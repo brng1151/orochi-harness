@@ -1,0 +1,80 @@
+# Live-recording patch shared by the ordinary headless snapshot composition.
+# The shipped profile owns application startup; this patch fixes only the
+# deterministic test composition and raw persistence needed for recording.
+
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  config:
+    thinking: enabled
+    reasoningEffort: max
+    models:
+      - id: deepseek-v4-flash
+      - id: deepseek-v4-pro
+      - id: deepseek-v4-flash-vision-exp
+        inputModalities: [text, image]
+
+- id: sandbox-policy
+  name: '@orochi-network/oh-sandbox-policy'
+  config:
+    mode: !!js "process.env.OH_PERMISSION_MODE ?? (process.env.OH_SNAPSHOT === undefined ? 'workspace-write' : 'danger-full-access')"
+    workspaceRoot: !!js process.cwd()
+
+- id: approval
+  name: '@orochi-network/oh-user-approval'
+  config:
+    policy: !!js "(process.env.OH_PERMISSION_MODE ?? (process.env.OH_SNAPSHOT === undefined ? 'workspace-write' : 'danger-full-access')) === 'danger-full-access' ? 'never' : 'ask'"
+
+- id: session-persistence-jsonl
+  name: '@orochi-network/oh-session-persistence-jsonl'
+  config:
+    root: !!js ohHomePath('sessions')
+    compression: none
+
+- id: session-title-llm
+  disabled: true
+
+- id: system-prompt
+  name: '@orochi-network/oh-system-prompt'
+  config:
+    personaPrefix: |
+      You are a coding assistant powered by the {{model}} model. Your working directory is {{cwd}}. Your bash tool runs under a file sandbox — a `[sandbox: file access denied …]` result is policy, not a command bug.
+
+      Verify your work by running the code or tests. Keep answers brief and factual.
+
+- id: agent-instructions
+  name: '@orochi-network/oh-agent-instructions'
+  config:
+    maxBytes: 65536
+
+- id: tool-subagent
+  name: '@orochi-network/oh-tool-subagent'
+  config:
+    provider: spawn
+    toolName: subagent
+    backgroundMode: continuable
+    maxDepth: 1
+
+- id: tool-subagent-fork
+  name: '@orochi-network/oh-tool-subagent'
+  config:
+    provider: fork
+    toolName: subagent_fork
+    backgroundMode: one-shot
+    enableRunInBackground: false
+    maxDepth: 1
+
+- id: fs-sandbox
+  name: '@orochi-network/oh-fs-sandbox'
+  config:
+    cwd: !!js process.cwd()
+
+- insert:
+    - id: hooks-claude-code
+      name: '@orochi-network/oh-hooks-claude-code'
+      config:
+        configPath: ./hooks.json
+
+    - id: hooks-codex
+      name: '@orochi-network/oh-hooks-codex'
+      config:
+        configPath: ./codex-hooks.json

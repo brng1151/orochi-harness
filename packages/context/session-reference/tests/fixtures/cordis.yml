@@ -1,0 +1,17 @@
+- name: '@orochi-network/oh-session'
+- name: '@orochi-network/oh-system-prompt'
+- name: '@orochi-network/oh-tools'
+- name: '@orochi-network/oh-fs-local'
+- name: '@orochi-network/oh-tool-fs'
+- name: '@orochi-network/oh-session-query-sqlite'
+  config:
+    path: ':memory:'
+    openAt: never
+- name: '@orochi-network/oh-session-reference'
+  config:
+    maxReferenceBytes: 360
+- name: './source-session.ts'
+- name: '@orochi-network/oh-spill-local'
+  config:
+    root: '{{spillRoot}}'
+    cleanupPeriodDays: 0

@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-08-10-session-log-version-mechanism.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-08-10-session-log-version-mechanism.md
+/agent-note-session-log-versioning-one-integer-an-upgrade-chain-and-a-per-event-ignorable-marker:
+  en: 46a66e2a862eefd0
+  zh: 547efc04badbb0f0
+/agent-note-session-log-versioning-one-integer-an-upgrade-chain-and-a-per-event-ignorable-marker/problem:
+  en: c11f54e24be6cc3b
+  zh: c1c274fbb161a57b
+/agent-note-session-log-versioning-one-integer-an-upgrade-chain-and-a-per-event-ignorable-marker/decision:
+  en: 5f8112e978152759
+  zh: d77e5ba5c053b4e9
+/agent-note-session-log-versioning-one-integer-an-upgrade-chain-and-a-per-event-ignorable-marker/decision/writer-and-publication-authority:
+  en: 10ea7318d460f179
+  zh: e27d2c3ea8457f8a
+/agent-note-session-log-versioning-one-integer-an-upgrade-chain-and-a-per-event-ignorable-marker/consequences:
+  en: 1771069d0b8ae582
+  zh: 39787fac5188696a
+/agent-note-session-log-versioning-one-integer-an-upgrade-chain-and-a-per-event-ignorable-marker/alternatives-considered:
+  en: bdbf3901479ad4ec
+  zh: 5aad26af905cd81b

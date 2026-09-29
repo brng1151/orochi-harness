@@ -1,0 +1,52 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/host/open-in-app/README.md
+/:
+  en: fbd3cf9953271b10
+  zh: 6efe4d036544d0d2
+/orochi-network-oh-host-open-in-app:
+  en: a11f603691b5bbc4
+  zh: 106a61788c52a216
+/orochi-network-oh-host-open-in-app/summary:
+  en: 15e805f150035a36
+  zh: f65f04c2a5973d01
+/orochi-network-oh-host-open-in-app/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 725b47765ee8f30b
+/orochi-network-oh-host-open-in-app/use-this-package:
+  en: 968b28f4900fca52
+  zh: 6cc35b8b21bc0b64
+/orochi-network-oh-host-open-in-app/use-this-package/when-to-choose-it:
+  en: 4a2be973aeb5af35
+  zh: 41d0766ae0caea4f
+/orochi-network-oh-host-open-in-app/use-this-package/minimal-configuration:
+  en: 275222a624e59549
+  zh: e85d185f7dc26705
+/orochi-network-oh-host-open-in-app/use-this-package/the-catalog-and-how-it-resolves:
+  en: 7a63acc1bc55aa6f
+  zh: bbe541dbe88b2ba6
+/orochi-network-oh-host-open-in-app/use-this-package/what-to-expect:
+  en: 2b791508f26b6fdd
+  zh: aace800ed652d78d
+/orochi-network-oh-host-open-in-app/use-this-package/the-shared-subpath:
+  en: 558e741770080c93
+  zh: 80482d355dc89cae
+/orochi-network-oh-host-open-in-app/understand-the-implementation:
+  en: aed17b8bb8134f74
+  zh: 747b54a6443f73b6
+/orochi-network-oh-host-open-in-app/further-exploration:
+  en: 936e5b11e15bb9fa
+  zh: 24a94aa80fad6045
+/orochi-network-oh-host-open-in-app/model-experience:
+  en: f4b8dd6b4e986564
+  zh: 814a768a38e52c03
+/orochi-network-oh-host-open-in-app/model-experience/kv-cache-effect:
+  en: 47f982e326fe77fd
+  zh: c2241315dc0c89c9
+/orochi-network-oh-host-open-in-app/known-limitations-and-deferred-work:
+  en: 6e1cf559c4ce0d56
+  zh: f78c5548bb3d6236
+/orochi-network-oh-host-open-in-app/known-limitations-and-deferred-work/dev-note:
+  en: 459313fb3b2b4cdf
+  zh: 2d71dedeb223c900

@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-06-python-runtime-windows-hosted.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/process/2026-09-06-python-runtime-windows-hosted.md
+/agent-note-windows-python-runtime-ci-stays-on-github-hosted-windows:
+  en: 0c2565fa1a10c656
+  zh: a208006f8d5468c5
+/agent-note-windows-python-runtime-ci-stays-on-github-hosted-windows/problem:
+  en: 1a5e971ffaa309bd
+  zh: 9bee471bff25836f
+/agent-note-windows-python-runtime-ci-stays-on-github-hosted-windows/decision:
+  en: 739ea169fc9aaf70
+  zh: 70237c3e06e13f95
+/agent-note-windows-python-runtime-ci-stays-on-github-hosted-windows/alternatives-considered:
+  en: 817e77f011ea35c8
+  zh: 2087bc653620a60f
+/agent-note-windows-python-runtime-ci-stays-on-github-hosted-windows/consequences:
+  en: c31f88bace48ff9e
+  zh: 4698cd5ee3152e87

@@ -1,0 +1,37 @@
+{
+  "name": "@orochi-network/oh-skill-badge",
+  "description": "Bundled oh badge skill provider for Orochi Harness",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/skill/skill-badge"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "assets",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/oh-skill": "workspace:*",
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/oh-skill": "workspace:*",
+    "@orochi-network/cordis": "workspace:~"
+  }
+}

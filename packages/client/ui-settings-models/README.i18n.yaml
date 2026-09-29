@@ -1,0 +1,61 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-settings-models/README.md
+/:
+  en: f13c41bb8b2a329e
+  zh: 79adf823abdd83ff
+/orochi-network-oh-client-ui-settings-models:
+  en: fb92c07b79dd755c
+  zh: fd2e3e44a4e7bbb2
+/orochi-network-oh-client-ui-settings-models/summary:
+  en: dd8bf5b579d879d2
+  zh: a99dc62d8422b5e1
+/orochi-network-oh-client-ui-settings-models/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-ui-settings-models/use-this-package:
+  en: 3547e20001588b67
+  zh: b777d793740bac5f
+/orochi-network-oh-client-ui-settings-models/use-this-package/api-keys:
+  en: c2f2a5c06ef20d5b
+  zh: 49a7eb0b66b4ed53
+/orochi-network-oh-client-ui-settings-models/use-this-package/editing-a-provider:
+  en: a6421f0e722adba9
+  zh: 5efc8ef6559240f6
+/orochi-network-oh-client-ui-settings-models/use-this-package/adding-and-deleting-providers:
+  en: 9d533c65c82cd4a4
+  zh: 0a5da334e127c035
+/orochi-network-oh-client-ui-settings-models/use-this-package/first-run-dialogs:
+  en: 8bda975b22b3d176
+  zh: 040bf71b539f8e46
+/orochi-network-oh-client-ui-settings-models/use-this-package/extension-slots:
+  en: 5b1433a4696aad14
+  zh: e31933248632af76
+/orochi-network-oh-client-ui-settings-models/understand-the-implementation:
+  en: a87afbec5e339b36
+  zh: 6348c81af7e650e1
+/orochi-network-oh-client-ui-settings-models/understand-the-implementation/validation:
+  en: 37fc0832887d9c62
+  zh: aff2b520284247eb
+/orochi-network-oh-client-ui-settings-models/understand-the-implementation/concurrency-and-credentials:
+  en: 670b8c066aed9b7a
+  zh: 2bedba9a2e0e3fee
+/orochi-network-oh-client-ui-settings-models/understand-the-implementation/onboarding-coordinator:
+  en: a994d49a2d39991f
+  zh: 39489587aaf5ae0f
+/orochi-network-oh-client-ui-settings-models/further-exploration:
+  en: 4d3ae2b3fe1c0716
+  zh: ae19dc68e5334e6b
+/orochi-network-oh-client-ui-settings-models/model-experience:
+  en: 3120df665299c634
+  zh: 1d9f365d091d0d2a
+/orochi-network-oh-client-ui-settings-models/model-experience/kv-cache-effect:
+  en: ca75c51c89c2c9b0
+  zh: 9779c98fff4c949a
+/orochi-network-oh-client-ui-settings-models/known-limitations-and-deferred-work:
+  en: f785742e72ab1467
+  zh: bd2c0328166ebae9
+/orochi-network-oh-client-ui-settings-models/known-limitations-and-deferred-work/dev-note:
+  en: 4f6749870e661a48
+  zh: 4953f3ea814546a4

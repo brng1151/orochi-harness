@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-01-parent-owned-subagent-catalog.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-01-parent-owned-subagent-catalog.md
+/agent-note-parent-owned-subagent-catalog-events:
+  en: 8795f16bed3fd2b8
+  zh: fef4cb290104bc40
+/agent-note-parent-owned-subagent-catalog-events/problem:
+  en: 5a991fec31578cea
+  zh: 13b75aa36eb22907
+/agent-note-parent-owned-subagent-catalog-events/decision:
+  en: fa3d02fa483fa48b
+  zh: 4fb4a7ce2f5887a0
+/agent-note-parent-owned-subagent-catalog-events/alternatives-considered:
+  en: 7a3d4b9f69c243d8
+  zh: 82b03d16ccc94dd2
+/agent-note-parent-owned-subagent-catalog-events/consequences:
+  en: 6c2bd3a5ae184dd3
+  zh: 807af4d45c6bb523

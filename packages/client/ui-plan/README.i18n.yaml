@@ -1,0 +1,46 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-plan/README.md
+/:
+  en: 1d5e0e4466f12e0f
+  zh: 14072627e89bc20b
+/orochi-network-oh-client-ui-plan:
+  en: e436e58ad91338d9
+  zh: a3768af260493fe7
+/orochi-network-oh-client-ui-plan/summary:
+  en: 958c2c8bf80759a0
+  zh: 57ffbbfa1bcbdff4
+/orochi-network-oh-client-ui-plan/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-ui-plan/use-this-package:
+  en: 74588c63dbe845dc
+  zh: 3305534c61285737
+/orochi-network-oh-client-ui-plan/use-this-package/what-the-chip-shows:
+  en: 1622db30d5378225
+  zh: 819c9cdb59d010a8
+/orochi-network-oh-client-ui-plan/use-this-package/reading-submitted-plans:
+  en: 1d2fecc23c658516
+  zh: 24a894dc2bbb1b78
+/orochi-network-oh-client-ui-plan/use-this-package/failures:
+  en: a13078ade4ef3b9d
+  zh: 2c8b3e8b62ad5652
+/orochi-network-oh-client-ui-plan/understand-the-implementation:
+  en: 34ed3a55dd31e5c2
+  zh: 3ff5c9229e967d48
+/orochi-network-oh-client-ui-plan/further-exploration:
+  en: a2a6409e8f702a18
+  zh: e6af12243bde08ac
+/orochi-network-oh-client-ui-plan/model-experience:
+  en: 5b417b01b6c623ad
+  zh: c1f200dd9c58d1dd
+/orochi-network-oh-client-ui-plan/model-experience/kv-cache-effect:
+  en: 0eeecf007103b9ba
+  zh: 4a105d4b5ec85547
+/orochi-network-oh-client-ui-plan/known-limitations-and-deferred-work:
+  en: f74784ddad90a7e1
+  zh: 638ce5a243e6b5cc
+/orochi-network-oh-client-ui-plan/known-limitations-and-deferred-work/dev-note:
+  en: 8f10593eda118cf2
+  zh: 74313780dd7b2bd7

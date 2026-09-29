@@ -1,0 +1,22 @@
+# Keyless replay layer for the OH SDK dynamic-route snapshot.
+
+- insert:
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: mock-delegate
+          - id: mock
+            name: Mock
+            models:
+              - id: mock-routed
+                reasoningEfforts: [max]
+
+    - id: sdk-jsonrpc-server-dynamic-replay
+      name: '@orochi-network/oh-sdk-jsonrpc-server'
+      inject: [sdkAppStartup, loader]
+      config:
+        maxTokensAsSuccess: true

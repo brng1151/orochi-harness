@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-08-04-configuration-source-ownership.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-08-04-configuration-source-ownership.md
+/agent-note-one-ordering-for-configuration-sources-and-what-a-discovered-file-may-not-decide:
+  en: b8675d9026a244fe
+  zh: a2908cb1c9535317
+/agent-note-one-ordering-for-configuration-sources-and-what-a-discovered-file-may-not-decide/problem:
+  en: a85d1e64f212ac34
+  zh: dd0d45b5a44f42da
+/agent-note-one-ordering-for-configuration-sources-and-what-a-discovered-file-may-not-decide/decision:
+  en: a1f7a80af9891ac1
+  zh: cd8594f5b64dec9d
+/agent-note-one-ordering-for-configuration-sources-and-what-a-discovered-file-may-not-decide/consequences:
+  en: bccbcfd50b8de2d9
+  zh: 7f8be6c4fa34a9b9
+/agent-note-one-ordering-for-configuration-sources-and-what-a-discovered-file-may-not-decide/alternatives-considered:
+  en: 3b49c7b133632ac7
+  zh: 691379c69ddc7ae0

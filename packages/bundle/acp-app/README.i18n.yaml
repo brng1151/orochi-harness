@@ -1,0 +1,43 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/bundle/acp-app/README.md
+/:
+  en: 54af04fe07d4168b
+  zh: e4ceb9a3f653e74b
+/orochi-network-oh-acp-app:
+  en: e20b1fc73bccdbaa
+  zh: a418e318ebc1b6a3
+/orochi-network-oh-acp-app/summary:
+  en: e66399c181d68830
+  zh: bdc357daaa23fd8b
+/orochi-network-oh-acp-app/table-of-contents:
+  en: 636fbd365057be75
+  zh: d12fd8759c7e62e5
+/orochi-network-oh-acp-app/use-this-package:
+  en: d846f8482863afec
+  zh: fccd21c2238d9409
+/orochi-network-oh-acp-app/standard-automation-workflow:
+  en: b3d28b15d33b981b
+  zh: dffb6d6863fadfa9
+/orochi-network-oh-acp-app/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-acp-app/model-experience/acp-coding-agent-persona:
+  en: a7451ee84e5e156a
+  zh: a7451ee84e5e156a
+/orochi-network-oh-acp-app/model-experience/acp-coding-agent-persona/what-the-model-sees:
+  en: bc0db4c628a1e547
+  zh: 740d07803bca3ce4
+/orochi-network-oh-acp-app/model-experience/acp-coding-agent-persona/token-effect:
+  en: 371d28831239e0a8
+  zh: 0d2678654607b657
+/orochi-network-oh-acp-app/model-experience/acp-coding-agent-persona/kv-cache-effect:
+  en: 8a5d250256381538
+  zh: 0578eaa7f774753e
+/orochi-network-oh-acp-app/known-limitations-and-deferred-work:
+  en: 7ddb54928b6f3d39
+  zh: d5258f14f7b60f3c
+/orochi-network-oh-acp-app/known-limitations-and-deferred-work/dev-note:
+  en: 8bc6c774f783517d
+  zh: d1643c271de867ae

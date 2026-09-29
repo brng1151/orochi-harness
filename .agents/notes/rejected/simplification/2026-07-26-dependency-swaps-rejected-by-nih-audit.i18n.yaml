@@ -1,0 +1,16 @@
+# Bilingual-pair consistency record for 2026-07-26-dependency-swaps-rejected-by-nih-audit.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/rejected/simplification/2026-07-26-dependency-swaps-rejected-by-nih-audit.md
+/agent-note-dependency-swaps-rejected-by-the-2026-07-nih-audit:
+  en: f179a6bbe6ea0e3f
+  zh: 1380ab6d91735830
+/agent-note-dependency-swaps-rejected-by-the-2026-07-nih-audit/problem:
+  en: 4f3a26940ee9c060
+  zh: 96c5ffd76578878d
+/agent-note-dependency-swaps-rejected-by-the-2026-07-nih-audit/proposal:
+  en: be745a201771c539
+  zh: 9179a043f02db064
+/agent-note-dependency-swaps-rejected-by-the-2026-07-nih-audit/alternatives-considered:
+  en: 229a0110ca47384e
+  zh: 3f86f858d56190c5

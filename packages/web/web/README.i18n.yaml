@@ -1,0 +1,67 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/web/web/README.md
+/:
+  en: 31868a4f15364a93
+  zh: 86824e1a18e237a7
+/orochi-network-oh-web:
+  en: 5c8b349a1ae58fa1
+  zh: 903de1742c4ad47d
+/orochi-network-oh-web/summary:
+  en: 4f904dc8f38ab76d
+  zh: 8c1f13f41a45bb7c
+/orochi-network-oh-web/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-web/use-this-package:
+  en: 63d8560f3db32fd1
+  zh: efca4a710739fb6f
+/orochi-network-oh-web/use-this-package/when-to-choose-it:
+  en: 68bb21b0e13f138d
+  zh: e79f6afbd83a7983
+/orochi-network-oh-web/use-this-package/minimal-configuration:
+  en: 6d3085067226fa32
+  zh: 054d1b7ad33eeb00
+/orochi-network-oh-web/use-this-package/searching-and-fetching:
+  en: 2adca589bb5c885d
+  zh: 62c2b708a98fbaca
+/orochi-network-oh-web/use-this-package/provider-selection:
+  en: a1d16fc8e3d3d7eb
+  zh: d7c91ce0bbd5e0e7
+/orochi-network-oh-web/use-this-package/failures-and-recovery:
+  en: d8d09ed3839f6474
+  zh: 7164d902f333592a
+/orochi-network-oh-web/understand-the-implementation:
+  en: a3364d8193deb7f0
+  zh: d1c4afbf25a7ae4d
+/orochi-network-oh-web/understand-the-implementation/design-philosophy:
+  en: c4d5437cfb1e2157
+  zh: 411b1b398de73426
+/orochi-network-oh-web/understand-the-implementation/source-map:
+  en: 75e450b263def321
+  zh: 7f28ff78ba2a5f03
+/orochi-network-oh-web/understand-the-implementation/data-model:
+  en: 254167bb1618c658
+  zh: 7ec2bcab16b98ebd
+/orochi-network-oh-web/understand-the-implementation/selection-flow:
+  en: 07dcd35a0a6369b2
+  zh: 927fe797d9079547
+/orochi-network-oh-web/further-exploration:
+  en: d69abcf0285f9b4c
+  zh: de89f98918b0149e
+/orochi-network-oh-web/model-experience:
+  en: 65f9aeef173e3322
+  zh: 3708e44f9f31c2a7
+/orochi-network-oh-web/model-experience/kv-cache-effect:
+  en: 40294c1c31b74824
+  zh: d75d48f485447a74
+/orochi-network-oh-web/known-limitations-and-deferred-work:
+  en: 834b6e6c626e6995
+  zh: 8e76e1691771dbbb
+/orochi-network-oh-web/known-limitations-and-deferred-work/dev-note:
+  en: 7f775cc79dbce94b
+  zh: 12b8f68f9e7c48ca
+/orochi-network-oh-web/known-limitations-and-deferred-work/dev-note/future-observing-provider-state:
+  en: 855f97574a820579
+  zh: 360ff6cd2ed82904

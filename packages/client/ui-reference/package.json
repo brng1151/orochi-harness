@@ -1,0 +1,70 @@
+{
+  "name": "@orochi-network/oh-client-ui-reference",
+  "description": "Unified Web @file and @session reference source",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/client/ui-reference"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "oh": {
+    "client": {
+      "inject": [
+        "@orochi-network/oh-api-remotes",
+        "@orochi-network/oh-api-session-controller",
+        "@orochi-network/oh-client-connection",
+        "@orochi-network/oh-client-locale",
+        "@orochi-network/oh-client-ui-input-trigger",
+        "@orochi-network/oh-client-ui-sidebar-right"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/oh-api-remotes": "workspace:*",
+    "@orochi-network/oh-api-session-controller": "workspace:*",
+    "@orochi-network/oh-client-connection": "workspace:*",
+    "@orochi-network/oh-client-locale": "workspace:*",
+    "@orochi-network/oh-client-test-runtime": "workspace:*",
+    "@orochi-network/oh-client-ui-input-trigger": "workspace:*",
+    "@orochi-network/oh-client-ui-primitives": "workspace:*",
+    "@orochi-network/oh-client-ui-slots": "workspace:*",
+    "@orochi-network/oh-file-reference": "workspace:*",
+    "@orochi-network/oh-session-reference": "workspace:*",
+    "@orochi-network/oh-typert-protocol": "workspace:*",
+    "@orochi-network/oh-util-workspace-path": "workspace:*",
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-client-ui-sidebar-right": "workspace:*"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts"
+  ]
+}

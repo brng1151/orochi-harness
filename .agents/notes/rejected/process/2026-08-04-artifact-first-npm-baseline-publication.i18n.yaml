@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for 2026-08-04-artifact-first-npm-baseline-publication.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/rejected/process/2026-08-04-artifact-first-npm-baseline-publication.md
+/agent-note-artifact-first-npm-baseline-publication:
+  en: 093a6a89d1e37fb3
+  zh: 4eb54a76f329ef60
+/agent-note-artifact-first-npm-baseline-publication/problem:
+  en: e1edc878e7d63ac8
+  zh: 04554b0c26768e54
+/agent-note-artifact-first-npm-baseline-publication/proposal:
+  en: 97a35a1e8f86924c
+  zh: 6ddff68f02ad2f54
+/agent-note-artifact-first-npm-baseline-publication/current-implementation-boundary:
+  en: 7af591a160429329
+  zh: 37566eac374ce3a6
+/agent-note-artifact-first-npm-baseline-publication/publication-payload-contract:
+  en: 6ad6a8829fe06538
+  zh: 70e1507b7c85cb8a
+/agent-note-artifact-first-npm-baseline-publication/artifact-plane-integration-test:
+  en: 3103cde478608fad
+  zh: 40cdf22b63345a1b
+/agent-note-artifact-first-npm-baseline-publication/publication-and-recovery:
+  en: f45f84678f8184ae
+  zh: 5f87157df6e828b5
+/agent-note-artifact-first-npm-baseline-publication/github-actions-integration:
+  en: c376aca1e297c9d2
+  zh: 2902f72e6d16e9ae
+/agent-note-artifact-first-npm-baseline-publication/alternatives-considered:
+  en: 88aad2b57fe7ed72
+  zh: b7ca8868caf12e06
+/agent-note-artifact-first-npm-baseline-publication/acceptance-criteria:
+  en: 8fe47b26dbffc6a8
+  zh: 4d827aee15dbe341
+/agent-note-artifact-first-npm-baseline-publication/risks:
+  en: ecd99ef9fa3567ff
+  zh: 108f61d2ea6953dd

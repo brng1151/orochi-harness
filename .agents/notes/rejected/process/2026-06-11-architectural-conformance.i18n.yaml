@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-06-11-architectural-conformance.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/rejected/process/2026-06-11-architectural-conformance.md
+/agent-note-architectural-conformance-dependency-rules-and-the-adapter-kit:
+  en: 49ba46f634be6a12
+  zh: 1003c993a80b91a1
+/agent-note-architectural-conformance-dependency-rules-and-the-adapter-kit/problem:
+  en: d8142a20dc8fc89b
+  zh: 81314425efb4d350
+/agent-note-architectural-conformance-dependency-rules-and-the-adapter-kit/proposal:
+  en: f179eab139c15c2f
+  zh: ec9287bb70f99534
+/agent-note-architectural-conformance-dependency-rules-and-the-adapter-kit/plan:
+  en: 56bb9b7b97ba6bf5
+  zh: 2e3f0a70ce391029
+/agent-note-architectural-conformance-dependency-rules-and-the-adapter-kit/acceptance-criteria:
+  en: 2953797008c6c120
+  zh: 42fd01df8a2a8f0b
+/agent-note-architectural-conformance-dependency-rules-and-the-adapter-kit/risks:
+  en: ec3e4e09231d9922
+  zh: 149986c52fe82a34

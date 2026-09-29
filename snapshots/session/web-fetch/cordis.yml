@@ -1,0 +1,18 @@
+# Web-fetch composition for the web-fetch snapshot scenario. The base bundle
+# supplies the web seam and public HTTP provider; this overlay inserts a
+# deterministic provider and exposes only fetch.
+- insert:
+    - id: web-fetch-fixture
+      name: './web-fetch-fixture-server.mjs'
+
+- id: web
+  name: '@orochi-network/oh-web'
+
+- id: web-fetch-http
+  name: '@orochi-network/oh-web-fetch-http'
+  disabled: true
+
+- id: tool-web
+  name: '@orochi-network/oh-tool-web'
+  config:
+    search: false

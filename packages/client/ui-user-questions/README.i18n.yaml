@@ -1,0 +1,52 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-user-questions/README.md
+/:
+  en: 3ef2d297ead1da19
+  zh: db81185cb09b4b39
+/orochi-network-oh-client-ui-user-questions:
+  en: ba3047292c9c70f5
+  zh: 4b6cfe493e951242
+/orochi-network-oh-client-ui-user-questions/summary:
+  en: 7e81c6a53759ff37
+  zh: b83f666c4ef4cbd3
+/orochi-network-oh-client-ui-user-questions/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-ui-user-questions/use-this-package:
+  en: 4aa048dcb7282f12
+  zh: d2731da0870aa6a0
+/orochi-network-oh-client-ui-user-questions/use-this-package/answering:
+  en: 8b6f37bfb11a2c3a
+  zh: 59d8951211f9b21b
+/orochi-network-oh-client-ui-user-questions/use-this-package/the-plan-review-card:
+  en: a17c0d0047e4f82a
+  zh: 25363204ca016e76
+/orochi-network-oh-client-ui-user-questions/use-this-package/failure-and-recovery:
+  en: da530ef485c07417
+  zh: b07525cfcd5034f0
+/orochi-network-oh-client-ui-user-questions/understand-the-implementation:
+  en: 77e1b2585acdf67b
+  zh: d433ec185c6b8f57
+/orochi-network-oh-client-ui-user-questions/understand-the-implementation/intent-surface-election:
+  en: 7f3e0e2460317462
+  zh: cb6b9410410e2f29
+/orochi-network-oh-client-ui-user-questions/understand-the-implementation/copy-and-locale:
+  en: 3ba76be6fce4a092
+  zh: b7f0c94db93b90ca
+/orochi-network-oh-client-ui-user-questions/further-exploration:
+  en: 78e4144faa7392e2
+  zh: 4873e1e8bb285fa2
+/orochi-network-oh-client-ui-user-questions/model-experience:
+  en: 888a79fecc9bd8a3
+  zh: 41b4c0b486d14660
+/orochi-network-oh-client-ui-user-questions/model-experience/kv-cache-effect:
+  en: 9b197d50e8abe9d9
+  zh: 8287cadbdc92ab8e
+/orochi-network-oh-client-ui-user-questions/known-limitations-and-deferred-work:
+  en: beb6dc6d1496e799
+  zh: d92150a88a797c21
+/orochi-network-oh-client-ui-user-questions/known-limitations-and-deferred-work/dev-note:
+  en: 7c763299daed17e4
+  zh: fb410b366b407ec7

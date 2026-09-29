@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-10-public-package-manifest.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-10-public-package-manifest.md
+/agent-note-public-package-manifest-fields:
+  en: e85c022c967db97a
+  zh: 97f2e27f49f5d5fc
+/agent-note-public-package-manifest-fields/problem:
+  en: 2c552f2215fdacb5
+  zh: d225776f9e4effae
+/agent-note-public-package-manifest-fields/decision:
+  en: b43ff910be5c1c3c
+  zh: 294e6b8930bc455a
+/agent-note-public-package-manifest-fields/alternatives-considered:
+  en: 9c636d6ed64aad0e
+  zh: c5274c87428ee96a
+/agent-note-public-package-manifest-fields/consequences:
+  en: cfe9751d93e872bb
+  zh: b7041f96778110af

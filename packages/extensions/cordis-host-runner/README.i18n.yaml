@@ -1,0 +1,67 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/extensions/cordis-host-runner/README.md
+/:
+  en: ac7eacf5f9b1e727
+  zh: 61461cb68f91fcce
+/orochi-network-oh-cordis-host-runner:
+  en: eebf393f96413695
+  zh: 26f6f97484eb765f
+/orochi-network-oh-cordis-host-runner/summary:
+  en: ba987dd4072dda3f
+  zh: 044dd4fbcb08eef6
+/orochi-network-oh-cordis-host-runner/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-cordis-host-runner/use-this-package:
+  en: bdaba8036acf80c9
+  zh: 2dd8f972c3023a8a
+/orochi-network-oh-cordis-host-runner/use-this-package/minimal-configuration:
+  en: d432e5fb6c6dba12
+  zh: 6f41a74813cfebd4
+/orochi-network-oh-cordis-host-runner/use-this-package/what-a-run-does:
+  en: a3c86c081974a710
+  zh: 180e1b7824c070d4
+/orochi-network-oh-cordis-host-runner/use-this-package/what-happens-to-definitions:
+  en: d1a8777f171d22bb
+  zh: 7f6aa4c2680557b1
+/orochi-network-oh-cordis-host-runner/use-this-package/trust-stance:
+  en: ffdc7241de13deea
+  zh: 348ace9f16ff8b9e
+/orochi-network-oh-cordis-host-runner/understand-the-implementation:
+  en: b0a536c0d00cbdb8
+  zh: 08e5d813aa6a612a
+/orochi-network-oh-cordis-host-runner/understand-the-implementation/design-philosophy:
+  en: 2193b1c446b388fc
+  zh: 6173e0e3e2df6812
+/orochi-network-oh-cordis-host-runner/understand-the-implementation/source-map:
+  en: f567eacc1072b96c
+  zh: 7f50499d9740f802
+/orochi-network-oh-cordis-host-runner/understand-the-implementation/how-a-run-flows:
+  en: 2868992569bbe7ef
+  zh: 95a5dfb5df0ef571
+/orochi-network-oh-cordis-host-runner/further-exploration:
+  en: ca51495db8911447
+  zh: 592e2bffe741ca9b
+/orochi-network-oh-cordis-host-runner/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-cordis-host-runner/model-experience/run-outcomes-refusals-and-diagnostics-relayed-to-the-owning-session:
+  en: f53130bb645f50df
+  zh: 603361c566527789
+/orochi-network-oh-cordis-host-runner/model-experience/run-outcomes-refusals-and-diagnostics-relayed-to-the-owning-session/what-the-model-sees:
+  en: 743dbef78fa3a8ad
+  zh: 2aa4e404e908cf22
+/orochi-network-oh-cordis-host-runner/model-experience/run-outcomes-refusals-and-diagnostics-relayed-to-the-owning-session/token-effect:
+  en: c7ef63dd8179a97e
+  zh: e66545088d00956a
+/orochi-network-oh-cordis-host-runner/model-experience/run-outcomes-refusals-and-diagnostics-relayed-to-the-owning-session/kv-cache-effect:
+  en: bbc4338c3035757a
+  zh: f51f4848786d5606
+/orochi-network-oh-cordis-host-runner/known-limitations-and-deferred-work:
+  en: 1f10688ae249a077
+  zh: ab2ff597e1769b81
+/orochi-network-oh-cordis-host-runner/known-limitations-and-deferred-work/dev-note:
+  en: 8111315620c52980
+  zh: 261bf47eecf96bad

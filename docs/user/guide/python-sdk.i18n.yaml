@@ -1,0 +1,28 @@
+# Bilingual-pair consistency record for python-sdk.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/user/guide/python-sdk.md
+/get-started-with-the-python-sdk:
+  en: f1d07838d528d748
+  zh: cce299a09015085e
+/get-started-with-the-python-sdk/prerequisites:
+  en: e187c15b80b93a68
+  zh: b34020486099c5c9
+/get-started-with-the-python-sdk/install-the-sdk:
+  en: 27f7d494c573eb06
+  zh: 0e6da3ff0ef0dce6
+/get-started-with-the-python-sdk/run-the-checked-in-example:
+  en: 9e057ff6ed35d311
+  zh: 8c10fd8472cb355f
+/get-started-with-the-python-sdk/use-the-sdk-in-your-program:
+  en: e74408baae50da16
+  zh: d7246874cd25c2a9
+/get-started-with-the-python-sdk/install-or-define-plugins:
+  en: d90481abcf3f320c
+  zh: 622e90fe2c2962ee
+/get-started-with-the-python-sdk/install-or-define-plugins/opt-in-to-str-replace-editor:
+  en: 6f4f3f8652c651c1
+  zh: 2948cab684a50f91
+/get-started-with-the-python-sdk/understand-the-minimal-profile:
+  en: 189afeb2d63f1e8b
+  zh: 49c0d9e9cd18641b

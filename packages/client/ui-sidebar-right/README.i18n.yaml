@@ -1,0 +1,55 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-sidebar-right/README.md
+/:
+  en: 4afd022c43ca0cfd
+  zh: e52b43b4214f94b3
+/orochi-network-oh-client-ui-sidebar-right:
+  en: 61bb9b13797db382
+  zh: 605ba8d03b253144
+/orochi-network-oh-client-ui-sidebar-right/summary:
+  en: 8aafe5400014fdac
+  zh: b2d7d0e8dc4f1291
+/orochi-network-oh-client-ui-sidebar-right/table-of-contents:
+  en: ff17f27d8c5557d1
+  zh: 6efe4b3d4902a441
+/orochi-network-oh-client-ui-sidebar-right/what-lives-here-and-what-does-not:
+  en: 4e119edb4b63765d
+  zh: 344665639fa1c49d
+/orochi-network-oh-client-ui-sidebar-right/presentations:
+  en: a08754a417e12314
+  zh: 1154f7d180120544
+/orochi-network-oh-client-ui-sidebar-right/the-expand-button:
+  en: 28b0bc3d4050b0e0
+  zh: 733b44ad9309f49a
+/orochi-network-oh-client-ui-sidebar-right/state:
+  en: 8de8efc62541c5d3
+  zh: 3cc9b16b6f78bb7e
+/orochi-network-oh-client-ui-sidebar-right/extension-seats:
+  en: 31238cdefec15d7e
+  zh: cd4db252c80ba051
+/orochi-network-oh-client-ui-sidebar-right/ctx-sidebarright:
+  en: ffff40e61509ee9c
+  zh: 324fb15a8a26a99d
+/orochi-network-oh-client-ui-sidebar-right/the-tab-domain:
+  en: b6617a16146b2e3a
+  zh: 3ed743bf1cd960aa
+/orochi-network-oh-client-ui-sidebar-right/the-guide:
+  en: 601f9f6635babc4d
+  zh: e345004fe30a65b9
+/orochi-network-oh-client-ui-sidebar-right/copy:
+  en: 4315a1c03ca5fef3
+  zh: c09a09f1d9b99107
+/orochi-network-oh-client-ui-sidebar-right/model-experience:
+  en: 3120df665299c634
+  zh: 242f3d68e8267e55
+/orochi-network-oh-client-ui-sidebar-right/model-experience/kv-cache-effect:
+  en: ca75c51c89c2c9b0
+  zh: f57cc48a1b5cbfa9
+/orochi-network-oh-client-ui-sidebar-right/known-limitations-and-deferred-work:
+  en: 76a763b4dd71babd
+  zh: fdc966dd427a82fb
+/orochi-network-oh-client-ui-sidebar-right/known-limitations-and-deferred-work/dev-note:
+  en: 33274d681fac9a21
+  zh: e024c1c4766b289f

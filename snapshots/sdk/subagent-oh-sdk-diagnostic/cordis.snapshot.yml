@@ -1,0 +1,15 @@
+# Keyless parent-model overlay for the OH SDK diagnostic snapshot.
+
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  disabled: true
+
+- insert:
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: deepseek-v4-flash

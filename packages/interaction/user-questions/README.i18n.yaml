@@ -1,0 +1,43 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/interaction/user-questions/README.md
+/:
+  en: 49ea5bf7d681936e
+  zh: e65549bc2fc385a4
+/orochi-network-oh-user-questions:
+  en: b05c231e4c893d9a
+  zh: 84eabc9804dfe66e
+/orochi-network-oh-user-questions/summary:
+  en: d27ce8b495269248
+  zh: 691a7cc7f3d892d0
+/orochi-network-oh-user-questions/table-of-contents:
+  en: ad3919bb107cc38d
+  zh: 557af29a8318b65c
+/orochi-network-oh-user-questions/service-userquestionservice-ctx-key-userquestions:
+  en: 1ba3467a2588da42
+  zh: 74f6e516f71116d9
+/orochi-network-oh-user-questions/service-userquestionservice-ctx-key-userquestions/public-api:
+  en: f7c183c8728b05cd
+  zh: f0104632d8eb2938
+/orochi-network-oh-user-questions/service-userquestionservice-ctx-key-userquestions/key-types:
+  en: 10637ca40891d520
+  zh: 015662eb651d19cb
+/orochi-network-oh-user-questions/service-userquestionservice-ctx-key-userquestions/presentation-intent:
+  en: b90ed15f6148302e
+  zh: 11fd8b6984a71b77
+/orochi-network-oh-user-questions/role:
+  en: 78c2ac61a7c8a555
+  zh: f94a30972fe0dfbe
+/orochi-network-oh-user-questions/model-experience:
+  en: 20022e3b269e83da
+  zh: 1866e083b79cec5f
+/orochi-network-oh-user-questions/model-experience/kv-cache-effect:
+  en: 40294c1c31b74824
+  zh: cd40bdfe1a1c37dc
+/orochi-network-oh-user-questions/known-limitations-and-deferred-work:
+  en: 9c2d868427856d56
+  zh: f0d19979fd90d826
+/orochi-network-oh-user-questions/known-limitations-and-deferred-work/dev-note:
+  en: f5f2c82d2e085ccf
+  zh: d04ca73d1db0ef0f

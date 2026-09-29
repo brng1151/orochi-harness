@@ -1,0 +1,55 @@
+# Bilingual-pair consistency record for 2026-07-06-approval-seam.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-07-06-approval-seam.md
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers:
+  en: 9083551d9882b980
+  zh: 2bc9ea6c74c3d4b7
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/problem:
+  en: a8000a94da429dc1
+  zh: b6b387e1f472fd79
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/decision:
+  en: 60aad83d3adc2da3
+  zh: ef7e68ec2c3bc244
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/decision/how-a-deployment-uses-it:
+  en: f63f2fe9a2c275c6
+  zh: 5d0a668f6436e396
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/decision/design-detail:
+  en: a6d7884e4359af3a
+  zh: e72588705942000a
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/decision/design-detail/the-seam-mechanism-and-policy-split:
+  en: 70d7fcd0afa6ebcb
+  zh: b2731144b564b3d2
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/decision/design-detail/ask-routing-in-oh-tools:
+  en: 381fd4aee4ac436a
+  zh: ca7c3d38c077dce9
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/decision/design-detail/the-per-session-policy-tier:
+  en: c80246b07d712864
+  zh: 7552ab56020d7e6b
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/decision/design-detail/the-acp-answerer:
+  en: 0b6a48829c3bd169
+  zh: ee59733050d07bf7
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/decision/design-detail/audit-and-what-the-model-sees:
+  en: d9f129e893e76bec
+  zh: 92929dbc54c65a5b
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/decision/design-detail/entities-and-dependencies:
+  en: 607cdeae538cf045
+  zh: 49905fd08099a1fb
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/decision/testing:
+  en: 01356985c175fcda
+  zh: b1bb3b68f619e698
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/deferred:
+  en: 64f86324b089032f
+  zh: 934d1c6066118324
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/alternatives-considered:
+  en: 82f8345179f807cd
+  zh: 41b462d2454636dd
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/consequences:
+  en: 9d2097d7b796dd63
+  zh: 4f1a0493dc109b12
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/faq:
+  en: 5fe2803e87e0c55f
+  zh: 8b344aad3368b108
+/agent-note-the-approval-seam-one-shot-permission-decisions-over-a-waterfall-of-answerers/prior-art:
+  en: 69c61bf323e1b183
+  zh: deb64a436d29d2c5

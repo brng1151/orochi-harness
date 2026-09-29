@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for 2026-07-10-parallel-tool-call-execution.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-07-10-parallel-tool-call-execution.md
+/agent-note-parallel-tool-call-execution-by-per-call-safety:
+  en: 742e1ef08179746e
+  zh: 0e1e1bd139ff663b
+/agent-note-parallel-tool-call-execution-by-per-call-safety/problem:
+  en: 41ffece5e72e022f
+  zh: e813a3efb9c12646
+/agent-note-parallel-tool-call-execution-by-per-call-safety/decision:
+  en: c43a9ed986637664
+  zh: b01f2b8d4094a9ac
+/agent-note-parallel-tool-call-execution-by-per-call-safety/scheduling-and-ordering:
+  en: b4784334fedc4872
+  zh: 5461ec85fcd7ebef
+/agent-note-parallel-tool-call-execution-by-per-call-safety/safety-contract:
+  en: 16c4ee08b65ead23
+  zh: df80d6e49982615b
+/agent-note-parallel-tool-call-execution-by-per-call-safety/configuration-and-declarations:
+  en: 25fe2a4d0c18ab58
+  zh: c1fc1cce2e30f353
+/agent-note-parallel-tool-call-execution-by-per-call-safety/verification:
+  en: eb5a6aa84980f0ab
+  zh: eed2680a160e8ed2
+/agent-note-parallel-tool-call-execution-by-per-call-safety/alternatives-considered:
+  en: 17becc038bb7df7c
+  zh: 673d9a9bdfa39edf
+/agent-note-parallel-tool-call-execution-by-per-call-safety/consequences:
+  en: a5508057bc03f4f6
+  zh: 96b46c59402474c3

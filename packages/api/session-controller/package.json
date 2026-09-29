@@ -1,0 +1,165 @@
+{
+  "name": "@orochi-network/oh-api-session-controller",
+  "description": "Session Remote commands, cold reads, and live control transport",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/api/session-controller"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./types": {
+      "types": "./lib/types/types.d.ts",
+      "default": "./lib/types/types.js"
+    },
+    "./remote-events": {
+      "types": "./lib/types/remote-events.d.ts",
+      "default": "./lib/types/remote-events.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./typert": {
+      "types": "./lib/typert.host.d.ts",
+      "default": "./lib/typert.host.js"
+    },
+    "./remote": {
+      "types": "./lib/typert.remote-client.d.ts",
+      "default": "./lib/typert.remote-client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "oh": {
+    "client": {
+      "external": [
+        "@orochi-network/oh-api-gateway/client"
+      ],
+      "inject": [
+        "@orochi-network/oh-api-gateway",
+        "@orochi-network/oh-client-file-upload"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts",
+    "lib/typert.host.js",
+    "lib/typert.host.d.ts",
+    "lib/typert.remote-client.js",
+    "lib/typert.remote-client.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@orochi-network/oh-brand": "workspace:*",
+    "@orochi-network/oh-deque": "workspace:*",
+    "@orochi-network/schemastery": "workspace:~",
+    "mime-types": "^3.0.2",
+    "zod": "^4.4.3"
+  },
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-agent-default-model": "workspace:*",
+    "@orochi-network/oh-agent-preset-registry": "workspace:*",
+    "@orochi-network/oh-api-gateway": "workspace:*",
+    "@orochi-network/oh-attachment": "workspace:*",
+    "@orochi-network/oh-client-connection": "workspace:*",
+    "@orochi-network/oh-client-file-upload": "workspace:*",
+    "@orochi-network/oh-commands": "workspace:*",
+    "@orochi-network/oh-credentials": "workspace:*",
+    "@orochi-network/oh-file-reference": "workspace:*",
+    "@orochi-network/oh-fs": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-native-command": "workspace:*",
+    "@orochi-network/oh-scope": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-session-persistence": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-session-projection-cache": "workspace:*",
+    "@orochi-network/oh-session-query": "workspace:*",
+    "@orochi-network/oh-session-title": "workspace:*",
+    "@orochi-network/oh-settings": "workspace:*",
+    "@orochi-network/oh-skill": "workspace:*",
+    "@orochi-network/oh-subagent": "workspace:*",
+    "@orochi-network/oh-typert-protocol": "workspace:*",
+    "@orochi-network/oh-typert-registry": "workspace:*",
+    "@orochi-network/oh-util-time": "workspace:*",
+    "@orochi-network/oh-util-values": "workspace:*",
+    "@orochi-network/oh-util-workspace-path": "workspace:*",
+    "@orochi-network/oh-workspace": "workspace:*"
+  },
+  "peerDependenciesMeta": {
+    "@orochi-network/oh-session-persistence": {
+      "optional": true
+    },
+    "@orochi-network/oh-session-projection-cache": {
+      "optional": true
+    },
+    "@orochi-network/oh-settings": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-agent-default-model": "workspace:*",
+    "@orochi-network/oh-agent-loop": "workspace:*",
+    "@orochi-network/oh-agent-loop-testkit": "workspace:*",
+    "@orochi-network/oh-agent-preset-registry": "workspace:*",
+    "@orochi-network/oh-api-gateway": "workspace:*",
+    "@orochi-network/oh-attachment": "workspace:*",
+    "@orochi-network/oh-client-connection": "workspace:*",
+    "@orochi-network/oh-client-file-upload": "workspace:*",
+    "@orochi-network/oh-client-store": "workspace:*",
+    "@orochi-network/oh-client-test-runtime": "workspace:*",
+    "@orochi-network/oh-commands": "workspace:*",
+    "@orochi-network/oh-credentials": "workspace:*",
+    "@orochi-network/oh-file-reference": "workspace:*",
+    "@orochi-network/oh-fs": "workspace:*",
+    "@orochi-network/oh-fs-local": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-native-command": "workspace:*",
+    "@orochi-network/oh-permission-presets": "workspace:*",
+    "@orochi-network/oh-remote-mock": "workspace:*",
+    "@orochi-network/oh-scope": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-session-persistence": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-session-projection-cache": "workspace:*",
+    "@orochi-network/oh-session-query": "workspace:*",
+    "@orochi-network/oh-session-title": "workspace:*",
+    "@orochi-network/oh-settings": "workspace:*",
+    "@orochi-network/oh-skill": "workspace:*",
+    "@orochi-network/oh-storage": "workspace:*",
+    "@orochi-network/oh-storage-domain": "workspace:*",
+    "@orochi-network/oh-storage-json": "workspace:*",
+    "@orochi-network/oh-subagent": "workspace:*",
+    "@orochi-network/oh-typert-protocol": "workspace:*",
+    "@orochi-network/oh-typert-registry": "workspace:*",
+    "@orochi-network/oh-util-crypto": "workspace:*",
+    "@orochi-network/oh-util-time": "workspace:*",
+    "@orochi-network/oh-util-values": "workspace:*",
+    "@orochi-network/oh-util-workspace-path": "workspace:*",
+    "@orochi-network/oh-workspace": "workspace:*",
+    "@types/mime-types": "^3.0.1"
+  }
+}

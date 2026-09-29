@@ -1,0 +1,25 @@
+# Patch for resuming one seeded semantic-checkpoint session over the shipped headless profile.
+- id: headless-startup
+  disabled: true
+
+- id: headless-runner
+  disabled: true
+
+- id: llm-orochi
+  disabled: true
+
+- id: session-persistence-jsonl
+  config:
+    root: './.sessions'
+    compression: none
+
+- insert:
+    - id: replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        file: !!js process.env.OH_SNAPSHOT_FILE
+        overrideFile: !!js process.env.OH_SNAPSHOT_OVERRIDE
+
+    # Publish the persisted agent before the driver selects the single root.
+    - id: resumed-agent
+      name: './tests/fixtures/semantic-checkpoint-agent.ts'

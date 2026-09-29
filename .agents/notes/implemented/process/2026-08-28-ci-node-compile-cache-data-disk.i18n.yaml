@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for 2026-08-28-ci-node-compile-cache-data-disk.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/process/2026-08-28-ci-node-compile-cache-data-disk.md
+/agent-note-redirect-the-node-compile-cache-to-the-data-volume-runner-temp:
+  en: 75931ee0fb528564
+  zh: ed0934a93a08fbf0
+/agent-note-redirect-the-node-compile-cache-to-the-data-volume-runner-temp/problem:
+  en: a5aff04d2c8104b8
+  zh: 8aa7942ce82dcc71
+/agent-note-redirect-the-node-compile-cache-to-the-data-volume-runner-temp/decision:
+  en: 0c659fb64cbbdeac
+  zh: 5b264b6d69a576dc
+/agent-note-redirect-the-node-compile-cache-to-the-data-volume-runner-temp/verification:
+  en: a620e90f588bf16a
+  zh: 1bdb8c8782475de1
+/agent-note-redirect-the-node-compile-cache-to-the-data-volume-runner-temp/alternatives-considered:
+  en: 6119e2aff3b6be5a
+  zh: e01a6c669a9ec6aa
+/agent-note-redirect-the-node-compile-cache-to-the-data-volume-runner-temp/alternatives-considered/why-not-disable-the-compile-cache-entirely:
+  en: cee8de5b45031309
+  zh: 6ce10a304e63bdbb
+/agent-note-redirect-the-node-compile-cache-to-the-data-volume-runner-temp/alternatives-considered/why-not-add-node-compile-cache-to-the-oh-residue-sweep:
+  en: 6d43b1d5b60958b8
+  zh: 04da9ff8bcbfebf1
+/agent-note-redirect-the-node-compile-cache-to-the-data-volume-runner-temp/alternatives-considered/why-not-job-level-env-or-gate-step-env-only:
+  en: 4ba6c9a14bafbc80
+  zh: 410149f4a3e930e6
+/agent-note-redirect-the-node-compile-cache-to-the-data-volume-runner-temp/consequences:
+  en: 083e2665e1550111
+  zh: 70560c09ca2b3750

@@ -1,0 +1,10 @@
+version: 1
+scenario: orochi-messages-input-history
+profile: headless
+composition: orochi-messages-input-history
+recording: authored
+header:
+  class: orochi-messages-input-history
+  pin: true
+  systemPromptSource: text-turn
+  toolSchemasSource: text-turn

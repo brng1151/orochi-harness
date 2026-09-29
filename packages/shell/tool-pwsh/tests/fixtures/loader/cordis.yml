@@ -1,0 +1,27 @@
+# Minimal tool-pwsh composition: real app boot path, real pwsh executor, real
+# foreground + background tool calls; driven by the package's loader.spec.ts.
+- id: system-prompt
+  name: '@orochi-network/oh-system-prompt'
+
+- id: tools
+  name: '@orochi-network/oh-tools'
+
+- id: subprocess
+  name: '@orochi-network/oh-subprocess-local'
+
+- id: bash
+  name: '@orochi-network/oh-pwsh-local'
+  config:
+    graceMs: 200
+
+- id: shell-env
+  name: '@orochi-network/oh-shell-env'
+
+- id: tasks
+  name: '@orochi-network/oh-jobs-local'
+
+- id: tool-jobs
+  name: '@orochi-network/oh-tool-jobs'
+
+- id: tool-pwsh
+  name: '@orochi-network/oh-tool-pwsh'

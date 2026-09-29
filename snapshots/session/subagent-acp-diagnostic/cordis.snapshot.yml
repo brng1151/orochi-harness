@@ -1,0 +1,40 @@
+# Keyless twin of subagent-acp-diagnostic.cordis.yml: keep the real ACP child
+# permission-denial path and replace only the external parent model adapter.
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  disabled: true
+
+- insert:
+    - id: acp-diagnostic-release-on-job-output
+      name: './release-on-job-output.mjs'
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: deepseek-v4-flash
+              - id: deepseek-v4-pro
+    - id: subagent-acp-diagnostic
+      name: '@orochi-network/oh-subagent-acp'
+      config:
+        providerName: acp-diagnostic
+        command: !!js process.execPath
+        args:
+          - !!js "decodeURIComponent(new URL('../../../packages/subagent/subagent-acp/tests/mock-acp-server.ts', 'file://' + process.env.OH_SNAPSHOT_FILE).pathname)"
+        permission: reject
+        env:
+          MOCK_PERMISSION: '1'
+          MOCK_TOOL_KIND: execute
+          MOCK_PROMPT_HOLD: .oh/acp-diagnostic-prompt-hold
+    - id: tool-subagent-acp-diagnostic
+      name: '@orochi-network/oh-tool-subagent'
+      config:
+        provider: acp-diagnostic
+        toolName: subagent_acp
+        backgroundMode: one-shot
+        maxDepth: provider-managed
+
+- id: plugin-package-inventory-orochi
+  disabled: true

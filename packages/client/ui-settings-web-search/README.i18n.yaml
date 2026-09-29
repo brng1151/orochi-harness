@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-settings-web-search/README.md
+/:
+  en: 54f0b56311a79f86
+  zh: 562671b8be7584d2
+/orochi-network-oh-client-ui-settings-web-search:
+  en: a9d3ae2830e2ba9b
+  zh: 0b46113360344d16
+/orochi-network-oh-client-ui-settings-web-search/summary:
+  en: 52241e58c7c809d4
+  zh: 40f5dd728aa7fac9
+/orochi-network-oh-client-ui-settings-web-search/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-ui-settings-web-search/use-this-package:
+  en: 8805d05eb6d18e98
+  zh: f1fdaeaa2bdd010c
+/orochi-network-oh-client-ui-settings-web-search/understand-the-implementation:
+  en: 560b87e78b941c7a
+  zh: 40cfeb1bef5bcd0b
+/orochi-network-oh-client-ui-settings-web-search/further-exploration:
+  en: 9b92705dfacb5087
+  zh: f91dcb427b804053
+/orochi-network-oh-client-ui-settings-web-search/model-experience:
+  en: 6b7c6f82ab6c8435
+  zh: 4517689c899abcbe
+/orochi-network-oh-client-ui-settings-web-search/model-experience/kv-cache-effect:
+  en: ca75c51c89c2c9b0
+  zh: 6e1c9a8fdde89577
+/orochi-network-oh-client-ui-settings-web-search/known-limitations-and-deferred-work:
+  en: 3fb1d37ebc9bf37a
+  zh: d6ac7929cb19ff55
+/orochi-network-oh-client-ui-settings-web-search/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: e88aeb617ffb74ea

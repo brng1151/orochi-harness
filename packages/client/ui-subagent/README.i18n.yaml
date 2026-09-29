@@ -1,0 +1,64 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-subagent/README.md
+/:
+  en: 2a4346e687de04a9
+  zh: c13273c49c819c2a
+/orochi-network-oh-client-ui-subagent:
+  en: 5c50b3404c1c3544
+  zh: d078c6b51f6a24c5
+/orochi-network-oh-client-ui-subagent/summary:
+  en: 50f267d55833a683
+  zh: 89d6b827576baa8b
+/orochi-network-oh-client-ui-subagent/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-ui-subagent/use-this-package:
+  en: 0ddc705bbeb65086
+  zh: 1d2e1aaebcb2cbdd
+/orochi-network-oh-client-ui-subagent/use-this-package/browsing-the-tree:
+  en: 3508631091820123
+  zh: ec7da9e5bedb22ba
+/orochi-network-oh-client-ui-subagent/use-this-package/continuing-a-conversation:
+  en: 876e7152c8b9c4a6
+  zh: f89f5e2a812e8451
+/orochi-network-oh-client-ui-subagent/use-this-package/the-reference-source:
+  en: 6a5f91b7dfcefafe
+  zh: 2d11441952cfea53
+/orochi-network-oh-client-ui-subagent/understand-the-implementation:
+  en: d2eeeaf065557e78
+  zh: c0f3e9d2ca83d2f3
+/orochi-network-oh-client-ui-subagent/understand-the-implementation/catalog-derivation:
+  en: 5e1c83ef8eb26c52
+  zh: f5be8f1e78c74859
+/orochi-network-oh-client-ui-subagent/understand-the-implementation/duration-completion-and-tokens:
+  en: b817e9907392f59c
+  zh: e42feb97d572a989
+/orochi-network-oh-client-ui-subagent/understand-the-implementation/composer-election:
+  en: 1c15af4dd7c0b791
+  zh: f789737ab4dd8cb2
+/orochi-network-oh-client-ui-subagent/further-exploration:
+  en: 4f74c04930e373f1
+  zh: 463c595de640849b
+/orochi-network-oh-client-ui-subagent/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-client-ui-subagent/model-experience/subagent-label-text-in-the-user-prompt:
+  en: 7207881f1c032278
+  zh: 911d6e8b319da21a
+/orochi-network-oh-client-ui-subagent/model-experience/subagent-label-text-in-the-user-prompt/what-the-model-sees:
+  en: 5688696ee061a0e1
+  zh: 7199ef8cb8697960
+/orochi-network-oh-client-ui-subagent/model-experience/subagent-label-text-in-the-user-prompt/token-effect:
+  en: bf3c483598710d54
+  zh: 32742fbb880db1b2
+/orochi-network-oh-client-ui-subagent/model-experience/subagent-label-text-in-the-user-prompt/kv-cache-effect:
+  en: de2762a99572475f
+  zh: 9b41107ad14ebf8a
+/orochi-network-oh-client-ui-subagent/known-limitations-and-deferred-work:
+  en: ee310ff3cd487639
+  zh: 23793aa1c28a23af
+/orochi-network-oh-client-ui-subagent/known-limitations-and-deferred-work/dev-note:
+  en: 3dd148cecbb1a4df
+  zh: 626cc5ed9f65c72a

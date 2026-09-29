@@ -1,0 +1,55 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/boot/plugin-manager/README.md
+/:
+  en: 65283627208ef4c9
+  zh: aa3f833ec24bb65a
+/orochi-network-oh-plugin-manager:
+  en: 1e0cdb7ed113eca4
+  zh: 7717c599066c8c3d
+/orochi-network-oh-plugin-manager/summary:
+  en: d6afcaa1594efcdb
+  zh: 459cb6ac0dcb2d46
+/orochi-network-oh-plugin-manager/table-of-contents:
+  en: 87679c51aa3693f5
+  zh: 11684a48a5806afb
+/orochi-network-oh-plugin-manager/use-this-package:
+  en: 5aa23162b702b5de
+  zh: 3a27b5fe5f4533f0
+/orochi-network-oh-plugin-manager/use-this-package/version-compatibility-and-exemptions:
+  en: 512cd844bedd4bb2
+  zh: 10d8471d5cad9e77
+/orochi-network-oh-plugin-manager/use-this-package/configuration:
+  en: 42c48ab9b9756ba4
+  zh: ba27b204d40c453e
+/orochi-network-oh-plugin-manager/understand-the-implementation:
+  en: 181ffb5ce232e505
+  zh: a131741748d4ef57
+/orochi-network-oh-plugin-manager/further-exploration:
+  en: a1bc07c83a7f48ef
+  zh: 9486c49052c0f01d
+/orochi-network-oh-plugin-manager/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-plugin-manager/model-experience/management-tool:
+  en: 1815ec6ce56c80d4
+  zh: 2d7ac75d3b25eb6b
+/orochi-network-oh-plugin-manager/model-experience/management-tool/what-the-model-sees:
+  en: 13861a62f053b0b7
+  zh: eb4c0202d9e164bc
+/orochi-network-oh-plugin-manager/model-experience/management-tool/token-effect:
+  en: bc70208bd361dbcd
+  zh: bb651d6066066c6c
+/orochi-network-oh-plugin-manager/model-experience/management-tool/kv-cache-effect:
+  en: c29f60be7f3edc1a
+  zh: d9b9388b96ef95cc
+/orochi-network-oh-plugin-manager/known-limitations-and-deferred-work:
+  en: a308de5147f16a82
+  zh: 5fedadac7ffbc14d
+/orochi-network-oh-plugin-manager/known-limitations-and-deferred-work/failure-behavior:
+  en: 1c96d01101af3c88
+  zh: 40bf2dad4085db04
+/orochi-network-oh-plugin-manager/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

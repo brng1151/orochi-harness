@@ -1,0 +1,15 @@
+# Keyless replay layer for the ordinary SDK snapshot composition.
+
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  disabled: true
+
+- insert:
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: deepseek-v4-flash

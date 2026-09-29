@@ -1,0 +1,66 @@
+{
+  "name": "@orochi-network/oh-client-ui-layout",
+  "description": "Shell plugin: three-column AppFrame with drag handles, ctx.layout viewing-state service (navigation + panels)",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/client/ui-layout"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "oh": {
+    "client": {
+      "inject": [
+        "@orochi-network/oh-client-locale",
+        "@orochi-network/oh-client-ui-renderer",
+        "@orochi-network/oh-client-ui-session",
+        "@orochi-network/oh-client-ui-theme",
+        "@orochi-network/oh-client-shortcuts"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/oh-brand": "workspace:*",
+    "@orochi-network/oh-client-locale": "workspace:*",
+    "@orochi-network/oh-client-store": "workspace:*",
+    "@orochi-network/oh-client-ui-renderer": "workspace:*",
+    "@orochi-network/oh-client-ui-session": "workspace:*",
+    "@orochi-network/oh-client-ui-slots": "workspace:*",
+    "@orochi-network/oh-client-ui-theme": "workspace:*",
+    "@types/react": "~18.3.1",
+    "@orochi-network/cordis": "workspace:~",
+    "react": "^18.2.0",
+    "@orochi-network/oh-client-shortcuts": "workspace:*"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts"
+  ]
+}

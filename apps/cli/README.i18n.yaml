@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write apps/cli/README.md
+/orochi-network-oh:
+  en: 4a5f57f76f538e4b
+  zh: 983c5e5125f8e2aa
+/orochi-network-oh/entry-modes:
+  en: b8c74c6a417c0d82
+  zh: cfb8424f88b3f96a
+/orochi-network-oh/app-arguments:
+  en: 0a52868ac23cd1a5
+  zh: e8c197264e577e49
+/orochi-network-oh/profiles:
+  en: b4f9486806e9fa2d
+  zh: 2eda7f4b8a64c41e
+/orochi-network-oh/optional-overlays:
+  en: 2dede5ad7e82d473
+  zh: 3b694c08fb2d2eef
+/orochi-network-oh/development:
+  en: 3c60b5fb3869288b
+  zh: a14fb5b4cac41898

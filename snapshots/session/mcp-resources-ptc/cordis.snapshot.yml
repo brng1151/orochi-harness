@@ -1,0 +1,33 @@
+- id: llm-orochi
+  disabled: true
+
+- insert:
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: deepseek-v4-flash
+                contextWindow: 1000000
+                defaultMaxTokens: 256000
+                reasoningEfforts: [off, low, high, max]
+                defaultReasoningEffort: max
+
+- insert:
+    - id: mcp-resource-catalog
+      name: '@orochi-network/oh-mcp-client'
+      config:
+        transport: stdio
+        serverName: catalog
+        command: !!js process.execPath
+        args: !!js '[process.env.OH_MCP_RESOURCES_FIXTURE]'
+        failOnStartupError: true
+        reconnect:
+          enabled: false
+
+- id: tools
+  name: '@orochi-network/oh-tools'
+  config:
+    mode: ptc

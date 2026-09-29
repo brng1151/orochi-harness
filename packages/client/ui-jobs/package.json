@@ -1,0 +1,67 @@
+{
+  "name": "@orochi-network/oh-client-ui-jobs",
+  "description": "Session-header background-job list with on-demand streaming record panels",
+  "version": "0.1.7-rc.2",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/client/ui-jobs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-api-job-controller": "workspace:*",
+    "@orochi-network/oh-client-locale": "workspace:*",
+    "@orochi-network/oh-client-test-runtime": "workspace:*",
+    "@orochi-network/oh-client-ui-conversation": "workspace:*",
+    "@orochi-network/oh-client-ui-primitives": "workspace:*",
+    "@orochi-network/oh-client-ui-renderer": "workspace:*",
+    "@orochi-network/oh-client-ui-session": "workspace:*",
+    "@orochi-network/oh-client-ui-slots": "workspace:*",
+    "@orochi-network/oh-jobs": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@types/react": "~18.3.1",
+    "react": "^18.2.0"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "oh": {
+    "client": {
+      "inject": [
+        "@orochi-network/oh-api-job-controller",
+        "@orochi-network/oh-client-locale",
+        "@orochi-network/oh-client-ui-conversation",
+        "@orochi-network/oh-client-ui-primitives"
+      ],
+      "platform": "web"
+    }
+  }
+}

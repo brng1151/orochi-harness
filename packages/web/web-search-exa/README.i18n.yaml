@@ -1,0 +1,61 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/web/web-search-exa/README.md
+/:
+  en: 4b8ba0a939fdf9d4
+  zh: 8b8ddab7cef0f022
+/orochi-network-oh-web-search-exa:
+  en: 4c64a72005c9266f
+  zh: 212e6e35c38b9acd
+/orochi-network-oh-web-search-exa/summary:
+  en: 6d9b216654c901aa
+  zh: e102b7f865b8cad1
+/orochi-network-oh-web-search-exa/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-web-search-exa/use-this-package:
+  en: 44ecd69ae3a9e8d3
+  zh: b5f26aa1580f90fc
+/orochi-network-oh-web-search-exa/use-this-package/when-to-choose-it:
+  en: d33f61122c271792
+  zh: e097094e69b3f425
+/orochi-network-oh-web-search-exa/use-this-package/minimal-configuration:
+  en: 5dfe6effaee70f99
+  zh: 61199c0a02e3b943
+/orochi-network-oh-web-search-exa/use-this-package/what-a-search-returns:
+  en: 72c9eb8a1563bfd6
+  zh: 26f7069376a74090
+/orochi-network-oh-web-search-exa/use-this-package/failures-and-recovery:
+  en: 5740595fa2cebf20
+  zh: 7316e46e09d8ad9f
+/orochi-network-oh-web-search-exa/understand-the-implementation:
+  en: 9842c69ad3636bb3
+  zh: 3cdc3f816cbdd0cb
+/orochi-network-oh-web-search-exa/understand-the-implementation/design-philosophy:
+  en: 341f17a367eca5b0
+  zh: ca3a4e4b4956892d
+/orochi-network-oh-web-search-exa/understand-the-implementation/source-map:
+  en: 58dfdd4423914f34
+  zh: 82c95e00bbb88028
+/orochi-network-oh-web-search-exa/understand-the-implementation/request-and-mapping-flow:
+  en: 1fe92c2ad0408273
+  zh: cc8c573e0accc8dc
+/orochi-network-oh-web-search-exa/further-exploration:
+  en: 3a0319f3ce1f8665
+  zh: a700e478ba951d84
+/orochi-network-oh-web-search-exa/model-experience:
+  en: 59cb386f70a00e29
+  zh: 368626115e74b56d
+/orochi-network-oh-web-search-exa/model-experience/kv-cache-effect:
+  en: 40294c1c31b74824
+  zh: d75d48f485447a74
+/orochi-network-oh-web-search-exa/known-limitations-and-deferred-work:
+  en: 5aaccc98f48da5d1
+  zh: 6f7e73a6e8400296
+/orochi-network-oh-web-search-exa/known-limitations-and-deferred-work/dev-note:
+  en: 7f775cc79dbce94b
+  zh: 12b8f68f9e7c48ca
+/orochi-network-oh-web-search-exa/known-limitations-and-deferred-work/dev-note/future-wider-exa-control-surface:
+  en: 7a6c72d34be40225
+  zh: b525946646a9f856

@@ -1,0 +1,33 @@
+# Agent Note: 权威反馈日志与请求投递
+
+Status: implemented
+
+[English](2026-09-05-canonical-feedback-log.md) | 中文
+
+## 问题
+
+可编辑的消息评分需要一个能由 Session 导出与请求投递保留的持久权威来源。独立的反馈存储会让这些消费方拿到不完整的数据，并引入与目标消息之间的第二套提交关系。记录人类判断不能改变模型输入，也不能暗示采集端已经接受数据。
+
+## 决策
+
+权威 Session 日志拥有反馈。Session 级备注使用 `feedback/record`；消息的实质编辑与删除使用 `feedback/message-put` 和 `feedback/message-delete`。三者都仅写日志。服务从与请求的 `sessionId` 匹配的事件中归约当前条目，因此继承的父级事件不会成为 fork 的当前反馈。删除会移除当前条目，但不会抹除日志中早先的评分或备注。
+
+live 消息反馈变更通过所属 Session 追加，并等待其持久化检查点；cold 变更在读取、比较、追加和 flush 期间持有持久化写句柄，不创建 Session 或 Agent。匹配版本的无变更操作不追加事件，但仍等待持久化。故障会原样传播，live flush 失败可能留下可观测的内存条目以供重试。逐条版本避免不同消息的编辑互相冲突；严格拒绝陈旧写入避免 ABA 覆盖，即使期望值已经匹配也不例外。目标校验把判断绑定到已发送的 assistant 消息，fork 保持独立判断。这些选择保留[已归档伴随记录决策](../../archived/architecture/2026-08-10-message-feedback-sidecar.md)记载的理由，但其存储与提交机制已被取代。
+
+没有独立的 `oh_feedback` 上传器、反馈触发的 LLM 请求或模型输入字段；[上报路径删除决策](../simplification/2026-09-28-remove-session-data-reporting-paths.zh.md)终结了把反馈送出本机的两条路径：默认开启的 `oh_session_log` 后缀，以及[已归档的显式反馈 OTel 上传](../../archived/architecture/2026-09-05-nonofficial-feedback-otel.md)。
+
+命令确认记录并标识 Session。其追加仍不执行 flush。这取代[已归档共享披露记录](../../archived/feature/2026-08-07-feedback-acknowledgement-sharing-disclosure.md)中的命令文案决策；该记录描述的匿名用户 id 与遥测策略披露已被同一次删除移除。
+
+## 考虑过的替代方案
+
+**保留伴随记录。** 它支持破坏性的本地编辑，但若不增加关联读取及持久化关系，就无法让反馈参与普通权威日志导出与投递。
+
+**对消息编辑复用 `feedback/record`。** 自由文本的 Session 备注不能标识条目变更。独立事件保留消息身份和删除语义；上传策略仍由消费方负责。
+
+**增加专用反馈上传器或立即发起 LLM 请求。** 当时默认开启的日志贡献在符合条件的请求上传送权威事件，OTel 流水线独立处理所有提供方的显式反馈上传，因此两者都不需要自定义上传器或另一个模型请求。
+
+## 后果
+
+反馈随普通日志导出与回放保留，不消耗模型输入 token，也不改变 KV Cache。删除当前条目不等于抹除历史。反馈保存在权威日志中：没有请求后缀，也没有遥测批次携带它。Web 控制器仍消费一元 Remote，不消费反馈日志事件来更新其他标签页。
+
+[消息反馈测试](../../../../packages/feedback/message-feedback/tests/message-feedback.spec.ts)覆盖实质事件、无变更操作、严格版本、fork 隔离与持久化故障。[命令测试](../../../../packages/feedback/command-feedback/tests/command-feedback.spec.ts)固定纯确认文本。

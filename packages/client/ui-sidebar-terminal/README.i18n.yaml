@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-sidebar-terminal/README.md
+/:
+  en: cbb34e66a0b2a790
+  zh: 51f560b10b0a10cd
+/orochi-network-oh-client-ui-sidebar-terminal:
+  en: ec35b027be4c4ab2
+  zh: 4088a8c0444739f3
+/orochi-network-oh-client-ui-sidebar-terminal/summary:
+  en: 49d669120f20c618
+  zh: 290df00c1312d5f2
+/orochi-network-oh-client-ui-sidebar-terminal/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 1fa9a72d1ee045cc
+/orochi-network-oh-client-ui-sidebar-terminal/use-this-package:
+  en: 681195983d60cc7f
+  zh: 9521715ef1da3d6d
+/orochi-network-oh-client-ui-sidebar-terminal/understand-the-implementation:
+  en: 08d672849e6f22a7
+  zh: f9e8ef89f5e8aec8
+/orochi-network-oh-client-ui-sidebar-terminal/further-exploration:
+  en: 6a51dfa8bfef98a6
+  zh: 84721c3a086e2526
+/orochi-network-oh-client-ui-sidebar-terminal/model-experience:
+  en: 2c52eec781441d2a
+  zh: 35a7c88f180f74a1
+/orochi-network-oh-client-ui-sidebar-terminal/model-experience/kv-cache-effect:
+  en: 507d3b3b80596fdc
+  zh: 4659007c4671afdc
+/orochi-network-oh-client-ui-sidebar-terminal/known-limitations-and-deferred-work:
+  en: 53d0b4b028b69a33
+  zh: c7adf9e9c9ede59c
+/orochi-network-oh-client-ui-sidebar-terminal/known-limitations-and-deferred-work/dev-note:
+  en: 2acda84e5b9a3ce2
+  zh: f86e92da1c66ffff

@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for adding-a-remote-api.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/cookbook/adding-a-remote-api.md
+/cookbook-adding-a-remote-api:
+  en: 1f9395062e8c8ef6
+  zh: 498f8478ebcec4cd
+/cookbook-adding-a-remote-api/1-declare-the-api:
+  en: 59e2a48bf15a8789
+  zh: 4c5e469e718a7da1
+/cookbook-adding-a-remote-api/2-declare-the-failures:
+  en: 3aa20654ba3614c3
+  zh: 2cbd16f813d66f46
+/cookbook-adding-a-remote-api/3-register-it-on-the-package:
+  en: 080a908789d4c45c
+  zh: e0e81f0c5beff55e
+/cookbook-adding-a-remote-api/4-consume-it-on-the-client:
+  en: e731407eac4052b8
+  zh: 7524dadfc4383db4
+/cookbook-adding-a-remote-api/5-test-it:
+  en: df8d3376c64731e9
+  zh: 1cc0585f246f5b86
+/cookbook-adding-a-remote-api/verify:
+  en: b4828707619bfb8d
+  zh: 07603685eed82240

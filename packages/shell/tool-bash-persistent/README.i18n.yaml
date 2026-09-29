@@ -1,0 +1,79 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/shell/tool-bash-persistent/README.md
+/:
+  en: 1516a333e77ca54a
+  zh: 53ef80da9cefd884
+/orochi-network-oh-tool-bash-persistent:
+  en: e8396c699c4cb3e6
+  zh: 417e758a87bb8322
+/orochi-network-oh-tool-bash-persistent/summary:
+  en: bf643fabf2a11adb
+  zh: 85f8b76952b62d55
+/orochi-network-oh-tool-bash-persistent/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-tool-bash-persistent/use-this-package:
+  en: ddec7cc1004498f8
+  zh: cd0cba22e570d1e9
+/orochi-network-oh-tool-bash-persistent/use-this-package/when-to-choose-it:
+  en: a8378f5d6ece828e
+  zh: cf00e196b1b89c6b
+/orochi-network-oh-tool-bash-persistent/use-this-package/minimal-configuration:
+  en: 0bb906779168978b
+  zh: 3b01b801191e08ef
+/orochi-network-oh-tool-bash-persistent/use-this-package/what-the-agent-can-rely-on:
+  en: b398f124ea7b77b0
+  zh: 50855e601e6c1b88
+/orochi-network-oh-tool-bash-persistent/use-this-package/what-can-go-wrong:
+  en: 2713550ebdb02f69
+  zh: 52ed398dc541d1fc
+/orochi-network-oh-tool-bash-persistent/understand-the-implementation:
+  en: 8d94a7381bca3fa9
+  zh: f4bd2866fff6fa8d
+/orochi-network-oh-tool-bash-persistent/understand-the-implementation/design-philosophy:
+  en: 61c39f52982612e3
+  zh: 92bc7e3c8d13a211
+/orochi-network-oh-tool-bash-persistent/understand-the-implementation/source-map:
+  en: 8dc5a2fb04ac01a2
+  zh: ad7822d2f49fafce
+/orochi-network-oh-tool-bash-persistent/understand-the-implementation/command-flow:
+  en: 3b7bf7c20b266c31
+  zh: 85a325ef65fa7ac7
+/orochi-network-oh-tool-bash-persistent/further-exploration:
+  en: 16b506f396a65b87
+  zh: a3b43883d95dd626
+/orochi-network-oh-tool-bash-persistent/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-tool-bash-persistent/model-experience/tool-schema:
+  en: e4c7376d4f29dbd5
+  zh: 6b7a9eaf69c9ea53
+/orochi-network-oh-tool-bash-persistent/model-experience/tool-schema/what-the-model-sees:
+  en: a9028c48cf96fe4e
+  zh: 25efb709d6a04c5c
+/orochi-network-oh-tool-bash-persistent/model-experience/tool-schema/token-effect:
+  en: feee7dec91ae7329
+  zh: b62338fa72ad3b87
+/orochi-network-oh-tool-bash-persistent/model-experience/tool-schema/kv-cache-effect:
+  en: 7d9323583a83cb95
+  zh: cc5daa6bce8450f8
+/orochi-network-oh-tool-bash-persistent/model-experience/tool-results:
+  en: beaabb79f229692a
+  zh: 8573891441963be4
+/orochi-network-oh-tool-bash-persistent/model-experience/tool-results/what-the-model-sees:
+  en: 7c197e9bb86cc044
+  zh: d8ffe918aab08250
+/orochi-network-oh-tool-bash-persistent/model-experience/tool-results/token-effect:
+  en: 5dea04ce6a30ad48
+  zh: c2434253dc517d3d
+/orochi-network-oh-tool-bash-persistent/model-experience/tool-results/kv-cache-effect:
+  en: ba6a48888c3361e5
+  zh: 3a8f648053555dc9
+/orochi-network-oh-tool-bash-persistent/known-limitations-and-deferred-work:
+  en: dc5a908f2b2da040
+  zh: 3afceaabcf324771
+/orochi-network-oh-tool-bash-persistent/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

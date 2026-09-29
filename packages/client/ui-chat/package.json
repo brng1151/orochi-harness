@@ -1,0 +1,105 @@
+{
+  "name": "@orochi-network/oh-client-ui-chat",
+  "description": "Chat Conversation target, node definitions, renderers, and details surface",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/client/ui-chat"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "oh": {
+    "client": {
+      "inject": [
+        "@orochi-network/oh-api-session-controller",
+        "@orochi-network/oh-api-workspace-controller",
+        "@orochi-network/oh-client-locale",
+        "@orochi-network/oh-client-ui-conversation",
+        "@orochi-network/oh-client-ui-input-trigger",
+        "@orochi-network/oh-client-ui-layout",
+        "@orochi-network/oh-client-ui-renderer",
+        "@orochi-network/oh-client-ui-session",
+        "@orochi-network/oh-client-ui-settings",
+        "@orochi-network/oh-client-ui-sidebar-right",
+        "@orochi-network/oh-client-ui-workspace"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-api-remotes": "workspace:*",
+    "@orochi-network/oh-api-session-controller": "workspace:*",
+    "@orochi-network/oh-api-workspace-controller": "workspace:*",
+    "@orochi-network/oh-api-workspace-files": "workspace:*",
+    "@orochi-network/oh-attachment": "workspace:*",
+    "@orochi-network/oh-brand": "workspace:*",
+    "@orochi-network/oh-client-locale": "workspace:*",
+    "@orochi-network/oh-client-store": "workspace:*",
+    "@orochi-network/oh-client-ui-approval": "workspace:*",
+    "@orochi-network/oh-client-ui-conversation": "workspace:*",
+    "@orochi-network/oh-client-ui-input-trigger": "workspace:*",
+    "@orochi-network/oh-client-ui-layout": "workspace:*",
+    "@orochi-network/oh-client-ui-primitives": "workspace:*",
+    "@orochi-network/oh-client-ui-renderer": "workspace:*",
+    "@orochi-network/oh-client-ui-session": "workspace:*",
+    "@orochi-network/oh-client-ui-settings": "workspace:*",
+    "@orochi-network/oh-client-ui-sidebar-browser": "workspace:*",
+    "@orochi-network/oh-client-ui-sidebar-documentpreview": "workspace:*",
+    "@orochi-network/oh-client-ui-sidebar-right": "workspace:*",
+    "@orochi-network/oh-client-ui-slots": "workspace:*",
+    "@orochi-network/oh-client-ui-workspace": "workspace:*",
+    "@orochi-network/oh-commands": "workspace:*",
+    "@orochi-network/oh-compaction": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-llm-retry": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-session-stats": "workspace:*",
+    "@orochi-network/oh-session-turn-outline": "workspace:*",
+    "@orochi-network/oh-subagent": "workspace:*",
+    "@orochi-network/oh-token-meter": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*",
+    "@orochi-network/oh-util-workspace-path": "workspace:*",
+    "@orochi-network/oh-util-values": "workspace:*",
+    "@tanstack/react-virtual": "^3.14.9",
+    "@types/react": "~18.3.1",
+    "@types/react-dom": "~18.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@orochi-network/oh-settings": "workspace:*"
+  },
+  "dependencies": {
+    "@orochi-network/schemastery": "workspace:~"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts"
+  ]
+}

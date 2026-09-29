@@ -1,0 +1,64 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/llm/llm/README.md
+/:
+  en: 860509fb08c860f4
+  zh: b2c4448e8afc1f12
+/orochi-network-oh-llm:
+  en: b8d45d9524adc45f
+  zh: 06061bc6298934b1
+/orochi-network-oh-llm/summary:
+  en: df4e5ce2d66c9135
+  zh: 4f566e3f39b2b369
+/orochi-network-oh-llm/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-llm/use-this-package:
+  en: 33738e61ce410ac0
+  zh: 363760460f4d4bed
+/orochi-network-oh-llm/use-this-package/when-to-choose-it:
+  en: d29f1423c5329105
+  zh: aa8f2398fba907b9
+/orochi-network-oh-llm/use-this-package/minimal-composition:
+  en: 7550d716b90fcb09
+  zh: 77891a44ee623c7a
+/orochi-network-oh-llm/use-this-package/what-you-can-do:
+  en: b45d7a414141734e
+  zh: a641c8ea3827cee6
+/orochi-network-oh-llm/use-this-package/failures-and-recovery:
+  en: 5189b5841876fe0e
+  zh: 82d4115c824ed9db
+/orochi-network-oh-llm/understand-the-implementation:
+  en: 9630d7e26193a512
+  zh: 94222c2a487c4b8c
+/orochi-network-oh-llm/understand-the-implementation/design-philosophy:
+  en: 12d0444c18a397c7
+  zh: 9d4a5468b4bb7fcd
+/orochi-network-oh-llm/understand-the-implementation/source-map:
+  en: ae1618577f4e8364
+  zh: a6e8ab1563c08dfb
+/orochi-network-oh-llm/understand-the-implementation/main-flow:
+  en: 66f7941c730750e5
+  zh: d36af6a813ffe6a6
+/orochi-network-oh-llm/understand-the-implementation/invariants:
+  en: 0163a050239248e5
+  zh: 885c95bedcbe2ff4
+/orochi-network-oh-llm/further-exploration:
+  en: e8a239d55683cf36
+  zh: 1ae8654a335cfcbe
+/orochi-network-oh-llm/model-experience:
+  en: fa5677003ad6bc0a
+  zh: ba33cfc860d9c37c
+/orochi-network-oh-llm/model-experience/kv-cache-effect:
+  en: a81634136baef72f
+  zh: b92dda883986b0e1
+/orochi-network-oh-llm/known-limitations-and-deferred-work:
+  en: 0d859c1db5218de8
+  zh: 50bd0ac7bfcc5173
+/orochi-network-oh-llm/known-limitations-and-deferred-work/dev-note:
+  en: ecbc333b88e14d88
+  zh: 77c725d92efd8646
+/orochi-network-oh-llm/known-limitations-and-deferred-work/dev-note/open-items:
+  en: 99b682e099b4a861
+  zh: b5b46c853b50e227

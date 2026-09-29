@@ -1,0 +1,60 @@
+# SDK-profile patch for a deterministic parent model that selects a route for
+# a separate SDK child runtime. Both runtimes persist their request headers.
+
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  disabled: true
+
+- id: tool-subagent
+  name: '@orochi-network/oh-tool-subagent'
+  disabled: true
+
+- id: sdk-jsonrpc-server
+  name: '@orochi-network/oh-sdk-jsonrpc-server'
+  disabled: true
+
+- id: session-persistence-jsonl
+  name: '@orochi-network/oh-session-persistence-jsonl'
+  config:
+    root: !!js ohHomePath('sessions')
+    compression: none
+
+- insert:
+    - id: mock-llm
+      name: '../../../packages/subagent/subagent-oh-sdk/tests/fixtures/loader/mock-delegating-llm.ts'
+      disabled: !!js process.env.OH_SNAPSHOT !== 'record'
+
+    - id: subagent-oh-sdk
+      name: '@orochi-network/oh-subagent-oh-sdk'
+      config:
+        profile: sdk
+        patches: !!js JSON.parse(process.env.OH_TEST_CHILD_PATCHES ?? '[]')
+        ohHome: !!js process.env.OH_TEST_CHILD_HOME
+        provider: mock
+        model: mock-routed
+        env:
+
+    - id: subagent-model-selection-settings
+      name: '@orochi-network/oh-tool-subagent/model-selection-settings'
+      config:
+        enabled: true
+        allowedModels:
+          - provider: mock
+            model: mock-routed
+
+    - id: tool-subagent-oh-sdk
+      name: '../../../packages/subagent/subagent-oh-sdk/tests/fixtures/loader/scoped-tool-subagent.ts'
+      config:
+        provider: oh-sdk
+        toolName: subagent
+        enableRunInBackground: false
+        agentOptions:
+          maxTokens: 777
+        maxDepth: 'provider-managed'
+
+    - id: sdk-jsonrpc-server-dynamic-live
+      name: '@orochi-network/oh-sdk-jsonrpc-server'
+      inject: [sdkAppStartup, loader]
+      disabled: !!js process.env.OH_SNAPSHOT !== 'record'
+      config:
+        maxTokensAsSuccess: true

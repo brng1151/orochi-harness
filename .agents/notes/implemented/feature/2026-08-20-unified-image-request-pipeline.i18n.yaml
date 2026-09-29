@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for 2026-08-20-unified-image-request-pipeline.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-20-unified-image-request-pipeline.md
+/agent-note-unified-normalized-attachments-request-versions-and-provider-files:
+  en: 55468b81b976ca1f
+  zh: d3d96c6aebeef0be
+/agent-note-unified-normalized-attachments-request-versions-and-provider-files/problem:
+  en: 707dcd93f224f366
+  zh: ad46e9b14a060bea
+/agent-note-unified-normalized-attachments-request-versions-and-provider-files/decision:
+  en: 98e7aad889f5b79c
+  zh: 84b24f6fd9209fcf
+/agent-note-unified-normalized-attachments-request-versions-and-provider-files/decision/provider-independent-normalized-attachment:
+  en: 771d1c735af3cb49
+  zh: 3d197dafa31b2772
+/agent-note-unified-normalized-attachments-request-versions-and-provider-files/decision/deterministic-request-versions:
+  en: 88cabe533de9d878
+  zh: 26d09829dd40d4cc
+/agent-note-unified-normalized-attachments-request-versions-and-provider-files/decision/stable-handles:
+  en: 1b204c138b0d8e6c
+  zh: 3d6a2e82372e6825
+/agent-note-unified-normalized-attachments-request-versions-and-provider-files/decision/orochi-files-lifecycle:
+  en: e572e69a2737a658
+  zh: 7af0854e50b3e94b
+/agent-note-unified-normalized-attachments-request-versions-and-provider-files/decision/diagnostics:
+  en: 19ec759c7819b6f3
+  zh: 50125b940176c6e6
+/agent-note-unified-normalized-attachments-request-versions-and-provider-files/alternatives-considered:
+  en: 3e135b7c0ce3fc6e
+  zh: 4cdb390049feb49a
+/agent-note-unified-normalized-attachments-request-versions-and-provider-files/verification:
+  en: c3b62357bfab9e27
+  zh: 65d2363678725c32
+/agent-note-unified-normalized-attachments-request-versions-and-provider-files/consequences:
+  en: 46b240f72bf40227
+  zh: f166a5a41552fe06

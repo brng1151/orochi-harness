@@ -1,0 +1,99 @@
+{
+  "name": "@orochi-network/oh-api-remotes",
+  "description": "Remote BFF assembly for application-selected Host capabilities",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/api/remotes"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./types": {
+      "types": "./lib/types/types.d.ts",
+      "default": "./lib/types/types.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "oh": {
+    "client": {
+      "inject": [
+        "@orochi-network/oh-api-gateway"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "dependencies": {
+    "@orochi-network/oh-deque": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-util-values": "workspace:*"
+  },
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-scope": "workspace:*"
+  },
+  "devDependencies": {
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-agent-preset-registry": "workspace:*",
+    "@orochi-network/oh-api-gateway": "workspace:*",
+    "@orochi-network/oh-api-job-controller": "workspace:*",
+    "@orochi-network/oh-api-session-controller": "workspace:*",
+    "@orochi-network/oh-api-settings-controller": "workspace:*",
+    "@orochi-network/oh-api-workspace-controller": "workspace:*",
+    "@orochi-network/oh-api-workspace-files": "workspace:*",
+    "@orochi-network/oh-client-connection": "workspace:*",
+    "@orochi-network/oh-client-file-upload": "workspace:*",
+    "@orochi-network/oh-commands": "workspace:*",
+    "@orochi-network/oh-cordis-host-runner": "workspace:*",
+    "@orochi-network/oh-credentials": "workspace:*",
+    "@orochi-network/oh-file-reference": "workspace:*",
+    "@orochi-network/oh-goal": "workspace:*",
+    "@orochi-network/oh-host-plugin-inventory": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-message-feedback": "workspace:*",
+    "@orochi-network/oh-permission-presets": "workspace:*",
+    "@orochi-network/oh-schedule": "workspace:*",
+    "@orochi-network/oh-scope": "workspace:*",
+    "@orochi-network/oh-session-reference": "workspace:*",
+    "@orochi-network/oh-settings": "workspace:*",
+    "@orochi-network/oh-subagent": "workspace:*",
+    "@orochi-network/oh-typert-protocol": "workspace:*",
+    "@orochi-network/oh-user-approval": "workspace:*",
+    "@orochi-network/oh-user-questions": "workspace:*",
+    "@orochi-network/cordis": "workspace:~",
+    "zod": "^4.4.3",
+    "@orochi-network/oh-command-feedback": "workspace:*",
+    "@orochi-network/oh-api-terminal-controller": "workspace:*",
+    "@orochi-network/oh-plugin-manager": "workspace:*",
+    "@orochi-network/oh-client-ui-plugin-manager": "workspace:*",
+    "@orochi-network/oh-office-to-pdf": "workspace:*",
+    "@orochi-network/oh-api-account-controller": "workspace:*",
+    "@orochi-network/oh-orochi-account": "workspace:*"
+  }
+}

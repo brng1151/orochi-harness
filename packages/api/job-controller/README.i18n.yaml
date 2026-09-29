@@ -1,0 +1,34 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/api/job-controller/README.md
+/:
+  en: f93b976ffb43210a
+  zh: a2959c2d0cee4154
+/job-controller:
+  en: 903dfe8849201104
+  zh: 61b3d8ba6ac409ca
+/job-controller/summary:
+  en: c1f0239e6e9f12a5
+  zh: 820e9133113846eb
+/job-controller/table-of-contents:
+  en: 4e53164159b5ce41
+  zh: 89582dc0294d0776
+/job-controller/use-this-package:
+  en: db99f974624887ff
+  zh: bcfad4a0d2559b60
+/job-controller/use-this-package/config:
+  en: 0ad8bb6626d60ea3
+  zh: 4812ab4183d67a3e
+/job-controller/model-experience:
+  en: 2a9c4fd2a37189c6
+  zh: 9c014f40850b4d3e
+/job-controller/model-experience/kv-cache-effect:
+  en: e71bac9439326121
+  zh: 9f1a50f452658818
+/job-controller/known-limitations-and-deferred-work:
+  en: c0f98753f7ba6b9b
+  zh: 4022148512051bfe
+/job-controller/known-limitations-and-deferred-work/dev-note:
+  en: ac802441bca0c356
+  zh: 8719e3ddfe71d948

@@ -1,0 +1,55 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/util/http-proxy/README.md
+/:
+  en: 117b4d191f773a9c
+  zh: 0b9e150f6cd23b04
+/orochi-network-oh-http-proxy:
+  en: 006d6911ae849b44
+  zh: f4d25299556f1d7e
+/orochi-network-oh-http-proxy/summary:
+  en: c3b1b32ab36f5f97
+  zh: 143b744ab361f0d4
+/orochi-network-oh-http-proxy/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-http-proxy/use-this-package:
+  en: bd52f6d211e60319
+  zh: 8246a90ea872dcba
+/orochi-network-oh-http-proxy/use-this-package/writing-a-new-outbound-call:
+  en: 04d593129c65f21d
+  zh: 7bd77c77149270e5
+/orochi-network-oh-http-proxy/use-this-package/what-the-policy-reads:
+  en: 897fabbec889c7ea
+  zh: 2e0c5c0ba7df560f
+/orochi-network-oh-http-proxy/use-this-package/failures:
+  en: 4248bc9a662680ed
+  zh: 4150ade9f1aa9287
+/orochi-network-oh-http-proxy/understand-the-implementation:
+  en: ee4615a04fa6503d
+  zh: ee2c5fb2204a43cf
+/orochi-network-oh-http-proxy/understand-the-implementation/design-philosophy:
+  en: 9f6715f41e68e00c
+  zh: 9ccb4da28cfcff87
+/orochi-network-oh-http-proxy/understand-the-implementation/source-map:
+  en: a099f88dd0c7d394
+  zh: 7325b7ea973bce13
+/orochi-network-oh-http-proxy/understand-the-implementation/bypass-matching:
+  en: e9ad6c2e8ee2fc21
+  zh: c10de6995cf594bc
+/orochi-network-oh-http-proxy/further-exploration:
+  en: 2fab336e963253e2
+  zh: 50f81bd4a34e1021
+/orochi-network-oh-http-proxy/model-experience:
+  en: e0af6a1073934d5a
+  zh: d8bf9c77b54ed5ae
+/orochi-network-oh-http-proxy/model-experience/kv-cache-effect:
+  en: 7f12ca92e7722f98
+  zh: 97fa75de6a3f6a3f
+/orochi-network-oh-http-proxy/known-limitations-and-deferred-work:
+  en: 9547acf50a89dbca
+  zh: d9bba027d43062b9
+/orochi-network-oh-http-proxy/known-limitations-and-deferred-work/dev-note:
+  en: e7d8628ccd7e0d36
+  zh: 751da266bfb84bef

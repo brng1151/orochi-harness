@@ -1,0 +1,31 @@
+# Keyless replay counterpart: deterministic HTTP remains real; only the model
+# adapter is replaced by replay.
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  disabled: true
+
+- insert:
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: deepseek-v4-flash
+              - id: deepseek-v4-pro
+
+    - id: web-fetch-fixture
+      name: './web-fetch-fixture-server.mjs'
+
+- id: web
+  name: '@orochi-network/oh-web'
+
+- id: web-fetch-http
+  name: '@orochi-network/oh-web-fetch-http'
+  disabled: true
+
+- id: tool-web
+  name: '@orochi-network/oh-tool-web'
+  config:
+    search: false

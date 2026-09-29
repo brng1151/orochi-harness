@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-14-sidebar-layout-provider-recovery.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-14-sidebar-layout-provider-recovery.md
+/agent-note-sidebar-layout-persistence-and-provider-recovery:
+  en: 39f2bcd5a0ba5508
+  zh: 91cf5250ea46b16a
+/agent-note-sidebar-layout-persistence-and-provider-recovery/problem:
+  en: 8adb7105e89be803
+  zh: 96c4e92e85b6980e
+/agent-note-sidebar-layout-persistence-and-provider-recovery/decision:
+  en: 667dd349fa8453f6
+  zh: 6d2a1173b5113dbd
+/agent-note-sidebar-layout-persistence-and-provider-recovery/alternatives-considered:
+  en: 4a9b1234b0289ae7
+  zh: 81854e0e9d32b6da
+/agent-note-sidebar-layout-persistence-and-provider-recovery/consequences:
+  en: 4b4e2190d9d52509
+  zh: 88c4f9a371e1f274

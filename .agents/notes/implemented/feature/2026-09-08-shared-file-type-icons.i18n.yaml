@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-09-08-shared-file-type-icons.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-09-08-shared-file-type-icons.md
+/agent-note-shared-file-type-icons:
+  en: 4afb95ac304acfed
+  zh: bfb0bd29436775ab
+/agent-note-shared-file-type-icons/problem:
+  en: e7dd7e2ee6e43947
+  zh: 70fdf29c18cc53c3
+/agent-note-shared-file-type-icons/decision:
+  en: a284e04b5c18b5a9
+  zh: 75efe655fdbbac75
+/agent-note-shared-file-type-icons/alternatives-considered:
+  en: 67dc36a02b841541
+  zh: cf262c343957ff69
+/agent-note-shared-file-type-icons/testing:
+  en: 16768b2ea13d16ef
+  zh: e7455e31220bb2e6
+/agent-note-shared-file-type-icons/consequences:
+  en: 44cb4cc04c8af635
+  zh: 0cc2aff9222dece0

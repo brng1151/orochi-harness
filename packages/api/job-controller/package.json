@@ -1,0 +1,86 @@
+{
+  "name": "@orochi-network/oh-api-job-controller",
+  "description": "Job Remote observation stream and the reference-counted client job-output service",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/api/job-controller"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./types": {
+      "types": "./lib/types/types.d.ts",
+      "default": "./lib/types/types.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./typert": {
+      "types": "./lib/typert.host.d.ts",
+      "default": "./lib/typert.host.js"
+    },
+    "./remote": {
+      "types": "./lib/typert.remote-client.d.ts",
+      "default": "./lib/typert.remote-client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "oh": {
+    "client": {
+      "external": [
+        "@orochi-network/oh-api-gateway/client"
+      ],
+      "inject": [
+        "@orochi-network/oh-api-gateway",
+        "@orochi-network/oh-client-connection"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts",
+    "lib/typert.host.js",
+    "lib/typert.host.d.ts",
+    "lib/typert.remote-client.js",
+    "lib/typert.remote-client.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@orochi-network/oh-typert-protocol": "workspace:*",
+    "@orochi-network/schemastery": "workspace:~",
+    "zod": "^4.4.3"
+  },
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-api-gateway": "workspace:*",
+    "@orochi-network/oh-client-connection": "workspace:*",
+    "@orochi-network/oh-client-store": "workspace:*",
+    "@orochi-network/oh-jobs": "workspace:*",
+    "@orochi-network/oh-jobs-local": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-typert-registry": "workspace:*"
+  }
+}

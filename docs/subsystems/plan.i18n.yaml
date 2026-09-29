@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for plan.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/subsystems/plan.md
+/plan-mode:
+  en: a5cacb4011bdab64
+  zh: e0903f28291d766c
+/plan-mode/logged-state-and-recovery:
+  en: 8ebc1c6db6a0b20c
+  zh: fa171e42da50231d
+/plan-mode/pending-selections-and-the-pre-step-append:
+  en: 4a1e6c54c765420f
+  zh: a018f5f103229654
+/plan-mode/configuration:
+  en: a801f2ff7a62e716
+  zh: 0fcf34854185600f
+/plan-mode/the-exit-tool-and-the-plan-command:
+  en: 20c6306c1ca0fd66
+  zh: 4ca0056f956eec34
+/plan-mode/the-service:
+  en: 07c3eec12e0dc75c
+  zh: 183d73f6672e2c5a

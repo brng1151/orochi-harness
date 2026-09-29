@@ -1,0 +1,67 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/guard/timeout-policy/README.md
+/:
+  en: 7020f47046dc8148
+  zh: 191dea4c788f374b
+/orochi-network-oh-tool-call-timeout-policy:
+  en: 1e209a911f857a03
+  zh: 8e60f6b9d5e658c6
+/orochi-network-oh-tool-call-timeout-policy/summary:
+  en: 7a3d006c5ba6c733
+  zh: 78aeefbc43f97ae0
+/orochi-network-oh-tool-call-timeout-policy/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-tool-call-timeout-policy/use-this-package:
+  en: 078ed01de76ce977
+  zh: 63fb0ba3b2305754
+/orochi-network-oh-tool-call-timeout-policy/use-this-package/when-to-choose-it:
+  en: 2c6495054dfaf09c
+  zh: 7f2d65c3202d75f3
+/orochi-network-oh-tool-call-timeout-policy/use-this-package/setting-it-up:
+  en: c499740d418a2df1
+  zh: 354f6670a6e5d125
+/orochi-network-oh-tool-call-timeout-policy/use-this-package/what-you-get:
+  en: 339ff1d6001f3def
+  zh: c3e378abc7c58fa4
+/orochi-network-oh-tool-call-timeout-policy/understand-the-implementation:
+  en: 9bdd0f9388915825
+  zh: c101ec504869d187
+/orochi-network-oh-tool-call-timeout-policy/understand-the-implementation/design-philosophy:
+  en: 1377ccce4334bb86
+  zh: e1add11089774c28
+/orochi-network-oh-tool-call-timeout-policy/understand-the-implementation/how-a-deadline-is-armed-and-mapped:
+  en: 4c2f31d760d5ad4b
+  zh: 42e5c42675c32dcc
+/orochi-network-oh-tool-call-timeout-policy/understand-the-implementation/composing-with-other-wrappers:
+  en: 09fba7333cf511f6
+  zh: 965c60634d370287
+/orochi-network-oh-tool-call-timeout-policy/understand-the-implementation/source-map:
+  en: 35abf9419848ba92
+  zh: 3c08b161064abdcd
+/orochi-network-oh-tool-call-timeout-policy/further-exploration:
+  en: 7acfa747b7472127
+  zh: d4efbcda990f1a08
+/orochi-network-oh-tool-call-timeout-policy/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-tool-call-timeout-policy/model-experience/conditional-tool-result:
+  en: 7877631ca859b191
+  zh: fb6f2aa33f70b82c
+/orochi-network-oh-tool-call-timeout-policy/model-experience/conditional-tool-result/what-the-model-sees:
+  en: 1fd9832261036f56
+  zh: 245b04969f3bc26d
+/orochi-network-oh-tool-call-timeout-policy/model-experience/conditional-tool-result/token-effect:
+  en: 063d0485b8631d04
+  zh: 13c1a680cfa9f02b
+/orochi-network-oh-tool-call-timeout-policy/model-experience/conditional-tool-result/kv-cache-effect:
+  en: 2fbf2175168e8244
+  zh: f681f89596f500f5
+/orochi-network-oh-tool-call-timeout-policy/known-limitations-and-deferred-work:
+  en: 8b51b07b2fc6d1bc
+  zh: f65e3760a6ea5f2f
+/orochi-network-oh-tool-call-timeout-policy/known-limitations-and-deferred-work/dev-note:
+  en: d4bed51085d84ee3
+  zh: 314c3ff237a4f914

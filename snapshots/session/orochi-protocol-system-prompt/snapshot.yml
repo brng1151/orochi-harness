@@ -1,0 +1,11 @@
+version: 1
+scenario: orochi-protocol-system-prompt
+profile: headless
+composition: orochi-protocol-system-prompt
+recording: authored
+header:
+  class: orochi-protocol-system-prompt
+  pin: true
+  promptChanges: 1
+replay:
+  override: true

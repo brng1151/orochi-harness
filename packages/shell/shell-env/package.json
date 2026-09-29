@@ -1,0 +1,48 @@
+{
+  "name": "@orochi-network/oh-shell-env",
+  "description": "Tool-independent managed OH_* shell environment registry",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/shell/shell-env"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-app-boot": "workspace:*",
+    "@orochi-network/oh-home-paths": "workspace:*",
+    "@orochi-network/oh-shell": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*"
+  },
+  "dependencies": {
+    "@orochi-network/schemastery": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-app-boot": "workspace:*",
+    "@orochi-network/oh-home-paths": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-shell": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*"
+  }
+}

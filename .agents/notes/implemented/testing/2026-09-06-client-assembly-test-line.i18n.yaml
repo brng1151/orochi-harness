@@ -1,0 +1,28 @@
+# Bilingual-pair consistency record for 2026-09-06-client-assembly-test-line.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/testing/2026-09-06-client-assembly-test-line.md
+/agent-note-whole-client-test-tier-over-an-endpoint-named-remote-mock:
+  en: 3eb4fe62c0aeb49c
+  zh: 50c6ec908789f622
+/agent-note-whole-client-test-tier-over-an-endpoint-named-remote-mock/problem:
+  en: 33c0c3670dae25c3
+  zh: 4d91a11eea9bbb8f
+/agent-note-whole-client-test-tier-over-an-endpoint-named-remote-mock/decision:
+  en: 274e96d2f86f3ecd
+  zh: d0f4d932a0729d27
+/agent-note-whole-client-test-tier-over-an-endpoint-named-remote-mock/product-exports-added-for-the-tier:
+  en: 98ceecac004d8e37
+  zh: 2c7b528126b67506
+/agent-note-whole-client-test-tier-over-an-endpoint-named-remote-mock/alternatives-considered:
+  en: 2898d540f4bb1ee2
+  zh: a3e2f1ea4cc8154f
+/agent-note-whole-client-test-tier-over-an-endpoint-named-remote-mock/consequences:
+  en: 2041df77d51ebe5c
+  zh: 7ab0c0154b9eeb8a
+/agent-note-whole-client-test-tier-over-an-endpoint-named-remote-mock/deferred:
+  en: 1f18c8a38967698a
+  zh: f6809d290748d9cf
+/agent-note-whole-client-test-tier-over-an-endpoint-named-remote-mock/testing:
+  en: 84fd4b8cc4a4abc8
+  zh: f5d8fcb31a6d103b

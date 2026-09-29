@@ -1,0 +1,40 @@
+# Bilingual-pair consistency record for 2026-08-22-single-dsh-application-launcher.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-08-22-single-dsh-application-launcher.md
+/agent-note-one-oh-launcher-for-application-profiles:
+  en: f2e65ebf90e7885d
+  zh: 1b93113b0a5d59ba
+/agent-note-one-oh-launcher-for-application-profiles/problem:
+  en: b32205b36c7ab748
+  zh: ffbb2ddfbdb5170d
+/agent-note-one-oh-launcher-for-application-profiles/decision:
+  en: a15c7c13f167e5ac
+  zh: a15c7c13f167e5ac
+/agent-note-one-oh-launcher-for-application-profiles/decision/launch-scope:
+  en: 2e45b97a9ede610d
+  zh: 29613c05eef07d00
+/agent-note-one-oh-launcher-for-application-profiles/decision/profile-applications:
+  en: 0e08c921a83e7307
+  zh: ede8d953e5d3693f
+/agent-note-one-oh-launcher-for-application-profiles/decision/typescript-sdk-customization:
+  en: eff0fa7a3cc582b4
+  zh: 477baf8915f9a850
+/agent-note-one-oh-launcher-for-application-profiles/decision/python-runtime:
+  en: 65cb173623e7003c
+  zh: 23f4b118c6308cb3
+/agent-note-one-oh-launcher-for-application-profiles/decision/enforcement:
+  en: 2a28af0b4b9144f1
+  zh: c8ffb89e8ca0e677
+/agent-note-one-oh-launcher-for-application-profiles/existing-decisions-and-supersession:
+  en: 98b375a3a4958d64
+  zh: 32dac8d8c61c99b1
+/agent-note-one-oh-launcher-for-application-profiles/alternatives-considered:
+  en: c6f33ac645817eee
+  zh: 50763de9d6703d81
+/agent-note-one-oh-launcher-for-application-profiles/verification:
+  en: 29d8d7beedd85f5c
+  zh: 552216d58c474b48
+/agent-note-one-oh-launcher-for-application-profiles/consequences:
+  en: bb359698d8cd8e3f
+  zh: 9264d33ee260061e

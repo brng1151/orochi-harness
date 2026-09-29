@@ -1,0 +1,64 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/spill/spill-local/README.md
+/:
+  en: 081da64c1be2d775
+  zh: cd51e86e3c5c49cf
+/orochi-network-oh-spill-local:
+  en: 05a096765c12358f
+  zh: 7c7e48f5d14bdfb2
+/orochi-network-oh-spill-local/summary:
+  en: 4de0d1e054294aca
+  zh: 8d754db5c7b148d3
+/orochi-network-oh-spill-local/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-spill-local/use-this-package:
+  en: 87aa904176d48a1e
+  zh: 88e6cf60a980413e
+/orochi-network-oh-spill-local/use-this-package/minimal-configuration:
+  en: 3f4ca2629f171aad
+  zh: 9aa600303515b1f7
+/orochi-network-oh-spill-local/use-this-package/what-you-get-back:
+  en: c8aca7d0d3fe321e
+  zh: b7f7a168d3ca78e0
+/orochi-network-oh-spill-local/use-this-package/where-files-land:
+  en: 32262a03c40c49df
+  zh: 9a028fff66aed750
+/orochi-network-oh-spill-local/use-this-package/startup-cleanup:
+  en: e65e7b4b166b325e
+  zh: aaa79d15aec589f8
+/orochi-network-oh-spill-local/use-this-package/failures-and-recovery:
+  en: 910bbe363921952d
+  zh: 1c21b9ca1d050a1e
+/orochi-network-oh-spill-local/understand-the-implementation:
+  en: deb655b3b1860576
+  zh: d83d8a3c24a71a16
+/orochi-network-oh-spill-local/understand-the-implementation/design-philosophy:
+  en: 905f7242345308cd
+  zh: 66907177a6dd4b94
+/orochi-network-oh-spill-local/understand-the-implementation/source-map:
+  en: d7746db31950fddb
+  zh: d7e2190e5c821801
+/orochi-network-oh-spill-local/understand-the-implementation/file-naming-and-write:
+  en: cb92a60310c465a8
+  zh: ce474c16abd2df5d
+/orochi-network-oh-spill-local/further-exploration:
+  en: 3fa7cc13df9ef8f4
+  zh: d9b00a1b8c8b7022
+/orochi-network-oh-spill-local/model-experience:
+  en: ae2966f8fc63dc5b
+  zh: 141aa4ebbc52574f
+/orochi-network-oh-spill-local/model-experience/kv-cache-effect:
+  en: 40294c1c31b74824
+  zh: 6b9a967b5b4765e4
+/orochi-network-oh-spill-local/known-limitations-and-deferred-work:
+  en: 363cf4b1b822e043
+  zh: c28e52f67ef21400
+/orochi-network-oh-spill-local/known-limitations-and-deferred-work/dev-note:
+  en: a63e51f03bdb279f
+  zh: 191a48d3bfc4a792
+/orochi-network-oh-spill-local/known-limitations-and-deferred-work/dev-note/future-workspace-confinement-interplay:
+  en: 7cc389241a5b9a4c
+  zh: af4b8e65ed565ec6

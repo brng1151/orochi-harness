@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-03-normalized-unread-fs-tool-diagnostic.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/bug-fix/2026-09-03-normalized-unread-fs-tool-diagnostic.md
+/agent-note-normalized-unread-filesystem-tool-diagnostic:
+  en: 1625541f570e96d9
+  zh: d6277ad2bc4456ad
+/agent-note-normalized-unread-filesystem-tool-diagnostic/problem:
+  en: 4a63b4407ac264b5
+  zh: 50c4cf93b338fdb1
+/agent-note-normalized-unread-filesystem-tool-diagnostic/decision:
+  en: 86c9288ecf71cd87
+  zh: 5affd11651fce4fc
+/agent-note-normalized-unread-filesystem-tool-diagnostic/alternatives-considered:
+  en: fdb0c22a3926c7b0
+  zh: 49a26afe3e7f6ac3
+/agent-note-normalized-unread-filesystem-tool-diagnostic/consequences:
+  en: 20abbdbfa3aa4edc
+  zh: d0555aac68cb7a1f

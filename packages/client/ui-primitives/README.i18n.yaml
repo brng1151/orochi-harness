@@ -1,0 +1,61 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-primitives/README.md
+/:
+  en: 18f77ec078e9ba08
+  zh: 981f27518a2a5c96
+/orochi-network-oh-client-ui-primitives:
+  en: b02b065bc0fe9d17
+  zh: 7dae3f276216b02a
+/orochi-network-oh-client-ui-primitives/summary:
+  en: db534437bb75f01b
+  zh: bca12dc03a82822a
+/orochi-network-oh-client-ui-primitives/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-ui-primitives/use-this-package:
+  en: d71ee00d97e6e370
+  zh: abd665a791616917
+/orochi-network-oh-client-ui-primitives/use-this-package/component-catalog:
+  en: e0d2585b146bc2fc
+  zh: a453d66ed6060518
+/orochi-network-oh-client-ui-primitives/use-this-package/controls-and-icons:
+  en: 69b362714bee9f4c
+  zh: cdc0dc319f1fa41f
+/orochi-network-oh-client-ui-primitives/use-this-package/rendering-agent-output:
+  en: eb63a6df747cd69b
+  zh: 1875571a14fbc1bc
+/orochi-network-oh-client-ui-primitives/use-this-package/localizing-copy:
+  en: 4aef65dea11de083
+  zh: abc22cd7c65cdf38
+/orochi-network-oh-client-ui-primitives/understand-the-implementation:
+  en: d7bdaed8cfeaea0b
+  zh: 43f0601cb9141bfb
+/orochi-network-oh-client-ui-primitives/understand-the-implementation/source-map:
+  en: 44eb32370cbeafe8
+  zh: 728009c66375c6bb
+/orochi-network-oh-client-ui-primitives/understand-the-implementation/input-modality:
+  en: ccc1dfc3c37484ec
+  zh: f6d81aa92a8125cd
+/orochi-network-oh-client-ui-primitives/understand-the-implementation/streaming-markdown:
+  en: 8bbfa14c27f3bfd7
+  zh: 88f7548ac3a114e1
+/orochi-network-oh-client-ui-primitives/understand-the-implementation/geometry-and-overflow:
+  en: 49f6341d81ded00e
+  zh: cab87dc54a42ba69
+/orochi-network-oh-client-ui-primitives/further-exploration:
+  en: 1e9081da91008e11
+  zh: 137c4f426aa665e2
+/orochi-network-oh-client-ui-primitives/model-experience:
+  en: 3120df665299c634
+  zh: 1d9f365d091d0d2a
+/orochi-network-oh-client-ui-primitives/model-experience/kv-cache-effect:
+  en: ca75c51c89c2c9b0
+  zh: de54f3467ef3b9be
+/orochi-network-oh-client-ui-primitives/known-limitations-and-deferred-work:
+  en: d1f4b01fce36fae7
+  zh: a8df3b12b58fb97c
+/orochi-network-oh-client-ui-primitives/known-limitations-and-deferred-work/dev-note:
+  en: ae1d5d1bcc80c932
+  zh: 15709ccdbfcdf26c

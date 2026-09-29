@@ -1,0 +1,64 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/session/session-title-all-prompts-llm/README.md
+/:
+  en: 0718b02e4cdd4cc6
+  zh: 2b5b4a729ce4d97e
+/orochi-network-oh-session-title-all-prompts-llm:
+  en: 89cc108a5e85bc3a
+  zh: 6825a6ec5aa626c8
+/orochi-network-oh-session-title-all-prompts-llm/summary:
+  en: 769d4b0d73fad3cc
+  zh: 98ef08116c3bed8f
+/orochi-network-oh-session-title-all-prompts-llm/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-session-title-all-prompts-llm/use-this-package:
+  en: 2ec2e03925f375b3
+  zh: 537c4b1f2f56031e
+/orochi-network-oh-session-title-all-prompts-llm/use-this-package/when-titles-are-generated:
+  en: 3c9e14df96e6000e
+  zh: a13f12a3df426380
+/orochi-network-oh-session-title-all-prompts-llm/use-this-package/configuration:
+  en: 23f471cc2f7662be
+  zh: 60983737c99f3339
+/orochi-network-oh-session-title-all-prompts-llm/use-this-package/failures-and-recovery:
+  en: 6077a4665a4edb87
+  zh: 539c4e5969f9bb9b
+/orochi-network-oh-session-title-all-prompts-llm/understand-the-implementation:
+  en: 506933ffa7745b7d
+  zh: a9bb6f06a32b7c18
+/orochi-network-oh-session-title-all-prompts-llm/understand-the-implementation/design-concept:
+  en: 569ba867f8aba56b
+  zh: aff7e0e527b4361b
+/orochi-network-oh-session-title-all-prompts-llm/understand-the-implementation/source-map:
+  en: e7ae42597cc501a6
+  zh: 2e55e9b293b25958
+/orochi-network-oh-session-title-all-prompts-llm/understand-the-implementation/scheduling:
+  en: ca23821924af2b14
+  zh: a384479d5e69b0f8
+/orochi-network-oh-session-title-all-prompts-llm/further-exploration:
+  en: d0120ab2e0fc90b0
+  zh: 441302d2cded7b74
+/orochi-network-oh-session-title-all-prompts-llm/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-session-title-all-prompts-llm/model-experience/all-messages-title-request:
+  en: 42380e2d029288cf
+  zh: e9c9f21ac00e3c9d
+/orochi-network-oh-session-title-all-prompts-llm/model-experience/all-messages-title-request/what-the-model-sees:
+  en: 39cb7059a3ab1fe6
+  zh: a3fd93ac52f12a43
+/orochi-network-oh-session-title-all-prompts-llm/model-experience/all-messages-title-request/token-effect:
+  en: 1a075b8073c16ce3
+  zh: a51ff16156f9c137
+/orochi-network-oh-session-title-all-prompts-llm/model-experience/all-messages-title-request/kv-cache-effect:
+  en: 6a70f43f38b8c075
+  zh: 2b823aff93344134
+/orochi-network-oh-session-title-all-prompts-llm/known-limitations-and-deferred-work:
+  en: d0486c65afaebb85
+  zh: 186a77e0d68bd968
+/orochi-network-oh-session-title-all-prompts-llm/known-limitations-and-deferred-work/dev-note:
+  en: 954d91e08a470fd6
+  zh: e11425f8ec88d40a

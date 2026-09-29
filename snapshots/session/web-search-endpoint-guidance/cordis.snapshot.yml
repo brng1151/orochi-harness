@@ -1,0 +1,33 @@
+# Keyless replay counterpart: the failed search remains real; only the
+# conversation model adapter is replaced by replay.
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  disabled: true
+
+- id: plugin-package-inventory-orochi
+  disabled: true
+
+- insert:
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: deepseek-v4-flash
+                contextWindow: 1000000
+                defaultMaxTokens: 256000
+                reasoningEfforts: ['off', 'low', 'high', 'max']
+                defaultReasoningEffort: max
+              - id: deepseek-v4-pro
+
+    - id: web-search-error-fixture
+      name: './web-search-error-fixture.mjs'
+
+- id: web-search-orochi
+  name: '@orochi-network/oh-web-search-orochi'
+  config:
+    apiKey: snapshot-key
+    # The fixture maps this recorded authority to its OS-assigned listener.
+    baseURL: http://127.0.0.1:43118/anthropic/v1

@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for 2026-07-20-gui-testing-system.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/process/2026-07-20-gui-testing-system.md
+/agent-note-gui-testing-system-the-three-tier-structure:
+  en: 9ae81242d1d7982f
+  zh: 268470d590f4d1a2
+/agent-note-gui-testing-system-the-three-tier-structure/problem:
+  en: 1c54e58ea993ef6a
+  zh: 73108687fa58a6f2
+/agent-note-gui-testing-system-the-three-tier-structure/decision:
+  en: 17b9b701be50ae60
+  zh: f98b24f07eac8d37
+/agent-note-gui-testing-system-the-three-tier-structure/lane-map:
+  en: 3aed81f9c3035977
+  zh: 959e6bf3adf1df0e
+/agent-note-gui-testing-system-the-three-tier-structure/anti-regression-discipline:
+  en: 80fe1589a6236740
+  zh: 30e1911d37865c49
+/agent-note-gui-testing-system-the-three-tier-structure/consequences:
+  en: 22f2475a438c639c
+  zh: aafab5ff60b7c644
+/agent-note-gui-testing-system-the-three-tier-structure/alternatives-considered:
+  en: d99dced2b01908a2
+  zh: dab72b1cc43eed82

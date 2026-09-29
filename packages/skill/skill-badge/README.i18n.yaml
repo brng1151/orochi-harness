@@ -1,0 +1,55 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/skill/skill-badge/README.md
+/:
+  en: 87472a132b6f7893
+  zh: c81b303486c28d9a
+/orochi-network-oh-skill-badge:
+  en: ec792bef62e94033
+  zh: aca770caa33e1943
+/orochi-network-oh-skill-badge/summary:
+  en: 76690150885f8457
+  zh: 064edf2e689af069
+/orochi-network-oh-skill-badge/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-skill-badge/use-this-package:
+  en: 3207316de9d8662a
+  zh: 9a64b4dc886ae2b5
+/orochi-network-oh-skill-badge/use-this-package/when-to-choose-it:
+  en: 221a5d512fd2b2a8
+  zh: 6155d8ca6433bf7d
+/orochi-network-oh-skill-badge/use-this-package/enable-the-plugin:
+  en: 75842e044f754f51
+  zh: c9307831ce07c123
+/orochi-network-oh-skill-badge/use-this-package/what-the-badge-skill-provides:
+  en: 1878e0cb4500b3ae
+  zh: 406112b0435fc5fc
+/orochi-network-oh-skill-badge/use-this-package/observable-success-and-failures:
+  en: b4c0a0006c788d1e
+  zh: 05c383808c852434
+/orochi-network-oh-skill-badge/understand-the-implementation:
+  en: 63465b0133f30e85
+  zh: 84bebb7c1fe0ceba
+/orochi-network-oh-skill-badge/understand-the-implementation/design-concept:
+  en: 41e0c03b396613bc
+  zh: ff4d2a8198b9ab7b
+/orochi-network-oh-skill-badge/understand-the-implementation/source-map:
+  en: b3ee47e61620c17f
+  zh: b88078e3242f98cc
+/orochi-network-oh-skill-badge/further-exploration:
+  en: 82e7cd06f370ca36
+  zh: 053ecb50d0acd890
+/orochi-network-oh-skill-badge/model-experience:
+  en: 27b624fbd45d9553
+  zh: 15c5dcdb2895593c
+/orochi-network-oh-skill-badge/model-experience/kv-cache-effect:
+  en: 6a8366520852a607
+  zh: 453ec29827b82bbc
+/orochi-network-oh-skill-badge/known-limitations-and-deferred-work:
+  en: adaa9d430d101035
+  zh: 78da685b70f6aedf
+/orochi-network-oh-skill-badge/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

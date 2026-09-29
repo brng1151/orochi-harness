@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for 2026-09-18-localized-package-metadata.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-18-localized-package-metadata.md
+/agent-note-plugin-owned-localized-display-metadata:
+  en: 3a1107dc00cbf3c3
+  zh: b79d9d90df8d0bf9
+/agent-note-plugin-owned-localized-display-metadata/problem:
+  en: 4022a58baf82e77d
+  zh: 8439268ed4df9b69
+/agent-note-plugin-owned-localized-display-metadata/decision:
+  en: f66c48c7d80d8395
+  zh: a8b437f562610827
+/agent-note-plugin-owned-localized-display-metadata/existing-decisions:
+  en: c4b144594107d94c
+  zh: 68b92228c95e11c1
+/agent-note-plugin-owned-localized-display-metadata/alternatives-considered:
+  en: abbdb1b8ab360380
+  zh: edfe6c06b1d67fd7
+/agent-note-plugin-owned-localized-display-metadata/verification:
+  en: 8541a2431321ef61
+  zh: 77599e0855d93da9
+/agent-note-plugin-owned-localized-display-metadata/consequences:
+  en: 2a4547c9657038df
+  zh: 1a4bebd06d2b9e38

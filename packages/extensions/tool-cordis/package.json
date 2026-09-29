@@ -1,0 +1,53 @@
+{
+  "name": "@orochi-network/oh-tool-cordis",
+  "description": "Read-only runtime API inspection for Harness plugin development",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/extensions/tool-cordis"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./host": {
+      "types": "./lib/types/host.d.ts",
+      "default": "./lib/types/host.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/cordis-plugin-loader": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-app-boot": "workspace:*",
+    "@orochi-network/oh-cordis-host-runner": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/cordis-plugin-group": "workspace:~",
+    "@orochi-network/cordis-plugin-loader": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-app-boot": "workspace:*",
+    "@orochi-network/oh-cordis-host-runner": "workspace:*",
+    "@orochi-network/oh-system-prompt": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*",
+    "@orochi-network/schemastery": "workspace:~"
+  }
+}

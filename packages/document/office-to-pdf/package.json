@@ -1,0 +1,65 @@
+{
+  "//": ["Dependency '@orochi-network/libreoffice-kit' resolves through an npm alias to the previously published '@deepseek-ai/libreoffice-kit' until the kit family (github.com/deepseek-harness/libreoffice-kit) is republished under @orochi-network; drop the 'npm:@deepseek-ai/libreoffice-kit@' alias then."],
+  "name": "@orochi-network/oh-office-to-pdf",
+  "description": "Shared Office-to-PDF conversion with bounded queues and caching",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/document/office-to-pdf"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json",
+    "./types": {
+      "types": "./lib/types/types.d.ts",
+      "default": "./lib/types/types.js"
+    },
+    "./remote": {
+      "types": "./lib/typert.remote-client.d.ts",
+      "default": "./lib/typert.remote-client.js"
+    },
+    "./typert": {
+      "types": "./lib/typert.host.d.ts",
+      "default": "./lib/typert.host.js"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts",
+    "lib/typert.host.js",
+    "lib/typert.host.d.ts",
+    "lib/typert.remote-client.js",
+    "lib/typert.remote-client.d.ts"
+  ],
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/cordis-plugin-loader": "workspace:~",
+    "@orochi-network/cordis-plugin-include": "workspace:~",
+    "@orochi-network/oh-api-workspace-files": "workspace:*",
+    "@orochi-network/oh-fs": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*"
+  },
+  "dependencies": {
+    "@orochi-network/libreoffice-kit": "npm:@deepseek-ai/libreoffice-kit@0.1.1",
+    "@orochi-network/schemastery": "workspace:~",
+    "@orochi-network/oh-brand": "workspace:*",
+    "@orochi-network/oh-typert-protocol": "workspace:*",
+    "zod": "^4.4.3"
+  }
+}

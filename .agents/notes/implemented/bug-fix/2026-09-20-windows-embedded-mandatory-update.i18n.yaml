@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-20-windows-embedded-mandatory-update.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/bug-fix/2026-09-20-windows-embedded-mandatory-update.md
+/agent-note-windows-embedded-mandatory-update:
+  en: 8f4b1102935cdb8e
+  zh: d683c8e1d0d95762
+/agent-note-windows-embedded-mandatory-update/problem:
+  en: df8f2127905913d7
+  zh: 64d27253ce39e031
+/agent-note-windows-embedded-mandatory-update/decision:
+  en: aa68fd6a07d16b94
+  zh: 422885a345a3b403
+/agent-note-windows-embedded-mandatory-update/alternatives-considered:
+  en: 9564f979909f0743
+  zh: 6730e42a123b707a
+/agent-note-windows-embedded-mandatory-update/consequences:
+  en: 64cd6585a98f01cd
+  zh: 8bca9eb88aa55d8e

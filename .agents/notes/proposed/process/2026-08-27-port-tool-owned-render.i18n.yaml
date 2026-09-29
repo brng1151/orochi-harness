@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-08-27-port-tool-owned-render.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/proposed/process/2026-08-27-port-tool-owned-render.md
+/agent-note-port-tool-owned-render-into-current-oh-apis:
+  en: 933860d7a4dacb6b
+  zh: 0b6cfcf12b788f34
+/agent-note-port-tool-owned-render-into-current-oh-apis/problem:
+  en: d1263521765c9a79
+  zh: 0164cfa7fae31bdf
+/agent-note-port-tool-owned-render-into-current-oh-apis/proposal:
+  en: a292b76aeee2715d
+  zh: 37080db72b0cda5a
+/agent-note-port-tool-owned-render-into-current-oh-apis/alternatives-considered:
+  en: a2364e3fca0a06e5
+  zh: a76370082e218154
+/agent-note-port-tool-owned-render-into-current-oh-apis/acceptance-criteria:
+  en: 6734636fa8d00136
+  zh: 530e6a8a6076da8a
+/agent-note-port-tool-owned-render-into-current-oh-apis/risks:
+  en: 4fa51a62af0a3fc5
+  zh: d6f555a8a5d9120c

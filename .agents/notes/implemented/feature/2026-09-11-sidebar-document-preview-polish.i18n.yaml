@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-11-sidebar-document-preview-polish.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-09-11-sidebar-document-preview-polish.md
+/agent-note-sidebar-document-preview-polish:
+  en: 2a0e807af265ea53
+  zh: 3bc26177b74a307d
+/agent-note-sidebar-document-preview-polish/problem:
+  en: 4a52e0a397d95c28
+  zh: ecaeb3f570c775da
+/agent-note-sidebar-document-preview-polish/decision:
+  en: 709f59f48a1cbcab
+  zh: eb3849aa3ee4d7a1
+/agent-note-sidebar-document-preview-polish/alternatives-considered:
+  en: e2e5b8bbd191385e
+  zh: 29b37f3ec312f5ca
+/agent-note-sidebar-document-preview-polish/consequences:
+  en: 38951cfb55e9214c
+  zh: 6ca3845e206be2da

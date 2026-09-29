@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for 2026-08-26-published-dependency-faces.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/process/2026-08-26-published-dependency-faces.md
+/agent-note-published-dependency-faces-and-bounded-peer-relays:
+  en: 37a7912ee06b0adf
+  zh: a553eafb439e7c4d
+/agent-note-published-dependency-faces-and-bounded-peer-relays/problem:
+  en: a8357e7e0735ad71
+  zh: 5217d99a4ef921c7
+/agent-note-published-dependency-faces-and-bounded-peer-relays/decision:
+  en: a15c7c13f167e5ac
+  zh: 63bcc2ef60c2f344
+/agent-note-published-dependency-faces-and-bounded-peer-relays/decision/package-selection:
+  en: 9ebd9a4f8d81bb6b
+  zh: 26b4fc730df56841
+/agent-note-published-dependency-faces-and-bounded-peer-relays/decision/dependency-sections:
+  en: ccd7b9823eb92bc0
+  zh: 5e768a6a2a19b0ff
+/agent-note-published-dependency-faces-and-bounded-peer-relays/decision/maintainer-workflow:
+  en: bc5f9af4d20ae2f1
+  zh: 2203d8049c3b2488
+/agent-note-published-dependency-faces-and-bounded-peer-relays/decision/performance-verification:
+  en: 6e9b0f2bbe78cf42
+  zh: b2c5cbfe7575f4dd
+/agent-note-published-dependency-faces-and-bounded-peer-relays/alternatives-considered:
+  en: b0c1308fc8eed40d
+  zh: d657e8548a426df4
+/agent-note-published-dependency-faces-and-bounded-peer-relays/consequences:
+  en: 70e475315e0898e2
+  zh: bcb54a35da49fc99

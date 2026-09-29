@@ -1,0 +1,82 @@
+{
+  "name": "@orochi-network/oh-client-ui-settings-general",
+  "description": "Settings ownerless-copy and product onboarding plugin: the General section, shell trigger/header chrome content, settings dictionaries, and the versioned welcome notice",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/client/ui-settings-general"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./types": {
+      "types": "./lib/types/types.d.ts"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "oh": {
+    "client": {
+      "inject": [
+        "@orochi-network/oh-client-ui-settings",
+        "@orochi-network/oh-client-locale",
+        "@orochi-network/oh-client-connection",
+        "@orochi-network/oh-api-remotes",
+        "@orochi-network/oh-client-ui-sidebar",
+        "@orochi-network/oh-client-shortcuts"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@orochi-network/schemastery": "workspace:~"
+  },
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-api-remotes": "workspace:*",
+    "@orochi-network/oh-client-connection": "workspace:*",
+    "@orochi-network/oh-client-locale": "workspace:*",
+    "@orochi-network/oh-client-store": "workspace:*",
+    "@orochi-network/oh-client-test-runtime": "workspace:*",
+    "@orochi-network/oh-client-ui-primitives": "workspace:*",
+    "@orochi-network/oh-client-ui-renderer": "workspace:*",
+    "@orochi-network/oh-client-ui-session": "workspace:*",
+    "@orochi-network/oh-client-ui-settings": "workspace:*",
+    "@orochi-network/oh-client-ui-sidebar": "workspace:*",
+    "@orochi-network/oh-client-ui-slots": "workspace:*",
+    "@orochi-network/oh-remote-mock": "workspace:*",
+    "@types/react": "~18.3.1",
+    "@types/react-dom": "~18.3.0",
+    "clsx": "^2.0.0",
+    "react": "^18.2.0",
+    "@orochi-network/oh-settings": "workspace:*",
+    "react-dom": "^18.2.0",
+    "@orochi-network/oh-client-shortcuts": "workspace:*"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts"
+  ]
+}

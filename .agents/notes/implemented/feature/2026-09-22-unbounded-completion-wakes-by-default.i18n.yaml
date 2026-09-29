@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-22-unbounded-completion-wakes-by-default.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-09-22-unbounded-completion-wakes-by-default.md
+/agent-note-background-job-completion-wakes-are-unbounded-by-default:
+  en: c3f8a81c0d460d7f
+  zh: e789e3bc177ef1bb
+/agent-note-background-job-completion-wakes-are-unbounded-by-default/problem:
+  en: 872a040a9b5982e5
+  zh: a31af853aae90d3f
+/agent-note-background-job-completion-wakes-are-unbounded-by-default/decision:
+  en: f0da69415ef684af
+  zh: db7a21bd1bd2d580
+/agent-note-background-job-completion-wakes-are-unbounded-by-default/alternatives-considered:
+  en: 62630b7ec477bf7b
+  zh: 0640a01ac9d22722
+/agent-note-background-job-completion-wakes-are-unbounded-by-default/consequences:
+  en: ba000076db02ccb7
+  zh: 1aa1e7d45d6512fe

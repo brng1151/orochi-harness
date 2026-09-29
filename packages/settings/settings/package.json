@@ -1,0 +1,60 @@
+{
+  "name": "@orochi-network/oh-settings",
+  "description": "Abstract user-settings seam (ctx.settings) for the Orochi Harness",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/settings/settings"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./types": {
+      "types": "./lib/types/types.d.ts",
+      "default": "./lib/types/types.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-brand": "workspace:*",
+    "@orochi-network/oh-invariants": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/schemastery": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-brand": "workspace:*",
+    "@orochi-network/oh-invariants": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/schemastery": "workspace:~",
+    "@orochi-network/cordis-plugin-timer": "workspace:~",
+    "@orochi-network/oh-app-boot": "workspace:*",
+    "@orochi-network/oh-hmr": "workspace:*",
+    "@orochi-network/oh-agent-default-model": "workspace:*",
+    "yaml": "^2.8.1"
+  },
+  "dependencies": {
+    "@orochi-network/oh-util-values": "workspace:*",
+    "@orochi-network/oh-config-editor": "workspace:*",
+    "@orochi-network/cordis-plugin-loader": "workspace:~",
+    "@orochi-network/cosmokit": "workspace:~",
+    "yaml": "^2.8.1"
+  }
+}

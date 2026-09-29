@@ -1,0 +1,46 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-sidebar-documentpreview/README.md
+/:
+  en: ef50065f5ff17aa1
+  zh: ee5d2b7986739fca
+/orochi-network-oh-client-ui-sidebar-documentpreview:
+  en: 9f2acd71d63ced34
+  zh: f022b5e55db0a9bf
+/orochi-network-oh-client-ui-sidebar-documentpreview/summary:
+  en: a74c16667d0baada
+  zh: 4fd709ff9f98b84f
+/orochi-network-oh-client-ui-sidebar-documentpreview/table-of-contents:
+  en: 0dd8c3a22e28aacf
+  zh: c27c11bf4b5cceba
+/orochi-network-oh-client-ui-sidebar-documentpreview/what-it-registers:
+  en: 041fd4e11baec359
+  zh: 563311b35d7358f7
+/orochi-network-oh-client-ui-sidebar-documentpreview/addresses:
+  en: 88c98ae281cd6a1a
+  zh: 5b651525ae43c83a
+/orochi-network-oh-client-ui-sidebar-documentpreview/how-it-reads:
+  en: 1d07799b5ebd6d0f
+  zh: 18ee98cc404958d8
+/orochi-network-oh-client-ui-sidebar-documentpreview/excel-preview:
+  en: 592d1e092302c723
+  zh: cb540d27f8711947
+/orochi-network-oh-client-ui-sidebar-documentpreview/office-preview:
+  en: 56e55f58dcf8b0a9
+  zh: 9410387ad6971be8
+/orochi-network-oh-client-ui-sidebar-documentpreview/navigation:
+  en: 5cd81a7b3cdc83bd
+  zh: 4cdd1b7ede497925
+/orochi-network-oh-client-ui-sidebar-documentpreview/model-experience:
+  en: ca1deb99d0e44755
+  zh: f285fc56cee669ec
+/orochi-network-oh-client-ui-sidebar-documentpreview/model-experience/kv-cache-effect:
+  en: 7edb4c0bb5f13847
+  zh: ae5d0bbebe4aa563
+/orochi-network-oh-client-ui-sidebar-documentpreview/known-limitations-and-deferred-work:
+  en: cd5dbf8638207236
+  zh: 493dc34158a0f245
+/orochi-network-oh-client-ui-sidebar-documentpreview/known-limitations-and-deferred-work/dev-note:
+  en: 3d8904cb970145a3
+  zh: a0c0cddcfedf9e42

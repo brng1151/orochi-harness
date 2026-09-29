@@ -1,0 +1,91 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/llm/llm-orochi/README.md
+/:
+  en: 8778b81437845762
+  zh: 5c5ba913b0c97d62
+/orochi-network-oh-llm-orochi:
+  en: 2cb2e795fce26157
+  zh: f59fa48e3d7a4351
+/orochi-network-oh-llm-orochi/summary:
+  en: 5b66cd3b2397e071
+  zh: 5ac224b930aaa572
+/orochi-network-oh-llm-orochi/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-llm-orochi/use-this-package:
+  en: 8fa43522f0c5ed59
+  zh: 6d3708b15d4aec71
+/orochi-network-oh-llm-orochi/use-this-package/when-to-choose-it:
+  en: a88841de7cf6b931
+  zh: e14156fa900139a0
+/orochi-network-oh-llm-orochi/use-this-package/minimal-configuration:
+  en: 38169420cd707375
+  zh: db916b7e83dd46df
+/orochi-network-oh-llm-orochi/use-this-package/endpoint-and-wire-format:
+  en: 00985212d8cdd55d
+  zh: e7eeae9a0a6422f7
+/orochi-network-oh-llm-orochi/use-this-package/account-credentials:
+  en: 113db004bcc9bc37
+  zh: f451a49276793581
+/orochi-network-oh-llm-orochi/use-this-package/streaming-with-thinking-and-images:
+  en: aecea0f7e37daed8
+  zh: 5f5bc4d810a3d40f
+/orochi-network-oh-llm-orochi/use-this-package/dynamic-configuration:
+  en: 49290fc5647136b4
+  zh: 96fa9ce0f9e83c13
+/orochi-network-oh-llm-orochi/use-this-package/provider-specific-request-fields:
+  en: 5929fbc291355802
+  zh: 4bbdc5339a2ae933
+/orochi-network-oh-llm-orochi/use-this-package/failures-and-recovery:
+  en: cd62bc9d41cb3a60
+  zh: 442b3dc4ddae8557
+/orochi-network-oh-llm-orochi/understand-the-implementation:
+  en: 1598ac8a8bb9b6bf
+  zh: fdd089c5ae7722cd
+/orochi-network-oh-llm-orochi/understand-the-implementation/design-philosophy:
+  en: 829203c4c282dc46
+  zh: e05dada4a1420a95
+/orochi-network-oh-llm-orochi/understand-the-implementation/source-map:
+  en: dc2d2409ad8c41cc
+  zh: 51fc4ad65dab6378
+/orochi-network-oh-llm-orochi/understand-the-implementation/wire-flow:
+  en: bb04001193c5c788
+  zh: 524ec51951a47e2e
+/orochi-network-oh-llm-orochi/further-exploration:
+  en: 3a9a2b7a5a4e8c87
+  zh: d3e7696505567198
+/orochi-network-oh-llm-orochi/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-llm-orochi/model-experience/orochi-request:
+  en: b0fde5f88c9395b1
+  zh: fd91e91e4a61e63f
+/orochi-network-oh-llm-orochi/model-experience/orochi-request/what-the-model-sees:
+  en: eef097e399ef12e7
+  zh: 42933dc27f656a40
+/orochi-network-oh-llm-orochi/model-experience/orochi-request/token-effect:
+  en: d08cbd3246d7a8cb
+  zh: ed14f921218d1e89
+/orochi-network-oh-llm-orochi/model-experience/orochi-request/kv-cache-effect:
+  en: 39489342f9e39849
+  zh: d21bc2ba08279123
+/orochi-network-oh-llm-orochi/model-experience/orochi-response:
+  en: e7a44daca63bba0b
+  zh: 4f0074e8c8e17f84
+/orochi-network-oh-llm-orochi/model-experience/orochi-response/what-the-model-sees:
+  en: 36a3d0297d6ca209
+  zh: bfc68b8300f61593
+/orochi-network-oh-llm-orochi/model-experience/orochi-response/token-effect:
+  en: 533309d1f93b89de
+  zh: 4cc0b86f05c9be53
+/orochi-network-oh-llm-orochi/model-experience/orochi-response/kv-cache-effect:
+  en: ddfbea043596878d
+  zh: 4fbf5864a684c053
+/orochi-network-oh-llm-orochi/known-limitations-and-deferred-work:
+  en: 9b523e59d24f063b
+  zh: 205fca43dcfc36f2
+/orochi-network-oh-llm-orochi/known-limitations-and-deferred-work/dev-note:
+  en: 64e566e940827a2d
+  zh: 8d0528945e83d2b9

@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/skill/README.md
+/:
+  en: b65db52ddcb307fe
+  zh: d599a27c5f80409f
+/skill-skill-capability-family:
+  en: 276c48c02a7feda4
+  zh: f8efb561e5cfc4c1
+/skill-skill-capability-family/summary:
+  en: 3119b70ce39aa67a
+  zh: ca05b86efbf84141
+/skill-skill-capability-family/table-of-contents:
+  en: 1eb35b015a6c423f
+  zh: a8a3dceee2c9e943
+/skill-skill-capability-family/packages:
+  en: acdddcd1920cd95e
+  zh: 01b47dfefa5d7768
+/skill-skill-capability-family/related-documentation:
+  en: 251d9e6878a0c1ff
+  zh: de30a9df5bedf308
+/skill-skill-capability-family/dev-note:
+  en: 5de1d6304e00c58f
+  zh: 8d8225361cfa29e5

@@ -1,0 +1,66 @@
+{
+  "name": "@orochi-network/oh-agent-loop",
+  "description": "The concrete agent loop plugin for the Orochi Harness",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/core/agent-loop"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-invariants": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-scope": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-session-persistence": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-system-prompt": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*"
+  },
+  "dependencies": {
+    "@orochi-network/oh-brand": "workspace:*",
+    "@orochi-network/oh-util-values": "workspace:*",
+    "@orochi-network/schemastery": "workspace:~",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@orochi-network/oh-llm-orochi-api-key": "workspace:*",
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-llm-pi-ai": "workspace:*",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-invariants": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-scope": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-session-persistence": "workspace:*",
+    "@orochi-network/oh-session-persistence-jsonl": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-system-prompt": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*"
+  }
+}

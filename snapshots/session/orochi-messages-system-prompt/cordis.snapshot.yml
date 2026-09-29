@@ -1,0 +1,18 @@
+- id: llm-orochi
+  disabled: true
+
+- insert:
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-messages
+            name: Orochi
+            models:
+              - id: deepseek-v4-flash
+                systemPromptUpdate: in-history
+                defaultMaxTokens: 256000
+                reasoningEfforts: [off, low, high, max]
+                defaultReasoningEffort: high
+    - id: prompt-update
+      name: '../../../packages/test-support/session-snapshot/tests/fixtures/in-history-prompt-update.ts'

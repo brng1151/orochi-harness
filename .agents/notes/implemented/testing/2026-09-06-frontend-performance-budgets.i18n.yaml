@@ -1,0 +1,28 @@
+# Bilingual-pair consistency record for 2026-09-06-frontend-performance-budgets.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/testing/2026-09-06-frontend-performance-budgets.md
+/agent-note-frontend-large-session-performance-budgets:
+  en: 1dead75ddc389266
+  zh: d3de008a2e044d69
+/agent-note-frontend-large-session-performance-budgets/problem:
+  en: bf23a22a1132b96b
+  zh: 6187820303ec3b36
+/agent-note-frontend-large-session-performance-budgets/decision:
+  en: d3429dbc3fb158b9
+  zh: 4f185bf03a9ebb96
+/agent-note-frontend-large-session-performance-budgets/calibration:
+  en: f3be2a0d346e80cc
+  zh: c49cc56e7714f68c
+/agent-note-frontend-large-session-performance-budgets/calibration/actual-ci-runs:
+  en: 6f09ea2deb28914b
+  zh: e9f2801ca1e4a310
+/agent-note-frontend-large-session-performance-budgets/calibration/standard-hosted-expectations-and-input-scheduling:
+  en: 8cb6299dbb42a9fe
+  zh: 51ef49d4fcaeb92f
+/agent-note-frontend-large-session-performance-budgets/alternatives-considered:
+  en: 1472bd425ef0daec
+  zh: a89811758d70331e
+/agent-note-frontend-large-session-performance-budgets/consequences:
+  en: 0c58a203103fd359
+  zh: 199dffebc7553888

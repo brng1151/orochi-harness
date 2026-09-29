@@ -1,0 +1,40 @@
+# Bilingual-pair consistency record for 2026-07-05-dynamic-workflows.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-07-05-dynamic-workflows.md
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam:
+  en: 7039dbe5ffc4886b
+  zh: 766e94cf2b047bb6
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam/problem:
+  en: 5fac83ebb9eb3d98
+  zh: 1189e82038f0c408
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam/decision:
+  en: 16af14c0c9fc54ee
+  zh: 463dd56b53d05ea7
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam/decision/the-script-contract-claude-code-compatible:
+  en: 889beb90c3650f25
+  zh: b1ba5dac3c77f8d2
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam/decision/the-seam-oh-workflow:
+  en: 35e156ff62fc75f5
+  zh: 28065d8b8f2cacb3
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam/decision/the-engine-oh-workflow-ptc-shared-node-process-execution:
+  en: 1cc021608e76d1ba
+  zh: 3486247cc4e5ef71
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam/decision/the-consumer-oh-tool-workflow:
+  en: 6ae5a1b999ab40ed
+  zh: fa88d78b16ad3529
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam/decision/the-foundation-structured-output-on-the-subagent-seam:
+  en: 9a57bf38b20cc922
+  zh: 40a8abf77b44f5a8
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam/testing:
+  en: a1607694b584dcbc
+  zh: 29c9c7560f0fcf56
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam/deferred-documented-non-goals:
+  en: 222954562b18abc2
+  zh: 3bc27c74010a7983
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam/alternatives-considered:
+  en: ecaf77bd6fe79d21
+  zh: 71b3d2c1c30df0de
+/agent-note-dynamic-workflows-a-script-driven-multi-agent-orchestration-seam/consequences:
+  en: bfd2d827ffb20587
+  zh: 310c4fe77f48aa4e

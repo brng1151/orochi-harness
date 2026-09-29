@@ -1,0 +1,58 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-deliverables/README.md
+/:
+  en: 91a4da87e2e078ed
+  zh: 8d489c6cdf208c4d
+/orochi-network-oh-client-ui-deliverables:
+  en: 436dfb47004c8e88
+  zh: a823402bb275e979
+/orochi-network-oh-client-ui-deliverables/summary:
+  en: a17b97d16803f911
+  zh: ad80cf4bcb5a8018
+/orochi-network-oh-client-ui-deliverables/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-ui-deliverables/use-this-package:
+  en: 605f8d1e9b29c792
+  zh: 162d9529df0ff717
+/orochi-network-oh-client-ui-deliverables/use-this-package/explicit-deliveries:
+  en: 32285dac5639de5b
+  zh: dc6f7a626974f6a1
+/orochi-network-oh-client-ui-deliverables/use-this-package/the-changed-files-card:
+  en: 4b279e2bddddc083
+  zh: a3135393299c935b
+/orochi-network-oh-client-ui-deliverables/use-this-package/the-review-tab:
+  en: 6348657e1b2e36f1
+  zh: 2bf2375e769c7803
+/orochi-network-oh-client-ui-deliverables/use-this-package/inline-code-links:
+  en: e36ccef8bf908ea4
+  zh: 30e11327a55e5dfa
+/orochi-network-oh-client-ui-deliverables/understand-the-implementation:
+  en: 45bcbca708381605
+  zh: 56c0fb79d2ab0d71
+/orochi-network-oh-client-ui-deliverables/further-exploration:
+  en: d11b3a3194d4fcbf
+  zh: c206ff3408dfc7c5
+/orochi-network-oh-client-ui-deliverables/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-client-ui-deliverables/model-experience/clickable-file-reference-guidance:
+  en: eb244aa21a4e5210
+  zh: e3450addfa19cea5
+/orochi-network-oh-client-ui-deliverables/model-experience/clickable-file-reference-guidance/what-the-model-sees:
+  en: 78339e353ae47a53
+  zh: 582efa623a5dfd72
+/orochi-network-oh-client-ui-deliverables/model-experience/clickable-file-reference-guidance/token-effect:
+  en: eb496b2f0d386522
+  zh: 3603f9419ab39643
+/orochi-network-oh-client-ui-deliverables/model-experience/clickable-file-reference-guidance/kv-cache-effect:
+  en: 52626a05acc8b320
+  zh: 6a8e62b0d47d5297
+/orochi-network-oh-client-ui-deliverables/known-limitations-and-deferred-work:
+  en: f6789b44ec9b99b9
+  zh: 682b4f4253813d7f
+/orochi-network-oh-client-ui-deliverables/known-limitations-and-deferred-work/dev-note:
+  en: a55f817f597aa646
+  zh: aba9a91ecde566ab

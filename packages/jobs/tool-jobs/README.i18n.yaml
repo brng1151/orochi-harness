@@ -1,0 +1,97 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/jobs/tool-jobs/README.md
+/:
+  en: bab11659311ef065
+  zh: 00536402873e1a55
+/orochi-network-oh-tool-jobs:
+  en: aba13d0ed1a823c1
+  zh: 4f147fedd93d34e9
+/orochi-network-oh-tool-jobs/summary:
+  en: c5d61ced6564b9cd
+  zh: 0a9b52b00bb5cd91
+/orochi-network-oh-tool-jobs/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-tool-jobs/use-this-package:
+  en: 823e94910a15e2e1
+  zh: c23e0b605f32f0bd
+/orochi-network-oh-tool-jobs/use-this-package/the-three-tools:
+  en: e9e9cb2ee5cea462
+  zh: 833beb2bca84bd6a
+/orochi-network-oh-tool-jobs/use-this-package/completion-notices:
+  en: f69e3f96353234c3
+  zh: 6caa74174a2d79b1
+/orochi-network-oh-tool-jobs/use-this-package/minimal-configuration:
+  en: f10f37cf13f4172e
+  zh: bd1c747ca8a59e6b
+/orochi-network-oh-tool-jobs/use-this-package/what-can-go-wrong:
+  en: a09c5c8225dec06c
+  zh: 3e9fcab42613775e
+/orochi-network-oh-tool-jobs/understand-the-implementation:
+  en: 32a36a3fe388e2c1
+  zh: f4bd2866fff6fa8d
+/orochi-network-oh-tool-jobs/understand-the-implementation/design-philosophy:
+  en: 5b69ae2716a52951
+  zh: fec78d84af7192b1
+/orochi-network-oh-tool-jobs/understand-the-implementation/source-map:
+  en: 354782dee6840110
+  zh: dfd46a4eee6b937d
+/orochi-network-oh-tool-jobs/understand-the-implementation/output-capping:
+  en: b47638fb0e80287a
+  zh: c47fa4b99b6df4c3
+/orochi-network-oh-tool-jobs/understand-the-implementation/notice-delivery-lanes:
+  en: 2540b7abbb3c9710
+  zh: 4fb355bceab2f865
+/orochi-network-oh-tool-jobs/further-exploration:
+  en: 6f9bc62d510d9969
+  zh: 984115bc6a9afdc4
+/orochi-network-oh-tool-jobs/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-tool-jobs/model-experience/system-prompt:
+  en: cf78b9dd5596495f
+  zh: bd44560f8c2435e8
+/orochi-network-oh-tool-jobs/model-experience/system-prompt/what-the-model-sees:
+  en: 39e8a31dc801e9c5
+  zh: 372c41269cf9c41b
+/orochi-network-oh-tool-jobs/model-experience/system-prompt/what-the-model-sees/background-job-guidance:
+  en: 3d751cf8e40e220f
+  zh: 91df3ed91d02b5f2
+/orochi-network-oh-tool-jobs/model-experience/system-prompt/token-effect:
+  en: 544674c70d5e5e0f
+  zh: eec61a623f4cfc13
+/orochi-network-oh-tool-jobs/model-experience/system-prompt/kv-cache-effect:
+  en: 13e7c6007bf6b5dc
+  zh: 9663c65441f0a3f0
+/orochi-network-oh-tool-jobs/model-experience/tool-schemas:
+  en: 3039bc5e7a796b21
+  zh: 6b7a9eaf69c9ea53
+/orochi-network-oh-tool-jobs/model-experience/tool-schemas/what-the-model-sees:
+  en: 293694194fb77847
+  zh: e44ccab4aa30de88
+/orochi-network-oh-tool-jobs/model-experience/tool-schemas/token-effect:
+  en: 3ce42a9605c3596c
+  zh: ab29758f0fbbb1c6
+/orochi-network-oh-tool-jobs/model-experience/tool-schemas/kv-cache-effect:
+  en: 24266e9d669810a2
+  zh: bfde811c7e84890f
+/orochi-network-oh-tool-jobs/model-experience/results-and-notices:
+  en: 8160e01d6bfc5e0c
+  zh: 570dc95be7f13260
+/orochi-network-oh-tool-jobs/model-experience/results-and-notices/what-the-model-sees:
+  en: 960436b3f61c7f96
+  zh: 2c956bb4fee134c2
+/orochi-network-oh-tool-jobs/model-experience/results-and-notices/token-effect:
+  en: 16efd9cb948ca4bf
+  zh: 563cc4c78dc63b4d
+/orochi-network-oh-tool-jobs/model-experience/results-and-notices/kv-cache-effect:
+  en: 2fbf2175168e8244
+  zh: f681f89596f500f5
+/orochi-network-oh-tool-jobs/known-limitations-and-deferred-work:
+  en: 1971e3b84c568c3c
+  zh: 3e357265178a8b00
+/orochi-network-oh-tool-jobs/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

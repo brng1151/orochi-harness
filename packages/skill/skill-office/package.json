@@ -1,0 +1,45 @@
+{
+  "//": ["Dependency '@orochi-network/libreoffice-kit' resolves through an npm alias to the previously published '@deepseek-ai/libreoffice-kit' until the kit family (github.com/deepseek-harness/libreoffice-kit) is republished under @orochi-network; drop the 'npm:@deepseek-ai/libreoffice-kit@' alias then."],
+  "name": "@orochi-network/oh-skill-office",
+  "description": "Bundled Word, PowerPoint, and Excel workflows and structural checks",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/skill/skill-office"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "assets",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/oh-skill": "workspace:*",
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/oh-skill": "workspace:*",
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/cordis-plugin-loader": "workspace:~",
+    "@orochi-network/cordis-plugin-include": "workspace:~"
+  },
+  "dependencies": {
+    "@orochi-network/libreoffice-kit": "npm:@deepseek-ai/libreoffice-kit@0.1.1",
+    "@orochi-network/schemastery": "workspace:~",
+    "yaml": "^2.4.2"
+  }
+}

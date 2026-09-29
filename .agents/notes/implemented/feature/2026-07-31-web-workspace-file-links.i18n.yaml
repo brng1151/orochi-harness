@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-07-31-web-workspace-file-links.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-07-31-web-workspace-file-links.md
+/agent-note-opening-a-produced-file-from-the-web-ui:
+  en: 83677f214ac89716
+  zh: 7ae296ab75b5c529
+/agent-note-opening-a-produced-file-from-the-web-ui/problem:
+  en: 3127069e21a24f4b
+  zh: 33b10b60d81c26a1
+/agent-note-opening-a-produced-file-from-the-web-ui/decision:
+  en: d056d12bcedcf2d7
+  zh: 1c841aca311bb645
+/agent-note-opening-a-produced-file-from-the-web-ui/alternatives-considered:
+  en: ba9603055aea84aa
+  zh: 3ab217f1b1ccb3b6
+/agent-note-opening-a-produced-file-from-the-web-ui/consequences:
+  en: aa460548654a89a5
+  zh: ebb8e51f5cd18f0b

@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-07-24-single-harness-home-resolver.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-07-24-single-harness-home-resolver.md
+/agent-note-one-harness-home-resolver:
+  en: 116a0b4bef875158
+  zh: 8a3d60f34bf1d4c4
+/agent-note-one-harness-home-resolver/problem:
+  en: ec01f957a704f76c
+  zh: 783ac1e34744f680
+/agent-note-one-harness-home-resolver/decision:
+  en: ea9301480247d290
+  zh: 711fae6c56bb52db
+/agent-note-one-harness-home-resolver/alternatives-considered:
+  en: e60284990f6d40c3
+  zh: 40e14a55dc659a7a
+/agent-note-one-harness-home-resolver/consequences:
+  en: 237855ad44414c4c
+  zh: dbac63631eccedc7

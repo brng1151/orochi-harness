@@ -1,0 +1,58 @@
+# Bilingual-pair consistency record for 2026-06-20-generic-long-running-tool-runtime.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-06-20-generic-long-running-tool-runtime.md
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools:
+  en: 0753091dc8850475
+  zh: cbc7392c56860f1a
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/problem:
+  en: 70e26df62568c337
+  zh: a9e6f5f8a5482d0a
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/decision:
+  en: 5682dff93fa69e12
+  zh: 03c57ca0bc185021
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/runtime-contract:
+  en: 890534815f06b928
+  zh: ad482d7fa981aa12
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/authorization-and-owner-lifecycle:
+  en: 3819a73ca70ecdfd
+  zh: c1a4f461a4e45978
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/service-api:
+  en: b8a5f02595d39303
+  zh: 1726788f713588df
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/model-facing-control-api:
+  en: e4d9e425404fa8bc
+  zh: b29c401474e7ae05
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/producer-opt-in:
+  en: d5603d57a9d33e1a
+  zh: 45c982277f2f74fd
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/producer-integrations:
+  en: 6c282204c5eb0dea
+  zh: 217a4e38f6ac5d21
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/alternatives-considered:
+  en: 6119e2aff3b6be5a
+  zh: e01a6c669a9ec6aa
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/alternatives-considered/per-capability-control-tools:
+  en: 9781c302dc72fd8e
+  zh: a78e1dd8da4d8ca8
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/alternatives-considered/an-immediate-abstract-task-runtime-backend:
+  en: 404a5c7c45a71a55
+  zh: 213621e4a9618a9c
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/alternatives-considered/consumer-owned-authorization-or-cleanup-events:
+  en: d99de803718d9ca6
+  zh: e03a97314851ed0f
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/alternatives-considered/blocking-output-or-a-separate-wait-tool:
+  en: e3beca50b6a57ce0
+  zh: a77663b817d33247
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/alternatives-considered/runtime-owned-output-sinks:
+  en: 42eeeba9d84ae681
+  zh: 1d540f9740675bee
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/alternatives-considered/random-ids-promotion-or-lifecycle-session-events:
+  en: e706b1b57241d3d2
+  zh: 1779b7fa05f48283
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/testing:
+  en: e891db1723828da8
+  zh: 657a62ed595bd081
+/agent-note-the-background-job-runtime-ctx-jobs-and-generic-task-control-tools/consequences:
+  en: 604b2f15cc2276b6
+  zh: a036d2db56f706e6

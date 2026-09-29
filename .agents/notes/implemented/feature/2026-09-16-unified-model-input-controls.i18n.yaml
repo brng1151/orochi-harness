@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-16-unified-model-input-controls.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-09-16-unified-model-input-controls.md
+/agent-note-unified-model-input-controls:
+  en: aef535120c81690a
+  zh: 0fa1035813b804fe
+/agent-note-unified-model-input-controls/problem:
+  en: b26ca60e565b5d99
+  zh: 7517bb82d36c8dd5
+/agent-note-unified-model-input-controls/decision:
+  en: a562c6c96fd244fc
+  zh: cf9a14edeb712b4e
+/agent-note-unified-model-input-controls/alternatives-considered:
+  en: f709e42149e29a38
+  zh: b6e16971c33d9ccd
+/agent-note-unified-model-input-controls/consequences:
+  en: 4f2ddcd991996b44
+  zh: 7d4ccbc2e1cb161b

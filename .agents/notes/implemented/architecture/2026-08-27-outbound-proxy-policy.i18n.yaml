@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-08-27-outbound-proxy-policy.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-08-27-outbound-proxy-policy.md
+/agent-note-one-outbound-proxy-policy-installed-before-anything-can-request:
+  en: 4ca5e11b45e26cf7
+  zh: 9d4bc0216caa4272
+/agent-note-one-outbound-proxy-policy-installed-before-anything-can-request/problem:
+  en: e3ebd405d00ca4c9
+  zh: e0ce2e948a3bb50e
+/agent-note-one-outbound-proxy-policy-installed-before-anything-can-request/decision:
+  en: db6e05a7237b1ba1
+  zh: c26bea281f522e86
+/agent-note-one-outbound-proxy-policy-installed-before-anything-can-request/alternatives-considered:
+  en: 985df27e7c4dd725
+  zh: f36a7daae388cb56
+/agent-note-one-outbound-proxy-policy-installed-before-anything-can-request/consequences:
+  en: c12a908253245441
+  zh: 32c5cb00d79aa7b1
+/agent-note-one-outbound-proxy-policy-installed-before-anything-can-request/testing:
+  en: 0d7eaa666c94a5cd
+  zh: 210fa098f154d137

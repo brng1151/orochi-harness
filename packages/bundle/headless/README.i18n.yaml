@@ -1,0 +1,67 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/bundle/headless/README.md
+/:
+  en: 69b7e74c9174075c
+  zh: ce86440749bdc40c
+/orochi-network-oh-headless:
+  en: 9a975b7fbc98fe87
+  zh: f2e2de83895a082b
+/orochi-network-oh-headless/summary:
+  en: eb8dcd816f623390
+  zh: db87ee918984ebc0
+/orochi-network-oh-headless/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-headless/use-this-package:
+  en: 4447012f4c84100d
+  zh: faf579ae9f04c096
+/orochi-network-oh-headless/use-this-package/running-a-one-shot-task:
+  en: 4c1dbad13e358a5c
+  zh: 75c1e86be60553f3
+/orochi-network-oh-headless/use-this-package/choosing-the-session-identity:
+  en: dbaa2fac63910a4c
+  zh: 4fd5c17815ca444b
+/orochi-network-oh-headless/use-this-package/machine-readable-output:
+  en: faef059fa7fc3134
+  zh: ca9232ce987dc0d3
+/orochi-network-oh-headless/use-this-package/when-to-use-it:
+  en: 6ddab3d5240c7ef3
+  zh: f26a0467c122055b
+/orochi-network-oh-headless/use-this-package/help-and-task-errors:
+  en: 37e4523e09f73f08
+  zh: 89da19a0613c2a80
+/orochi-network-oh-headless/understand-the-implementation:
+  en: be1b73a6d0ee3902
+  zh: bdba099685d68b27
+/orochi-network-oh-headless/understand-the-implementation/run-flow:
+  en: e30f0700d0084ab2
+  zh: 4ef63304d6a83e2f
+/orochi-network-oh-headless/understand-the-implementation/patch-surface-over-base:
+  en: 890eda3559135712
+  zh: 7e7ceb086ade5877
+/orochi-network-oh-headless/understand-the-implementation/exit-mapping:
+  en: 8e3095a8900a71a6
+  zh: 97073bd1b9e56f80
+/orochi-network-oh-headless/understand-the-implementation/source-map:
+  en: 24a455dc70998160
+  zh: c45e228a9d341898
+/orochi-network-oh-headless/understand-the-implementation/invariant-ownership:
+  en: 329f170dec4b2279
+  zh: bb40f8beda5b3a1c
+/orochi-network-oh-headless/further-exploration:
+  en: 919bb20c83a244d6
+  zh: 6ad1c0a97ab0a61c
+/orochi-network-oh-headless/model-experience:
+  en: c5a0991833f64dd7
+  zh: 46f9feb255778f11
+/orochi-network-oh-headless/model-experience/kv-cache-effect:
+  en: 0b0f74b412c7c6d8
+  zh: 6e8f918d0c4bf342
+/orochi-network-oh-headless/known-limitations-and-deferred-work:
+  en: 00ee2da83391de83
+  zh: 73ab401544907828
+/orochi-network-oh-headless/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

@@ -1,0 +1,42 @@
+{
+  "name": "@orochi-network/oh-benchmarks",
+  "version": "0.1.3-alpha.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "playwright": "^1.49.0",
+    "@xterm/headless": "^6.0.0",
+    "@orochi-network/oh-terminal": "workspace:*",
+    "@orochi-network/oh-subprocess": "workspace:*",
+    "@orochi-network/oh-llm-replay": "workspace:*",
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-agent-loop": "workspace:*",
+    "@orochi-network/oh-agent-loop-testkit": "workspace:*",
+    "@orochi-network/oh-agent-preset-registry": "workspace:*",
+    "@orochi-network/oh-api-session-controller": "workspace:*",
+    "@orochi-network/oh-client-store": "workspace:*",
+    "@orochi-network/oh-client-ui-chat": "workspace:*",
+    "@orochi-network/oh-deque": "workspace:*",
+    "@orochi-network/oh-lazy-require": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-sdk-client": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-session-persistence": "workspace:*",
+    "@orochi-network/oh-session-persistence-jsonl": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-session-query": "workspace:*",
+    "@orochi-network/oh-session-stats": "workspace:*",
+    "@orochi-network/oh-session-title": "workspace:*",
+    "@orochi-network/oh-session-turn-outline": "workspace:*",
+    "@orochi-network/oh-subagent": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*",
+    "@orochi-network/oh-token-meter": "workspace:*",
+    "@orochi-network/oh-typert-protocol": "workspace:*",
+    "@orochi-network/oh-util-values": "workspace:*"
+  },
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  }
+}

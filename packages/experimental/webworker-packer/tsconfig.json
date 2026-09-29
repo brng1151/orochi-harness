@@ -1,0 +1,30 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib/types",
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "../../../vendor/include"
+    },
+    {
+      "path": "../webworker-runtime"
+    },
+    {
+      "path": "../../util/home-paths"
+    },
+    {
+      "path": "../../session/session-format"
+    },
+    {
+      "path": "../../session/session-format-catalog"
+    }
+  ]
+}

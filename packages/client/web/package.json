@@ -1,0 +1,54 @@
+{
+  "name": "@orochi-network/oh-client-web",
+  "description": "Web boot kernel: static module table, Cordis loader, framework-free boot page, and UI-renderer handoff",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/client/web"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json",
+    "./injections": {
+      "types": "./lib/types/apply-injections.d.ts",
+      "default": "./lib/apply-injections.js"
+    }
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@orochi-network/cordis-plugin-loader": "workspace:~",
+    "@orochi-network/oh-client-modules": "workspace:*",
+    "@orochi-network/oh-client-store": "workspace:*",
+    "@orochi-network/oh-client-ui-dockkit": "workspace:*",
+    "@orochi-network/oh-client-ui-renderer": "workspace:*",
+    "@orochi-network/oh-client-ui-primitives": "workspace:*",
+    "@orochi-network/oh-client-ui-slots": "workspace:*",
+    "@types/react": "~18.3.1",
+    "@types/react-dom": "~18.3.0",
+    "@orochi-network/cordis": "workspace:~",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^6.0.3",
+    "@orochi-network/oh-host-webserver": "workspace:*"
+  },
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/**/*.css",
+    "lib/apply-injections.js",
+    "lib/types/**/*.d.ts"
+  ]
+}

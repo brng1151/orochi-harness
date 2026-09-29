@@ -1,0 +1,28 @@
+# Bilingual-pair consistency record for 2026-08-28-omit-unneeded-invariant-companions.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/simplification/2026-08-28-omit-unneeded-invariant-companions.md
+/agent-note-omit-invariant-companions-without-independent-observations:
+  en: d19545f4544d8349
+  zh: a4251fa3d38e8624
+/agent-note-omit-invariant-companions-without-independent-observations/problem:
+  en: 363641892afb2e27
+  zh: 70cdf24b247a8935
+/agent-note-omit-invariant-companions-without-independent-observations/decision:
+  en: a15c7c13f167e5ac
+  zh: 63bcc2ef60c2f344
+/agent-note-omit-invariant-companions-without-independent-observations/decision/independent-observations-justify-publication:
+  en: 62b684262795e093
+  zh: d700188377e63371
+/agent-note-omit-invariant-companions-without-independent-observations/decision/omission-is-explicit-in-the-package-readme:
+  en: 465c523c29fd7836
+  zh: 9967d7e5b17f1adf
+/agent-note-omit-invariant-companions-without-independent-observations/decision/audit-result:
+  en: 2e767628c3c9fa69
+  zh: 98c7926aaa03e2d8
+/agent-note-omit-invariant-companions-without-independent-observations/alternatives-considered:
+  en: 7c880d1d3d310eba
+  zh: 0238c4399c878dbe
+/agent-note-omit-invariant-companions-without-independent-observations/consequences:
+  en: 0083a6971887753d
+  zh: 4d6b41e0f7afdac0

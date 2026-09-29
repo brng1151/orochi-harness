@@ -1,0 +1,73 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/goal/goal/README.md
+/:
+  en: 6509c63744950c59
+  zh: b7d4e056e0591155
+/orochi-network-oh-goal:
+  en: 92d0216f1f5c0a30
+  zh: 20f073d1093d7934
+/orochi-network-oh-goal/summary:
+  en: a1f8485b2db15044
+  zh: 2602e5408b9adab7
+/orochi-network-oh-goal/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-goal/use-this-package:
+  en: 42ae235acf72554a
+  zh: eeaac1b9a2e69053
+/orochi-network-oh-goal/use-this-package/when-to-use-it:
+  en: 44fbecf68641514a
+  zh: afa1720f5128cf1b
+/orochi-network-oh-goal/use-this-package/set-up-the-service:
+  en: 897975aa8c414413
+  zh: 6a2bfd30ca9e440a
+/orochi-network-oh-goal/use-this-package/session-projection:
+  en: ef892326f7a0a5c2
+  zh: 2844a36f7f1cd0cb
+/orochi-network-oh-goal/use-this-package/drive-the-lifecycle:
+  en: 622890ced87a44e9
+  zh: 6ba1f3f872400452
+/orochi-network-oh-goal/use-this-package/what-survives-and-what-does-not:
+  en: e5cd2097500a9027
+  zh: 3ecae388f839c944
+/orochi-network-oh-goal/use-this-package/observing-a-goal:
+  en: 3074e4c76de81d22
+  zh: 10134afe344dafb3
+/orochi-network-oh-goal/understand-the-implementation:
+  en: 592af7e68423bd1c
+  zh: 9b1f08393db1b14e
+/orochi-network-oh-goal/understand-the-implementation/design:
+  en: 6f19e891ffc79754
+  zh: 9599e3b142f1e6b5
+/orochi-network-oh-goal/understand-the-implementation/source-map:
+  en: f0451101cf73da7d
+  zh: 73176ab69bb63a7f
+/orochi-network-oh-goal/understand-the-implementation/events-and-attribution:
+  en: 502cf61dba8b22ca
+  zh: 2b6f672bb2ac84ba
+/orochi-network-oh-goal/further-exploration:
+  en: 4b99309e79265661
+  zh: df7c45432cd82f04
+/orochi-network-oh-goal/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-goal/model-experience/goal-state-mutations:
+  en: 6e6274de7991ef9e
+  zh: be2048ca18b3cbab
+/orochi-network-oh-goal/model-experience/goal-state-mutations/what-the-model-sees:
+  en: 7f3f6cf3e85ca188
+  zh: 758596ce93635eab
+/orochi-network-oh-goal/model-experience/goal-state-mutations/token-effect:
+  en: 5c3d2b320679252b
+  zh: 67156a0cec8c8e60
+/orochi-network-oh-goal/model-experience/goal-state-mutations/kv-cache-effect:
+  en: 5fcc49f70cf6604d
+  zh: 39a3ba8fcdfba009
+/orochi-network-oh-goal/known-limitations-and-deferred-work:
+  en: c163d9b9a887d3b1
+  zh: 2b0424c2d3e73b26
+/orochi-network-oh-goal/known-limitations-and-deferred-work/dev-note:
+  en: 0b672d0c3b09cd5d
+  zh: 8f5d79353a6e5d63

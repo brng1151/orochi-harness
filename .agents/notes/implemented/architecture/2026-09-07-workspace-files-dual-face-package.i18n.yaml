@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-09-07-workspace-files-dual-face-package.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-07-workspace-files-dual-face-package.md
+/agent-note-workspace-files-as-one-dual-face-api-package:
+  en: 54f4d650c1e5a938
+  zh: 81ef5da3cd34e6fd
+/agent-note-workspace-files-as-one-dual-face-api-package/problem:
+  en: 575fe773700082dc
+  zh: d9b04feeb86ee36a
+/agent-note-workspace-files-as-one-dual-face-api-package/decision:
+  en: 8011745605cd4d26
+  zh: 4b5d4d6c453589c5
+/agent-note-workspace-files-as-one-dual-face-api-package/alternatives-considered:
+  en: 5b5a57ca0faddbab
+  zh: e4bd2eedae59eef2
+/agent-note-workspace-files-as-one-dual-face-api-package/consequences:
+  en: d4558eea4ac3a00b
+  zh: e625747fd469f146
+/agent-note-workspace-files-as-one-dual-face-api-package/verification:
+  en: 4c49a2ec778623e8
+  zh: 94eacb1ee8e4d36d

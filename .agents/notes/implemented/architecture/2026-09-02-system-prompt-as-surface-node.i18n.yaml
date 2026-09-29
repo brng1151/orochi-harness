@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for 2026-09-02-system-prompt-as-surface-node.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-02-system-prompt-as-surface-node.md
+/agent-note-the-system-prompt-is-surface-node-0:
+  en: 33153cf5dac212f4
+  zh: 0deb9afe546a5501
+/agent-note-the-system-prompt-is-surface-node-0/problem:
+  en: 552ff69de90bc4e9
+  zh: 30e64aaaaefce0e0
+/agent-note-the-system-prompt-is-surface-node-0/decision:
+  en: 3911ea80c5466d5e
+  zh: a0d6844e6f8af462
+/agent-note-the-system-prompt-is-surface-node-0/decision/the-event:
+  en: 4f73193344495254
+  zh: e607887b45a049b2
+/agent-note-the-system-prompt-is-surface-node-0/decision/the-operations:
+  en: a217a08932938062
+  zh: 4924d99d55d9c973
+/agent-note-the-system-prompt-is-surface-node-0/decision/ownership-in-the-loop:
+  en: 55b09219567f0cb5
+  zh: 85ecbb37b09d5e00
+/agent-note-the-system-prompt-is-surface-node-0/decision/consumers:
+  en: 2fd9c2c786728add
+  zh: 875d9d889950c0b8
+/agent-note-the-system-prompt-is-surface-node-0/decision/v2-to-v3-structural-conversion:
+  en: 3933e6ad5140f7c7
+  zh: f5583514e7151dec
+/agent-note-the-system-prompt-is-surface-node-0/alternatives-considered:
+  en: 067e96734ebbce89
+  zh: 9f79bc0f4942675d
+/agent-note-the-system-prompt-is-surface-node-0/consequences:
+  en: 1f7f6e26d2d5870b
+  zh: 75a4373e3bfc477a
+/agent-note-the-system-prompt-is-surface-node-0/testing:
+  en: 92aab462cd8e1f71
+  zh: 49abf2a2f764c9a7

@@ -1,0 +1,85 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/compaction/compaction/README.md
+/:
+  en: 5c47c9629036f119
+  zh: 7730d7468a38b38d
+/orochi-network-oh-compaction:
+  en: 0838594ef15ab4fe
+  zh: 91183e9a224e176d
+/orochi-network-oh-compaction/summary:
+  en: ccd5fcb5a9961bdb
+  zh: 514a3dd4d0e16f19
+/orochi-network-oh-compaction/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-compaction/use-this-package:
+  en: 7d1dad97626dbd2e
+  zh: 075fef4e1844ad12
+/orochi-network-oh-compaction/use-this-package/when-to-choose-it:
+  en: 91eda7b565ba3c24
+  zh: c85ddde39aa6e756
+/orochi-network-oh-compaction/use-this-package/what-condensation-looks-like:
+  en: 0abbee3a3b929a90
+  zh: 334736dffe93488d
+/orochi-network-oh-compaction/use-this-package/turning-condensation-on:
+  en: eff804f1600a988f
+  zh: 20fafe45644076f8
+/orochi-network-oh-compaction/use-this-package/implementing-a-backend:
+  en: 1904b7a33be4b087
+  zh: efcf4c455dc063d3
+/orochi-network-oh-compaction/use-this-package/recognizing-condensed-history:
+  en: 35502487f2850f05
+  zh: 333d2b86cc1d6eb0
+/orochi-network-oh-compaction/understand-the-implementation:
+  en: 321c3dc665ea03ff
+  zh: f0fa408cde7b0454
+/orochi-network-oh-compaction/understand-the-implementation/design-philosophy:
+  en: 746424cfbbf0847d
+  zh: f82e6280b00334db
+/orochi-network-oh-compaction/understand-the-implementation/service-api:
+  en: 1400aa992cd6f8e4
+  zh: fbc79784666e6ee7
+/orochi-network-oh-compaction/understand-the-implementation/manual-failure-taxonomy:
+  en: 03b3e1a64eebfbed
+  zh: 92a8cf652e0ed17b
+/orochi-network-oh-compaction/understand-the-implementation/tool-pairing-boundaries:
+  en: 15dad68a04d6c86b
+  zh: 3b95acf1b7e503bf
+/orochi-network-oh-compaction/understand-the-implementation/the-surface-contract:
+  en: ca78676cb90461db
+  zh: 098bda283a1fb30b
+/orochi-network-oh-compaction/understand-the-implementation/source-map:
+  en: 121139cf1878d7cf
+  zh: f8f9d8d3eb9866b5
+/orochi-network-oh-compaction/understand-the-implementation/locking-and-serialization:
+  en: 68caa51bed28bada
+  zh: 3f8261f9dcba95ed
+/orochi-network-oh-compaction/understand-the-implementation/events:
+  en: abc3d3656293a921
+  zh: 447b722159242f8d
+/orochi-network-oh-compaction/further-exploration:
+  en: 012e80e056af40c1
+  zh: 36fb04d396381521
+/orochi-network-oh-compaction/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-compaction/model-experience/conversation-history-when-a-backend-is-invoked:
+  en: 94de97ed1e85db85
+  zh: c8e37d8050609e63
+/orochi-network-oh-compaction/model-experience/conversation-history-when-a-backend-is-invoked/what-the-model-sees:
+  en: 3c4875a13da17814
+  zh: 9b257950a9e2c7c1
+/orochi-network-oh-compaction/model-experience/conversation-history-when-a-backend-is-invoked/token-effect:
+  en: be91f4a4bbb9338b
+  zh: 2b5de31d4d7caff1
+/orochi-network-oh-compaction/model-experience/conversation-history-when-a-backend-is-invoked/kv-cache-effect:
+  en: 40ba838a2309c44a
+  zh: c609fc1587a0d666
+/orochi-network-oh-compaction/known-limitations-and-deferred-work:
+  en: fee9ba06d3e5f35c
+  zh: 2bb5241e2447d15d
+/orochi-network-oh-compaction/known-limitations-and-deferred-work/dev-note:
+  en: 270e23ae6414aff0
+  zh: c6d219b8a547dbca

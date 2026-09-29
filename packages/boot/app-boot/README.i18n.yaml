@@ -1,0 +1,73 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/boot/app-boot/README.md
+/:
+  en: 3f6d5d83c2fa52b0
+  zh: 76348037645c0e29
+/orochi-network-oh-app-boot:
+  en: 565c0cb6295267f5
+  zh: 64d27d03bf82a3af
+/orochi-network-oh-app-boot/summary:
+  en: 3a2ad9ce373a2881
+  zh: b5b4ed598b3f4ff9
+/orochi-network-oh-app-boot/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-app-boot/use-this-package:
+  en: f6fa378225009c8f
+  zh: 324c0e4640bb1358
+/orochi-network-oh-app-boot/use-this-package/when-to-use-it:
+  en: 9ecf7cd7fc2347a8
+  zh: dd8a6cbb7cf71509
+/orochi-network-oh-app-boot/use-this-package/starting-the-app:
+  en: 1099528bde0e2aee
+  zh: b68772bdb9bb7856
+/orochi-network-oh-app-boot/use-this-package/profiles:
+  en: baad57e33b50e906
+  zh: 4a431828d0227ba6
+/orochi-network-oh-app-boot/use-this-package/previewing-the-effective-configuration:
+  en: 646a0ccdd7881ad1
+  zh: e3696acb1573dd7b
+/orochi-network-oh-app-boot/use-this-package/inspecting-plugin-configuration-schemas:
+  en: 2a1e36a5ac7bb3ea
+  zh: ca163641dd335173
+/orochi-network-oh-app-boot/use-this-package/reading-plugin-display-metadata:
+  en: c2252e52ca216e21
+  zh: c159ed4f689c879e
+/orochi-network-oh-app-boot/use-this-package/startup-and-reload-failures:
+  en: d637c7f61e04fb0f
+  zh: 35d323aeb7293980
+/orochi-network-oh-app-boot/use-this-package/telling-the-agent-where-the-harness-lives:
+  en: 41e1218191313b91
+  zh: cc4677e34a20165b
+/orochi-network-oh-app-boot/understand-the-implementation:
+  en: f4a2695cb4c8a570
+  zh: 89837235d2f376cf
+/orochi-network-oh-app-boot/understand-the-implementation/design-notes:
+  en: 1aea3bbe50fc513b
+  zh: 9c7a8eec08d1e68a
+/orochi-network-oh-app-boot/understand-the-implementation/helper-behavior:
+  en: f7bc3a8dd4b00bdd
+  zh: 30098428aa769ad0
+/orochi-network-oh-app-boot/understand-the-implementation/source-map:
+  en: 25602fd8eb9b2907
+  zh: 870a33dd34a52c32
+/orochi-network-oh-app-boot/further-exploration:
+  en: 64b768347e86311a
+  zh: 5f3c835d8cf3609f
+/orochi-network-oh-app-boot/model-experience:
+  en: 769777f1cb1a9408
+  zh: f02b2834179df50d
+/orochi-network-oh-app-boot/model-experience/kv-cache-effect:
+  en: c4d49630b68ae896
+  zh: 6f450ec6ba39bb81
+/orochi-network-oh-app-boot/known-limitations-and-deferred-work:
+  en: bf1a49013cad8e9c
+  zh: 41b2b010f8650ec3
+/orochi-network-oh-app-boot/known-limitations-and-deferred-work/dev-note:
+  en: d2f0d68fe29fb750
+  zh: 323d21ee73a9e3f6
+/orochi-network-oh-app-boot/known-limitations-and-deferred-work/dev-note/open-yaml-config-dump-stability:
+  en: 7e3604c25e366431
+  zh: 8d70d8fc36f6e866

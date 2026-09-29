@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for oh-v0.0.1-rc.1.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/persistence-changes/releases/oh-v0.0.1-rc.1.md
+/:
+  en: a71b64807739a534
+  zh: 5659c5871f5de0c6
+/persistence-release-oh-v0-0-1-rc-1:
+  en: baaf7bff8b331a51
+  zh: 4c6b5e4fd429775d
+/persistence-release-oh-v0-0-1-rc-1/summary:
+  en: 9f69100801848043
+  zh: 825abeadc00a2f16
+/persistence-release-oh-v0-0-1-rc-1/table-of-contents:
+  en: 0ff4a6f3c6af323f
+  zh: f5c7bd70cc1585c7
+/persistence-release-oh-v0-0-1-rc-1/release-evidence:
+  en: 12aaad43bc05fed8
+  zh: a9e2b15f90d642fc
+/persistence-release-oh-v0-0-1-rc-1/declaration:
+  en: af9cea43334ee692
+  zh: c6c8bd0d6a17718a
+/persistence-release-oh-v0-0-1-rc-1/structural-changes:
+  en: aed15ef7091b8455
+  zh: c44b2756c730d39b
+/persistence-release-oh-v0-0-1-rc-1/verification:
+  en: 8ccca317964523b1
+  zh: 2c8b3e70a3320778
+/persistence-release-oh-v0-0-1-rc-1/dev-note:
+  en: b75c8458928b72b9
+  zh: 003ba4e17b4b5269

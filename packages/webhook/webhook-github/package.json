@@ -1,0 +1,55 @@
+{
+  "name": "@orochi-network/oh-webhook-github",
+  "description": "Signed GitHub HTTP webhook adapter for the Orochi Harness webhook runtime",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/webhook/webhook-github"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./types": {
+      "types": "./lib/types/types.d.ts",
+      "default": "./lib/types/types.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-credentials": "workspace:*",
+    "@orochi-network/oh-host-webserver": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-webhook": "workspace:*"
+  },
+  "dependencies": {
+    "@orochi-network/oh-util-values": "workspace:*",
+    "@orochi-network/schemastery": "workspace:~",
+    "@octokit/webhooks": "^14.2.0"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/cordis-plugin-include": "workspace:~",
+    "@orochi-network/cordis-plugin-loader": "workspace:~",
+    "@orochi-network/oh-credentials": "workspace:*",
+    "@orochi-network/oh-host-webserver": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-webhook": "workspace:*"
+  }
+}

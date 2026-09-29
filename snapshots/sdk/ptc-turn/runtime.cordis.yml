@@ -1,0 +1,3 @@
+- insert:
+    - id: ptc-runtime
+      name: '@orochi-network/oh-ptc-runtime-node'

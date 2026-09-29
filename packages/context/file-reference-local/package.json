@@ -1,0 +1,51 @@
+{
+  "name": "@orochi-network/oh-file-reference-local",
+  "description": "Local-filesystem ctx.fileReferences provider with bounded fuzzy indexes",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/context/file-reference-local"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./search": {
+      "types": "./lib/types/search.d.ts",
+      "default": "./lib/types/search.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@orochi-network/schemastery": "workspace:~"
+  },
+  "peerDependencies": {
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-file-reference": "workspace:*",
+    "@orochi-network/oh-system-prompt": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*",
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-file-reference": "workspace:*",
+    "@orochi-network/oh-system-prompt": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*",
+    "@orochi-network/cordis": "workspace:~"
+  }
+}

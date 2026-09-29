@@ -1,0 +1,67 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/jobs/jobs-local/README.md
+/:
+  en: 0abe764a4bc3e3db
+  zh: 280ff3a1c1a8bc5c
+/orochi-network-oh-jobs-local:
+  en: 363a19f528724011
+  zh: 91ac7c2ee17bddc8
+/orochi-network-oh-jobs-local/summary:
+  en: c12eaa3e0cbe98c2
+  zh: 148e7384d8c5939e
+/orochi-network-oh-jobs-local/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-jobs-local/use-this-package:
+  en: d6a69bd403921743
+  zh: 79643065117f2fdd
+/orochi-network-oh-jobs-local/use-this-package/when-to-choose-it:
+  en: 17479310883edc0a
+  zh: f1cea41c704dabe2
+/orochi-network-oh-jobs-local/use-this-package/minimal-configuration:
+  en: 8f2a72bbe7c2068a
+  zh: 348e1643d4bcfbee
+/orochi-network-oh-jobs-local/use-this-package/what-each-owner-gets:
+  en: 9ab66aa770694092
+  zh: 38de930bcfbc132c
+/orochi-network-oh-jobs-local/use-this-package/lifecycle:
+  en: 91dd372f742dcdb8
+  zh: 58eeee0254d33cd1
+/orochi-network-oh-jobs-local/use-this-package/what-can-go-wrong:
+  en: 10d9fee0bd02dda8
+  zh: 1b9e90f926d67121
+/orochi-network-oh-jobs-local/understand-the-implementation:
+  en: f782557ca8da3138
+  zh: e8f0082b9692cacc
+/orochi-network-oh-jobs-local/understand-the-implementation/design-philosophy:
+  en: b92e6e5415553e2e
+  zh: c3e0be579af4c7fb
+/orochi-network-oh-jobs-local/understand-the-implementation/source-map:
+  en: b310ada5d764f7bc
+  zh: 9b09a4a06933aaa3
+/orochi-network-oh-jobs-local/understand-the-implementation/scope-layers:
+  en: 2c53e11a60965985
+  zh: 63adc1628c71e62e
+/orochi-network-oh-jobs-local/understand-the-implementation/admission-and-settlement:
+  en: 5fa7fae0aa1d3b68
+  zh: c4570e96ff627b0a
+/orochi-network-oh-jobs-local/understand-the-implementation/teardown:
+  en: 49e8bd5e2c1f6ffd
+  zh: ad3e1aa712fd59b3
+/orochi-network-oh-jobs-local/further-exploration:
+  en: 4be9c5e6918452cb
+  zh: 9006d94c2a5cc0cf
+/orochi-network-oh-jobs-local/model-experience:
+  en: 37acea88fd4a0659
+  zh: c6fdaa60e17ebe4d
+/orochi-network-oh-jobs-local/model-experience/kv-cache-effect:
+  en: e290ccc9b3c92c08
+  zh: d75d48f485447a74
+/orochi-network-oh-jobs-local/known-limitations-and-deferred-work:
+  en: 5284107cbd22e3dd
+  zh: 9aa0048908c94e25
+/orochi-network-oh-jobs-local/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

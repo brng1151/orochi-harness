@@ -1,0 +1,82 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/subagent/subagent-codex/README.md
+/:
+  en: c0c24742184eba37
+  zh: 2982b61ecfff95ce
+/orochi-network-oh-subagent-codex:
+  en: 3374711539a3c5f8
+  zh: 2727417ecfceba15
+/orochi-network-oh-subagent-codex/summary:
+  en: e70078ca65464aff
+  zh: e53994c8a4f61f5a
+/orochi-network-oh-subagent-codex/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-subagent-codex/use-this-package:
+  en: b5a419bc17f9938f
+  zh: d3f864c694dcc3df
+/orochi-network-oh-subagent-codex/use-this-package/installing-the-bundle:
+  en: fd1a741f9ef67dd5
+  zh: 6d4b6129543eeeed
+/orochi-network-oh-subagent-codex/use-this-package/configuration:
+  en: 7d630738d9f1f9e4
+  zh: c4a7815b965be5b4
+/orochi-network-oh-subagent-codex/use-this-package/exposing-the-tool:
+  en: ae49a2c17f98c205
+  zh: 8cd118bdf4a6ac57
+/orochi-network-oh-subagent-codex/use-this-package/what-you-get:
+  en: d095aece07cf4e43
+  zh: 124065171903083e
+/orochi-network-oh-subagent-codex/use-this-package/failure-and-recovery:
+  en: 4ffe0312c5a8f722
+  zh: 532a1997e9ae825b
+/orochi-network-oh-subagent-codex/understand-the-implementation:
+  en: d283c5564d6697e1
+  zh: 723aa78188880979
+/orochi-network-oh-subagent-codex/understand-the-implementation/design-concept:
+  en: 40315dca80a4e688
+  zh: 6b12db5e1037db98
+/orochi-network-oh-subagent-codex/understand-the-implementation/source-map:
+  en: ff3ba333a1cbb54e
+  zh: 1680115a5d1814b7
+/orochi-network-oh-subagent-codex/understand-the-implementation/run-flow:
+  en: d330494dbded9388
+  zh: ab996ff8a2f8b2fa
+/orochi-network-oh-subagent-codex/further-exploration:
+  en: 1f3e051601bd2349
+  zh: 81853c64ff7336b8
+/orochi-network-oh-subagent-codex/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-subagent-codex/model-experience/child-request:
+  en: 1796fa78833bfc2b
+  zh: d925d4c0d6c46552
+/orochi-network-oh-subagent-codex/model-experience/child-request/what-the-model-sees:
+  en: eb7be1567ceff373
+  zh: bec1a36af27bd3e9
+/orochi-network-oh-subagent-codex/model-experience/child-request/token-effect:
+  en: 7812d203a360434a
+  zh: 52c8b9a0cbfe39c3
+/orochi-network-oh-subagent-codex/model-experience/child-request/kv-cache-effect:
+  en: cd1fb7e2382ad2a2
+  zh: 2646d4b03a2e7220
+/orochi-network-oh-subagent-codex/model-experience/parent-scheduling-and-results-indirectly:
+  en: 4c391bb16e3cd380
+  zh: ab3847efe35fa6dc
+/orochi-network-oh-subagent-codex/model-experience/parent-scheduling-and-results-indirectly/what-the-model-sees:
+  en: aa6126bd31f85f33
+  zh: 2a39e12ead1e05d0
+/orochi-network-oh-subagent-codex/model-experience/parent-scheduling-and-results-indirectly/token-effect:
+  en: 0bf99fe5b871cb64
+  zh: 6bb608e9b39ffb5b
+/orochi-network-oh-subagent-codex/model-experience/parent-scheduling-and-results-indirectly/kv-cache-effect:
+  en: fdbb7dcbf8b37f2b
+  zh: c7bcbf1e91ffe1d4
+/orochi-network-oh-subagent-codex/known-limitations-and-deferred-work:
+  en: c76bf3e401740732
+  zh: 01d3d7783dfa8d3e
+/orochi-network-oh-subagent-codex/known-limitations-and-deferred-work/dev-note:
+  en: 7ab7eb087a0e3abb
+  zh: 5f3d74e7ad285e36

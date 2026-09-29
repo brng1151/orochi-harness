@@ -1,0 +1,49 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-tool/README.md
+/:
+  en: f6f0399208d1e62a
+  zh: 80d83d79f741bbf9
+/orochi-network-oh-client-ui-tool:
+  en: ab8b3273577c44c6
+  zh: 5e4fc7d06c8bb83f
+/orochi-network-oh-client-ui-tool/summary:
+  en: fda741d14f58e2a3
+  zh: 642f9bb2a14e8058
+/orochi-network-oh-client-ui-tool/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-ui-tool/use-this-package:
+  en: be2bc859e0d64fe5
+  zh: d51a35fb36675dd3
+/orochi-network-oh-client-ui-tool/use-this-package/registering-a-business-tool-view:
+  en: 5332d87e76037f07
+  zh: db5d06e7e46b8429
+/orochi-network-oh-client-ui-tool/use-this-package/built-in-views:
+  en: 4b69e36952574494
+  zh: 1f9842b40931adb6
+/orochi-network-oh-client-ui-tool/understand-the-implementation:
+  en: 00bc7b0c84edc603
+  zh: 1cfcf5b435248a91
+/orochi-network-oh-client-ui-tool/understand-the-implementation/rendering-contract:
+  en: 2959b10b01e08a7b
+  zh: 7084ca22650cbb5b
+/orochi-network-oh-client-ui-tool/understand-the-implementation/cards:
+  en: 64b28175e1db407a
+  zh: 5f9be66bbd6f0eb9
+/orochi-network-oh-client-ui-tool/further-exploration:
+  en: 757a7e9743a97790
+  zh: 8370f41be8065873
+/orochi-network-oh-client-ui-tool/model-experience:
+  en: 1e5e72dd269855d5
+  zh: 81a4756d460e3af9
+/orochi-network-oh-client-ui-tool/model-experience/kv-cache-effect:
+  en: ca75c51c89c2c9b0
+  zh: de54f3467ef3b9be
+/orochi-network-oh-client-ui-tool/known-limitations-and-deferred-work:
+  en: 7475317a656f1d11
+  zh: 787f10cc0f2c586e
+/orochi-network-oh-client-ui-tool/known-limitations-and-deferred-work/dev-note:
+  en: 0fdeab2e4db0261f
+  zh: 156d2b2952cf112e

@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-15-pr-approval-delegation.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/process/2026-09-15-pr-approval-delegation.md
+/agent-note-pr-scoped-approval-delegation:
+  en: 7cf63878bf951c36
+  zh: 737e587bddf50ca9
+/agent-note-pr-scoped-approval-delegation/problem:
+  en: 5fe2f3b3cb7ce046
+  zh: ed27d4efc995b8b5
+/agent-note-pr-scoped-approval-delegation/decision:
+  en: 1cd18d80c47535a5
+  zh: 5a13e5da4793908c
+/agent-note-pr-scoped-approval-delegation/alternatives-considered:
+  en: a6006217cb29613a
+  zh: 83968328096f1d91
+/agent-note-pr-scoped-approval-delegation/consequences:
+  en: 36314eb56106edea
+  zh: cb9f7602e56fc146

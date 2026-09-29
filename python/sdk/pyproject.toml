@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling==1.30.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "orochi-harness-sdk"
+version = "0.0.0.dev0"
+description = "Python SDK for Orochi Harness"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Orochi" }]
+dependencies = [
+  "pydantic>=2.12,<3",
+  "orochi-harness-runtime-bin==0.0.0.dev0",
+]
+
+[project.urls]
+Homepage = "https://github.com/orochi-network/orochi-harness"
+Documentation = "https://github.com/orochi-network/orochi-harness/blob/master/docs/user/guide/python-sdk.md"
+Issues = "https://github.com/orochi-network/orochi-harness/issues"
+Source = "https://github.com/orochi-network/orochi-harness"
+
+[dependency-groups]
+test = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/orochi_harness"]
+
+# Editable installs see runtime executables injected after installation instead
+# of freezing a wheel snapshot.
+[tool.uv.sources]
+orochi-harness-runtime-bin = { path = "../sdk-runtime", editable = true }

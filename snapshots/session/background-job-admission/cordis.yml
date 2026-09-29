@@ -1,0 +1,33 @@
+# Bounded-task admission overlay: keep the ordinary ACP composition while
+# configuring its task provider to allow one active task per exact owner. The
+# scenario starts a real background Bash process, observes the second producer
+# rejection, and cleans up the first task by its returned id.
+- id: agent-default-model
+  name: '@orochi-network/oh-agent-default-model'
+  config:
+    provider: orochi-official
+    model: deepseek-v4-flash
+
+- id: session-persistence-jsonl
+  name: '@orochi-network/oh-session-persistence-jsonl'
+  config:
+    root: !!js ohHomePath('sessions')
+    compression: !!js 'process.env.OH_SNAPSHOT === undefined ? ''zstd'' : ''none'''
+
+- id: agent-instructions
+  name: '@orochi-network/oh-agent-instructions'
+  config:
+    maxBytes: 65536
+
+- id: system-prompt
+  name: '@orochi-network/oh-system-prompt'
+  config:
+    personaPrefix: |
+      You are a coding assistant powered by the {{model}} model. Your working directory is {{cwd}}. Your bash tool runs under a file sandbox — a `[sandbox: file access denied …]` result is policy, not a command bug.
+
+      Verify your work by running the code or tests. Keep answers brief and factual.
+
+- id: jobs
+  name: '@orochi-network/oh-jobs-local'
+  config:
+    maxConcurrentJobsPerOwner: 1

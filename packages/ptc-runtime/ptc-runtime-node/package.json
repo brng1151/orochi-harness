@@ -1,0 +1,61 @@
+{
+  "name": "@orochi-network/oh-ptc-runtime-node",
+  "description": "Sandboxed Node process implementation of the Orochi Harness PTC execution capability",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/ptc-runtime/ptc-runtime-node"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
+    "./process": {
+      "types": "./lib/types/process-entry.d.ts",
+      "default": "./lib/process.js"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/process.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-ptc-runtime": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-timeout": "workspace:*",
+    "@orochi-network/oh-fs": "workspace:*",
+    "@orochi-network/oh-subprocess": "workspace:*",
+    "@orochi-network/oh-sandbox": "workspace:*",
+    "@orochi-network/oh-sandbox-policy": "workspace:*"
+  },
+  "dependencies": {
+    "@orochi-network/oh-util-values": "workspace:*",
+    "@orochi-network/schemastery": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-ptc-runtime": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-timeout": "workspace:*",
+    "@orochi-network/oh-fs": "workspace:*",
+    "@orochi-network/oh-subprocess": "workspace:*",
+    "@orochi-network/oh-sandbox": "workspace:*",
+    "@orochi-network/oh-sandbox-policy": "workspace:*",
+    "@orochi-network/oh-fs-local": "workspace:*",
+    "@orochi-network/oh-subprocess-local": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-sandbox-local": "workspace:*"
+  }
+}

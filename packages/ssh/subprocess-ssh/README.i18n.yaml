@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/ssh/subprocess-ssh/README.md
+/:
+  en: 3e3b8e1b999fccbb
+  zh: 996257b8c3c219a8
+/orochi-network-oh-subprocess-ssh:
+  en: 726f187b1d658d67
+  zh: e0a5fbae747e9bfb
+/orochi-network-oh-subprocess-ssh/summary:
+  en: ed8b0002b9b60cd7
+  zh: cb26433265fec7ea
+/orochi-network-oh-subprocess-ssh/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 725b47765ee8f30b
+/orochi-network-oh-subprocess-ssh/use-this-package:
+  en: 914333850286575a
+  zh: 4d15402c23d33c1a
+/orochi-network-oh-subprocess-ssh/understand-the-implementation:
+  en: d5f97cb70c722464
+  zh: c4fb27703f5ab22e
+/orochi-network-oh-subprocess-ssh/further-exploration:
+  en: fa4eac9f41578536
+  zh: 837f16de7bf17c9d
+/orochi-network-oh-subprocess-ssh/model-experience:
+  en: 02267d26e71b847c
+  zh: 749305233e7f63e4
+/orochi-network-oh-subprocess-ssh/model-experience/kv-cache-effect:
+  en: 21f304c66e5ba98b
+  zh: 18185d5b164f8216
+/orochi-network-oh-subprocess-ssh/known-limitations-and-deferred-work:
+  en: 0aa40f28ee1eb6e1
+  zh: da785a9b66cdbed9
+/orochi-network-oh-subprocess-ssh/known-limitations-and-deferred-work/dev-note:
+  en: 6ca4f1d4b4810fff
+  zh: e42f580ca971972b

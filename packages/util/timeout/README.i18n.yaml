@@ -1,0 +1,64 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/util/timeout/README.md
+/:
+  en: 118428acb1b2d2e4
+  zh: e5ca5ae92e8a7e4b
+/orochi-network-oh-timeout:
+  en: fb521901a0481270
+  zh: c76a37fe66a3625f
+/orochi-network-oh-timeout/summary:
+  en: acf09dfbd41643a6
+  zh: f20f539237d5bc21
+/orochi-network-oh-timeout/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-timeout/use-this-package:
+  en: f000e79268bb4b39
+  zh: 82c40259b95776be
+/orochi-network-oh-timeout/use-this-package/clamping-a-timeout-hint:
+  en: f8c517a0c27ebeec
+  zh: 0b6eed0130330349
+/orochi-network-oh-timeout/use-this-package/running-work-under-a-deadline:
+  en: 5cfa732a396484a6
+  zh: d114cd5ea1ddeb3f
+/orochi-network-oh-timeout/use-this-package/classifying-the-outcome:
+  en: 0c1e99daa88e0ea0
+  zh: fc92bc0add2e9a49
+/orochi-network-oh-timeout/use-this-package/streaming-with-an-idle-watchdog:
+  en: f464a16371ff00d1
+  zh: 3c62c560c9dbc804
+/orochi-network-oh-timeout/use-this-package/what-does-not-get-a-timeout:
+  en: 73e04894d01ddb23
+  zh: 4830e47cc55143ff
+/orochi-network-oh-timeout/understand-the-implementation:
+  en: 6c052aa1171a2e3b
+  zh: 2a37575eb6059cc9
+/orochi-network-oh-timeout/understand-the-implementation/source-map:
+  en: be1b396f4153b9d0
+  zh: a762ab1642b3431e
+/orochi-network-oh-timeout/understand-the-implementation/how-a-deadline-fuses-sources:
+  en: 940080c53d1d0dac
+  zh: b86e7f51434a3f2c
+/orochi-network-oh-timeout/understand-the-implementation/the-no-timeout-sentinel:
+  en: ceea0b46e6b8e15f
+  zh: de87dccf08764061
+/orochi-network-oh-timeout/understand-the-implementation/why-an-idle-watchdog-rearms:
+  en: fc26fc2db443e348
+  zh: 606d72c39ff5cde1
+/orochi-network-oh-timeout/further-exploration:
+  en: ef966c3cd25483fb
+  zh: 947c812592334087
+/orochi-network-oh-timeout/model-experience:
+  en: 5c35c77e4625b8ac
+  zh: 8142da11ba1a6d11
+/orochi-network-oh-timeout/model-experience/kv-cache-effect:
+  en: 04cc18d90bf9382d
+  zh: 2c8b75063c46c620
+/orochi-network-oh-timeout/known-limitations-and-deferred-work:
+  en: cff4b9d3cfc23a97
+  zh: 9eb52fbe4c8a6c30
+/orochi-network-oh-timeout/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

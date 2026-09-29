@@ -1,0 +1,36 @@
+# Keyless replay keeps the LSP composition intact and replaces only the model adapter.
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  disabled: true
+
+- insert:
+    - id: lsp
+      name: '@orochi-network/oh-lsp'
+    - id: lsp-stdio
+      name: '@orochi-network/oh-lsp-stdio'
+      config:
+        servers:
+          fixture:
+            command: !!js process.execPath
+            args: ['./lsp-server.mjs']
+            extensionToLanguage:
+              '.ts': typescript
+    - id: tool-lsp
+      name: '@orochi-network/oh-tool-lsp'
+      config:
+        maxLocations: 1
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: deepseek-v4-flash
+              - id: deepseek-v4-pro
+
+- id: timeout-policy
+  name: '@orochi-network/oh-tool-call-timeout-policy'
+
+- id: plugin-package-inventory-orochi
+  disabled: true

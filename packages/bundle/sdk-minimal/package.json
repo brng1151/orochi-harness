@@ -1,0 +1,71 @@
+{
+  "name": "@orochi-network/oh-sdk-minimal",
+  "description": "The standalone minimal SDK profile bundle: JSON-RPC, one Orochi adapter, persistent shell, and JSONL sessions",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/bundle/sdk-minimal"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "cordis.patch.yml",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "oh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@orochi-network/cordis-plugin-timer": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-agent-loop": "workspace:*",
+    "@orochi-network/oh-orochi-llm-api-extensions": "workspace:*",
+    "@orochi-network/oh-invariants": "workspace:*",
+    "@orochi-network/oh-jobs-local": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-llm-orochi-api-key": "workspace:*",
+    "@orochi-network/oh-llm-retry": "workspace:*",
+    "@orochi-network/oh-mcp-resources": "workspace:*",
+    "@orochi-network/oh-plugin-package-inventory-orochi": "workspace:*",
+    "@orochi-network/oh-sandbox-local": "workspace:*",
+    "@orochi-network/oh-sandbox-policy": "workspace:*",
+    "@orochi-network/oh-scope": "workspace:*",
+    "@orochi-network/oh-sdk-app": "workspace:*",
+    "@orochi-network/oh-sdk-jsonrpc-server": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-session-persistence-jsonl": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-session-title": "workspace:*",
+    "@orochi-network/oh-subprocess-local": "workspace:*",
+    "@orochi-network/oh-system-prompt": "workspace:*",
+    "@orochi-network/oh-terminal": "workspace:*",
+    "@orochi-network/oh-terminal-bash": "workspace:*",
+    "@orochi-network/oh-tool-bash-persistent": "workspace:*",
+    "@orochi-network/oh-tool-pwsh-persistent": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*"
+  },
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  }
+}

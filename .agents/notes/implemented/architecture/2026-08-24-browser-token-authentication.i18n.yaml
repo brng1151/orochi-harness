@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-08-24-browser-token-authentication.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-08-24-browser-token-authentication.md
+/agent-note-browser-launch-token-authentication:
+  en: 879f23f0f5b25a8e
+  zh: 40d4fb8d56464441
+/agent-note-browser-launch-token-authentication/problem:
+  en: 01293500639c9d79
+  zh: 6d19e4843955c811
+/agent-note-browser-launch-token-authentication/decision:
+  en: 6e997a0a2baa5cfa
+  zh: 7cbddbc7d595ab04
+/agent-note-browser-launch-token-authentication/verification:
+  en: e871e1a3bfc06bfa
+  zh: 60739a0e63268135
+/agent-note-browser-launch-token-authentication/alternatives-considered:
+  en: 6831d322663f6c98
+  zh: f8b79abee9544850
+/agent-note-browser-launch-token-authentication/consequences:
+  en: 0dab7a89cda076c1
+  zh: 7bdbb1cc00e66a29

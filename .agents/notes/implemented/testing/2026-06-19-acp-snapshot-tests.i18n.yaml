@@ -1,0 +1,46 @@
+# Bilingual-pair consistency record for 2026-06-19-acp-snapshot-tests.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/testing/2026-06-19-acp-snapshot-tests.md
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic:
+  en: 073b965b0e89bc22
+  zh: 1377823b01be86f9
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/problem:
+  en: 064bee62228d5f7e
+  zh: 6f9784202382b216
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/decision:
+  en: 11b1b14a751548a6
+  zh: 7d5130dfdab26890
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/decision/the-fixture-projects-the-persisted-session-jsonl:
+  en: bdd1333366edfc30
+  zh: ed8a0fbab516a62b
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/decision/replay-derives-the-model-script-from-the-log:
+  en: cb71313f2b14f855
+  zh: f85809cfd19ce6af
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/decision/the-in-memory-replay-entry-honors-the-full-llm-contract:
+  en: 5d750b82fd88597c
+  zh: 22dc6dec0d638449
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/decision/positional-replay-one-in-flight-stream:
+  en: 9ecd0c3efce1b2a1
+  zh: 51612956e0c4fc85
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/decision/recording-harvests-the-log-keyless-replay-needs-a-providerless-config:
+  en: 1bdbaff04a187067
+  zh: 1c48d2cffc222c0b
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/decision/two-outputs-normalize-then-compare:
+  en: ee891a839a0c05e9
+  zh: 677259307e4357fa
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/decision/isolation-normalization-now-sandbox-later:
+  en: ca949da227b07d29
+  zh: c3371bc0549a699d
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/decision/the-replay-plugin-is-its-own-package:
+  en: f80182b06691d38e
+  zh: 67566733a8a559ee
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/decision/two-subcommands-replay-in-the-default-gate:
+  en: a50cb4cd2be177f7
+  zh: a29f45aafb83fa6c
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/alternatives-considered:
+  en: c4e83a568e8f483e
+  zh: eff19f1872565ff6
+/agent-note-acp-snapshot-tests-record-once-replay-deterministic/consequences:
+  en: 69f11fb77d44879a
+  zh: e5f8ad12bb400586

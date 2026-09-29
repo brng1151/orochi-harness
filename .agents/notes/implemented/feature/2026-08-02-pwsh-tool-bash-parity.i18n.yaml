@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-08-02-pwsh-tool-bash-parity.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-02-pwsh-tool-bash-parity.md
+/agent-note-pwsh-tool-bash-parity:
+  en: 4125408e15d245a5
+  zh: c3afae4a34a7dc8d
+/agent-note-pwsh-tool-bash-parity/problem:
+  en: 90087f37bc70843d
+  zh: 21fac015b64c6b91
+/agent-note-pwsh-tool-bash-parity/decision:
+  en: d69f8605b46722db
+  zh: 8510b985a10803a0
+/agent-note-pwsh-tool-bash-parity/alternatives-considered:
+  en: 60a33fbb82ae7e61
+  zh: fb0bcec605cbdd1c
+/agent-note-pwsh-tool-bash-parity/consequences:
+  en: 43137428039db2f0
+  zh: 9a0740cd51d639dc

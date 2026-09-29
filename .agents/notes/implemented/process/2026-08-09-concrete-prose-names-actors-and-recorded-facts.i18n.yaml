@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-08-09-concrete-prose-names-actors-and-recorded-facts.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/process/2026-08-09-concrete-prose-names-actors-and-recorded-facts.md
+/agent-note-concrete-prose-names-actors-and-recorded-facts:
+  en: 04bad51d05fc9a50
+  zh: b1a80dc9830f6baa
+/agent-note-concrete-prose-names-actors-and-recorded-facts/problem:
+  en: f0228c15ff233209
+  zh: b6183fdc8dd705a0
+/agent-note-concrete-prose-names-actors-and-recorded-facts/decision:
+  en: 03f93537ba1968a9
+  zh: b81c2836854f851f
+/agent-note-concrete-prose-names-actors-and-recorded-facts/alternatives-considered:
+  en: 08a988b00edf03b2
+  zh: 8614c5edbc46ca36
+/agent-note-concrete-prose-names-actors-and-recorded-facts/consequences:
+  en: 18e6d0b597186220
+  zh: 744ed1b795929bba

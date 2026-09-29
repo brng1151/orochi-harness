@@ -1,0 +1,52 @@
+{
+  "name": "@orochi-network/oh-host-directory-picker-auto",
+  "description": "Adaptive chooser of the directory-picker seam: resolves the host situation at boot and mounts the native or browse backend for the Orochi Harness web GUI host",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/host/directory-picker-auto"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/cordis-plugin-loader": "workspace:~",
+    "@orochi-network/oh-client-ui-directory-picker-browse": "workspace:*",
+    "@orochi-network/oh-client-ui-directory-picker-native": "workspace:*",
+    "@orochi-network/oh-host-directory-picker-browse": "workspace:*",
+    "@orochi-network/oh-host-directory-picker-native": "workspace:*",
+    "@orochi-network/oh-host-webserver": "workspace:*"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/cordis-plugin-include": "workspace:~",
+    "@orochi-network/cordis-plugin-loader": "workspace:~",
+    "@orochi-network/oh-client-ui-directory-picker-browse": "workspace:*",
+    "@orochi-network/oh-client-ui-directory-picker-native": "workspace:*",
+    "@orochi-network/oh-host-directory-picker": "workspace:*",
+    "@orochi-network/oh-host-directory-picker-browse": "workspace:*",
+    "@orochi-network/oh-host-directory-picker-native": "workspace:*",
+    "@orochi-network/oh-host-webserver": "workspace:*"
+  },
+  "dependencies": {
+    "@orochi-network/oh-launch-environment": "workspace:*"
+  }
+}

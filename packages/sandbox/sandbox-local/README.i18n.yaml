@@ -1,0 +1,64 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/sandbox/sandbox-local/README.md
+/:
+  en: f172767891b86bf4
+  zh: e66e1cc8c96cc259
+/orochi-network-oh-sandbox-local:
+  en: 6289d835874e6159
+  zh: fcb5d3fa6528a74e
+/orochi-network-oh-sandbox-local/summary:
+  en: cc04c2f92fd0c85a
+  zh: 168b2dab66e6aab1
+/orochi-network-oh-sandbox-local/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-sandbox-local/use-this-package:
+  en: 3759ad594d0a27fb
+  zh: 722010d952b9f87f
+/orochi-network-oh-sandbox-local/use-this-package/when-to-choose-it:
+  en: 722ad601000b13c7
+  zh: d2723f3743fe160b
+/orochi-network-oh-sandbox-local/use-this-package/minimal-configuration:
+  en: 5005193f887b4165
+  zh: aabb962ee651d5cf
+/orochi-network-oh-sandbox-local/use-this-package/confined-execution-and-enforcement:
+  en: 7282c9ec77fd6f01
+  zh: 10e385a9489105e3
+/orochi-network-oh-sandbox-local/use-this-package/failures-and-recovery:
+  en: 3808edb37dde5761
+  zh: a8fef8a4fd33e364
+/orochi-network-oh-sandbox-local/understand-the-implementation:
+  en: 15db6ec303151ccc
+  zh: 91f62c1f64192f92
+/orochi-network-oh-sandbox-local/understand-the-implementation/runner-selection:
+  en: f0c44248c2ca6acc
+  zh: 554e9f706671d222
+/orochi-network-oh-sandbox-local/understand-the-implementation/platform-profiles:
+  en: 312bda629e1111bd
+  zh: fd39a74c179cd50a
+/orochi-network-oh-sandbox-local/understand-the-implementation/denial-and-runner-failure-dialects:
+  en: 62adfc9229c656cc
+  zh: 11b1534b6d61e5de
+/orochi-network-oh-sandbox-local/understand-the-implementation/source-map:
+  en: 8ab5bcc8dd97df3c
+  zh: ee7a6a237a142cbd
+/orochi-network-oh-sandbox-local/further-exploration:
+  en: 8451f066cbdfa959
+  zh: e4b86993d544858e
+/orochi-network-oh-sandbox-local/model-experience:
+  en: 7cca6820bcaa01d1
+  zh: f51f6c1872f5e9e1
+/orochi-network-oh-sandbox-local/model-experience/kv-cache-effect:
+  en: e290ccc9b3c92c08
+  zh: 469589ac12cdadab
+/orochi-network-oh-sandbox-local/known-limitations-and-deferred-work:
+  en: b2a6a72e340bc620
+  zh: 9d9b2894850a131d
+/orochi-network-oh-sandbox-local/known-limitations-and-deferred-work/dev-note:
+  en: cc273320f6a1beaf
+  zh: 5c57a312ddc50651
+/orochi-network-oh-sandbox-local/known-limitations-and-deferred-work/dev-note/future-environment-coherent-groups:
+  en: 231c8fb566539188
+  zh: 3d79f9f848bbfec5

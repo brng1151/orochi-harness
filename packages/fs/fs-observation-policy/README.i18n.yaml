@@ -1,0 +1,70 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/fs/fs-observation-policy/README.md
+/:
+  en: 2e7d205b959bad5b
+  zh: 78111c063c98c309
+/orochi-network-oh-fs-observation-policy:
+  en: 8b0229bf4862d566
+  zh: ea8b6f6413edc5d3
+/orochi-network-oh-fs-observation-policy/summary:
+  en: 36984c208591d7f7
+  zh: e0d4d79d0a13b39a
+/orochi-network-oh-fs-observation-policy/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-fs-observation-policy/use-this-package:
+  en: d7e350573d106da2
+  zh: 988d57656206cf77
+/orochi-network-oh-fs-observation-policy/use-this-package/minimal-composition:
+  en: d85e3b814b43768e
+  zh: 89d3672dbb2f6d30
+/orochi-network-oh-fs-observation-policy/use-this-package/what-changes-for-the-model:
+  en: 91686925a433794d
+  zh: 9ac2a197203d6549
+/orochi-network-oh-fs-observation-policy/use-this-package/failures-and-recovery:
+  en: 1ecc7b68f7c7b3f0
+  zh: f6a9800786ed30c0
+/orochi-network-oh-fs-observation-policy/understand-the-implementation:
+  en: 612e69f76edc8795
+  zh: 55edab9956941616
+/orochi-network-oh-fs-observation-policy/understand-the-implementation/design-concept:
+  en: 06cb7a303328b9fe
+  zh: e697c0d6e701e3b9
+/orochi-network-oh-fs-observation-policy/understand-the-implementation/source-map:
+  en: 6a55bd72a91664bf
+  zh: fc22345acfd9d850
+/orochi-network-oh-fs-observation-policy/understand-the-implementation/decision-flow:
+  en: 79ddd675e3c27d62
+  zh: b9b74b63aad5b42d
+/orochi-network-oh-fs-observation-policy/understand-the-implementation/single-slot-first-wins:
+  en: 226bb7885eb147b8
+  zh: 0b68d59ddc55fb07
+/orochi-network-oh-fs-observation-policy/understand-the-implementation/lifecycle:
+  en: 02a1e3e7707706fb
+  zh: eff587af0445d032
+/orochi-network-oh-fs-observation-policy/further-exploration:
+  en: d42a9c4e81d9e0fc
+  zh: 41fb02271ad3ecb5
+/orochi-network-oh-fs-observation-policy/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-fs-observation-policy/model-experience/filesystem-tool-outcome:
+  en: ee1f02dc1bb69955
+  zh: 9ba9205a9b15d132
+/orochi-network-oh-fs-observation-policy/model-experience/filesystem-tool-outcome/what-the-model-sees:
+  en: 7d9459239db04673
+  zh: 3ef3ddf24a4fa040
+/orochi-network-oh-fs-observation-policy/model-experience/filesystem-tool-outcome/token-effect:
+  en: 425ccc7dafa6218d
+  zh: d2c1a29955a60e3d
+/orochi-network-oh-fs-observation-policy/model-experience/filesystem-tool-outcome/kv-cache-effect:
+  en: 2fbf2175168e8244
+  zh: 3d6bc05b9eadfbc2
+/orochi-network-oh-fs-observation-policy/known-limitations-and-deferred-work:
+  en: 135fd5549c273557
+  zh: 55594954dc1cc0d5
+/orochi-network-oh-fs-observation-policy/known-limitations-and-deferred-work/dev-note:
+  en: 9979632783da7b78
+  zh: c42c1feec2905268

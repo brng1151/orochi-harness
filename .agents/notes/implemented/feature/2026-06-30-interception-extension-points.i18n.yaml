@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for 2026-06-30-interception-extension-points.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-06-30-interception-extension-points.md
+/agent-note-interception-extension-points-the-typed-decision-surface-a-hook-programs-against:
+  en: 245e6c0c2010a8b6
+  zh: 6dcc80cde6e525d2
+/agent-note-interception-extension-points-the-typed-decision-surface-a-hook-programs-against/problem:
+  en: 5a0dc1d24ed6846a
+  zh: f4547fa375b7700a
+/agent-note-interception-extension-points-the-typed-decision-surface-a-hook-programs-against/decision:
+  en: 7e052bc2658ebfd3
+  zh: b5883da2a65393f8
+/agent-note-interception-extension-points-the-typed-decision-surface-a-hook-programs-against/decision/the-tool-pipeline-gives-each-phase-one-kind-of-authority:
+  en: ce07ebcffbad002d
+  zh: d32a156a82191aca
+/agent-note-interception-extension-points-the-typed-decision-surface-a-hook-programs-against/decision/three-load-bearing-loop-decisions:
+  en: 4add07de4dca489f
+  zh: ba513069919c6544
+/agent-note-interception-extension-points-the-typed-decision-surface-a-hook-programs-against/decision/pre-tool-input-rewrite-is-a-separate-consistency-decision:
+  en: b07ff70ac4f57221
+  zh: 444168b5a0de2f8f
+/agent-note-interception-extension-points-the-typed-decision-surface-a-hook-programs-against/decision/boundaries:
+  en: 76fdd657a75c1405
+  zh: 56e02b34d55d1d6d
+/agent-note-interception-extension-points-the-typed-decision-surface-a-hook-programs-against/alternatives-considered:
+  en: 208b58b0c7b406b3
+  zh: 4bd1ae3d288482a4
+/agent-note-interception-extension-points-the-typed-decision-surface-a-hook-programs-against/consequences:
+  en: d64452136dfdc65d
+  zh: d966c52a854ddc78

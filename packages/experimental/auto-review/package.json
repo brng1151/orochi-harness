@@ -1,0 +1,83 @@
+{
+  "name": "@orochi-network/oh-experimental-auto-review",
+  "description": "Per-tool LLM authorization review for the Orochi Harness Auto permission preset",
+  "version": "0.1.7-rc.2",
+  "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/experimental/auto-review"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./locale/*.json": "./locale/*.json",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "icon.svg",
+    "locale/*.json",
+    "lib/index.js",
+    "cordis.patch.yml",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-agent-instructions": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-permission-presets": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*",
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "dependencies": {
+    "@orochi-network/oh-util-values": "workspace:*"
+  },
+  "devDependencies": {
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-agent-instructions": "workspace:*",
+    "@orochi-network/oh-agent-loop": "workspace:*",
+    "@orochi-network/oh-agent-loop-testkit": "workspace:*",
+    "@orochi-network/oh-bash-sandbox": "workspace:*",
+    "@orochi-network/oh-compaction": "workspace:*",
+    "@orochi-network/oh-fs-local": "workspace:*",
+    "@orochi-network/oh-fs-observation-policy": "workspace:*",
+    "@orochi-network/oh-fs-sandbox": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-llm-orochi": "workspace:*",
+    "@orochi-network/oh-llm-orochi-api-key": "workspace:*",
+    "@orochi-network/oh-permission-presets": "workspace:*",
+    "@orochi-network/oh-ptc-runtime-node": "workspace:*",
+    "@orochi-network/oh-sandbox": "workspace:*",
+    "@orochi-network/oh-sandbox-policy": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-shell": "workspace:*",
+    "@orochi-network/oh-shell-env": "workspace:*",
+    "@orochi-network/oh-subagent": "workspace:*",
+    "@orochi-network/oh-subprocess-local": "workspace:*",
+    "@orochi-network/oh-system-prompt": "workspace:*",
+    "@orochi-network/oh-tool-bash": "workspace:*",
+    "@orochi-network/oh-tool-fs": "workspace:*",
+    "@orochi-network/oh-tool-subagent": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*",
+    "@orochi-network/oh-user-approval": "workspace:*",
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "oh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

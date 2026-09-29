@@ -1,0 +1,54 @@
+{
+  "name": "@orochi-network/oh-experimental-voice-input-bundle",
+  "description": "Experimental voice input with local SenseVoice; downloads its runtime on first use",
+  "version": "0.1.7-rc.2",
+  "icon": "./icon.svg",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/experimental/voice-input-bundle"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "icon.svg",
+    "locale/*.json",
+    "lib/index.js",
+    "cordis.patch.yml",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@orochi-network/oh-experimental-speech-to-text": "workspace:*",
+    "@orochi-network/oh-experimental-speech-to-text-sensevoice": "workspace:*",
+    "@orochi-network/oh-experimental-api-speech-to-text": "workspace:*",
+    "@orochi-network/oh-experimental-client-ui-voice-input": "workspace:*"
+  },
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/cordis-plugin-include": "workspace:~",
+    "js-yaml": "^4.2.0"
+  },
+  "oh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

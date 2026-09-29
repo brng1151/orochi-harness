@@ -1,0 +1,40 @@
+# Bilingual-pair consistency record for 2026-08-10-remote-event-delivery.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-08-10-remote-event-delivery.md
+/agent-note-remote-event-delivery-ctx-remote-on:
+  en: 9752fedd8d29d0f5
+  zh: 95b7bae39eb0b42f
+/agent-note-remote-event-delivery-ctx-remote-on/problem:
+  en: 9b275754c65ae86e
+  zh: 8c50655adc489b35
+/agent-note-remote-event-delivery-ctx-remote-on/decision:
+  en: 83f6f48ce1fc517b
+  zh: abcfcd1c0eb777ea
+/agent-note-remote-event-delivery-ctx-remote-on/decision/consumer-contract-oh-typert-protocol:
+  en: 6c4bdb2aa1c53ceb
+  zh: 95c81cd3cc173aac
+/agent-note-remote-event-delivery-ctx-remote-on/decision/the-allowlist-one-declaration-read-by-both-faces:
+  en: dddd658fa1412ae5
+  zh: 97fcb597a1c2324b
+/agent-note-remote-event-delivery-ctx-remote-on/decision/wire-protocol-api-gateway-remote-mux:
+  en: 5c89d238a469e79f
+  zh: d0cf485f0d245e7d
+/agent-note-remote-event-delivery-ctx-remote-on/decision/the-apps-web-browser-e2e-belongs-to-the-host-face:
+  en: 370e24e279f349b2
+  zh: a708a1f641dbde2d
+/agent-note-remote-event-delivery-ctx-remote-on/decision/change-inventory:
+  en: 5edc449f9cfb8716
+  zh: 80e95e86458aefd1
+/agent-note-remote-event-delivery-ctx-remote-on/alternatives-considered:
+  en: b75743ab277c1557
+  zh: e8e05f41ce1bc2f3
+/agent-note-remote-event-delivery-ctx-remote-on/verification:
+  en: 4ec0e1c76da8d3b6
+  zh: 23de66f8fc659c15
+/agent-note-remote-event-delivery-ctx-remote-on/consequences:
+  en: f5eafabb87dd1fd4
+  zh: 8dcc19f333a53eff
+/agent-note-remote-event-delivery-ctx-remote-on/related:
+  en: f05c6143dcfadc9c
+  zh: 595e50c7938a8495

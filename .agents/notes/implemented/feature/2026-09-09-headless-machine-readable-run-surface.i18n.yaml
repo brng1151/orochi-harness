@@ -1,0 +1,28 @@
+# Bilingual-pair consistency record for 2026-09-09-headless-machine-readable-run-surface.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-09-09-headless-machine-readable-run-surface.md
+/agent-note-headless-machine-readable-run-surface:
+  en: 61e6c20e8201b789
+  zh: f30780c7be39a17c
+/agent-note-headless-machine-readable-run-surface/problem:
+  en: 46b3011a32af9444
+  zh: 40d8c21bf6f8acf6
+/agent-note-headless-machine-readable-run-surface/decision:
+  en: 98b5b8493809ceeb
+  zh: 1a118c89e896f93c
+/agent-note-headless-machine-readable-run-surface/decision/command-line-contract:
+  en: 59470d5c2eba0a57
+  zh: 342c1ac9042c6b46
+/agent-note-headless-machine-readable-run-surface/decision/event-stream:
+  en: b6837e3de1305559
+  zh: 183956da3319a126
+/agent-note-headless-machine-readable-run-surface/decision/session-identity:
+  en: 946d0597df83498b
+  zh: d67bae6438c64c72
+/agent-note-headless-machine-readable-run-surface/consequences:
+  en: 1ba14087f533dd8e
+  zh: 66f4aa9d63a0da23
+/agent-note-headless-machine-readable-run-surface/alternatives-considered:
+  en: 42f321bd399f906e
+  zh: 3b13791afa256781

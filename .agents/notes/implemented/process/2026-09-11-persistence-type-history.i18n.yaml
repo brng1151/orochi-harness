@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-09-11-persistence-type-history.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/process/2026-09-11-persistence-type-history.md
+/agent-note-in-tree-persistence-type-history:
+  en: cf476c8a610ec440
+  zh: 7200833f0cf1499e
+/agent-note-in-tree-persistence-type-history/problem:
+  en: c8e926bfc65d7195
+  zh: e0e007960b68fe80
+/agent-note-in-tree-persistence-type-history/decision:
+  en: 04c07d5ba1228ef0
+  zh: f47ad2e4970da554
+/agent-note-in-tree-persistence-type-history/decision/finalized-checkpoints:
+  en: bad9370ac72d0d81
+  zh: 0b503a76cd381902
+/agent-note-in-tree-persistence-type-history/alternatives-considered:
+  en: 5cdac1b3f15f89f6
+  zh: 36cda3b92d31c916
+/agent-note-in-tree-persistence-type-history/consequences:
+  en: d23a09c225cdd4ac
+  zh: 234db454a7648509

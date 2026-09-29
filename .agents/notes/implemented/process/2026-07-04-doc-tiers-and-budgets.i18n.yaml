@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-07-04-doc-tiers-and-budgets.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/process/2026-07-04-doc-tiers-and-budgets.md
+/agent-note-documentation-structure-tiers-and-budgets:
+  en: 7456b96817b92552
+  zh: b3ec88be8857c5ad
+/agent-note-documentation-structure-tiers-and-budgets/problem:
+  en: 6ecec6cc312745dd
+  zh: ac1244b6113b89da
+/agent-note-documentation-structure-tiers-and-budgets/decision:
+  en: 35317fb1d9b5d486
+  zh: 759295447efac33d
+/agent-note-documentation-structure-tiers-and-budgets/alternatives-considered:
+  en: f788f6e9d2b0441e
+  zh: 9e2adcb941d45634
+/agent-note-documentation-structure-tiers-and-budgets/consequences:
+  en: 76c254b56618cef6
+  zh: 1f1264d6879df20c

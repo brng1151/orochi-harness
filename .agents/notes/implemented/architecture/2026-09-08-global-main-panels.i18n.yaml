@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-08-global-main-panels.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-08-global-main-panels.md
+/agent-note-global-main-panels-without-default-ui-additions:
+  en: 4e769e40f09d2ef6
+  zh: 6e33bb0e42c6b457
+/agent-note-global-main-panels-without-default-ui-additions/problem:
+  en: da6aa479acac3baf
+  zh: ed6316ea9953ff99
+/agent-note-global-main-panels-without-default-ui-additions/decision:
+  en: 8ea8b9078c56a7f5
+  zh: 474dd60603749c0e
+/agent-note-global-main-panels-without-default-ui-additions/alternatives-considered:
+  en: 18c8461d961490ee
+  zh: a26b37ff3aa15bbc
+/agent-note-global-main-panels-without-default-ui-additions/consequences:
+  en: 8c1ec1821d0661c9
+  zh: a06000133ec046dd

@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for orochi-llm-api-wire-extensions.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/orochi-llm-api-wire-extensions.md
+/official-orochi-llm-api-wire-extensions:
+  en: 30e20997f112a44b
+  zh: 096b4ff5e408e19d
+/official-orochi-llm-api-wire-extensions/wire-namespaces-and-versioning:
+  en: b11e12cbdbdd9dbe
+  zh: fce4c00090094de2
+/official-orochi-llm-api-wire-extensions/request-headers:
+  en: 338d0484f069e1cd
+  zh: b26bb758693037a4
+/official-orochi-llm-api-wire-extensions/body-extension-transaction:
+  en: f0b1443c364a431c
+  zh: 16d16ddf5c451e8e
+/official-orochi-llm-api-wire-extensions/oh-plugin-packages:
+  en: 240aaaa15a8f3209
+  zh: 9aabb0c7dab0b6f1
+/official-orochi-llm-api-wire-extensions/exposure-and-receiver-requirements:
+  en: 10a53d289a2f9909
+  zh: 3ec24b6e77d7e5dc

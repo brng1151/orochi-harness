@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for 2026-08-04-draft-provider-endpoint-interrogation.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-08-04-draft-provider-endpoint-interrogation.md
+/agent-note-interrogating-a-draft-provider-endpoint:
+  en: 9a24efd9f787c09e
+  zh: d5ba9935de653f2e
+/agent-note-interrogating-a-draft-provider-endpoint/problem:
+  en: c50e44492b4b30a2
+  zh: 74a17b3d3ec6cf0d
+/agent-note-interrogating-a-draft-provider-endpoint/decision:
+  en: 9d71c92745a3ac28
+  zh: c4381d2f0988eb2a
+/agent-note-interrogating-a-draft-provider-endpoint/decision/why-not-pi-ai-s-own-refresh-machinery:
+  en: a9654499e32c91b3
+  zh: cfb5a76500b6fe1a
+/agent-note-interrogating-a-draft-provider-endpoint/alternatives-considered:
+  en: 3493f8891aa9cdba
+  zh: 68e633bb5c8dcfa4
+/agent-note-interrogating-a-draft-provider-endpoint/consequences:
+  en: a4911a205e713f60
+  zh: 04adc6be1f4f34c7
+/agent-note-interrogating-a-draft-provider-endpoint/testing:
+  en: 40cf0cf6141eba6e
+  zh: 54a6097cf125b846

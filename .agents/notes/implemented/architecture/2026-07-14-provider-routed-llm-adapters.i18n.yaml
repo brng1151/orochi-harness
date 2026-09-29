@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for 2026-07-14-provider-routed-llm-adapters.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-07-14-provider-routed-llm-adapters.md
+/agent-note-provider-routed-llm-adapters-and-a-generic-pi-ai-backend:
+  en: b6ab1d25b0f06647
+  zh: 1d8209c2380e63f8
+/agent-note-provider-routed-llm-adapters-and-a-generic-pi-ai-backend/problem:
+  en: 15249ee23ccf3e4d
+  zh: b156c409296dc444
+/agent-note-provider-routed-llm-adapters-and-a-generic-pi-ai-backend/decision:
+  en: a15c7c13f167e5ac
+  zh: 63bcc2ef60c2f344
+/agent-note-provider-routed-llm-adapters-and-a-generic-pi-ai-backend/decision/provider-is-the-adapter-registration-key:
+  en: e648e5749122f77b
+  zh: f07307c80c3d999d
+/agent-note-provider-routed-llm-adapters-and-a-generic-pi-ai-backend/decision/explicit-pi-ai-provider-profiles:
+  en: 4c9fb1a1ec1da565
+  zh: bb778af32da38375
+/agent-note-provider-routed-llm-adapters-and-a-generic-pi-ai-backend/decision/recorded-assistant-route-and-replay-state:
+  en: f69c62896005aed8
+  zh: 2cde3b2a4e106793
+/agent-note-provider-routed-llm-adapters-and-a-generic-pi-ai-backend/decision/propagate-the-target-through-every-request-producer:
+  en: 065078f975c2d680
+  zh: 1a808ce7d138d5ac
+/agent-note-provider-routed-llm-adapters-and-a-generic-pi-ai-backend/alternatives-considered:
+  en: a872ec2f8ad890b2
+  zh: 84a6abbcfd0c7d3f
+/agent-note-provider-routed-llm-adapters-and-a-generic-pi-ai-backend/consequences:
+  en: 882a4511a96ce31a
+  zh: 5612f578d56e925f
+/agent-note-provider-routed-llm-adapters-and-a-generic-pi-ai-backend/testing:
+  en: 877362594da019e1
+  zh: c55763943c24d7ef
+/agent-note-provider-routed-llm-adapters-and-a-generic-pi-ai-backend/risks:
+  en: 11db2a349f9f26c2
+  zh: 550d6017d8639854

@@ -1,0 +1,55 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-theme/README.md
+/:
+  en: 64dc98fbc6386407
+  zh: 5a561bf32e49cf38
+/orochi-network-oh-client-ui-theme:
+  en: 518d31ffb83f83ba
+  zh: a61302653599119f
+/orochi-network-oh-client-ui-theme/summary:
+  en: 1554320e32debf44
+  zh: dfa2a9c2ee4d4358
+/orochi-network-oh-client-ui-theme/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-ui-theme/use-this-package:
+  en: 7700751d82aa83b9
+  zh: 73e840202d8f7363
+/orochi-network-oh-client-ui-theme/use-this-package/appearance-and-font-size:
+  en: 0b0177e1afefe4a7
+  zh: 52d88f12a8369ee8
+/orochi-network-oh-client-ui-theme/use-this-package/registering-a-theme:
+  en: 2cd32ccaba33b3e9
+  zh: 53ea78d19929ea02
+/orochi-network-oh-client-ui-theme/use-this-package/pre-plugin-palette:
+  en: e2c40b5e94fff987
+  zh: 2159e6f7bed7e252
+/orochi-network-oh-client-ui-theme/understand-the-implementation:
+  en: fde3c4e3f909640a
+  zh: 366ac6b2f6b3c6ca
+/orochi-network-oh-client-ui-theme/understand-the-implementation/stylesheets:
+  en: c011d2358a1c2974
+  zh: 9253fd7d20fa50db
+/orochi-network-oh-client-ui-theme/understand-the-implementation/scrollbar-rebinding:
+  en: 9b8aa058aeb4bb1f
+  zh: 2d2537591cf3c4ea
+/orochi-network-oh-client-ui-theme/understand-the-implementation/preference-persistence:
+  en: 99449f2c10ce312d
+  zh: af376a666b33a495
+/orochi-network-oh-client-ui-theme/further-exploration:
+  en: d75c2090fd927b39
+  zh: dc4b0d727bd82dcd
+/orochi-network-oh-client-ui-theme/model-experience:
+  en: 3120df665299c634
+  zh: 1d9f365d091d0d2a
+/orochi-network-oh-client-ui-theme/model-experience/kv-cache-effect:
+  en: ca75c51c89c2c9b0
+  zh: de54f3467ef3b9be
+/orochi-network-oh-client-ui-theme/known-limitations-and-deferred-work:
+  en: 0d328dbced31a041
+  zh: 2951de356ba6bb82
+/orochi-network-oh-client-ui-theme/known-limitations-and-deferred-work/dev-note:
+  en: f1a2942985b11203
+  zh: 8196d82321e024b0

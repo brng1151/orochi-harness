@@ -1,0 +1,52 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/experimental/agent-team-profile/README.md
+/:
+  en: e263a0edd266210f
+  zh: c5779bf7f64631d3
+/orochi-network-oh-experimental-agent-team-profile:
+  en: bfb43db0723bfad4
+  zh: 637e65fec59386fb
+/orochi-network-oh-experimental-agent-team-profile/summary:
+  en: 780376b81cbf8c8c
+  zh: 6b338c12379e2444
+/orochi-network-oh-experimental-agent-team-profile/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-experimental-agent-team-profile/use-this-package:
+  en: bbff250eba0f1b89
+  zh: 0a618f05cc88ee2b
+/orochi-network-oh-experimental-agent-team-profile/use-this-package/install-into-a-profile:
+  en: 95299b1dfaa65915
+  zh: 0077900c2dfec8a1
+/orochi-network-oh-experimental-agent-team-profile/use-this-package/what-you-get:
+  en: cd99c62871950d09
+  zh: 3ed8b96984e62ff9
+/orochi-network-oh-experimental-agent-team-profile/understand-the-implementation:
+  en: d0ec4998c90aa605
+  zh: 41b05e23cbae235b
+/orochi-network-oh-experimental-agent-team-profile/further-exploration:
+  en: b57b0794015410ff
+  zh: 2b0e0e910b605d6d
+/orochi-network-oh-experimental-agent-team-profile/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-experimental-agent-team-profile/model-experience/team-policy-and-tools:
+  en: 8e1e365ff3b0dfb2
+  zh: c6c91fbf1e1df934
+/orochi-network-oh-experimental-agent-team-profile/model-experience/team-policy-and-tools/what-the-model-sees:
+  en: b74d1c03f126acb0
+  zh: b919d17d85f4e117
+/orochi-network-oh-experimental-agent-team-profile/model-experience/team-policy-and-tools/token-effect:
+  en: 9a22e317213aaf52
+  zh: 81fc7eab7604de67
+/orochi-network-oh-experimental-agent-team-profile/model-experience/team-policy-and-tools/kv-cache-effect:
+  en: e331337b094aacde
+  zh: bb2e5df5ebeb9305
+/orochi-network-oh-experimental-agent-team-profile/known-limitations-and-deferred-work:
+  en: 5e80f5d1632a6cf1
+  zh: 2af287dcbfcc5979
+/orochi-network-oh-experimental-agent-team-profile/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

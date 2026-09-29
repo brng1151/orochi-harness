@@ -1,0 +1,51 @@
+{
+  "name": "@orochi-network/oh-sandbox-windows-acl",
+  "description": "Windows ACL write-restriction sandbox backend (restricted-token spawn with capability-SID write allowlist) for the Orochi Harness sandbox seam",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/sandbox/sandbox-windows-acl"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./runner": {
+      "types": "./lib/types/runner.d.ts",
+      "default": "./lib/runner.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/runner.js",
+    "lib/types-*.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-subprocess": "workspace:*"
+  },
+  "dependencies": {
+    "@orochi-network/oh-lazy-require": "workspace:*",
+    "@orochi-network/oh-win32-process": "workspace:*",
+    "koffi": "^3.1.0"
+  },
+  "devDependencies": {
+    "@orochi-network/oh-pwsh-local": "workspace:*",
+    "@orochi-network/oh-sandbox-local": "workspace:*",
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-subprocess": "workspace:*",
+    "@orochi-network/oh-subprocess-local": "workspace:*"
+  }
+}

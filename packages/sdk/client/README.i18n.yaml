@@ -1,0 +1,55 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/sdk/client/README.md
+/:
+  en: 3f4b2209217ff35a
+  zh: 0b49778cbd75b17a
+/orochi-network-oh-sdk-client:
+  en: 1ab23dd472d3a413
+  zh: 5ee2a9dc115aae7e
+/orochi-network-oh-sdk-client/summary:
+  en: 7c328ec32d693ec8
+  zh: 7bdd8d141e87e37c
+/orochi-network-oh-sdk-client/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-sdk-client/use-this-package:
+  en: 49b12ad6980bd7a6
+  zh: 467108f88faabb1a
+/orochi-network-oh-sdk-client/use-this-package/running-agent-turns-with-orochiharness:
+  en: f432e5dca1231f3f
+  zh: 0ce24ebf0c411741
+/orochi-network-oh-sdk-client/use-this-package/lower-level-control-with-harnessclient:
+  en: 1630c259ef9dba84
+  zh: 1d068bfabb49f128
+/orochi-network-oh-sdk-client/understand-the-implementation:
+  en: 8773f50c51da85f0
+  zh: 4649ebc69357deb0
+/orochi-network-oh-sdk-client/understand-the-implementation/design-concept:
+  en: ad21f15528e3a3e7
+  zh: c17e1a40cf8ad33a
+/orochi-network-oh-sdk-client/understand-the-implementation/source-map:
+  en: 76373ba72035d359
+  zh: 1166a196b79106c3
+/orochi-network-oh-sdk-client/understand-the-implementation/owned-activity-flow:
+  en: 94a42babac5f1c7d
+  zh: df9e42ed02f7d002
+/orochi-network-oh-sdk-client/understand-the-implementation/errors-and-teardown:
+  en: 165364de2cee0a9f
+  zh: c4dc37b44e1e621e
+/orochi-network-oh-sdk-client/further-exploration:
+  en: 3c97c575cba77ed1
+  zh: 8e3afab5bdcc4b3c
+/orochi-network-oh-sdk-client/model-experience:
+  en: e82a55513d3cd30e
+  zh: ecd8c0875ff2fb87
+/orochi-network-oh-sdk-client/model-experience/kv-cache-effect:
+  en: 7abe0be104a791e7
+  zh: 445311f78b1069ca
+/orochi-network-oh-sdk-client/known-limitations-and-deferred-work:
+  en: 277cf7a89b28c267
+  zh: 2ba2c017c4570acb
+/orochi-network-oh-sdk-client/known-limitations-and-deferred-work/dev-note:
+  en: 6177a56f053936a4
+  zh: 0f4b20228c2d15da

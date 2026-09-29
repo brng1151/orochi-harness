@@ -1,0 +1,8 @@
+version: 1
+scenario: subagent-oh-sdk-diagnostic
+profile: sdk
+composition: sdk-oh-sdk-diagnostic
+recording: live
+header:
+  class: sdk-oh-sdk-diagnostic
+  pin: true

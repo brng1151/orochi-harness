@@ -1,0 +1,40 @@
+# Bilingual-pair consistency record for 2026-08-08-web-background-job-display.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-08-web-background-job-display.md
+/agent-note-web-background-job-display:
+  en: 919c763c1d5b8f76
+  zh: 28c834864d5ca1c5
+/agent-note-web-background-job-display/problem:
+  en: 42c51a399bf8c50f
+  zh: 63a04231956e432d
+/agent-note-web-background-job-display/decision:
+  en: 50058c6557e05f15
+  zh: bbf35bb475474cd8
+/agent-note-web-background-job-display/decision/wire-shape:
+  en: eaa43bc21d82daec
+  zh: 3741928dfa28cecc
+/agent-note-web-background-job-display/decision/the-task-registry-change-feed:
+  en: aa588a870d5b6beb
+  zh: 6ac866a2e4b7e981
+/agent-note-web-background-job-display/decision/the-session-controller-carrier:
+  en: e9ef574e65e8fb7d
+  zh: d1a6e446c48a0921
+/agent-note-web-background-job-display/decision/the-client-mirror:
+  en: 6185994020e639ee
+  zh: df9b464f95c0f3e2
+/agent-note-web-background-job-display/decision/the-header-action:
+  en: 775b1dc2dc8ad577
+  zh: 3dc03c3746c41997
+/agent-note-web-background-job-display/decision/what-this-deliberately-does-not-do:
+  en: eae3dd59d7722e8d
+  zh: 2b1bf1d541e5df10
+/agent-note-web-background-job-display/alternatives-considered:
+  en: c9b5ed883501f8c1
+  zh: 80c250b427e60844
+/agent-note-web-background-job-display/testing:
+  en: f41d5017ea4beabb
+  zh: cb216dd1d802ebe2
+/agent-note-web-background-job-display/consequences:
+  en: 729dffddbaebf723
+  zh: 0d960fb84f0a9491

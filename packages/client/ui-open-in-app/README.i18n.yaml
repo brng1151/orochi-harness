@@ -1,0 +1,40 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-open-in-app/README.md
+/:
+  en: be11314755d8f4f9
+  zh: dd75b03074eea543
+/orochi-network-oh-client-ui-open-in-app:
+  en: 5cd2d1f40233ce1c
+  zh: 9c04468b9b08b9ed
+/orochi-network-oh-client-ui-open-in-app/summary:
+  en: 8f50cbb05b2662a0
+  zh: 2f045a3db0fe6aa5
+/orochi-network-oh-client-ui-open-in-app/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 725b47765ee8f30b
+/orochi-network-oh-client-ui-open-in-app/use-this-package:
+  en: ad290a1129a6eb63
+  zh: 8555106d63d4432e
+/orochi-network-oh-client-ui-open-in-app/use-this-package/what-to-expect:
+  en: 08687be802a41b7b
+  zh: 9a297214e1e576c7
+/orochi-network-oh-client-ui-open-in-app/understand-the-implementation:
+  en: 412da7efd0c0c0ec
+  zh: 4a0990ec298b5f21
+/orochi-network-oh-client-ui-open-in-app/further-exploration:
+  en: e48f2752c10f368f
+  zh: fcc6983ea1a51ee5
+/orochi-network-oh-client-ui-open-in-app/model-experience:
+  en: 5f9e6e0fb0438628
+  zh: fc9a81185ea6cb14
+/orochi-network-oh-client-ui-open-in-app/model-experience/kv-cache-effect:
+  en: ca75c51c89c2c9b0
+  zh: c2241315dc0c89c9
+/orochi-network-oh-client-ui-open-in-app/known-limitations-and-deferred-work:
+  en: 1ab543b2fb2b3308
+  zh: 2fefde7e0490da73
+/orochi-network-oh-client-ui-open-in-app/known-limitations-and-deferred-work/dev-note:
+  en: 3ef117defa1acfb1
+  zh: 1a7b61fa35eb2818

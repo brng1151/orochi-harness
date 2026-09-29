@@ -1,0 +1,31 @@
+# Keyless replay counterpart of system-prompt-in-history/cordis.yml: the
+# replay route declares the same in-history capability.
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  disabled: true
+
+- id: agent-default-model
+  name: '@orochi-network/oh-agent-default-model'
+  config:
+    provider: orochi-official
+    model: deepseek-flash
+
+- id: session-persistence-jsonl
+  name: '@orochi-network/oh-session-persistence-jsonl'
+  config:
+    root: !!js ohHomePath('sessions')
+    compression: none
+
+- insert:
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: deepseek-flash
+                systemPromptUpdate: in-history
+                inputModalities: [text, image]
+    - id: in-history-prompt-update
+      name: '../../../packages/test-support/session-snapshot/tests/fixtures/in-history-prompt-update.ts'

@@ -1,0 +1,52 @@
+# Bilingual-pair consistency record for 2026-06-19-real-api-e2e-ci.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/testing/2026-06-19-real-api-e2e-ci.md
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api:
+  en: 7f0c5ffa449974a1
+  zh: d6a3ff074d01c141
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/problem:
+  en: d47f974c9ea33f5a
+  zh: 95244b55ca062db2
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/decision:
+  en: 3fbdb8769322e05f
+  zh: f46f68f8eba74d67
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/decision/a-separate-workflow-not-a-job-in-ci-yml:
+  en: e4745c43611b96bb
+  zh: 8fb980401b0c5e9b
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/decision/cost-is-not-the-constraint-reliability-is:
+  en: 72d33132652460eb
+  zh: 94ab4227f4f8aaf1
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/decision/triggers-trusted-events-only:
+  en: 42a2fb15f00aec3a
+  zh: c4775447c863d209
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/decision/the-untrusted-pr-gate:
+  en: e94c28db20896508
+  zh: c8e77c54dceed035
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/decision/preflight-fail-loud-never-false-green:
+  en: 07904c7ad53be5ad
+  zh: 67d84d4dc6f082a9
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/decision/secret-mapping-and-hygiene:
+  en: 313265684f93a0f1
+  zh: 46e322c043700f34
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/decision/scope-runtime-shape:
+  en: 00c76691bad06faa
+  zh: fe3d6543add4a6b1
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/security:
+  en: 1fd3925ab26c11d4
+  zh: 0d7103fd0b1afa89
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/security/who-can-reach-the-secret-in-a-private-repository:
+  en: 41ed9cd52d6ceb06
+  zh: 60d26d58c7d387e5
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/security/the-residual-exposure-the-pull-request-trigger-adds:
+  en: 04463ffd6f67a2bd
+  zh: 4126fb30873782ed
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/security/what-changes-when-the-repo-goes-public:
+  en: 4fea47baf00fae2c
+  zh: c5c3d45eba873747
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/alternatives-considered:
+  en: 7e7aa3a387a174bc
+  zh: 2431a0df2fb478a8
+/agent-note-real-api-e2e-in-ci-against-the-external-orochi-api/consequences:
+  en: a999af1cbd7776da
+  zh: 5f1fab52fd4eb304

@@ -1,0 +1,147 @@
+{
+  "name": "@orochi-network/oh-subagent",
+  "description": "Abstract subagent seam (ctx.subagents): named-provider registry for delegating to child agents",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/subagent/subagent"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./internal": {
+      "types": "./lib/types/internal.d.ts",
+      "default": "./lib/types/internal.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./client": {
+      "types": "./lib/types/client.d.ts",
+      "default": "./lib/types/client.js"
+    },
+    "./typert": {
+      "types": "./lib/typert.host.d.ts",
+      "default": "./lib/typert.host.js"
+    },
+    "./remote": {
+      "types": "./lib/typert.remote-client.d.ts",
+      "default": "./lib/typert.remote-client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/types/**/*.js",
+    "lib/types/**/*.d.ts",
+    "lib/typert.host.js",
+    "lib/typert.host.d.ts",
+    "lib/typert.remote-client.js",
+    "lib/typert.remote-client.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@orochi-network/oh-brand": "workspace:*",
+    "@orochi-network/oh-chunked-list": "workspace:*",
+    "@orochi-network/oh-util-values": "workspace:*",
+    "@orochi-network/schemastery": "workspace:~",
+    "zod": "^4.4.3"
+  },
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-agent-preset-registry": "workspace:*",
+    "@orochi-network/oh-attachment": "workspace:*",
+    "@orochi-network/oh-invariants": "workspace:*",
+    "@orochi-network/oh-jobs": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-sandbox": "workspace:*",
+    "@orochi-network/oh-sandbox-policy": "workspace:*",
+    "@orochi-network/oh-scope": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-session-persistence": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-session-query": "workspace:*",
+    "@orochi-network/oh-system-prompt": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*",
+    "@orochi-network/oh-typert-protocol": "workspace:*",
+    "@orochi-network/oh-user-approval": "workspace:*",
+    "@orochi-network/oh-util-time": "workspace:*",
+    "@orochi-network/oh-permission-presets": "workspace:*",
+    "@orochi-network/oh-workspace": "workspace:*"
+  },
+  "peerDependenciesMeta": {
+    "@orochi-network/oh-agent-preset-registry": {
+      "optional": true
+    },
+    "@orochi-network/oh-permission-presets": {
+      "optional": true
+    },
+    "@orochi-network/oh-sandbox": {
+      "optional": true
+    },
+    "@orochi-network/oh-sandbox-policy": {
+      "optional": true
+    },
+    "@orochi-network/oh-session-persistence": {
+      "optional": true
+    },
+    "@orochi-network/oh-session-projection": {
+      "optional": true
+    },
+    "@orochi-network/oh-session-query": {
+      "optional": true
+    },
+    "@orochi-network/oh-workspace": {
+      "optional": true
+    },
+    "@orochi-network/oh-jobs": {
+      "optional": true
+    },
+    "@orochi-network/oh-user-approval": {
+      "optional": true
+    },
+    "@orochi-network/oh-settings": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-agent-preset-registry": "workspace:*",
+    "@orochi-network/oh-attachment": "workspace:*",
+    "@orochi-network/oh-invariants": "workspace:*",
+    "@orochi-network/oh-jobs": "workspace:*",
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-sandbox": "workspace:*",
+    "@orochi-network/oh-sandbox-policy": "workspace:*",
+    "@orochi-network/oh-schedule": "workspace:*",
+    "@orochi-network/oh-scope": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/oh-session-persistence": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-session-query": "workspace:*",
+    "@orochi-network/oh-storage": "workspace:*",
+    "@orochi-network/oh-storage-domain": "workspace:*",
+    "@orochi-network/oh-storage-json": "workspace:*",
+    "@orochi-network/oh-system-prompt": "workspace:*",
+    "@orochi-network/oh-tools": "workspace:*",
+    "@orochi-network/oh-typert-protocol": "workspace:*",
+    "@orochi-network/oh-user-approval": "workspace:*",
+    "@orochi-network/oh-util-time": "workspace:*",
+    "@orochi-network/oh-permission-presets": "workspace:*",
+    "@orochi-network/oh-workspace": "workspace:*"
+  }
+}

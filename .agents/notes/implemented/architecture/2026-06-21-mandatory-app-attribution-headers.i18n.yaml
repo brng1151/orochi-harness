@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for 2026-06-21-mandatory-app-attribution-headers.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-06-21-mandatory-app-attribution-headers.md
+/agent-note-mandatory-user-agent-attribution-for-provider-requests:
+  en: 696f8f68105fe665
+  zh: 2f622657d1a967cb
+/agent-note-mandatory-user-agent-attribution-for-provider-requests/problem:
+  en: 9d32ca2f50319977
+  zh: 070f1763b6c7c1df
+/agent-note-mandatory-user-agent-attribution-for-provider-requests/investigation:
+  en: 5ea11f54f507ba64
+  zh: 22a83a0714a2fda3
+/agent-note-mandatory-user-agent-attribution-for-provider-requests/decision:
+  en: 84c97fcdd6f6d02f
+  zh: 0638bcaef9df7096
+/agent-note-mandatory-user-agent-attribution-for-provider-requests/verification:
+  en: d5e87bf2e65516a4
+  zh: ba19820ee7e58411
+/agent-note-mandatory-user-agent-attribution-for-provider-requests/alternatives-considered:
+  en: 6a27b23494975deb
+  zh: ee17c3e1fda0d8cd
+/agent-note-mandatory-user-agent-attribution-for-provider-requests/consequences:
+  en: a9010e68445a0008
+  zh: 1ec6104ab2865919

@@ -1,0 +1,88 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/web/web-search-orochi/README.md
+/:
+  en: 1c2ffc00fcf18da2
+  zh: 759b8d2d545822d7
+/orochi-network-oh-web-search-orochi:
+  en: 1afdb3e59e9d0a60
+  zh: 194772afa40e8ab3
+/orochi-network-oh-web-search-orochi/summary:
+  en: 6b5c358fce4fcced
+  zh: 36eb243e029ef8fd
+/orochi-network-oh-web-search-orochi/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-web-search-orochi/use-this-package:
+  en: 9c2d726aa3698999
+  zh: 52d8cda83048e671
+/orochi-network-oh-web-search-orochi/use-this-package/when-to-choose-it:
+  en: e8324e0d5bf65867
+  zh: 326000b1fc9f8e33
+/orochi-network-oh-web-search-orochi/use-this-package/minimal-configuration:
+  en: 7ac67643d5ea2ae5
+  zh: b15ee9e9e4ec0907
+/orochi-network-oh-web-search-orochi/use-this-package/authentication:
+  en: 779abe7ccb10dfe4
+  zh: 644660b1f9b45cab
+/orochi-network-oh-web-search-orochi/use-this-package/what-a-search-returns:
+  en: 05749f79a149e24b
+  zh: c03afc36ccd4cfd9
+/orochi-network-oh-web-search-orochi/use-this-package/request-logging:
+  en: aaeec75488d80956
+  zh: 0e2657fb8b92d59d
+/orochi-network-oh-web-search-orochi/use-this-package/failures-and-recovery:
+  en: 678c226fdd48673b
+  zh: 88cbcf5b42760179
+/orochi-network-oh-web-search-orochi/understand-the-implementation:
+  en: 9842c69ad3636bb3
+  zh: 3cdc3f816cbdd0cb
+/orochi-network-oh-web-search-orochi/understand-the-implementation/design-philosophy:
+  en: d25b1fcc8ffe9448
+  zh: a3520b11dfa270fb
+/orochi-network-oh-web-search-orochi/understand-the-implementation/source-map:
+  en: 1d2e273a0cccf519
+  zh: a92f848e2cd599ac
+/orochi-network-oh-web-search-orochi/understand-the-implementation/request-flow:
+  en: 2b9b914662e14e1e
+  zh: 122026cb8947e4f8
+/orochi-network-oh-web-search-orochi/further-exploration:
+  en: c3dd5ed0937ee95e
+  zh: fda5673fefccbd24
+/orochi-network-oh-web-search-orochi/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-web-search-orochi/model-experience/auxiliary-orochi-search-request:
+  en: a18109772b8c0aa2
+  zh: 4f98355248ee3a58
+/orochi-network-oh-web-search-orochi/model-experience/auxiliary-orochi-search-request/what-the-model-sees:
+  en: 7e4906717997478b
+  zh: a1bc9ec09f5dcb94
+/orochi-network-oh-web-search-orochi/model-experience/auxiliary-orochi-search-request/token-effect:
+  en: f244b4dd6c9e6ad4
+  zh: 50f2434d5119296b
+/orochi-network-oh-web-search-orochi/model-experience/auxiliary-orochi-search-request/kv-cache-effect:
+  en: 2bac9662f1792a79
+  zh: 556d9baabd79f9cb
+/orochi-network-oh-web-search-orochi/model-experience/conversation-tool-result-indirectly:
+  en: 666f5753c99783ab
+  zh: b44328e99bcc45c9
+/orochi-network-oh-web-search-orochi/model-experience/conversation-tool-result-indirectly/what-the-model-sees:
+  en: 75c0432bd8fc36a9
+  zh: d67dfe6e0cad4c25
+/orochi-network-oh-web-search-orochi/model-experience/conversation-tool-result-indirectly/token-effect:
+  en: 01ec43a9b616139d
+  zh: 0a5b7c28fde34bcf
+/orochi-network-oh-web-search-orochi/model-experience/conversation-tool-result-indirectly/kv-cache-effect:
+  en: f5d5f97a153f7c70
+  zh: f681f89596f500f5
+/orochi-network-oh-web-search-orochi/known-limitations-and-deferred-work:
+  en: c57b6c85e40047a8
+  zh: 7fb0eb908e65c191
+/orochi-network-oh-web-search-orochi/known-limitations-and-deferred-work/dev-note:
+  en: 7f775cc79dbce94b
+  zh: 12b8f68f9e7c48ca
+/orochi-network-oh-web-search-orochi/known-limitations-and-deferred-work/dev-note/future-dedicated-retrieval-endpoint:
+  en: 43430e4f590ffe86
+  zh: 1964e88e835f99de

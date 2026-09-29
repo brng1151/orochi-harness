@@ -1,0 +1,61 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/typert/generator/README.md
+/:
+  en: 3fe330c4d51197ec
+  zh: 5874f3bcd419dbbc
+/orochi-network-oh-typert-generator:
+  en: 4a6fd06e9f3394b2
+  zh: 8a6f1a5222521298
+/orochi-network-oh-typert-generator/summary:
+  en: 511e159355276c0f
+  zh: 41fa523adae11151
+/orochi-network-oh-typert-generator/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-typert-generator/use-this-package:
+  en: 949dec3bb987644a
+  zh: 0ed333a6067465dc
+/orochi-network-oh-typert-generator/use-this-package/publishing-typert-artifacts-from-a-package:
+  en: c8daa01d01694199
+  zh: f5c4b254e0391960
+/orochi-network-oh-typert-generator/use-this-package/analyzing-a-workspace-statically:
+  en: 88f4e7fc9d4c7701
+  zh: cecd35ff4f35bfd2
+/orochi-network-oh-typert-generator/use-this-package/running-generation-inside-a-tsdown-build:
+  en: cc3f7d23739380f6
+  zh: 864d15088f581271
+/orochi-network-oh-typert-generator/understand-the-implementation:
+  en: b90762df7a978580
+  zh: 123ab225a2b5df2a
+/orochi-network-oh-typert-generator/understand-the-implementation/design-concept:
+  en: 0a515742229bf442
+  zh: dfd2c5eddd943af9
+/orochi-network-oh-typert-generator/understand-the-implementation/source-map:
+  en: 783dec50106bcabb
+  zh: 2627f55ce69a1a2c
+/orochi-network-oh-typert-generator/understand-the-implementation/analysis-and-faces:
+  en: 0c4c1e201d0c44a1
+  zh: 03d605ba0f32502b
+/orochi-network-oh-typert-generator/understand-the-implementation/emission-and-publication-contract:
+  en: 1757ffeeb55b52d6
+  zh: 46880a18560f0796
+/orochi-network-oh-typert-generator/understand-the-implementation/catalog-projection:
+  en: e85b521a1e01ab2c
+  zh: 4416dca569de0f61
+/orochi-network-oh-typert-generator/further-exploration:
+  en: e201d4aa4ee4db84
+  zh: 74893c874633a368
+/orochi-network-oh-typert-generator/model-experience:
+  en: e6641e8b5e5f42ca
+  zh: 2fdc0d3fde7e9216
+/orochi-network-oh-typert-generator/model-experience/kv-cache-effect:
+  en: 09310605f7d136d4
+  zh: 3535ec7eba83b90f
+/orochi-network-oh-typert-generator/known-limitations-and-deferred-work:
+  en: f3b1002133fe8736
+  zh: e8d5fecd10db5e3a
+/orochi-network-oh-typert-generator/known-limitations-and-deferred-work/dev-note:
+  en: cc7e47f271475e4c
+  zh: 8426eb322816bd28

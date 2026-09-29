@@ -1,0 +1,53 @@
+# Keyless replay counterpart of ptc-workspace-context.cordis.yml. It adds
+# PTC mode to the default filesystem suite and swaps in replay.
+- insert:
+    - id: literal-sdk
+      name: '../../../packages/core/tools/tests/fixtures/literal-sdk.ts'
+
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  disabled: true
+
+- id: plugin-package-inventory-orochi
+  disabled: true
+
+- id: agent-default-model
+  name: '@orochi-network/oh-agent-default-model'
+  config:
+    provider: orochi-official
+    model: deepseek-v4-flash
+
+- id: session-persistence-jsonl
+  name: '@orochi-network/oh-session-persistence-jsonl'
+  config:
+    root: !!js ohHomePath('sessions')
+    compression: none
+
+- id: agent-instructions
+  name: '@orochi-network/oh-agent-instructions'
+  config:
+    maxBytes: 65536
+
+- id: tools
+  name: '@orochi-network/oh-tools'
+  config:
+    mode: ptc
+
+- id: system-prompt
+  name: '@orochi-network/oh-system-prompt'
+  config:
+    personaPrefix: |
+      You are a coding assistant powered by the {{model}} model. Your working directory is {{cwd}}.
+
+      Verify your work by running the code or tests. Keep answers brief and factual.
+
+- insert:
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: deepseek-v4-flash
+              - id: deepseek-v4-pro

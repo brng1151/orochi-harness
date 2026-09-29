@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for maintaining-oh-code-review.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/cookbook/maintaining-oh-code-review.md
+/maintaining-the-oh-code-review-skill:
+  en: 76bd9bcc65974983
+  zh: 6b1dac3e9fc4eaa9
+/maintaining-the-oh-code-review-skill/what-the-maintainer-receives:
+  en: 3b35bc9aa216b43b
+  zh: e6cd1be36941110f
+/maintaining-the-oh-code-review-skill/what-the-operator-does-with-a-candidate-diff:
+  en: c7a460a9f091b3bf
+  zh: f96e5f5849db3e9d
+/maintaining-the-oh-code-review-skill/when-a-run-produces-no-candidate:
+  en: feb6d261939d6c19
+  zh: 044d8238cd6537d3
+/maintaining-the-oh-code-review-skill/interruptions-and-handoff:
+  en: e3d9ef2657fc204c
+  zh: 76349a7e37f42c26
+/maintaining-the-oh-code-review-skill/where-the-operator-s-private-setup-lives:
+  en: ae06145764738c16
+  zh: d527b944db8c52be

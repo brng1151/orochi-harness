@@ -1,0 +1,67 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/goal/goal-round-driver/README.md
+/:
+  en: ac0eab4e811114ab
+  zh: 5ded4a1b84f8afe1
+/orochi-network-oh-goal-round-driver:
+  en: b1c88063bc6ad392
+  zh: 6db56fcef25d7e1f
+/orochi-network-oh-goal-round-driver/summary:
+  en: 42a990dbcde53cc7
+  zh: 5945839125dc4f32
+/orochi-network-oh-goal-round-driver/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-goal-round-driver/use-this-package:
+  en: 5372651507f3d685
+  zh: 73d7d24819028f52
+/orochi-network-oh-goal-round-driver/use-this-package/compose-it:
+  en: 0d154191aea997df
+  zh: 8eb60675cc00af4f
+/orochi-network-oh-goal-round-driver/use-this-package/what-each-round-does:
+  en: 4eb6b1cebc13afb3
+  zh: 3b1b84f659e833b4
+/orochi-network-oh-goal-round-driver/use-this-package/when-continuation-stops:
+  en: fc22b566b233d3a1
+  zh: 276ee5f35d4524f5
+/orochi-network-oh-goal-round-driver/use-this-package/after-resume-fork-or-unload:
+  en: 85d5470b1b330330
+  zh: e761f9046ba7af8a
+/orochi-network-oh-goal-round-driver/understand-the-implementation:
+  en: 907f73e7cee7269d
+  zh: 1230e8e9b15655df
+/orochi-network-oh-goal-round-driver/understand-the-implementation/design:
+  en: 58a2316725fe1f38
+  zh: d42d60cf02ad518e
+/orochi-network-oh-goal-round-driver/understand-the-implementation/source-map:
+  en: 2636a395ea78f621
+  zh: f169bc50b4c79ffb
+/orochi-network-oh-goal-round-driver/understand-the-implementation/the-round-prompt:
+  en: 88c61c1dcb13352b
+  zh: 8dd618c327469bbf
+/orochi-network-oh-goal-round-driver/further-exploration:
+  en: cf1f098f5508aa01
+  zh: 7e254fbfbce51f6f
+/orochi-network-oh-goal-round-driver/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-goal-round-driver/model-experience/goal-round-prompt:
+  en: 4d07e0f4df39dd39
+  zh: b4b4b1a1ac49133d
+/orochi-network-oh-goal-round-driver/model-experience/goal-round-prompt/what-the-model-sees:
+  en: 627dbb55e83ea545
+  zh: f7961cb0d8cee632
+/orochi-network-oh-goal-round-driver/model-experience/goal-round-prompt/token-effect:
+  en: d754ed8cc26fc2a5
+  zh: 75aad6a5759b1fec
+/orochi-network-oh-goal-round-driver/model-experience/goal-round-prompt/kv-cache-effect:
+  en: 261db0e11125cb5c
+  zh: fcceb0bb63f4e07a
+/orochi-network-oh-goal-round-driver/known-limitations-and-deferred-work:
+  en: 9a392b465bd1b96d
+  zh: f24e557f8b67020c
+/orochi-network-oh-goal-round-driver/known-limitations-and-deferred-work/dev-note:
+  en: 19c6db37afd5cff4
+  zh: 86e849e83cdc1d94

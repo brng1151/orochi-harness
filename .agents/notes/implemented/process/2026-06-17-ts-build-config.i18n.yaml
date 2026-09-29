@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-06-17-ts-build-config.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/process/2026-06-17-ts-build-config.md
+/agent-note-tsc-first-build-and-one-compiler-ownership:
+  en: 9a6a2b18ae2eef95
+  zh: 17aa71a7f21d6a80
+/agent-note-tsc-first-build-and-one-compiler-ownership/problem:
+  en: 62307ddfb9e110cb
+  zh: 236bdad7df92a028
+/agent-note-tsc-first-build-and-one-compiler-ownership/decision:
+  en: 81e20108ba378195
+  zh: be9a627875f6a945
+/agent-note-tsc-first-build-and-one-compiler-ownership/alternatives-considered:
+  en: 9b143ba610f06e2f
+  zh: 7832be7816aec7e6
+/agent-note-tsc-first-build-and-one-compiler-ownership/consequences:
+  en: 4f0d450ac651020d
+  zh: b409dfc3808e7bb8

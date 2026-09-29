@@ -1,0 +1,61 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/bundle/base/README.md
+/:
+  en: 9daf92c46376c1e5
+  zh: 8acd132070d7da0a
+/orochi-network-oh-base:
+  en: 2feef28a4237cf1f
+  zh: 72ca69d33dcdf732
+/orochi-network-oh-base/summary:
+  en: d7aa974b562ada1b
+  zh: 97b0b8f68a9265c5
+/orochi-network-oh-base/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-base/use-this-package:
+  en: 104ef50415b8eef0
+  zh: 70d98ef4afcdda9b
+/orochi-network-oh-base/use-this-package/a-minimal-custom-profile:
+  en: 5e860dbc06b0d69f
+  zh: 21e48c1ccbd38055
+/orochi-network-oh-base/use-this-package/what-you-get:
+  en: 89f1644c0c7d8f62
+  zh: f3ebc7cdd1cb1df5
+/orochi-network-oh-base/use-this-package/shell-tools-per-platform:
+  en: 2dce12f82d6ee955
+  zh: d4599eb899a3cd88
+/orochi-network-oh-base/use-this-package/changing-the-defaults:
+  en: 96a55abd5f7007dd
+  zh: d94f020708c38a17
+/orochi-network-oh-base/understand-the-implementation:
+  en: 094cfca8e26a0042
+  zh: de435e3e38420c01
+/orochi-network-oh-base/understand-the-implementation/composition-mechanics:
+  en: fd37bc66e39ac5e7
+  zh: 1a039afb8bf2d517
+/orochi-network-oh-base/understand-the-implementation/platform-gating:
+  en: 757d72ad62c77ced
+  zh: a7db3f08b0affe35
+/orochi-network-oh-base/understand-the-implementation/source-map:
+  en: 3aaf655b9c93534b
+  zh: 5a1b627cc6385a17
+/orochi-network-oh-base/understand-the-implementation/invariant-ownership:
+  en: 533299d7bd555e61
+  zh: 0aed404f790ea447
+/orochi-network-oh-base/further-exploration:
+  en: 1eb2b3e40da315bd
+  zh: 2e0e52fe42965e53
+/orochi-network-oh-base/model-experience:
+  en: f6c4d2609b5f4bb6
+  zh: 869a9565a133fb01
+/orochi-network-oh-base/model-experience/kv-cache-effect:
+  en: e6e907c99df7cd0a
+  zh: f19f2f84a5f95177
+/orochi-network-oh-base/known-limitations-and-deferred-work:
+  en: df474a1011190ad9
+  zh: 7a303379bf27e5e2
+/orochi-network-oh-base/known-limitations-and-deferred-work/dev-note:
+  en: ca037cb236aa841a
+  zh: e06f3899be43b572

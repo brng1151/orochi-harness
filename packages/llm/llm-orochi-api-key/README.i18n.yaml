@@ -1,0 +1,46 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/llm/llm-orochi-api-key/README.md
+/:
+  en: e9a135a29b8fcedc
+  zh: bcff5938e8aff6b2
+/orochi-network-oh-llm-orochi-api-key:
+  en: e5dea59172810d7d
+  zh: a1ea17f9867e0f06
+/orochi-network-oh-llm-orochi-api-key/summary:
+  en: e6b20952f362bfd0
+  zh: 34adbe33079398ec
+/orochi-network-oh-llm-orochi-api-key/table-of-contents:
+  en: 23386452a66b2fbd
+  zh: 4cf93c4bf17b3da2
+/orochi-network-oh-llm-orochi-api-key/use-this-package:
+  en: 72dbb5a8ee1447f8
+  zh: b9f41785b9a7528d
+/orochi-network-oh-llm-orochi-api-key/understand-the-implementation:
+  en: a2a213e5629a569f
+  zh: eb23478d0081270a
+/orochi-network-oh-llm-orochi-api-key/further-exploration:
+  en: 4797b26eaeb87019
+  zh: 717a388dd09a568f
+/orochi-network-oh-llm-orochi-api-key/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-llm-orochi-api-key/model-experience/authenticated-model-requests:
+  en: 5cf024f0d3370159
+  zh: ed480db8f348a42f
+/orochi-network-oh-llm-orochi-api-key/model-experience/authenticated-model-requests/what-the-model-sees:
+  en: ecf5e582a3afa9a2
+  zh: bc26b1f89347adc9
+/orochi-network-oh-llm-orochi-api-key/model-experience/authenticated-model-requests/token-effect:
+  en: fecefb75b719c317
+  zh: f0c2322f657c5914
+/orochi-network-oh-llm-orochi-api-key/model-experience/authenticated-model-requests/kv-cache-effect:
+  en: 2004df60d997da79
+  zh: a215a6586b44746b
+/orochi-network-oh-llm-orochi-api-key/known-limitations-and-deferred-work:
+  en: d5880c883b1b678f
+  zh: bf7a4da24ba75280
+/orochi-network-oh-llm-orochi-api-key/known-limitations-and-deferred-work/dev-note:
+  en: 0525041e573e96b6
+  zh: b05ed8d852498e6b

@@ -1,0 +1,18 @@
+/* Onboarding palette and themed materials; card geometry and animation belong
+ * to the feature. The accent and the named violet/blue/cyan gradient stops match
+ * the bundled onboarding illustration layers and move with those rasters. */
+body {
+  --oh-alias-onboarding-accent: rgb(57, 100, 254);
+  --oh-gradient-onboarding-violet-stops: #2a2fb6 33.102%, #8b76f6 50.954%, #c5c0ff 85.326%, #2a2fb6;
+  --oh-gradient-onboarding-blue-stops: #3964fe 18.75%, #398efe 51.78%, #6dccff 86.252%, #3964fe;
+  --oh-gradient-onboarding-cyan-stops: #0293b4 21.154%, #2dc8eb 50.954%, #aff0ff 85.326%, #0293b4;
+  --oh-alias-onboarding-card-fill: color-mix(in srgb, var(--oh-static-neutral-bluish-00) 80%, transparent);
+  --oh-alias-onboarding-secondary-fill: var(--oh-static-neutral-bluish-00);
+  --oh-alias-onboarding-checkbox-border: color-mix(in srgb, var(--oh-static-neutral-bluish-1000) 20%, transparent);
+}
+
+body[data-ds-dark-theme] {
+  --oh-alias-onboarding-card-fill: color-mix(in srgb, var(--oh-static-neutral-bluish-850) 80%, transparent);
+  --oh-alias-onboarding-secondary-fill: rgb(72, 73, 76);
+  --oh-alias-onboarding-checkbox-border: var(--oh-alias-border-l2);
+}

@@ -1,0 +1,14 @@
+# Session-title snapshot composition: the optional first-prompt provider uses
+# the ordinary Orochi route while the every other capability stay
+# identical to the base example.
+- insert:
+    - id: session-title-provider
+      name: '@orochi-network/oh-session-title-first-prompt-llm'
+      config:
+        targetWords: 5
+        targetCjkCharacters: 10
+        maxInputBytes: 4096
+        maxOutputTokens: 32
+        timeoutMs: 5000
+        provider: orochi-official
+        model: deepseek-v4-flash

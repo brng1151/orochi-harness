@@ -1,0 +1,44 @@
+{
+  "name": "@orochi-network/oh-experimental-ptc-runtime-python",
+  "description": "CPython subprocess implementation of the Orochi Harness PTC execution seam",
+  "version": "0.1.7-rc.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/experimental/ptc-runtime-python"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "py/**/*.py",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/oh-ptc-runtime": "workspace:*",
+    "@orochi-network/oh-timeout": "workspace:*",
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-util-values": "workspace:*"
+  },
+  "devDependencies": {
+    "@orochi-network/oh-ptc-runtime": "workspace:*",
+    "@orochi-network/oh-timeout": "workspace:*",
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-util-values": "workspace:*"
+  },
+  "dependencies": {
+    "@orochi-network/schemastery": "workspace:~"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

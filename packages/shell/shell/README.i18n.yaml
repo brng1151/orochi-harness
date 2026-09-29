@@ -1,0 +1,67 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/shell/shell/README.md
+/:
+  en: 4a173bf52227a3b6
+  zh: 76bb85595252765c
+/orochi-network-oh-shell:
+  en: 0758ccc1b0b707c2
+  zh: 3a023bfc91b52d3c
+/orochi-network-oh-shell/summary:
+  en: bb40932744bc4b80
+  zh: 22e2af1327b2f835
+/orochi-network-oh-shell/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-shell/use-this-package:
+  en: b81fffe9eb713a49
+  zh: ac37478e7f1f7499
+/orochi-network-oh-shell/use-this-package/foreground-commands:
+  en: cf38f6bc0e150602
+  zh: 2ff6cfb0ce48a7b8
+/orochi-network-oh-shell/use-this-package/background-processes:
+  en: 277c543917453017
+  zh: d2c100e37944f151
+/orochi-network-oh-shell/use-this-package/deadlines-and-bounded-waits:
+  en: 719b0708bf3cf1cf
+  zh: 044f53d543960f42
+/orochi-network-oh-shell/use-this-package/requests-and-resolved-specs:
+  en: a9939914c23c89d1
+  zh: 63d081e6634cc1f1
+/orochi-network-oh-shell/use-this-package/choosing-and-composing-an-executor:
+  en: f20d6ef1ee78e8b4
+  zh: 3c69e1312ce99401
+/orochi-network-oh-shell/use-this-package/the-shared-exit-status-contract:
+  en: f4125282c1deab36
+  zh: 46b8ee789ae68a9a
+/orochi-network-oh-shell/understand-the-implementation:
+  en: d2192b68c2faf92b
+  zh: 7678a2fd356d8587
+/orochi-network-oh-shell/understand-the-implementation/design-philosophy:
+  en: 1b91757033ebde2d
+  zh: b7cddbc4df30c4dd
+/orochi-network-oh-shell/understand-the-implementation/source-map:
+  en: 80d45b2de500588a
+  zh: 23da8d99b05f4db6
+/orochi-network-oh-shell/understand-the-implementation/settings-namespace:
+  en: a5b81ecee7fe9938
+  zh: 25fcf060b48e14cf
+/orochi-network-oh-shell/understand-the-implementation/background-lifecycle-and-ownership:
+  en: 63853c610719e1bb
+  zh: 09668e6fd34c9161
+/orochi-network-oh-shell/further-exploration:
+  en: 7c684640fda0513e
+  zh: 17e8bbceb6a59802
+/orochi-network-oh-shell/model-experience:
+  en: d9e0900ef1be3fa9
+  zh: a7b85ad111f6428f
+/orochi-network-oh-shell/model-experience/kv-cache-effect:
+  en: 40294c1c31b74824
+  zh: 788a4799b1d65a8b
+/orochi-network-oh-shell/known-limitations-and-deferred-work:
+  en: 99d12169daf4dc4e
+  zh: 9ac87f28295fbe77
+/orochi-network-oh-shell/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3c8bbe93d71a3377

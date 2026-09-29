@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-09-01-jobs-absorb-activity-record.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-01-jobs-absorb-activity-record.md
+/agent-note-the-job-registry-absorbs-the-observation-record-the-standalone-activity-seam-is-removed:
+  en: abe6c282d1969445
+  zh: 542d75a935da483d
+/agent-note-the-job-registry-absorbs-the-observation-record-the-standalone-activity-seam-is-removed/problem:
+  en: b814df033d4d7ccb
+  zh: d68b41bcdaa92739
+/agent-note-the-job-registry-absorbs-the-observation-record-the-standalone-activity-seam-is-removed/decision:
+  en: c7ada6a40d92daf4
+  zh: bd16a02f295c4ae2
+/agent-note-the-job-registry-absorbs-the-observation-record-the-standalone-activity-seam-is-removed/alternatives-considered:
+  en: d78d9d62744e005b
+  zh: b6216317e6262f9c
+/agent-note-the-job-registry-absorbs-the-observation-record-the-standalone-activity-seam-is-removed/review-corrections:
+  en: 93db5342c848587a
+  zh: d4e67a47d573eb39
+/agent-note-the-job-registry-absorbs-the-observation-record-the-standalone-activity-seam-is-removed/consequences:
+  en: c1df52910a1ee554
+  zh: 50fd15ed06f07f76

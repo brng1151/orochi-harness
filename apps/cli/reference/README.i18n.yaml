@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write apps/cli/reference/README.md
+/oh-cli-behavior-reference:
+  en: e568025f2b3d3bf2
+  zh: 13569af2dd5f2cae
+/oh-cli-behavior-reference/profile-boot:
+  en: 9c64ba1d3e7914dd
+  zh: b540799d7cbbc008
+/oh-cli-behavior-reference/profile-boot/app-arguments:
+  en: 0ac8cdb015d4b1e5
+  zh: d572d928e91ae652
+/oh-cli-behavior-reference/profile-boot/config-schema-dump:
+  en: 08ef18d6e25059f0
+  zh: 11d1be9f4a027bc6
+/oh-cli-behavior-reference/startup-diagnostics:
+  en: 39920b550f20a38d
+  zh: ead8a1cafceb1c63
+/oh-cli-behavior-reference/plugin-management:
+  en: 9aad4f8ee90d431a
+  zh: e84e6389403684b8
+/oh-cli-behavior-reference/web-profile:
+  en: 9d467c1bc55b84f6
+  zh: c1b3426808781da4
+/oh-cli-behavior-reference/shared-deployment-behavior:
+  en: addc4408e6e0335c
+  zh: 5066bb144e8dccdf
+/oh-cli-behavior-reference/source-execution:
+  en: 247fdaa05966a1f5
+  zh: 5d3554850bed50f9

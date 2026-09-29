@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-07-21-follow-instruction-symlinks.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-07-21-follow-instruction-symlinks.md
+/agent-note-follow-symlinked-instruction-files:
+  en: 375ac09dabdb7398
+  zh: 5dda168521dd293c
+/agent-note-follow-symlinked-instruction-files/problem:
+  en: 034a35b8165b3239
+  zh: 4c46d0888c5206e3
+/agent-note-follow-symlinked-instruction-files/decision:
+  en: ad2bdd005f364ef8
+  zh: 6c8a98643633e4ca
+/agent-note-follow-symlinked-instruction-files/decision/trust-boundary-and-residual-risk:
+  en: bffcc579c0829c0d
+  zh: a4b2cf1fdae7cacb
+/agent-note-follow-symlinked-instruction-files/alternatives-considered:
+  en: e0a4eb2b8df7e2ad
+  zh: 63d75aff4f709c91
+/agent-note-follow-symlinked-instruction-files/consequences:
+  en: b0ee45a9e4d95dd5
+  zh: 338d3758f400a651

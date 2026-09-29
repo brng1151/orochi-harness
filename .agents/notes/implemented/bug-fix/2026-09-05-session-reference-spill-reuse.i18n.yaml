@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for 2026-09-05-session-reference-spill-reuse.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/bug-fix/2026-09-05-session-reference-spill-reuse.md
+/agent-note-reuse-spill-storage-for-truncated-session-references:
+  en: 591c1e1d26c6efd9
+  zh: 63687efad27b4729
+/agent-note-reuse-spill-storage-for-truncated-session-references/problem:
+  en: 50a1ef10604acb5f
+  zh: 128abfd3e43740dc
+/agent-note-reuse-spill-storage-for-truncated-session-references/decision:
+  en: 4047da831dd9bc56
+  zh: 0964d6c8e7eac3bd
+/agent-note-reuse-spill-storage-for-truncated-session-references/alternatives-considered:
+  en: fccf1c25876b92a0
+  zh: 7d5c7c3d240132c3
+/agent-note-reuse-spill-storage-for-truncated-session-references/consequences:
+  en: 2bff957549afe59b
+  zh: 30c6be54168fe183
+/agent-note-reuse-spill-storage-for-truncated-session-references/verification:
+  en: a27f180c9f3bbf2b
+  zh: 13c9b505703566eb
+/agent-note-reuse-spill-storage-for-truncated-session-references/related-decisions:
+  en: 13366c425305aa97
+  zh: afadf7714bf52076

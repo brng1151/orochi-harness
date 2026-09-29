@@ -1,0 +1,61 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/jobs/jobs/README.md
+/:
+  en: 4055a3bc920e4ac2
+  zh: 3bc99f3b5bc2fd71
+/orochi-network-oh-jobs:
+  en: 53a7d8ef1b29adf6
+  zh: 0e4a82fb2c587125
+/orochi-network-oh-jobs/summary:
+  en: f200f89473bb135f
+  zh: 5376832fd34dd138
+/orochi-network-oh-jobs/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-jobs/use-this-package:
+  en: 6abc0df2b132cb04
+  zh: 9f38b008e262b413
+/orochi-network-oh-jobs/use-this-package/what-a-background-job-gives-you:
+  en: df75170e487bdfbd
+  zh: fb6440ea80fa8ba4
+/orochi-network-oh-jobs/use-this-package/the-ownership-boundary:
+  en: 873494750b38dae5
+  zh: 2e6142ab889f7a8b
+/orochi-network-oh-jobs/use-this-package/starting-background-work-needs-a-controller:
+  en: b815e730e7a16ab2
+  zh: 14c00ec9ce9f2b5c
+/orochi-network-oh-jobs/use-this-package/smallest-working-composition:
+  en: c677033352299a9b
+  zh: 5524292a3581d48a
+/orochi-network-oh-jobs/use-this-package/what-can-go-wrong:
+  en: fcfee3f72ea703ac
+  zh: 80299901bd44783b
+/orochi-network-oh-jobs/understand-the-implementation:
+  en: 7e13d669ecc96d59
+  zh: b5fe7ae65812d926
+/orochi-network-oh-jobs/understand-the-implementation/design-philosophy:
+  en: e32dd3f0da84013c
+  zh: 39d9db9636c6bc22
+/orochi-network-oh-jobs/understand-the-implementation/source-map:
+  en: 2416d5be526d4dba
+  zh: 1090a9373258d7bb
+/orochi-network-oh-jobs/understand-the-implementation/service-operations:
+  en: 5a401b10e99bcc47
+  zh: 81ce2370a226812a
+/orochi-network-oh-jobs/further-exploration:
+  en: 049e992d60935810
+  zh: a2e721f3df47b0c3
+/orochi-network-oh-jobs/model-experience:
+  en: efb58cac0fc08163
+  zh: 838791f77fd79917
+/orochi-network-oh-jobs/model-experience/kv-cache-effect:
+  en: e290ccc9b3c92c08
+  zh: d75d48f485447a74
+/orochi-network-oh-jobs/known-limitations-and-deferred-work:
+  en: bf4e5e0bd25d579e
+  zh: ed995c02012f0c72
+/orochi-network-oh-jobs/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

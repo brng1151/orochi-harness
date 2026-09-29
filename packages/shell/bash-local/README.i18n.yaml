@@ -1,0 +1,61 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/shell/bash-local/README.md
+/:
+  en: f70a1e0bb1e0d56d
+  zh: 927e75bc75573410
+/orochi-network-oh-bash-local:
+  en: d02426760d091f07
+  zh: 550b843fe73b0a35
+/orochi-network-oh-bash-local/summary:
+  en: 2cc1988e8b203ac1
+  zh: 5b23ba7f9635aeac
+/orochi-network-oh-bash-local/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-bash-local/use-this-package:
+  en: 95ae7843275778ca
+  zh: 43b5069075a99625
+/orochi-network-oh-bash-local/use-this-package/minimal-configuration:
+  en: 27528f63e4ca755d
+  zh: 98d864c643ae972b
+/orochi-network-oh-bash-local/use-this-package/running-commands:
+  en: a27f24e1c9908612
+  zh: 4183e0c89aebb96c
+/orochi-network-oh-bash-local/use-this-package/background-processes:
+  en: 3c580842cc8452af
+  zh: 5a156670a7cacc2a
+/orochi-network-oh-bash-local/use-this-package/adjusting-budgets-at-runtime:
+  en: 1098db4c932a48f8
+  zh: 33f78ab65dbfeb1d
+/orochi-network-oh-bash-local/understand-the-implementation:
+  en: 05e2abe4a25886fd
+  zh: 3f7f1326dc3c1d3f
+/orochi-network-oh-bash-local/understand-the-implementation/design-concept:
+  en: ec84e5746de85fe0
+  zh: 1c353325eeae87c6
+/orochi-network-oh-bash-local/understand-the-implementation/source-map:
+  en: 254759ab26151a72
+  zh: e94679a11b67dc10
+/orochi-network-oh-bash-local/understand-the-implementation/main-flow:
+  en: 723bbaedc34e58f3
+  zh: d0239dcfdd8a53c6
+/orochi-network-oh-bash-local/understand-the-implementation/invariants-and-ownership:
+  en: 6776d698558912e0
+  zh: 35a712feb8df1233
+/orochi-network-oh-bash-local/further-exploration:
+  en: d43b2b32a2f6f02d
+  zh: cf3e4b9d05bcaeb4
+/orochi-network-oh-bash-local/model-experience:
+  en: c6d16f5d69010531
+  zh: 9c99422801e13df6
+/orochi-network-oh-bash-local/model-experience/kv-cache-effect:
+  en: 40294c1c31b74824
+  zh: 788a4799b1d65a8b
+/orochi-network-oh-bash-local/known-limitations-and-deferred-work:
+  en: 6435dc03aac7bd15
+  zh: 6f4ccf46a0a63d63
+/orochi-network-oh-bash-local/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

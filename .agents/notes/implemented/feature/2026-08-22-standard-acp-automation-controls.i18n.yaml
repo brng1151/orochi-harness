@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for 2026-08-22-standard-acp-automation-controls.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-22-standard-acp-automation-controls.md
+/agent-note-standard-acp-v1-automation-controls:
+  en: a3313c14de396865
+  zh: 7a65abb09f0380e4
+/agent-note-standard-acp-v1-automation-controls/problem:
+  en: 9579ca0e5fec996f
+  zh: ee5233d01a5b8a43
+/agent-note-standard-acp-v1-automation-controls/decision:
+  en: 420c71a343710e5f
+  zh: b931ac6b5d21740c
+/agent-note-standard-acp-v1-automation-controls/per-session-ownership:
+  en: 5b98c5e68eccfe76
+  zh: c22dc47ad8003f22
+/agent-note-standard-acp-v1-automation-controls/persistent-session-controls:
+  en: 122752f1cb116417
+  zh: 96971bcc1fed4a8a
+/agent-note-standard-acp-v1-automation-controls/standard-configuration-options:
+  en: 61cb15891965c67a
+  zh: a0a958094b60951f
+/agent-note-standard-acp-v1-automation-controls/standard-mcp-mapping:
+  en: 4552aacc856975f8
+  zh: e6c963b99835c260
+/agent-note-standard-acp-v1-automation-controls/semantic-update-projection:
+  en: 7832f12bd72df970
+  zh: d92dcdbfc3f18a60
+/agent-note-standard-acp-v1-automation-controls/alternatives-considered:
+  en: b9259114f154e2cd
+  zh: ee1222fbc8829232
+/agent-note-standard-acp-v1-automation-controls/verification:
+  en: 08e2b98606d9d362
+  zh: 99d6aef7c89e287f
+/agent-note-standard-acp-v1-automation-controls/consequences:
+  en: 453c92c19160d71b
+  zh: ffbff57426ab24c9

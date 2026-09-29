@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-09-28-remove-session-data-reporting-paths.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/simplification/2026-09-28-remove-session-data-reporting-paths.md
+/agent-note-remove-the-session-log-session-telemetry-and-anonymous-user-id-reporting-paths:
+  en: 477b7d1ca2a018a1
+  zh: 3c14504d1b1df588
+/agent-note-remove-the-session-log-session-telemetry-and-anonymous-user-id-reporting-paths/problem:
+  en: bdbe8c03fc9c9163
+  zh: 779af95f43f2419d
+/agent-note-remove-the-session-log-session-telemetry-and-anonymous-user-id-reporting-paths/decision:
+  en: bd1479c5c78c4b23
+  zh: ca11c59e966b3406
+/agent-note-remove-the-session-log-session-telemetry-and-anonymous-user-id-reporting-paths/alternatives-considered:
+  en: 2b20366db8a5a0ff
+  zh: 299348388ebeefc6
+/agent-note-remove-the-session-log-session-telemetry-and-anonymous-user-id-reporting-paths/consequences:
+  en: 63dc49158bdb06a7
+  zh: 66fbe275a9fc5e9f
+/agent-note-remove-the-session-log-session-telemetry-and-anonymous-user-id-reporting-paths/verification:
+  en: 98b2a3fd3986b49f
+  zh: c3acc53eaed86e01

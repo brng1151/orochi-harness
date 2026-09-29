@@ -1,0 +1,70 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/ptc-runtime/ptc-runtime/README.md
+/:
+  en: 8904d5f5d5251a83
+  zh: 69b48f289b0416f0
+/orochi-network-oh-ptc-runtime:
+  en: cc03259378113caf
+  zh: d6e36e38ea6575e6
+/orochi-network-oh-ptc-runtime/summary:
+  en: 0d9b659834daf84c
+  zh: c8fdca4e1e44ad90
+/orochi-network-oh-ptc-runtime/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-ptc-runtime/use-this-package:
+  en: 4a6efdf899257310
+  zh: 4f638549c37265d7
+/orochi-network-oh-ptc-runtime/use-this-package/run-a-program:
+  en: 6f97019cebc2f417
+  zh: c56f18a690dbe814
+/orochi-network-oh-ptc-runtime/use-this-package/choose-a-backend:
+  en: 83bfa5bfbb942620
+  zh: f94ae6276979ed04
+/orochi-network-oh-ptc-runtime/use-this-package/name-your-bindings-portably:
+  en: 4e46c1672701b8df
+  zh: 0353c5855c9ff6be
+/orochi-network-oh-ptc-runtime/use-this-package/what-can-go-wrong:
+  en: 44f9fdf2c8e2cacc
+  zh: 99dd555a49075f88
+/orochi-network-oh-ptc-runtime/understand-the-implementation:
+  en: 686d570f5e669fa4
+  zh: 2075cf27c30f251a
+/orochi-network-oh-ptc-runtime/understand-the-implementation/design-concept:
+  en: ffe216433e6419b7
+  zh: 832605a96cfc48a5
+/orochi-network-oh-ptc-runtime/understand-the-implementation/service-api:
+  en: 485000abcfbadac3
+  zh: 54e497a080934099
+/orochi-network-oh-ptc-runtime/understand-the-implementation/vocabulary:
+  en: 855cb8366e3bd293
+  zh: da6d7a0ce51f97fc
+/orochi-network-oh-ptc-runtime/understand-the-implementation/portable-identifiers:
+  en: 094898ff8348b576
+  zh: a991eef12391dd81
+/orochi-network-oh-ptc-runtime/understand-the-implementation/source-map:
+  en: 73b7deab23f3b00d
+  zh: 780ddf5ff0dd5f65
+/orochi-network-oh-ptc-runtime/further-exploration:
+  en: ad287330bcd8dfd9
+  zh: d9ee4e4dedade7be
+/orochi-network-oh-ptc-runtime/model-experience:
+  en: aa6cb579843e257e
+  zh: 356d7ae427dd5b68
+/orochi-network-oh-ptc-runtime/model-experience/kv-cache-effect:
+  en: 40294c1c31b74824
+  zh: 081cebc2e2650f03
+/orochi-network-oh-ptc-runtime/known-limitations-and-deferred-work:
+  en: 7f30f78c5d427667
+  zh: 99d21160016deea2
+/orochi-network-oh-ptc-runtime/known-limitations-and-deferred-work/dev-note:
+  en: d56846da29ad869c
+  zh: 0397151a7e29b8ba
+/orochi-network-oh-ptc-runtime/known-limitations-and-deferred-work/dev-note/future-persistent-kernel-backend:
+  en: cfefaae6ed9705d5
+  zh: 3cca5b1bd92445b0
+/orochi-network-oh-ptc-runtime/known-limitations-and-deferred-work/dev-note/future-container-backend:
+  en: 2b94202842f0556c
+  zh: 5aa0311fa621a018

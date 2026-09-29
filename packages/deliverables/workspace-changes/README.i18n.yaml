@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/deliverables/workspace-changes/README.md
+/:
+  en: 961e566f4c0c9b31
+  zh: 368dabdd8c4d53ec
+/orochi-network-oh-workspace-changes:
+  en: b0ec56e46e8da0b5
+  zh: b4da36950c71d356
+/orochi-network-oh-workspace-changes/summary:
+  en: 61639e7f0185b4d9
+  zh: 7c559b2863f073f9
+/orochi-network-oh-workspace-changes/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-workspace-changes/use-this-package:
+  en: d6364de942d83439
+  zh: b958129205655ba9
+/orochi-network-oh-workspace-changes/understand-the-implementation:
+  en: e5b20d508763a2cf
+  zh: 4e35b0c46ffd5fb0
+/orochi-network-oh-workspace-changes/further-exploration:
+  en: 894b556716387fc7
+  zh: c58b5deba848110e
+/orochi-network-oh-workspace-changes/model-experience:
+  en: aa413c0bfaa815a8
+  zh: eea730976cf916e6
+/orochi-network-oh-workspace-changes/model-experience/kv-cache-effect:
+  en: e7ba08477bf22c4e
+  zh: f365439c69beb722
+/orochi-network-oh-workspace-changes/known-limitations-and-deferred-work:
+  en: c7091685e5065a40
+  zh: 1e9b85962ea04187
+/orochi-network-oh-workspace-changes/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

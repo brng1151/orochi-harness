@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/experimental/speech-to-text/README.md
+/:
+  en: 22f9a7932dfa9329
+  zh: c8cb8d78a0dba75d
+/orochi-network-oh-experimental-speech-to-text:
+  en: 7970bcbea5adf6d9
+  zh: 76e737b00bac8b24
+/orochi-network-oh-experimental-speech-to-text/summary:
+  en: a70b8d594ad6240b
+  zh: 19f25b113876504e
+/orochi-network-oh-experimental-speech-to-text/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 364c80ee00a374ff
+/orochi-network-oh-experimental-speech-to-text/use-this-package:
+  en: a80f24db495a8cae
+  zh: 05e189f6578edd7a
+/orochi-network-oh-experimental-speech-to-text/understand-the-implementation:
+  en: ed5da4ea3ef6a0a8
+  zh: 7f12a1f42cd48c36
+/orochi-network-oh-experimental-speech-to-text/further-exploration:
+  en: c4b5f78f39ccf6c1
+  zh: dfb86304e8902ab9
+/orochi-network-oh-experimental-speech-to-text/model-experience:
+  en: 3c5a85f8b7129ce8
+  zh: d5f491ca88d9a810
+/orochi-network-oh-experimental-speech-to-text/model-experience/kv-cache-effect:
+  en: b5ec79db2e1d0dbc
+  zh: e5aff567ae5ee6fc
+/orochi-network-oh-experimental-speech-to-text/known-limitations-and-deferred-work:
+  en: 947c3e506a569f5a
+  zh: 432a35dfe77f498f
+/orochi-network-oh-experimental-speech-to-text/known-limitations-and-deferred-work/dev-note:
+  en: 0225ba087c5266f3
+  zh: 4e706f1b2b984e63

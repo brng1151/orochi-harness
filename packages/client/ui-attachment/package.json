@@ -1,0 +1,69 @@
+{
+  "name": "@orochi-network/oh-client-ui-attachment",
+  "description": "Dynamic attachment presentation plugin for conversation input, message-image, and trajectory image slots",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/client/ui-attachment"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "oh": {
+    "client": {
+      "inject": [
+        "@orochi-network/oh-client-ui-chat",
+        "@orochi-network/oh-client-ui-conversation",
+        "@orochi-network/oh-client-ui-renderer",
+        "@orochi-network/oh-client-ui-trajectory",
+        "@orochi-network/oh-client-ui-tool"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "bundle": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@types/react": "~18.3.1",
+    "@types/react-dom": "~18.3.0",
+    "@orochi-network/oh-client-ui-chat": "workspace:*",
+    "@orochi-network/oh-client-ui-conversation": "workspace:*",
+    "@orochi-network/oh-client-ui-trajectory": "workspace:*",
+    "@orochi-network/oh-client-ui-renderer": "workspace:*",
+    "@orochi-network/oh-client-ui-primitives": "workspace:*",
+    "@orochi-network/oh-client-ui-slots": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@orochi-network/oh-attachment": "workspace:*",
+    "@orochi-network/oh-client-ui-tool": "workspace:*",
+    "clsx": "^2.0.0"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  }
+}

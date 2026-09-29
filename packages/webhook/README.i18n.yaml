@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/webhook/README.md
+/:
+  en: 542890deab52a32a
+  zh: 524b53cd6671d87c
+/webhook-verified-external-events-to-oh-sessions:
+  en: 88150a7479af2754
+  zh: 2daeb5c302ce024e
+/webhook-verified-external-events-to-oh-sessions/summary:
+  en: 297975121095f74a
+  zh: 9530dbf3c90d1ae0
+/webhook-verified-external-events-to-oh-sessions/table-of-contents:
+  en: 1eb35b015a6c423f
+  zh: a8a3dceee2c9e943
+/webhook-verified-external-events-to-oh-sessions/packages:
+  en: c7101405d1ac725c
+  zh: 1d487f1837e1edd5
+/webhook-verified-external-events-to-oh-sessions/related-documentation:
+  en: 72b7b25d0179d303
+  zh: 1f8d498af4649944
+/webhook-verified-external-events-to-oh-sessions/dev-note:
+  en: b75c8458928b72b9
+  zh: 003ba4e17b4b5269

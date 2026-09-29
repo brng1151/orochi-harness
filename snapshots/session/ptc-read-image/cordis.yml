@@ -1,0 +1,35 @@
+# PTC mode image overlay: mounts the worker runtime and durable attachment
+# store so a nested read_image result can cross the generic rich-result bridge.
+# The live config selects the shipped vision route for manual use.
+- id: agent-default-model
+  name: '@orochi-network/oh-agent-default-model'
+  config:
+    provider: orochi-official
+    model: deepseek-v4-flash-vision-exp
+
+- id: session-persistence-jsonl
+  name: '@orochi-network/oh-session-persistence-jsonl'
+  config:
+    root: !!js ohHomePath('sessions')
+    compression: !!js 'process.env.OH_SNAPSHOT === undefined ? ''zstd'' : ''none'''
+
+- id: agent-instructions
+  name: '@orochi-network/oh-agent-instructions'
+  config:
+    maxBytes: 65536
+
+- id: tools
+  name: '@orochi-network/oh-tools'
+  config:
+    mode: ptc
+
+- id: system-prompt
+  name: '@orochi-network/oh-system-prompt'
+  config:
+    personaPrefix: |
+      You are a coding assistant powered by the {{model}} model. Your working directory is {{cwd}}.
+
+      Verify your work by running the code or tests. Keep answers brief and factual.
+
+- id: attachment-local
+  name: '@orochi-network/oh-attachment-local'

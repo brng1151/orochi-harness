@@ -1,0 +1,64 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/skill/skill/README.md
+/:
+  en: ab82ac4bcc012854
+  zh: 3e2a2326e66f4bc3
+/orochi-network-oh-skill:
+  en: be5858a89984437d
+  zh: 20ee495ebebd2db6
+/orochi-network-oh-skill/summary:
+  en: b8c71a615a72991f
+  zh: da6e68dfd7834409
+/orochi-network-oh-skill/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-skill/use-this-package:
+  en: cb13ae81a3e0ae68
+  zh: e709d66f4b6b4dd5
+/orochi-network-oh-skill/use-this-package/when-to-choose-it:
+  en: 23a9cd1efa529344
+  zh: 594d9115f9344b6f
+/orochi-network-oh-skill/use-this-package/mount-and-configure:
+  en: 5090b2ee61bfb25c
+  zh: d8dc5b3534448f3f
+/orochi-network-oh-skill/use-this-package/what-the-registry-gives-you:
+  en: 0cb7936c76a84e45
+  zh: a1fb8572481af54c
+/orochi-network-oh-skill/use-this-package/observable-success-and-failures:
+  en: b7331b6a9c0d5bb2
+  zh: 3ea0785c3a8c7330
+/orochi-network-oh-skill/understand-the-implementation:
+  en: 89be1dad151abb04
+  zh: 9a1915c4d55bb9d2
+/orochi-network-oh-skill/understand-the-implementation/design-concept:
+  en: c0fb1850f00f24b1
+  zh: 226883ab5635435d
+/orochi-network-oh-skill/understand-the-implementation/source-map:
+  en: 6cfbcb24c960a60c
+  zh: 5db5bd40e76b492a
+/orochi-network-oh-skill/understand-the-implementation/catalog-collection:
+  en: 58a9b57dc504b69f
+  zh: 8fe8011247bc3f2b
+/orochi-network-oh-skill/understand-the-implementation/loading-and-staleness:
+  en: e855d39692737103
+  zh: 396aa887a78989ec
+/orochi-network-oh-skill/understand-the-implementation/invalidation:
+  en: d73258316127f5b5
+  zh: ddc6690f88922782
+/orochi-network-oh-skill/further-exploration:
+  en: 4d235ce3e0dd52b8
+  zh: 3c92d1a2a425d3a5
+/orochi-network-oh-skill/model-experience:
+  en: 1e5b3feed9a99bce
+  zh: 456631f17a452187
+/orochi-network-oh-skill/model-experience/kv-cache-effect:
+  en: 628a45ff9f6b0e74
+  zh: fda70b0eed2df1d7
+/orochi-network-oh-skill/known-limitations-and-deferred-work:
+  en: c5456e001203fd7a
+  zh: 3cc6fa50700eec13
+/orochi-network-oh-skill/known-limitations-and-deferred-work/dev-note:
+  en: 259ce6914314397d
+  zh: d500b1f988a83999

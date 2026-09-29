@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-05-canonical-feedback-log.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-05-canonical-feedback-log.md
+/agent-note-canonical-feedback-log-and-request-delivery:
+  en: dc7cbbd049c845e7
+  zh: ba60de8e20edf6dc
+/agent-note-canonical-feedback-log-and-request-delivery/problem:
+  en: 702e5973c264ec35
+  zh: 71b095565593629c
+/agent-note-canonical-feedback-log-and-request-delivery/decision:
+  en: 963ef8c6f7c2dae7
+  zh: 739b7265ed4dc0a9
+/agent-note-canonical-feedback-log-and-request-delivery/alternatives-considered:
+  en: b2c86cd82d7abb6a
+  zh: acc6533ca7b620a5
+/agent-note-canonical-feedback-log-and-request-delivery/consequences:
+  en: 100eb90afbd448de
+  zh: 608c67fe25cc3693

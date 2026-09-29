@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for 2026-07-29-durable-last-activity-index.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/proposed/architecture/2026-07-29-durable-last-activity-index.md
+/agent-note-record-last-activity-in-the-session-index:
+  en: 8ef521179b65e5b0
+  zh: dbf7f8d6b9cd23db
+/agent-note-record-last-activity-in-the-session-index/problem:
+  en: 43bc3ba4bc87bab8
+  zh: 68ab3dfeb10461ac
+/agent-note-record-last-activity-in-the-session-index/proposal:
+  en: 2260380e10b59eb6
+  zh: dcf5a7f2d6003021
+/agent-note-record-last-activity-in-the-session-index/alternatives-considered:
+  en: d7e4d58efe837591
+  zh: e283b2ddc2c667d9
+/agent-note-record-last-activity-in-the-session-index/acceptance-criteria:
+  en: ec546e4feceb77a7
+  zh: a29c9268e1c189c7
+/agent-note-record-last-activity-in-the-session-index/risks:
+  en: 9aaf88097b46e9b6
+  zh: d16e5bbbe221b139
+/agent-note-record-last-activity-in-the-session-index/related:
+  en: 9a68e0dff3ab4257
+  zh: 90ec6aec436efc1a

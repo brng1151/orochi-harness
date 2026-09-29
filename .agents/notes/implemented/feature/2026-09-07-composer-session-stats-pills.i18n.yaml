@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-07-composer-session-stats-pills.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-09-07-composer-session-stats-pills.md
+/agent-note-composer-session-stats-two-icon-pills-with-click-open-stat-dialogs:
+  en: 086510058a305a08
+  zh: 5ed5d35cd01f862d
+/agent-note-composer-session-stats-two-icon-pills-with-click-open-stat-dialogs/problem:
+  en: 654462fa4eeb58dc
+  zh: 7c9cd57947ab8639
+/agent-note-composer-session-stats-two-icon-pills-with-click-open-stat-dialogs/decision:
+  en: 748de590369fccbf
+  zh: 78e084108a990688
+/agent-note-composer-session-stats-two-icon-pills-with-click-open-stat-dialogs/alternatives-considered:
+  en: 7798b1fb9824b920
+  zh: 7e75cd154ab58a0b
+/agent-note-composer-session-stats-two-icon-pills-with-click-open-stat-dialogs/consequences:
+  en: 933d193a2557ec8b
+  zh: eb60bb45362a6c15

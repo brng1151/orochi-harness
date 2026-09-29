@@ -1,0 +1,43 @@
+# Bilingual-pair consistency record for 2026-06-26-file-context-as-event-gate.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-06-26-file-context-as-event-gate.md
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface:
+  en: 46f4bccee1dee419
+  zh: 23841cac45d35807
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/problem:
+  en: 550c15a46d66c2b5
+  zh: 306c8d546bed0751
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/decision:
+  en: df7148b883462edb
+  zh: be5a655f64ae6aac
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/the-policy-is-enforced-by-provider-cas-not-by-oh-fs-observation-policy-stat:
+  en: 3d95a3e2a85facfa
+  zh: 1ebc3015e50336d0
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/provider-contract-change-the-version-guard-is-optional:
+  en: c21ecfc551cba665
+  zh: 0f435076b4dba952
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/event-vocabulary-owned-by-oh-fs:
+  en: e64a4c717c605f47
+  zh: c1a91ce1636e0584
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/tool-contract-oh-tool-fs:
+  en: c4c38056feb41bcd
+  zh: b0f9df0184189fa2
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/policy-plugin-contract-oh-fs-observation-policy:
+  en: e9e78c78e0ba6545
+  zh: db3d6cd3fa98bb5a
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/bare-provider-behavior-no-oh-fs-observation-policy:
+  en: 8dda7b2cb47dde96
+  zh: 481811eb1e91f29c
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/supersedes:
+  en: 7b821859d0488f5c
+  zh: 0f21ab6d9785d105
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/verification:
+  en: f8b4e0a109f7fecf
+  zh: b38d8da788ce26a3
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/alternatives-considered:
+  en: fc67bb10bbea8d17
+  zh: d92adcf1b7105a72
+/agent-note-make-oh-fs-observation-policy-an-event-gate-plugin-not-a-method-interface/consequences:
+  en: 43556fc251c3a09c
+  zh: 47ac639fefdafdab

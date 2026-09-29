@@ -1,0 +1,40 @@
+# Bilingual-pair consistency record for 2026-07-26-ci-failover-runbook.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/process/2026-07-26-ci-failover-runbook.md
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool:
+  en: 6a18de947715c599
+  zh: c95c3ce0874e1a00
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool/problem:
+  en: d8c450934a605b33
+  zh: de730d4ce6261a61
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool/decision:
+  en: 8a33a69d22381224
+  zh: afc749588c94d857
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool/decision/release-rehearsals-share-the-linux-switch:
+  en: ce9d4a4718758524
+  zh: 24831b15d08ad2b6
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool/decision/what-the-in-house-pool-is:
+  en: 00d8934ed30e838c
+  zh: bdb5584fbaf27c7d
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool/decision/what-the-in-house-pool-is/windows-pool:
+  en: 4e9f041e4f50572c
+  zh: 4ff2da2a20af1064
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool/decision/switch-any-repository-writer-1-minute-no-merge:
+  en: f7df3a29346c1342
+  zh: f5887e6b2a404905
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool/capacity-during-failover:
+  en: 2bf6ac737857fbe6
+  zh: 299d73d6e8f6f44f
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool/capacity-during-failover/switch-back:
+  en: b6464a5e0506bad6
+  zh: 5124993c10879cfd
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool/capacity-during-failover/trust-boundary:
+  en: c05bc0ceba304ff0
+  zh: 19ae9a2d70f25d33
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool/alternatives-considered:
+  en: e68b70d7caca52f1
+  zh: e6f0be792105a9e6
+/agent-note-ci-failover-runbook-hosted-pools-in-house-pool/consequences:
+  en: 64069ee73742a816
+  zh: c9d117e6dc816f12

@@ -1,0 +1,49 @@
+# Bilingual-pair consistency record for 2026-07-16-persistent-pty-sessions.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-07-16-persistent-pty-sessions.md
+/agent-note-persistent-pty-sessions:
+  en: e3299181a0011c7d
+  zh: 7c2d1e6341b26984
+/agent-note-persistent-pty-sessions/problem:
+  en: 96137011c1d8b725
+  zh: f29c586e422ff74a
+/agent-note-persistent-pty-sessions/decision:
+  en: d08149877aefd587
+  zh: 6c22514b190ba277
+/agent-note-persistent-pty-sessions/decision/package-topology:
+  en: 9bdc6f545f4106fb
+  zh: 21af6ffdcda29142
+/agent-note-persistent-pty-sessions/decision/agent-ownership-and-identity:
+  en: 83c8c368c113c8fd
+  zh: 07b1bc45776e87be
+/agent-note-persistent-pty-sessions/decision/security-and-process-boundary:
+  en: bdc089ad4db0245a
+  zh: d8a55c7cc6f245e1
+/agent-note-persistent-pty-sessions/decision/six-model-facing-tools:
+  en: c32929008f1859e6
+  zh: fbd895e394ca8f05
+/agent-note-persistent-pty-sessions/decision/local-readiness-detection:
+  en: 033f4cf3b6bb50f9
+  zh: 77754549621b03ce
+/agent-note-persistent-pty-sessions/decision/model-visible-output-and-durability:
+  en: 1b504ab41b47216d
+  zh: 8fb3d360b3a4e6a1
+/agent-note-persistent-pty-sessions/decision/process-tree-teardown:
+  en: e96a972845bc3513
+  zh: d76d7dfb80985e9d
+/agent-note-persistent-pty-sessions/decision/composition-and-rollout:
+  en: 9cb63aefaa115ace
+  zh: 93b133ce7cbed467
+/agent-note-persistent-pty-sessions/decision/deferred-work:
+  en: c0ae6d86dd5c0635
+  zh: 737bd3fda903d5e3
+/agent-note-persistent-pty-sessions/alternatives-considered:
+  en: 8ed3a19bf83dc298
+  zh: 5e124a86e0bbe68f
+/agent-note-persistent-pty-sessions/verification:
+  en: 08cd5f0369ee69e9
+  zh: 3e9b13ba1f8b6bff
+/agent-note-persistent-pty-sessions/consequences:
+  en: 56b0eff5c305f73c
+  zh: 5c6155684ceb6192

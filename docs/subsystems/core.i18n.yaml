@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for core.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/subsystems/core.md
+/core:
+  en: fa377f77fa9f6833
+  zh: e81ca462055dd5be
+/core/the-spine-package-by-package:
+  en: 8b6dba0f1041b349
+  zh: 4ab80824c8e29fb8
+/core/creation-and-ownership:
+  en: ab09a38b4e1f0883
+  zh: 81e2d14c4036ab6c
+/core/the-agent-handle:
+  en: 5c2d577a1c784cba
+  zh: 0811cd34c4ac5413
+/core/initiating-agent:
+  en: ea9f645afd604336
+  zh: 7dc15c522e6a296c
+/core/interception-decisions:
+  en: 6fccceb0a5f1cad9
+  zh: f43c30c2386d8cc8
+/core/sessions:
+  en: f957863038b17658
+  zh: e90f1a0aa75f9928
+/core/tooldefinition:
+  en: b60c54b0746bb832
+  zh: deb7b0b3c9948667
+/core/repo-wide-type-patterns:
+  en: 057db6d8bf356c0f
+  zh: 1441b39e5142b0bf
+/core/repo-wide-type-patterns/the-map-derived-union-pattern:
+  en: 2f6303102ffb3687
+  zh: e1cf1321bd30537e
+/core/repo-wide-type-patterns/branded-ids:
+  en: 3663fe0104effd8c
+  zh: c9536aa7847a9545

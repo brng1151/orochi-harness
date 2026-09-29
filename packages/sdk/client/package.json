@@ -1,0 +1,43 @@
+{
+  "name": "@orochi-network/oh-sdk-client",
+  "description": "TypeScript client SDK for driving a Orochi Harness runtime subprocess over stdio JSON-RPC: the OrochiHarness high-level turns API and the lower-level HarnessClient",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/sdk/client"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@orochi-network/oh": "workspace:*"
+  },
+  "peerDependencies": {
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-sdk-protocol": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/oh-llm": "workspace:*",
+    "@orochi-network/oh-sdk-protocol": "workspace:*",
+    "@orochi-network/oh-session": "workspace:*",
+    "@orochi-network/cordis": "workspace:~"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "capturedAt": "2026-09-29T02:27:35.039Z",
+  "npm": "11.16.0",
+  "node": "24.18.0",
+  "platform": "linux",
+  "arch": "arm64",
+  "registry": "https://registry.npmjs.org/",
+  "installStrategy": "hoisted"
+}

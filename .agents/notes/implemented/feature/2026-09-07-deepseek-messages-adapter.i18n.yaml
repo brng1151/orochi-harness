@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-07-deepseek-messages-adapter.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-09-07-deepseek-messages-adapter.md
+/agent-note-orochi-through-the-anthropic-messages-protocol:
+  en: 15f8c5bc3dace9cc
+  zh: 54b7ff68ce556cbe
+/agent-note-orochi-through-the-anthropic-messages-protocol/problem:
+  en: 6c9d47e829752afe
+  zh: 98bd3b5300bfea8c
+/agent-note-orochi-through-the-anthropic-messages-protocol/decision:
+  en: 98de822a6dbfdd4a
+  zh: 3ebcfa0916ca0b00
+/agent-note-orochi-through-the-anthropic-messages-protocol/alternatives-considered:
+  en: d268876d071a4797
+  zh: 8921c8febb1b068c
+/agent-note-orochi-through-the-anthropic-messages-protocol/consequences:
+  en: b476f5e048d3e294
+  zh: 8b7a8b304d9590f7

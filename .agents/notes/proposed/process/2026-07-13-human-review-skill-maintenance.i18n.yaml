@@ -1,0 +1,40 @@
+# Bilingual-pair consistency record for 2026-07-13-human-review-skill-maintenance.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/proposed/process/2026-07-13-human-review-skill-maintenance.md
+/agent-note-periodic-human-review-maintenance-for-oh-code-review:
+  en: 0a3b3745fe551650
+  zh: 8f197c495a2a3f76
+/agent-note-periodic-human-review-maintenance-for-oh-code-review/problem:
+  en: 0972659e2239c2a4
+  zh: 48d0b7d966ab89e1
+/agent-note-periodic-human-review-maintenance-for-oh-code-review/proposal:
+  en: 9d65d4fee7abc4ae
+  zh: 622a3bd24b3b6412
+/agent-note-periodic-human-review-maintenance-for-oh-code-review/proposal/acquisition-contract:
+  en: a95dea3f6b37af6f
+  zh: 29cfc8f03a8b487b
+/agent-note-periodic-human-review-maintenance-for-oh-code-review/proposal/adoption-evidence:
+  en: f61dfd9e11b1e5a5
+  zh: c87f245097c39fc7
+/agent-note-periodic-human-review-maintenance-for-oh-code-review/proposal/dual-reviewer-classification-and-drafting:
+  en: fe1f6987e5a7d4f7
+  zh: 74d990935316e69b
+/agent-note-periodic-human-review-maintenance-for-oh-code-review/proposal/reviewer-adapter-protocol:
+  en: baa824361e643e80
+  zh: 15d5efb0a1ca2c11
+/agent-note-periodic-human-review-maintenance-for-oh-code-review/proposal/promotion-contract:
+  en: dd6810cf423430bc
+  zh: 0c81e470f64af150
+/agent-note-periodic-human-review-maintenance-for-oh-code-review/proposal/where-the-mechanism-lives:
+  en: e838dd9bd773e624
+  zh: e0fbc42f21bc7076
+/agent-note-periodic-human-review-maintenance-for-oh-code-review/alternatives-considered:
+  en: 1673a2138ddd34c2
+  zh: 81c91a50ea0703d6
+/agent-note-periodic-human-review-maintenance-for-oh-code-review/acceptance-criteria:
+  en: 65570b779fe2577b
+  zh: 1b5af8dcc76528b2
+/agent-note-periodic-human-review-maintenance-for-oh-code-review/risks:
+  en: b26ffb43c1c35b3a
+  zh: c2c8b81a8317cd55

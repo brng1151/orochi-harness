@@ -1,0 +1,40 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-directory-picker-browse/README.md
+/:
+  en: 5f823b578f5be33d
+  zh: 5e12bb5290b0286b
+/orochi-network-oh-client-ui-directory-picker-browse:
+  en: 947c0a0e1b4b7835
+  zh: b081c35573b4dff0
+/orochi-network-oh-client-ui-directory-picker-browse/summary:
+  en: 7d61906e2f064805
+  zh: 6dc9edbc96350805
+/orochi-network-oh-client-ui-directory-picker-browse/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-ui-directory-picker-browse/use-this-package:
+  en: 81e13a1f2039d4b5
+  zh: bc17e2e1567c4eb0
+/orochi-network-oh-client-ui-directory-picker-browse/use-this-package/navigating-and-creating:
+  en: 18e10884b02f288f
+  zh: 06debd0a4a88bdac
+/orochi-network-oh-client-ui-directory-picker-browse/understand-the-implementation:
+  en: fb217b7d152731db
+  zh: 9ee3c0a9f15a5a29
+/orochi-network-oh-client-ui-directory-picker-browse/further-exploration:
+  en: d6e7f73c7c583f6a
+  zh: b306d9338d9795d7
+/orochi-network-oh-client-ui-directory-picker-browse/model-experience:
+  en: 3bcc2b54b66f366e
+  zh: 489716ece3a4ef2a
+/orochi-network-oh-client-ui-directory-picker-browse/model-experience/kv-cache-effect:
+  en: ca75c51c89c2c9b0
+  zh: f57cc48a1b5cbfa9
+/orochi-network-oh-client-ui-directory-picker-browse/known-limitations-and-deferred-work:
+  en: 20e381071e1644e2
+  zh: 9260bcb09a52dd8c
+/orochi-network-oh-client-ui-directory-picker-browse/known-limitations-and-deferred-work/dev-note:
+  en: d31303387d07ac33
+  zh: 5613857edfa8b0b4

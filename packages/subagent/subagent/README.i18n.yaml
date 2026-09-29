@@ -1,0 +1,94 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/subagent/subagent/README.md
+/:
+  en: 384d01a27a111f49
+  zh: fbadc6917c3099c9
+/orochi-network-oh-subagent:
+  en: 372e60ad1d6d8881
+  zh: deacb479c49c3e63
+/orochi-network-oh-subagent/summary:
+  en: 2edf1fc24ed15c23
+  zh: 7eba6d58603cf7e3
+/orochi-network-oh-subagent/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-subagent/use-this-package:
+  en: 4651aec03a1d2e21
+  zh: 7b6d1d604bdb1bf1
+/orochi-network-oh-subagent/use-this-package/enabling-delegation:
+  en: f66e74a5fa4e49b6
+  zh: 8c3a793cc29fcc1b
+/orochi-network-oh-subagent/use-this-package/delegation-settings:
+  en: 86c982223fab1a3a
+  zh: 3d220d8ed84eab9a
+/orochi-network-oh-subagent/use-this-package/continuable-capacity:
+  en: a7a02f3a735ee0ce
+  zh: fbf2c9db782b1489
+/orochi-network-oh-subagent/use-this-package/one-shot-and-continuable-children:
+  en: 10d0a7e0513bf04b
+  zh: 0cf2c2d81e85d7a9
+/orochi-network-oh-subagent/use-this-package/messaging-interrupting-and-discovering:
+  en: ff41ac0e770ed865
+  zh: 27dcf055badf217d
+/orochi-network-oh-subagent/use-this-package/failure-and-recovery:
+  en: 782aaaf8639c211c
+  zh: e2a873eece366e74
+/orochi-network-oh-subagent/understand-the-implementation:
+  en: 74d91b364b23f88d
+  zh: 19cc558105efe8df
+/orochi-network-oh-subagent/understand-the-implementation/design-concept:
+  en: 26c4eb7592b77d14
+  zh: c166fb6ee1a1c7d8
+/orochi-network-oh-subagent/understand-the-implementation/source-map:
+  en: d9afc0d9548afe58
+  zh: 0e11526b6c001dc6
+/orochi-network-oh-subagent/understand-the-implementation/one-shot-flow:
+  en: 25aaed03f285d6b2
+  zh: ddfe52f568a22b75
+/orochi-network-oh-subagent/understand-the-implementation/continuable-flow:
+  en: 4ed98a3836c14337
+  zh: f5391b3cd5964cbc
+/orochi-network-oh-subagent/understand-the-implementation/ownership-and-invariants:
+  en: 15157e658356d09b
+  zh: addbfe496943b7f8
+/orochi-network-oh-subagent/further-exploration:
+  en: cfa89cc510495ac6
+  zh: 1d67edf80600a0a3
+/orochi-network-oh-subagent/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-subagent/model-experience/settlement-notice:
+  en: f7cec22ba9d3fb4f
+  zh: 67b1d40f9b136f71
+/orochi-network-oh-subagent/model-experience/settlement-notice/what-the-model-sees:
+  en: 44ba290ef9896de9
+  zh: 21d207c31228c0ce
+/orochi-network-oh-subagent/model-experience/settlement-notice/token-effect:
+  en: 45dc428c61f606f5
+  zh: 7e9a2587e98c8ca6
+/orochi-network-oh-subagent/model-experience/settlement-notice/kv-cache-effect:
+  en: d6b1d618083da79b
+  zh: 9a28942b7d53c382
+/orochi-network-oh-subagent/model-experience/child-delegation-scope-statement:
+  en: dc8544657916e194
+  zh: b0feff0764b5d903
+/orochi-network-oh-subagent/model-experience/child-delegation-scope-statement/what-the-model-sees:
+  en: 61906b6a7b656eeb
+  zh: 2fa94349714efc9f
+/orochi-network-oh-subagent/model-experience/child-delegation-scope-statement/what-the-model-sees/the-delegation-scope-statement:
+  en: 960e4abc8393bcd1
+  zh: e125aa2bab1570d0
+/orochi-network-oh-subagent/model-experience/child-delegation-scope-statement/token-effect:
+  en: 4e0b922b186dc2a9
+  zh: 7453563417c5b9a2
+/orochi-network-oh-subagent/model-experience/child-delegation-scope-statement/kv-cache-effect:
+  en: 59e848fca82a46fb
+  zh: fcd6a8a2bb58609f
+/orochi-network-oh-subagent/known-limitations-and-deferred-work:
+  en: b2182809471f0780
+  zh: cfab217025442ae8
+/orochi-network-oh-subagent/known-limitations-and-deferred-work/dev-note:
+  en: 25cc0909348666bb
+  zh: 95517f12de100049

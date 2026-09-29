@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/settings/settings/README.md
+/:
+  en: 51da5e07db469e4d
+  zh: fbacb8b1ea8d70ca
+/orochi-network-oh-settings:
+  en: fc790a60724bb1c1
+  zh: 817ac020b1093104
+/orochi-network-oh-settings/summary:
+  en: a5e84db91656bc73
+  zh: 3fabc5eb76ae228f
+/orochi-network-oh-settings/table-of-contents:
+  en: 23386452a66b2fbd
+  zh: 70bba862b949b652
+/orochi-network-oh-settings/use-this-package:
+  en: dce359fd7095df35
+  zh: faa6fdcd693560f7
+/orochi-network-oh-settings/understand-the-implementation:
+  en: c0f2f476ce7a6e54
+  zh: 16cbd0cf117a2c02
+/orochi-network-oh-settings/further-exploration:
+  en: ef0bb8b119b6b264
+  zh: a02d37853bb3f7cf
+/orochi-network-oh-settings/model-experience:
+  en: 358d1a5b1d9f2fde
+  zh: a40c6e95f39032e8
+/orochi-network-oh-settings/model-experience/kv-cache-effect:
+  en: f49cb624cd503dd1
+  zh: 9944f21ab3458e4b
+/orochi-network-oh-settings/known-limitations-and-deferred-work:
+  en: 4ae53522f8a7d66d
+  zh: ee55c14ebd4575db
+/orochi-network-oh-settings/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: e88aeb617ffb74ea

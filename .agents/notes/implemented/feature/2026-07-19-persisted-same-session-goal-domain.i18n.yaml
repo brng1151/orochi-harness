@@ -1,0 +1,34 @@
+# Bilingual-pair consistency record for 2026-07-19-persisted-same-session-goal-domain.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-07-19-persisted-same-session-goal-domain.md
+/agent-note-persisted-same-session-goal-domain:
+  en: 1bed0e5c5c49f27d
+  zh: 2e53a09f07553748
+/agent-note-persisted-same-session-goal-domain/problem:
+  en: 45e351264fabe761
+  zh: 6513999a7d83a528
+/agent-note-persisted-same-session-goal-domain/decision:
+  en: 32c5de4a266b3db2
+  zh: cc71a8b1d4906895
+/agent-note-persisted-same-session-goal-domain/decision/durable-record-and-replay:
+  en: 65225815d2396f74
+  zh: 0e5eebaab44771e0
+/agent-note-persisted-same-session-goal-domain/decision/lifecycle-and-live-activation:
+  en: d68c058ff7a49fee
+  zh: cbcdbce1aade7758
+/agent-note-persisted-same-session-goal-domain/decision/service-boundary:
+  en: 65d82bd116b95aa7
+  zh: b3db39f0ed9f5242
+/agent-note-persisted-same-session-goal-domain/testing:
+  en: 9fb97674d1dd45ac
+  zh: c56df41a9aa6767a
+/agent-note-persisted-same-session-goal-domain/alternatives-considered:
+  en: 6856c591a0529a7f
+  zh: a7aba0f62c1929d3
+/agent-note-persisted-same-session-goal-domain/consequences:
+  en: fa46d172b9d01b52
+  zh: 54c40631d1719624
+/agent-note-persisted-same-session-goal-domain/known-limitations-and-deferred-work:
+  en: 21f5c50b4eafa028
+  zh: 4cad975fb10501bd

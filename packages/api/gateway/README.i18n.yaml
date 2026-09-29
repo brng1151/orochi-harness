@@ -1,0 +1,34 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/api/gateway/README.md
+/:
+  en: 6ffef394821a2841
+  zh: 1410a5b46b97d9c7
+/orochi-network-oh-api-gateway:
+  en: 47fd68f980c6f024
+  zh: 5406798614c5b937
+/orochi-network-oh-api-gateway/summary:
+  en: bd7f7fd462c33b4b
+  zh: 85ce630e7294bfdf
+/orochi-network-oh-api-gateway/table-of-contents:
+  en: d9859219cdb0f367
+  zh: 2a3cfa8cb786e327
+/orochi-network-oh-api-gateway/host-service-typertgatewayservice-ctx-key-typertgateway:
+  en: da95819ded9c35ef
+  zh: 954870626b686e2d
+/orochi-network-oh-api-gateway/client-service-clientremote-ctx-key-remote:
+  en: d5ac0c952b783ba5
+  zh: d67af7973ea99482
+/orochi-network-oh-api-gateway/model-experience:
+  en: 6cb309d3378f035d
+  zh: 998042a02ee32850
+/orochi-network-oh-api-gateway/model-experience/kv-cache-effect:
+  en: af5abeee32f2d93b
+  zh: b320bb727a223a13
+/orochi-network-oh-api-gateway/known-limitations-and-deferred-work:
+  en: 3ade2903f40a0a98
+  zh: 9af1d557fefdbd89
+/orochi-network-oh-api-gateway/known-limitations-and-deferred-work/dev-note:
+  en: 365f5c32056ff39a
+  zh: 9556fd36702f5ecd

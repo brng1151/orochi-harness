@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/shortcuts/README.md
+/:
+  en: 7cd394124c35afae
+  zh: 087929192244cb41
+/orochi-network-oh-client-shortcuts:
+  en: 3802da0953380634
+  zh: f4e85ef3e971a3a9
+/orochi-network-oh-client-shortcuts/summary:
+  en: 24e6f7d87be069fd
+  zh: ab228fd8c4f8c43e
+/orochi-network-oh-client-shortcuts/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 0cd57b7b8d8c9b59
+/orochi-network-oh-client-shortcuts/use-this-package:
+  en: 77b8f9632da27b6d
+  zh: 17ce7af6d936a8f0
+/orochi-network-oh-client-shortcuts/understand-the-implementation:
+  en: adfd258f490cacb1
+  zh: 44c080babc54c6a9
+/orochi-network-oh-client-shortcuts/further-exploration:
+  en: 3eb9cc8afeb85889
+  zh: abfeff30aa973432
+/orochi-network-oh-client-shortcuts/model-experience:
+  en: 3120df665299c634
+  zh: e2dc75ed76d271bc
+/orochi-network-oh-client-shortcuts/model-experience/kv-cache-effect:
+  en: ca75c51c89c2c9b0
+  zh: a0e9f8d52b4b62ee
+/orochi-network-oh-client-shortcuts/known-limitations-and-deferred-work:
+  en: 1fe209aad4915c64
+  zh: 078d33d3ca9e05ea
+/orochi-network-oh-client-shortcuts/known-limitations-and-deferred-work/dev-note:
+  en: 09894c06f9d76ac0
+  zh: d166e1338ae660e4

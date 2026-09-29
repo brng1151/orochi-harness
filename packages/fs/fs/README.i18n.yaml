@@ -1,0 +1,58 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/fs/fs/README.md
+/:
+  en: a94eb1470c498a2c
+  zh: cdd5faa0a8fcb562
+/orochi-network-oh-fs:
+  en: 78a275b8fe17cb4f
+  zh: 7a0caf07721a047e
+/orochi-network-oh-fs/summary:
+  en: 1a471447756f1047
+  zh: a5028fe2c54c06ef
+/orochi-network-oh-fs/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-fs/use-this-package:
+  en: ca696094cfb273bf
+  zh: a5c905cd10e24ccc
+/orochi-network-oh-fs/use-this-package/choosing-and-mounting-a-backend:
+  en: b9cf9c91f7608fba
+  zh: 0817d328cef6690e
+/orochi-network-oh-fs/use-this-package/what-the-service-lets-you-do:
+  en: 48aa680bb26e99c7
+  zh: 4f9b6e47292c233e
+/orochi-network-oh-fs/understand-the-implementation:
+  en: 7e13d669ecc96d59
+  zh: b5fe7ae65812d926
+/orochi-network-oh-fs/understand-the-implementation/design-philosophy:
+  en: df00d151bff9b11b
+  zh: fda382c8b5b506e7
+/orochi-network-oh-fs/understand-the-implementation/source-map:
+  en: 9507d7d9259fc89e
+  zh: aa500435e02e6de3
+/orochi-network-oh-fs/understand-the-implementation/how-a-call-flows:
+  en: 6ce9e67b0f5653e5
+  zh: 6d974a760352417f
+/orochi-network-oh-fs/understand-the-implementation/the-fs-policy-events:
+  en: 16035397c6cf4d89
+  zh: f6ca5d88833a7ca0
+/orochi-network-oh-fs/understand-the-implementation/invariants:
+  en: 15b98bc9800b6eae
+  zh: 434d9dd05fa1a332
+/orochi-network-oh-fs/further-exploration:
+  en: 36c9f7be34ef0f6c
+  zh: 19c31b876740c210
+/orochi-network-oh-fs/model-experience:
+  en: b3a5293848d76f2f
+  zh: bc383beaa6462dda
+/orochi-network-oh-fs/model-experience/kv-cache-effect:
+  en: 40294c1c31b74824
+  zh: 0857e9b4dd363e0a
+/orochi-network-oh-fs/known-limitations-and-deferred-work:
+  en: 082bd3e426258689
+  zh: ba3819fcc9646dcd
+/orochi-network-oh-fs/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-07-25-subagent-policy-inheritance.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-07-25-subagent-policy-inheritance.md
+/agent-note-in-process-subagent-policy-inheritance-the-child-starts-under-the-parent-s-sandbox-override:
+  en: 6a0d521dfb4d4f0d
+  zh: 2354e3e656739164
+/agent-note-in-process-subagent-policy-inheritance-the-child-starts-under-the-parent-s-sandbox-override/problem:
+  en: 476b4a1b9ada2d8a
+  zh: 15b8051d22bb1dd0
+/agent-note-in-process-subagent-policy-inheritance-the-child-starts-under-the-parent-s-sandbox-override/decision:
+  en: 5690877a29940cd1
+  zh: 8b9d17de9174bb84
+/agent-note-in-process-subagent-policy-inheritance-the-child-starts-under-the-parent-s-sandbox-override/decision/what-a-blocked-child-experiences:
+  en: ce07f6f0586794f4
+  zh: 5b66e559fb03f78f
+/agent-note-in-process-subagent-policy-inheritance-the-child-starts-under-the-parent-s-sandbox-override/alternatives-considered:
+  en: 128b6be09f9a9106
+  zh: a03d3c12078b0e47
+/agent-note-in-process-subagent-policy-inheritance-the-child-starts-under-the-parent-s-sandbox-override/consequences:
+  en: 3946c6ae5bdc3049
+  zh: 48da627311a7831e

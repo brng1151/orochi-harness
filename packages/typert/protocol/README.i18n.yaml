@@ -1,0 +1,64 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/typert/protocol/README.md
+/:
+  en: f05430dc6311d1e1
+  zh: ad9779e051bc21f8
+/orochi-network-oh-typert-protocol:
+  en: 960f92215cc92650
+  zh: 77641ecc13c4fbf5
+/orochi-network-oh-typert-protocol/summary:
+  en: 29fc06c1a49cb73d
+  zh: d7da68edd39fa291
+/orochi-network-oh-typert-protocol/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-typert-protocol/use-this-package:
+  en: c479b5b665822198
+  zh: 1ffb789c18043baf
+/orochi-network-oh-typert-protocol/use-this-package/exposing-a-host-method:
+  en: 92e7f2b466b6215c
+  zh: 9130a8c70d9a2958
+/orochi-network-oh-typert-protocol/use-this-package/associating-host-objects-and-contexts-with-wire-identities:
+  en: 3db384ae6f215632
+  zh: 56207184b09d4018
+/orochi-network-oh-typert-protocol/use-this-package/reporting-and-reading-a-remote-failure:
+  en: 4ba5266ddb014029
+  zh: e31ae6438b9b4aa5
+/orochi-network-oh-typert-protocol/use-this-package/receiving-forwarded-host-events-on-the-client:
+  en: 1101bd1d1419618c
+  zh: 6ff036538d237e0a
+/orochi-network-oh-typert-protocol/understand-the-implementation:
+  en: f1a51c9826244574
+  zh: bd3ebd8831c6bf84
+/orochi-network-oh-typert-protocol/understand-the-implementation/design-concept:
+  en: 4f45bb46a1920984
+  zh: 70408d3b59d2735a
+/orochi-network-oh-typert-protocol/understand-the-implementation/remote-markers:
+  en: 93b83a9441a5a3c2
+  zh: c4eb143ddd167a27
+/orochi-network-oh-typert-protocol/understand-the-implementation/protocol-maps-and-descriptors:
+  en: 164b30b3fa543936
+  zh: 0831edd3e04a3d3a
+/orochi-network-oh-typert-protocol/understand-the-implementation/wire-identity-grammar:
+  en: aac79a7b4682371e
+  zh: bc9cc513c1ced3e6
+/orochi-network-oh-typert-protocol/understand-the-implementation/source-map:
+  en: c8834e55e3e3db73
+  zh: d820bc330814b240
+/orochi-network-oh-typert-protocol/further-exploration:
+  en: 195fa1357cb88957
+  zh: e3c1ebb2e924a108
+/orochi-network-oh-typert-protocol/model-experience:
+  en: dc0c83c97e195e97
+  zh: 1f11dd080898d6c0
+/orochi-network-oh-typert-protocol/model-experience/kv-cache-effect:
+  en: b1c49d5e440d9d41
+  zh: 87ead78472415189
+/orochi-network-oh-typert-protocol/known-limitations-and-deferred-work:
+  en: 0be59e6d97923487
+  zh: 70523fb0dc567ed6
+/orochi-network-oh-typert-protocol/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

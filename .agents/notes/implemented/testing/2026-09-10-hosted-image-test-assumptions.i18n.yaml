@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-10-hosted-image-test-assumptions.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/testing/2026-09-10-hosted-image-test-assumptions.md
+/agent-note-hosted-image-assumptions-in-the-coverage-suite:
+  en: 98b111fe140a811e
+  zh: 0c4f5e19d31089cd
+/agent-note-hosted-image-assumptions-in-the-coverage-suite/problem:
+  en: fd7a80902aa135eb
+  zh: ae4bc0c22d03f7aa
+/agent-note-hosted-image-assumptions-in-the-coverage-suite/decision:
+  en: 602cd00b41193bfe
+  zh: cbc5b45443f49ffc
+/agent-note-hosted-image-assumptions-in-the-coverage-suite/alternatives-considered:
+  en: 7cc99ab98600ed3f
+  zh: c302b579791a403d
+/agent-note-hosted-image-assumptions-in-the-coverage-suite/consequences:
+  en: 96ad46667a025f85
+  zh: ba04b1436b82a620

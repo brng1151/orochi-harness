@@ -1,0 +1,26 @@
+# Keyless replay counterpart to pty.cordis.yml.
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  disabled: true
+
+- insert:
+    - id: pty
+      name: '@orochi-network/oh-terminal'
+    - id: pty-snapshot-backend
+      name: './pty-snapshot-backend.mjs'
+    - id: tool-terminal
+      name: '@orochi-network/oh-tool-terminal'
+      config:
+        maxResultBytes: 64
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: deepseek-v4-flash
+              - id: deepseek-v4-pro
+
+- id: plugin-package-inventory-orochi
+  disabled: true

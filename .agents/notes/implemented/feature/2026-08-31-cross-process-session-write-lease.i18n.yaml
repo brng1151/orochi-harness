@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-08-31-cross-process-session-write-lease.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-31-cross-process-session-write-lease.md
+/agent-note-cross-process-session-write-lease:
+  en: 21bed9aadb312aaa
+  zh: 9a43778adc99e914
+/agent-note-cross-process-session-write-lease/problem:
+  en: fa5063a7f8ec786f
+  zh: f3f7f955d146f00c
+/agent-note-cross-process-session-write-lease/decision:
+  en: 24f21f27d60ee02f
+  zh: 4f22c07136ddd62b
+/agent-note-cross-process-session-write-lease/alternatives-considered:
+  en: 19f91be6b8d623bd
+  zh: 57147d36fca76a3e
+/agent-note-cross-process-session-write-lease/consequences:
+  en: d2a681fa574ebd04
+  zh: 4af2e372011bbd59

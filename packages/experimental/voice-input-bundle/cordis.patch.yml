@@ -1,0 +1,13 @@
+- insert:
+    - id: speech-to-text
+      name: '@orochi-network/oh-experimental-speech-to-text'
+      config:
+        defaultProvider: sensevoice-local
+    - id: speech-to-text-sensevoice
+      name: '@orochi-network/oh-experimental-speech-to-text-sensevoice'
+      config:
+        dataRoot: !!js ohHomePath('speech-to-text', 'sensevoice')
+    - id: api-speech-to-text
+      name: '@orochi-network/oh-experimental-api-speech-to-text'
+    - id: ui-voice-input
+      name: '@orochi-network/oh-experimental-client-ui-voice-input'

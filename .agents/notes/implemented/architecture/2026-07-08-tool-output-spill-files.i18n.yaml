@@ -1,0 +1,40 @@
+# Bilingual-pair consistency record for 2026-07-08-tool-output-spill-files.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-07-08-tool-output-spill-files.md
+/agent-note-tool-output-spill-policy:
+  en: 91d00f8312c19fcf
+  zh: 79fe597640bf08e6
+/agent-note-tool-output-spill-policy/problem:
+  en: 8743bf0997cad5c6
+  zh: 94824fc86636b672
+/agent-note-tool-output-spill-policy/decision:
+  en: 8f2cbb950e5b7f46
+  zh: d65e56fbd87d2c80
+/agent-note-tool-output-spill-policy/decision/spill-seam:
+  en: 957113ff9139ca5d
+  zh: 5c96d8f2866127ab
+/agent-note-tool-output-spill-policy/decision/spill-policy:
+  en: f01f2e9ac22d293f
+  zh: e71d38e723f3c08f
+/agent-note-tool-output-spill-policy/showcase-web-fetch:
+  en: 66be75e72b79bd1d
+  zh: 84dd0cab18512d82
+/agent-note-tool-output-spill-policy/relationship-to-retention-and-early-spill:
+  en: 8bfff115c4454c3f
+  zh: 4cbda367f5fb11c7
+/agent-note-tool-output-spill-policy/non-goals:
+  en: f82b5399ecddd8a1
+  zh: 9675b58631bb5c90
+/agent-note-tool-output-spill-policy/deferred:
+  en: 094f8c71672ea726
+  zh: 252dbe825d6e34ca
+/agent-note-tool-output-spill-policy/testing:
+  en: bd24535bb31e2e6a
+  zh: 13054315717d63a0
+/agent-note-tool-output-spill-policy/consequences:
+  en: 99a7459b7e880bdb
+  zh: 92aa43b7b8b98174
+/agent-note-tool-output-spill-policy/alternatives-considered:
+  en: d53fb144141de557
+  zh: 1b851eb64c421803

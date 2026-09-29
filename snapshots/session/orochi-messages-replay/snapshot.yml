@@ -1,0 +1,10 @@
+version: 1
+scenario: orochi-messages-replay
+profile: headless
+composition: default
+recording: authored
+header:
+  class: orochi-messages
+  pin: true
+  systemPromptSource: text-turn
+  toolSchemasSource: text-turn

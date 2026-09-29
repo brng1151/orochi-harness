@@ -1,0 +1,70 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/modules/README.md
+/:
+  en: 97d39db1617684ea
+  zh: de11ba354583a044
+/orochi-network-oh-client-modules:
+  en: 614f86350e1e918f
+  zh: 8058eb6f75322004
+/orochi-network-oh-client-modules/summary:
+  en: 48fe10167701b745
+  zh: 944f422ec8dca5a8
+/orochi-network-oh-client-modules/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-modules/use-this-package:
+  en: 337a3a69bc3e73c0
+  zh: c57abe91d2c5a8cf
+/orochi-network-oh-client-modules/use-this-package/declaring-a-client-plugin:
+  en: 2e0fbe4cdac5630e
+  zh: e9ca70c86219697e
+/orochi-network-oh-client-modules/use-this-package/what-the-browser-loads:
+  en: 1383d68472b3c057
+  zh: 94dd7d9abbdbccf3
+/orochi-network-oh-client-modules/use-this-package/live-plugin-composition:
+  en: 45740a56e931d094
+  zh: b3362af77c804459
+/orochi-network-oh-client-modules/use-this-package/sharing-modules:
+  en: cb919001a1bf3719
+  zh: b3d697cf50a825ad
+/orochi-network-oh-client-modules/use-this-package/build-requirements:
+  en: b6a4d3b901c89efe
+  zh: 615b5f3eec41f281
+/orochi-network-oh-client-modules/understand-the-implementation:
+  en: 7ab11d2c2bdc6eaa
+  zh: 54c3c9091cf59711
+/orochi-network-oh-client-modules/understand-the-implementation/design-concept:
+  en: f68b4bf503a507ba
+  zh: 0da6fadf146cb245
+/orochi-network-oh-client-modules/understand-the-implementation/lazy-cjs-model:
+  en: 6d16b74acb333e3b
+  zh: fcb3a20cc8c39e4a
+/orochi-network-oh-client-modules/understand-the-implementation/incremental-composition:
+  en: 1b54c654b3f7344d
+  zh: c20d3499b51f0b4d
+/orochi-network-oh-client-modules/understand-the-implementation/boot-manifest-injection:
+  en: 253d9f265cd83ed0
+  zh: 9d0f8df84d9d3ac9
+/orochi-network-oh-client-modules/understand-the-implementation/entry-ownership:
+  en: ae59769034d692fa
+  zh: f71914d6f39b033a
+/orochi-network-oh-client-modules/understand-the-implementation/source-map:
+  en: 29202c31f50651fd
+  zh: c96a3b2d8d16c861
+/orochi-network-oh-client-modules/further-exploration:
+  en: 98187d807bd53a90
+  zh: 66697abec4aaa150
+/orochi-network-oh-client-modules/model-experience:
+  en: abb2fc0416e1482c
+  zh: 0e8a913d424a0c28
+/orochi-network-oh-client-modules/model-experience/kv-cache-effect:
+  en: ca75c51c89c2c9b0
+  zh: de54f3467ef3b9be
+/orochi-network-oh-client-modules/known-limitations-and-deferred-work:
+  en: d0908712f037c479
+  zh: 14034e5df3c34e7f
+/orochi-network-oh-client-modules/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

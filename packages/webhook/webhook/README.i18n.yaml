@@ -1,0 +1,46 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/webhook/webhook/README.md
+/:
+  en: e4ac1bc2fef159c0
+  zh: a2d724d2cffb6608
+/orochi-network-oh-webhook:
+  en: 962ec702997bbda4
+  zh: 70c30d5d711c8b9e
+/orochi-network-oh-webhook/summary:
+  en: 7a0a4e45dca60421
+  zh: 61cd45c8a499e9da
+/orochi-network-oh-webhook/table-of-contents:
+  en: 2c6f2175556251ee
+  zh: 753d216d980e1735
+/orochi-network-oh-webhook/rule-interface:
+  en: d9674188535399ab
+  zh: c52fe9b7ebe8fe79
+/orochi-network-oh-webhook/session-request:
+  en: e4d096efc8633575
+  zh: b1bf7d45fe76c380
+/orochi-network-oh-webhook/composition:
+  en: 251306024e62e654
+  zh: a6db349fa349e3b6
+/orochi-network-oh-webhook/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-webhook/model-experience/rule-authored-initial-prompt:
+  en: d9d6f7525ae75c28
+  zh: 981d9ea68b9e884b
+/orochi-network-oh-webhook/model-experience/rule-authored-initial-prompt/what-the-model-sees:
+  en: 44859d5d877a1484
+  zh: 0f6c96ff6435167b
+/orochi-network-oh-webhook/model-experience/rule-authored-initial-prompt/token-effect:
+  en: 13937f95014a6bea
+  zh: c61031459298c4ab
+/orochi-network-oh-webhook/model-experience/rule-authored-initial-prompt/kv-cache-effect:
+  en: 88b78de3ce71698f
+  zh: d13964bad7485d4e
+/orochi-network-oh-webhook/known-limitations-and-deferred-work:
+  en: 49d9bd7c7c327cc0
+  zh: ab94de11bbda1936
+/orochi-network-oh-webhook/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: e88aeb617ffb74ea

@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-09-19-remove-desktop-profile-core-cleanup.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/simplification/2026-09-19-remove-desktop-profile-core-cleanup.md
+/agent-note-remove-the-desktop-production-profile-core-package-cleanup:
+  en: bccfc00d2a6e8bec
+  zh: 54fd1378f132b551
+/agent-note-remove-the-desktop-production-profile-core-package-cleanup/problem:
+  en: 1bd482487bd6210e
+  zh: 4b4e9063111e5a17
+/agent-note-remove-the-desktop-production-profile-core-package-cleanup/decision:
+  en: 1dcc649de42750b9
+  zh: 4a3e1d9aca89d25b
+/agent-note-remove-the-desktop-production-profile-core-package-cleanup/alternatives-considered:
+  en: 7fc6c300bfc55534
+  zh: 9e51a70cc89db218
+/agent-note-remove-the-desktop-production-profile-core-package-cleanup/verification:
+  en: dfb7a6977452f472
+  zh: 424f2003f8372fe3
+/agent-note-remove-the-desktop-production-profile-core-package-cleanup/consequences:
+  en: cc40d6d66b5fa2a8
+  zh: b994bc03091667eb

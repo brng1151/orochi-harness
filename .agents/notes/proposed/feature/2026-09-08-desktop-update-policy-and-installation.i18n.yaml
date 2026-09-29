@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for 2026-09-08-desktop-update-policy-and-installation.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/proposed/feature/2026-09-08-desktop-update-policy-and-installation.md
+/agent-note-desktop-update-policy-and-installation:
+  en: 70f848a720aafcbb
+  zh: 83fc3797060e8db5
+/agent-note-desktop-update-policy-and-installation/problem:
+  en: 565393dba31dbfca
+  zh: 113f77eb2662b236
+/agent-note-desktop-update-policy-and-installation/proposal:
+  en: e6a5bf2e991eca3e
+  zh: b5a8246d45a13f4d
+/agent-note-desktop-update-policy-and-installation/proposal/release-and-backend-qualification:
+  en: 0e6842cd9adbb056
+  zh: 2af38e8f84142dde
+/agent-note-desktop-update-policy-and-installation/proposal/open-product-choices:
+  en: 2b03dc177a8f24ce
+  zh: ea4506b435249edd
+/agent-note-desktop-update-policy-and-installation/proposal/cdn-and-capacity-qualification:
+  en: 4f926d274859534a
+  zh: b9d83a49406a0ca9
+/agent-note-desktop-update-policy-and-installation/alternatives-considered:
+  en: ff419f29cfc6702b
+  zh: dc79b9d3d9bef98f
+/agent-note-desktop-update-policy-and-installation/acceptance-criteria:
+  en: db7d20578a44d2ca
+  zh: 81b71132c9c08725
+/agent-note-desktop-update-policy-and-installation/risks:
+  en: c518abbbfd98b9ca
+  zh: 0d325d2b825eee87

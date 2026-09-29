@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/util/package-manifest/README.md
+/:
+  en: 58a4062f9e9aeb85
+  zh: a5a6c61932debef0
+/orochi-network-oh-package-manifest:
+  en: 1001bd3c8d341e8c
+  zh: c933b1ee789b11fe
+/orochi-network-oh-package-manifest/summary:
+  en: 80d968750fc18e45
+  zh: aeb0cc591e189870
+/orochi-network-oh-package-manifest/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 1db86285abf6c499
+/orochi-network-oh-package-manifest/use-this-package:
+  en: 47da205f9a9339db
+  zh: 22b2fbf46e9d4aab
+/orochi-network-oh-package-manifest/understand-the-implementation:
+  en: 64e1e57d1c3761e0
+  zh: 9fc039770ce43c63
+/orochi-network-oh-package-manifest/further-exploration:
+  en: 0d2197106cda626e
+  zh: 868f19c760e9ca7c
+/orochi-network-oh-package-manifest/model-experience:
+  en: 0b5aaa4787068a57
+  zh: bdb5dabe0b33ff9d
+/orochi-network-oh-package-manifest/model-experience/kv-cache-effect:
+  en: 2ed74a2a33958543
+  zh: 7d63c3a3801bef13
+/orochi-network-oh-package-manifest/known-limitations-and-deferred-work:
+  en: 043f002b2b953d3d
+  zh: de1d4ba8f12d33f4
+/orochi-network-oh-package-manifest/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

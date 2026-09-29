@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for 2026-08-15-client-shells-and-dynamic-packages.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-08-15-client-shells-and-dynamic-packages.md
+/agent-note-client-shell-layering-and-dynamic-package-boundaries:
+  en: 6c58352a85461953
+  zh: 43886157e6cdcb32
+/agent-note-client-shell-layering-and-dynamic-package-boundaries/problem:
+  en: bd5f38c7aba648dc
+  zh: 3c28670556b3b34d
+/agent-note-client-shell-layering-and-dynamic-package-boundaries/decision:
+  en: a15c7c13f167e5ac
+  zh: a15c7c13f167e5ac
+/agent-note-client-shell-layering-and-dynamic-package-boundaries/decision/layers-and-build-forms:
+  en: c3558ee58e288440
+  zh: decf9e23198b0f45
+/agent-note-client-shell-layering-and-dynamic-package-boundaries/decision/shared-module-requests:
+  en: 17d1350f3eb8c7e4
+  zh: 4600ba219e0d9e06
+/agent-note-client-shell-layering-and-dynamic-package-boundaries/decision/parser-preloading-and-react-handoff:
+  en: afcaada9f332db8b
+  zh: 2a4577b2ee1f1a1d
+/agent-note-client-shell-layering-and-dynamic-package-boundaries/decision/dependency-declarations:
+  en: 69174b1085cda9f7
+  zh: 160e612c84855f38
+/agent-note-client-shell-layering-and-dynamic-package-boundaries/alternatives-considered:
+  en: 2257178f8f474757
+  zh: 7da85b5899b91520
+/agent-note-client-shell-layering-and-dynamic-package-boundaries/consequences:
+  en: c382a9fdf75ee589
+  zh: fdb10882238a3276

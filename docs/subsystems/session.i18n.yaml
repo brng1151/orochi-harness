@@ -1,0 +1,67 @@
+# Bilingual-pair consistency record for session.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/subsystems/session.md
+/sessions:
+  en: fe6541225d7e9cbd
+  zh: c2608958dd5c9a0f
+/sessions/sessioneventmap-the-event-vocabulary:
+  en: 36e31f02e9e4f0b9
+  zh: 2946c21cea3ad75d
+/sessions/sessioneventmap-the-event-vocabulary/the-request-header-event-request-header:
+  en: 6cd61dc7ffeca103
+  zh: 66a2489ac1c072b0
+/sessions/sessioneventmap-the-event-vocabulary/the-route-capacity-event-request-context:
+  en: c21c79f994fbe670
+  zh: efec4f404bec7bcc
+/sessions/sessionevent-t-one-log-entry:
+  en: 622d333d9d903795
+  zh: fdc9ee663330f01e
+/sessions/surface-types:
+  en: 4ff691c3f7a19821
+  zh: 36143599622d3054
+/sessions/surface-types/surfaceeventtype-the-message-producing-subset-of-event-types:
+  en: 2f1b6a16a4ee7cc1
+  zh: 7f16b568c4aa940f
+/sessions/surface-types/surfaceop-how-an-event-entered-the-surface:
+  en: 8fcc967516a13692
+  zh: d3978d3b8d02c566
+/sessions/surface-types/surfaceintent-the-parameter-to-session-append:
+  en: 4d2b7affc171a070
+  zh: 69681860bb52b78a
+/sessions/surface-types/plugin-owned-message-projections:
+  en: e91178c72b62a34f
+  zh: 9a4ab7c0a85912d9
+/sessions/surface-types/sessionsurface-the-live-readonly-surface-projection:
+  en: 350259099d8d60c9
+  zh: 7b25db461748c04e
+/sessions/surface-types/surfacefoldreplacement-and-surfacefoldresult-a-complete-surface-replay:
+  en: 13820e0611b2e141
+  zh: 2aafb1e5e3dc42f6
+/sessions/session-public-api:
+  en: 04e9982948d9560d
+  zh: 221961cadebc6fb1
+/sessions/derived-history-derivemessages-and-deriveeventmessage:
+  en: 6e48ebd63b85f473
+  zh: c8ab986e975bbce2
+/sessions/live-session-fork-api:
+  en: 332567e9b7cf0eb7
+  zh: acaeceab28877455
+/sessions/why-a-turn-ended-turnendreasonmap:
+  en: 77169ab8c3381980
+  zh: 28298d6b553b516b
+/sessions/execution-enclosure-and-standalone-events:
+  en: 43f7859749ca2aa1
+  zh: 3edd7e6d976e0000
+/sessions/the-end-seed-boundary-session-end-seed:
+  en: 63b4059793255ca3
+  zh: 6bc7891c320249f4
+/sessions/plugin-contributed-log-only-events:
+  en: 9556cc01da1a5cff
+  zh: 9bd3fdc485a4e8c2
+/sessions/durability-contract:
+  en: 4ec6df86060dcc56
+  zh: e8f876e05d60a22b
+/sessions/remote-catalog-and-workspace-opening:
+  en: dd27307e0d7c893c
+  zh: b77d2a749b7b641c

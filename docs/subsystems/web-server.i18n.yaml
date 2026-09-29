@@ -1,0 +1,16 @@
+# Bilingual-pair consistency record for web-server.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/subsystems/web-server.md
+/http-server:
+  en: 12d9072b2debc585
+  zh: a47c3761a1c66ae4
+/http-server/routes:
+  en: 8df7a7a84de32df4
+  zh: baaaffa356edbc25
+/http-server/config:
+  en: 91293ae372417f94
+  zh: 3283a45ffe1002c7
+/http-server/the-service:
+  en: cf9f80a130ce6c1f
+  zh: 6983a742d51a3ffa

@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-08-25-promote-open-anywhere-plugin.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-25-promote-open-anywhere-plugin.md
+/agent-note-promote-open-anywhere-from-community-plugin-to-first-party-package:
+  en: c3218df78c751dd7
+  zh: f5dcf5c8453a3e42
+/agent-note-promote-open-anywhere-from-community-plugin-to-first-party-package/problem:
+  en: bb0d921edddd21ba
+  zh: 9c771e235765b5ca
+/agent-note-promote-open-anywhere-from-community-plugin-to-first-party-package/decision:
+  en: c0f47bbf0c27152a
+  zh: bd1c0fade6aa46a4
+/agent-note-promote-open-anywhere-from-community-plugin-to-first-party-package/alternatives-considered:
+  en: c695b37ce71f72df
+  zh: fe52e78b87e3b336
+/agent-note-promote-open-anywhere-from-community-plugin-to-first-party-package/consequences:
+  en: f28a64582be61041
+  zh: 501b2b9280e0593a

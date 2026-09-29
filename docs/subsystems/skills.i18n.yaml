@@ -1,0 +1,28 @@
+# Bilingual-pair consistency record for skills.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/subsystems/skills.md
+/skills:
+  en: f02cd54242218ff1
+  zh: d1132c8fe2f8c470
+/skills/provider-registry:
+  en: 4ee94468aef0dc3a
+  zh: a088d92faa0a39ee
+/skills/local-discovery-priority:
+  en: 0a19a60f7aa18bcd
+  zh: 43b4569d8a2c9fb6
+/skills/skill-identity:
+  en: 61295a9cf1c51588
+  zh: 1c4c1582688d2310
+/skills/summaries-candidates-and-complete-definitions:
+  en: 8819c25fac497a1f
+  zh: 5795f0d16f09750e
+/skills/lookup-and-configuration:
+  en: e1c6cc3e9f90a526
+  zh: fd5f4b2a1d7df7e7
+/skills/session-catalog-and-tool-contract:
+  en: d04fc6b73bc039a1
+  zh: cb1d42b313672e87
+/skills/browser-session-catalog:
+  en: 1209dc6ee65fd476
+  zh: af3b7ef836564d05

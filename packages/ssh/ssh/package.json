@@ -1,0 +1,83 @@
+{
+  "name": "@orochi-network/oh-ssh",
+  "description": "Shared OpenSSH connection and versioned POSIX remote helper",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/ssh/ssh"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json",
+    "./helper": {
+      "types": "./lib/types/helper-entry.d.ts",
+      "default": "./lib/helper.js"
+    },
+    "./protocol": {
+      "types": "./lib/types/protocol.d.ts",
+      "default": "./lib/protocol.js"
+    },
+    "./schemas": {
+      "types": "./lib/types/schemas.d.ts",
+      "default": "./lib/schemas.js"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/helper.js",
+    "lib/protocol.js",
+    "lib/schemas.js",
+    "lib/protocol-*.js",
+    "lib/schemas-*.js",
+    "lib/stream-security-*.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-fs": "workspace:*",
+    "@orochi-network/oh-fs-local": "workspace:*",
+    "@orochi-network/oh-fs-sandbox": "workspace:*",
+    "@orochi-network/oh-subprocess": "workspace:*",
+    "@orochi-network/oh-subprocess-local": "workspace:*",
+    "@orochi-network/oh-sandbox": "workspace:*",
+    "@orochi-network/oh-sandbox-local": "workspace:*",
+    "@orochi-network/oh-sandbox-policy": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-brand": "workspace:*"
+  },
+  "dependencies": {
+    "@orochi-network/schemastery": "workspace:~",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh-fs": "workspace:*",
+    "@orochi-network/oh-fs-local": "workspace:*",
+    "@orochi-network/oh-fs-sandbox": "workspace:*",
+    "@orochi-network/oh-subprocess": "workspace:*",
+    "@orochi-network/oh-subprocess-local": "workspace:*",
+    "@orochi-network/oh-sandbox": "workspace:*",
+    "@orochi-network/oh-sandbox-local": "workspace:*",
+    "@orochi-network/oh-sandbox-policy": "workspace:*",
+    "@orochi-network/oh-session-projection": "workspace:*",
+    "@orochi-network/oh-ptc-runtime-node": "workspace:*",
+    "@orochi-network/oh-fs-ssh": "workspace:*",
+    "@orochi-network/oh-subprocess-ssh": "workspace:*",
+    "@orochi-network/oh-sandbox-ssh": "workspace:*",
+    "@orochi-network/oh-lsp": "workspace:*",
+    "@orochi-network/oh-lsp-stdio": "workspace:*",
+    "@orochi-network/oh-brand": "workspace:*"
+  }
+}

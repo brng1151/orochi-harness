@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-18-account-quota-top-up.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-09-18-account-quota-top-up.md
+/agent-note-account-quota-top-up-action:
+  en: a4b06df6db28942a
+  zh: ac3481dd848fa7e7
+/agent-note-account-quota-top-up-action/problem:
+  en: 5153329b544a0175
+  zh: ac4addb3c56da67b
+/agent-note-account-quota-top-up-action/decision:
+  en: 289ebe5b7c550beb
+  zh: 1ea48917c41499e1
+/agent-note-account-quota-top-up-action/alternatives-considered:
+  en: ec6731c63d9c42ee
+  zh: 535b67062ce0269b
+/agent-note-account-quota-top-up-action/consequences:
+  en: 72febb3835a50018
+  zh: 0125b875f35b829e

@@ -1,0 +1,28 @@
+# Bilingual-pair consistency record for 2026-07-06-timeout-deadline-library.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-07-06-timeout-deadline-library.md
+/agent-note-a-shared-timeout-deadline-primitive-with-hard-kill-left-to-each-capability:
+  en: bc0bcd0464f427e4
+  zh: 53065ffb1dd6797c
+/agent-note-a-shared-timeout-deadline-primitive-with-hard-kill-left-to-each-capability/problem:
+  en: d8927059228ae8af
+  zh: 1076928c3d454b13
+/agent-note-a-shared-timeout-deadline-primitive-with-hard-kill-left-to-each-capability/decision:
+  en: e6f6f302aeb0ffb0
+  zh: 8e189037f037d031
+/agent-note-a-shared-timeout-deadline-primitive-with-hard-kill-left-to-each-capability/decision/the-library-api:
+  en: c62681afef60a0db
+  zh: 69827b4b3165b3da
+/agent-note-a-shared-timeout-deadline-primitive-with-hard-kill-left-to-each-capability/decision/the-division-of-labor:
+  en: a68aae75dada21f3
+  zh: 5f1f04762dddef12
+/agent-note-a-shared-timeout-deadline-primitive-with-hard-kill-left-to-each-capability/decision/how-each-capability-consumes-it:
+  en: 0d18e08af896fee3
+  zh: 2f48840e9af4b460
+/agent-note-a-shared-timeout-deadline-primitive-with-hard-kill-left-to-each-capability/consequences:
+  en: 2f68985076864658
+  zh: 7b792c433db453a3
+/agent-note-a-shared-timeout-deadline-primitive-with-hard-kill-left-to-each-capability/alternatives-considered:
+  en: 7b3445622becbd36
+  zh: bb358acf2ff28e26

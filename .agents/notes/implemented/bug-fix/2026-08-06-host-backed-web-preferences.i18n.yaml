@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-08-06-host-backed-web-preferences.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/bug-fix/2026-08-06-host-backed-web-preferences.md
+/agent-note-persist-web-user-preferences-through-host-settings:
+  en: 13734924f09efbea
+  zh: df3aba1f96354cd8
+/agent-note-persist-web-user-preferences-through-host-settings/problem:
+  en: 11cfa17205011549
+  zh: 860bac5120571e23
+/agent-note-persist-web-user-preferences-through-host-settings/decision:
+  en: 790ad9491c59f7d5
+  zh: cc8b5ba6745b7020
+/agent-note-persist-web-user-preferences-through-host-settings/alternatives-considered:
+  en: a91ebb47ec1ee356
+  zh: d5ce0b7f48195093
+/agent-note-persist-web-user-preferences-through-host-settings/consequences:
+  en: 0105e7a5275a6e89
+  zh: 9d8a915f2235a29c

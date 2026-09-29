@@ -1,0 +1,5 @@
+- menu "模型与推理等级":
+  - group "Orochi":
+    - text: Orochi
+    - menuitemradio "Messages Flash" [checked]
+    - menuitemradio "DeepSeek-V4-Pro"

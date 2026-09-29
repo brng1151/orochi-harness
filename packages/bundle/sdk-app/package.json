@@ -1,0 +1,51 @@
+{
+  "name": "@orochi-network/oh-sdk-app",
+  "description": "The oh SDK profile bundle: stdio JSON-RPC serving and process lifecycle over oh-base",
+  "version": "0.1.7-rc.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orochi-network/orochi-harness.git",
+    "directory": "packages/bundle/sdk-app"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "cordis.patch.yml",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "oh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@orochi-network/oh-cmdline": "workspace:*",
+    "@orochi-network/oh-sdk-jsonrpc-server": "workspace:*",
+    "@orochi-network/schemastery": "workspace:~",
+    "commander": "^15.0.0",
+    "@orochi-network/oh-skill-office": "workspace:*",
+    "@orochi-network/oh-tool-workspace-dependencies": "workspace:*"
+  },
+  "peerDependencies": {
+    "@orochi-network/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@orochi-network/cordis-plugin-include": "workspace:~",
+    "@orochi-network/cordis": "workspace:~"
+  }
+}

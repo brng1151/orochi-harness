@@ -1,0 +1,24 @@
+- name: '@orochi-network/oh-llm'
+- name: '@orochi-network/oh-session'
+- name: '@orochi-network/oh-session-projection'
+- name: '@orochi-network/oh-system-prompt'
+- name: '@orochi-network/oh-tools'
+- name: '@orochi-network/oh-agent'
+- name: '@orochi-network/oh-agent-loop'
+  config:
+    agents: []
+- name: '@orochi-network/oh-credentials-local'
+  config:
+    path: {{credentials}}
+    watch: false
+- name: '@orochi-network/oh-llm-orochi-api-key'
+  config:
+    apiKeyEnv: OROCHI_API_KEY
+    baseURL: {{endpoint}}
+    thinking: enabled
+    reasoningEffort: high
+    maxTokens: 256000
+    streamIdleTimeoutMs: 300000
+- name: '@orochi-network/oh-llm-orochi-account'
+  config:
+    baseURL: {{endpoint}}

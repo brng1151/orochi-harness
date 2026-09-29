@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-12-computer-use-provider-registration.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-12-computer-use-provider-registration.md
+/agent-note-computer-use-provider-registration:
+  en: 02c2d3b9332a324a
+  zh: 738472d6610b11ef
+/agent-note-computer-use-provider-registration/problem:
+  en: 192323ebd8ab3bde
+  zh: fc48464bfee0df86
+/agent-note-computer-use-provider-registration/decision:
+  en: 9c631f14d13b3413
+  zh: c21c5dfb4af8779b
+/agent-note-computer-use-provider-registration/alternatives-considered:
+  en: 52bb722596e8bc1c
+  zh: 0f49f0a2b77426e8
+/agent-note-computer-use-provider-registration/consequences:
+  en: eed0c10237bf13b1
+  zh: e077a9b42e2d9e71

@@ -1,0 +1,50 @@
+.icon {
+  /* The design platform has no violet token matching the supplied image/video artwork. */
+  --oh-file-type-violet: rgb(139, 118, 246);
+
+  color: var(--oh-file-type-icon-color, var(--oh-file-type-default-color));
+}
+
+.code {
+  --oh-file-type-default-color: var(--oh-static-orochi-500);
+}
+
+.excel {
+  --oh-file-type-default-color: var(--oh-static-green-500);
+}
+
+.folder {
+  --oh-file-type-default-color: var(--oh-static-amber-400);
+}
+
+.html {
+  --oh-file-type-default-color: var(--oh-static-orochi-500);
+}
+
+.image {
+  --oh-file-type-default-color: var(--oh-file-type-violet);
+}
+
+.markdown {
+  --oh-file-type-default-color: var(--oh-static-orochi-500);
+}
+
+.other {
+  --oh-file-type-default-color: var(--oh-static-neutral-bluish-300);
+}
+
+.pdf {
+  --oh-file-type-default-color: var(--oh-static-red-600);
+}
+
+.ppt {
+  --oh-file-type-default-color: var(--oh-static-amber-500);
+}
+
+.video {
+  --oh-file-type-default-color: var(--oh-file-type-violet);
+}
+
+.word {
+  --oh-file-type-default-color: var(--oh-static-orochi-450);
+}

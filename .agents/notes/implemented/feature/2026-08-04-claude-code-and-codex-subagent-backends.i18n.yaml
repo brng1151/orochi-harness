@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for 2026-08-04-claude-code-and-codex-subagent-backends.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-04-claude-code-and-codex-subagent-backends.md
+/agent-note-claude-code-and-codex-subagent-backends:
+  en: 23bb528afcd7e1eb
+  zh: 07dca59b65c4b831
+/agent-note-claude-code-and-codex-subagent-backends/problem:
+  en: 9ae3783464f46054
+  zh: 3d4be79451957509
+/agent-note-claude-code-and-codex-subagent-backends/decision:
+  en: 4cd6c6e8c80dd1e6
+  zh: 1ab56a6141070d72
+/agent-note-claude-code-and-codex-subagent-backends/decision/ownership-and-lifecycle:
+  en: ff552d974d29929e
+  zh: e39753bb04b289a7
+/agent-note-claude-code-and-codex-subagent-backends/codex-provider:
+  en: 1c07e09de21992d2
+  zh: 577073976e9b8518
+/agent-note-claude-code-and-codex-subagent-backends/claude-code-provider:
+  en: 60deb4732a3a0a07
+  zh: 8ee370ef489fd9aa
+/agent-note-claude-code-and-codex-subagent-backends/distribution-and-evidence:
+  en: 88fab9bf2a65e14d
+  zh: 9290be488c560921
+/agent-note-claude-code-and-codex-subagent-backends/alternatives-considered:
+  en: 10b5b282fac03988
+  zh: bf9fb4899f2c8e16
+/agent-note-claude-code-and-codex-subagent-backends/consequences:
+  en: 4a2bafe568ce329e
+  zh: d85032cadea15f3a

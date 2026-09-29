@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-09-19-config-only-hmr.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/proposed/simplification/2026-09-19-config-only-hmr.md
+/agent-note-limit-oh-hmr-to-live-profile-configuration:
+  en: 3aebe71948785f63
+  zh: 7c90f583a4139a1b
+/agent-note-limit-oh-hmr-to-live-profile-configuration/problem:
+  en: 725f205f945b42ff
+  zh: e1565829e04eaee2
+/agent-note-limit-oh-hmr-to-live-profile-configuration/proposal:
+  en: aae697d5566a1c89
+  zh: 5c7d0603bc8c31ca
+/agent-note-limit-oh-hmr-to-live-profile-configuration/alternatives-considered:
+  en: eb0a06a78232aa2d
+  zh: 0810b66b50a5f4fe
+/agent-note-limit-oh-hmr-to-live-profile-configuration/acceptance-criteria:
+  en: ea1dbf4681f60fcf
+  zh: fa7b9f7888bfc24f
+/agent-note-limit-oh-hmr-to-live-profile-configuration/risks:
+  en: de00ca4e66cff7d0
+  zh: fb82e77bd554c1f6

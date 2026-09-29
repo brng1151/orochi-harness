@@ -1,0 +1,46 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/extensions/tool-cordis/README.md
+/:
+  en: 784a82be07311e99
+  zh: 85d917ecc6386ec9
+/orochi-network-oh-tool-cordis:
+  en: 3fa6039f89ab8cfd
+  zh: bfc20c564a6e802b
+/orochi-network-oh-tool-cordis/summary:
+  en: 245a3cd287214bed
+  zh: 8687666c28a676cf
+/orochi-network-oh-tool-cordis/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 3a2f21ff0dc3420d
+/orochi-network-oh-tool-cordis/use-this-package:
+  en: 601d89b585f47bea
+  zh: fe9a379ead290d4b
+/orochi-network-oh-tool-cordis/understand-the-implementation:
+  en: de18fe3471a4a341
+  zh: fda07860cfe1e325
+/orochi-network-oh-tool-cordis/further-exploration:
+  en: d7cd999e84b97e11
+  zh: fc80dcda77675255
+/orochi-network-oh-tool-cordis/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-tool-cordis/model-experience/runtime-inspection:
+  en: 72ffb7cae674c31a
+  zh: 85674f298a78592a
+/orochi-network-oh-tool-cordis/model-experience/runtime-inspection/what-the-model-sees:
+  en: 2274bedc48cff2eb
+  zh: 8f4b5951abd4fb86
+/orochi-network-oh-tool-cordis/model-experience/runtime-inspection/token-effect:
+  en: 5d9791798f8ce57f
+  zh: b47984cc13e12cfd
+/orochi-network-oh-tool-cordis/model-experience/runtime-inspection/kv-cache-effect:
+  en: f57a20cd4e76d13c
+  zh: 7b673116422bee87
+/orochi-network-oh-tool-cordis/known-limitations-and-deferred-work:
+  en: ffe15dd1fd333dbf
+  zh: b256afc74a1782cb
+/orochi-network-oh-tool-cordis/known-limitations-and-deferred-work/dev-note:
+  en: 0a1253c6f7b5e8b9
+  zh: 9f56528562c7c914

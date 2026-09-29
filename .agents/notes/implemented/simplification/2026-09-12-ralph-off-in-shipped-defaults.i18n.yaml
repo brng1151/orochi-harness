@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-09-12-ralph-off-in-shipped-defaults.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/simplification/2026-09-12-ralph-off-in-shipped-defaults.md
+/agent-note-ship-ralph-off-in-the-default-compositions:
+  en: ecc124ea99ef5a8f
+  zh: 3afb7b12bc2ab934
+/agent-note-ship-ralph-off-in-the-default-compositions/problem:
+  en: 50564cda290dc74f
+  zh: 2e666d6e40dceb5e
+/agent-note-ship-ralph-off-in-the-default-compositions/decision:
+  en: b0b8e6b925e44f35
+  zh: c4e7862939129df4
+/agent-note-ship-ralph-off-in-the-default-compositions/alternatives-considered:
+  en: 8d4b9713a0dbad5f
+  zh: 0edad0349e6381fc
+/agent-note-ship-ralph-off-in-the-default-compositions/consequences:
+  en: 427242f0a8df0c66
+  zh: ca3dd1bd4cd54605
+/agent-note-ship-ralph-off-in-the-default-compositions/verification:
+  en: a28c1a4bd08f392e
+  zh: ce20be8657477ff0

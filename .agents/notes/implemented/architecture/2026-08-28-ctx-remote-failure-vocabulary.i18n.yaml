@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for 2026-08-28-ctx-remote-failure-vocabulary.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-08-28-ctx-remote-failure-vocabulary.md
+/agent-note-one-remote-failure-vocabulary-for-ctx-remote:
+  en: 6902c2925ceccc55
+  zh: f4864aeb1b477f26
+/agent-note-one-remote-failure-vocabulary-for-ctx-remote/problem:
+  en: 14ba240ed01bd8bb
+  zh: 0ee184e5ee062f41
+/agent-note-one-remote-failure-vocabulary-for-ctx-remote/decision:
+  en: 31a2dfa3c1df486b
+  zh: ba869e788ccafb03
+/agent-note-one-remote-failure-vocabulary-for-ctx-remote/code-ownership:
+  en: abd378ed6318d560
+  zh: e6bd1859dc174b2c
+/agent-note-one-remote-failure-vocabulary-for-ctx-remote/discrimination-by-code:
+  en: a69e2160f2c08884
+  zh: ab4d11ed7a9915d5
+/agent-note-one-remote-failure-vocabulary-for-ctx-remote/fixed-host-facts:
+  en: 569574eab7edae2d
+  zh: b0d6a9b2690c1925
+/agent-note-one-remote-failure-vocabulary-for-ctx-remote/what-the-wire-carries:
+  en: 16f1063265bf03b8
+  zh: 7160adba210e966d
+/agent-note-one-remote-failure-vocabulary-for-ctx-remote/alternatives-considered:
+  en: d92f46d0827ad0d1
+  zh: 640f223d3a27559b
+/agent-note-one-remote-failure-vocabulary-for-ctx-remote/consequences:
+  en: a96d0fde288bbba1
+  zh: f066b343a70296ec

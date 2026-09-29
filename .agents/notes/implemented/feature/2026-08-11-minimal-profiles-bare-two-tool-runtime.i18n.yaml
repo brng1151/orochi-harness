@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-08-11-minimal-profiles-bare-two-tool-runtime.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-11-minimal-profiles-bare-two-tool-runtime.md
+/agent-note-minimal-profiles-use-a-bare-runtime:
+  en: 8f5d2bcf84e11189
+  zh: 8d8cd63fb1e2e6ee
+/agent-note-minimal-profiles-use-a-bare-runtime/problem:
+  en: 725fe45436a65f26
+  zh: 97f96497173bec4f
+/agent-note-minimal-profiles-use-a-bare-runtime/decision:
+  en: 0bfa2b0bd2240679
+  zh: 2e415a884d57ce7a
+/agent-note-minimal-profiles-use-a-bare-runtime/verification:
+  en: d287a23d1c2d000e
+  zh: 7767eecd6fe21de1
+/agent-note-minimal-profiles-use-a-bare-runtime/alternatives-considered:
+  en: e88b3197766ecd65
+  zh: e7e2681a08a00d1b
+/agent-note-minimal-profiles-use-a-bare-runtime/consequences:
+  en: ac04337ec218057f
+  zh: 6d9a4d00f9bec3a2

@@ -1,0 +1,55 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/feedback/message-feedback/README.md
+/:
+  en: f3648275facc4888
+  zh: 110c0e8aedf63e4e
+/orochi-network-oh-message-feedback:
+  en: 9df4939b64c36010
+  zh: 87ad072e619ce998
+/orochi-network-oh-message-feedback/summary:
+  en: 07fec1cc63536ffb
+  zh: 530c8f20786c7af6
+/orochi-network-oh-message-feedback/table-of-contents:
+  en: 122f0d41696980b1
+  zh: 528864635b577290
+/orochi-network-oh-message-feedback/use-this-package:
+  en: c8c21dc5b823c1ae
+  zh: 063677da9a547c87
+/orochi-network-oh-message-feedback/use-this-package/configuration:
+  en: ca14ef1102f31d3e
+  zh: 33aa0013b9a02a24
+/orochi-network-oh-message-feedback/use-this-package/reading-and-changing-feedback:
+  en: fed12d93b538866d
+  zh: 4b45e81d9e5a8260
+/orochi-network-oh-message-feedback/understand-the-implementation:
+  en: ee4615a04fa6503d
+  zh: ee2c5fb2204a43cf
+/orochi-network-oh-message-feedback/understand-the-implementation/canonical-log-and-durability:
+  en: 73ddbcf524f213a1
+  zh: 050f1a72c7f56fd6
+/orochi-network-oh-message-feedback/understand-the-implementation/source-map:
+  en: b7306d67e4eb2239
+  zh: fc69c9c108ac57c7
+/orochi-network-oh-message-feedback/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-message-feedback/model-experience/message-feedback:
+  en: 73eacb58a40342f6
+  zh: 1ee3049173128f61
+/orochi-network-oh-message-feedback/model-experience/message-feedback/what-the-model-sees:
+  en: 3928187c2f20ec0f
+  zh: fd5273ee1a885bde
+/orochi-network-oh-message-feedback/model-experience/message-feedback/token-effect:
+  en: 5ff6c3ac5017b3ef
+  zh: 4ccd5af39b37dd1c
+/orochi-network-oh-message-feedback/model-experience/message-feedback/kv-cache-effect:
+  en: 2bdd13dcb4078358
+  zh: 591328cf1a061fca
+/orochi-network-oh-message-feedback/known-limitations-and-deferred-work:
+  en: eb4c3550f6352965
+  zh: f043f12ec7a79399
+/orochi-network-oh-message-feedback/known-limitations-and-deferred-work/dev-note:
+  en: 3c3ce6ed67282e05
+  zh: 213816553e3581b4

@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for architecture.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/architecture.md
+/orochi-harness-architecture:
+  en: ee3dc69bd77f41de
+  zh: 8d581b599ea18732
+/orochi-harness-architecture/cordis:
+  en: 4a3b108c652fdeb5
+  zh: 451617ffd41b7ff7
+/orochi-harness-architecture/profiles-and-bundles:
+  en: 44a61ef93f32dd3c
+  zh: 7830c9e0b15ced2b
+/orochi-harness-architecture/application-launch:
+  en: 408451b387c12d5d
+  zh: 41c46c8d0714b765
+/orochi-harness-architecture/desktop-application:
+  en: fd93272a821744a1
+  zh: 199a2650f783705f
+/orochi-harness-architecture/core-packages:
+  en: 810633e697aadb15
+  zh: 790b212621e3c702
+/orochi-harness-architecture/events:
+  en: de38e55978788083
+  zh: 1d45e99bdac90c2b
+/orochi-harness-architecture/turn-flow:
+  en: 66a9eefff8da75d3
+  zh: 79c104a3faa64c1c
+/orochi-harness-architecture/session-log:
+  en: 384e3a635ccc4216
+  zh: 41c6014dc93b11ce
+/orochi-harness-architecture/capability-seams:
+  en: 96b02ed467ae525b
+  zh: 5b27ef547d463e97
+/orochi-harness-architecture/where-new-behavior-goes:
+  en: ffa8ce6d538f6abf
+  zh: 59329f3972d3d87c

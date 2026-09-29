@@ -1,0 +1,34 @@
+# Bilingual-pair consistency record for adding-a-session-format-version.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/cookbook/adding-a-session-format-version.md
+/cookbook-adding-a-session-log-format-version:
+  en: 24825a8c7ee9bbc5
+  zh: 29072983c6dc081b
+/cookbook-adding-a-session-log-format-version/summary:
+  en: 8de6b8821eb9d6d5
+  zh: c77845a73aa8c9c0
+/cookbook-adding-a-session-log-format-version/table-of-contents:
+  en: e906cb221e1e711e
+  zh: 298c74364f18275b
+/cookbook-adding-a-session-log-format-version/1-choose-the-version-and-release-base:
+  en: 56c72110b72b1848
+  zh: 08dfa9edda258cf1
+/cookbook-adding-a-session-log-format-version/2-add-an-identity-edge:
+  en: 23982e9b41ba1505
+  zh: 76a819207ebd73fb
+/cookbook-adding-a-session-log-format-version/3-implement-per-artifact-stages-and-validation:
+  en: 214a50b7f74b5690
+  zh: 5cca86cbb929010e
+/cookbook-adding-a-session-log-format-version/4-update-current-version-consumers:
+  en: 0b06891c12ace007
+  zh: e3114707b8ae38e5
+/cookbook-adding-a-session-log-format-version/5-create-snapshot-successors:
+  en: e2d11948c6c7af49
+  zh: 40156fcf4484c884
+/cookbook-adding-a-session-log-format-version/6-validate-the-integrated-result:
+  en: d1404cbec5a40adf
+  zh: 87a263f7ed4dc105
+/cookbook-adding-a-session-log-format-version/dev-note:
+  en: b75c8458928b72b9
+  zh: 003ba4e17b4b5269

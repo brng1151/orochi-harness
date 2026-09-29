@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for 2026-07-27-web-subagent-conversations.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-07-27-web-subagent-conversations.md
+/agent-note-web-subagent-catalog-and-human-continuation:
+  en: 45e579bec987e660
+  zh: 7bacc06ace2db1e3
+/agent-note-web-subagent-catalog-and-human-continuation/problem:
+  en: 833d0b99f62165aa
+  zh: 65fc938ed82b4d18
+/agent-note-web-subagent-catalog-and-human-continuation/decision:
+  en: 1889926df5eb5bc1
+  zh: b40d335428ded4df
+/agent-note-web-subagent-catalog-and-human-continuation/design-context:
+  en: da3858c86cf685ff
+  zh: b13ee4f45e3dff7d
+/agent-note-web-subagent-catalog-and-human-continuation/product-contract:
+  en: 63f165aa7b5d0f97
+  zh: 103d91beb3f7df60
+/agent-note-web-subagent-catalog-and-human-continuation/host-adapter-and-wire-contract:
+  en: b3e9a286d6ff14a3
+  zh: dced2a46c2453d8f
+/agent-note-web-subagent-catalog-and-human-continuation/client-object-layer-and-presentation:
+  en: 9b14105f3d3cf5a3
+  zh: c36424fb825d433a
+/agent-note-web-subagent-catalog-and-human-continuation/default-web-assembly:
+  en: 6d4d8db99535aa18
+  zh: 803554b55a67acb1
+/agent-note-web-subagent-catalog-and-human-continuation/alternatives-considered:
+  en: d686fb77868d772b
+  zh: b49676627319d48d
+/agent-note-web-subagent-catalog-and-human-continuation/testing:
+  en: 0c2f7f5cc473ecff
+  zh: 00b2c22e109b3429
+/agent-note-web-subagent-catalog-and-human-continuation/consequences:
+  en: 5551e53acf48c2f4
+  zh: 05fdd0e375ba281e

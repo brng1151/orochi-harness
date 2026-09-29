@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for 2026-09-28-single-generation-session-format.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-28-single-generation-session-format.md
+/agent-note-this-fork-ships-one-session-format-generation:
+  en: d0275685635e154c
+  zh: d2c75d7d36fb9d99
+/agent-note-this-fork-ships-one-session-format-generation/problem:
+  en: 2b924622594acd24
+  zh: 2af0ac0dac21fd37
+/agent-note-this-fork-ships-one-session-format-generation/decision:
+  en: 97c99b263645fef3
+  zh: 025569e49cdeae19
+/agent-note-this-fork-ships-one-session-format-generation/alternatives-considered:
+  en: 60918bd6e50442d6
+  zh: e2be5eb33d937431
+/agent-note-this-fork-ships-one-session-format-generation/consequences:
+  en: 7450c07b0c36b0b0
+  zh: e63ab3cc78490e0e
+/agent-note-this-fork-ships-one-session-format-generation/what-this-gives-up:
+  en: 80b0e3be98140cb3
+  zh: d3dae35c984d18fd
+/agent-note-this-fork-ships-one-session-format-generation/verification:
+  en: 6b1e6719f9205a77
+  zh: e87f60e1204918af

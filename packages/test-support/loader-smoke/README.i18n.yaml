@@ -1,0 +1,58 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/test-support/loader-smoke/README.md
+/:
+  en: 00a7ac59f751e4d0
+  zh: 35334966b956621d
+/orochi-network-oh-loader-smoke:
+  en: 7c6013284308b37a
+  zh: 6c38e2052dfcc228
+/orochi-network-oh-loader-smoke/summary:
+  en: 69f5c6873d30b951
+  zh: 4f942c0c31e3ec26
+/orochi-network-oh-loader-smoke/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-loader-smoke/use-this-package:
+  en: 682780f6cbeb85cb
+  zh: 07a2458db985471a
+/orochi-network-oh-loader-smoke/use-this-package/booting-an-application-fixture:
+  en: d06d155af4cd26f0
+  zh: de544e6c44224605
+/orochi-network-oh-loader-smoke/use-this-package/testing-a-shipped-profile:
+  en: 0d94049c31dfc430
+  zh: a9a2ff5750d58ac6
+/orochi-network-oh-loader-smoke/use-this-package/driving-a-fixture-turn:
+  en: c99402b3d2219738
+  zh: cbff00f4bfb7d625
+/orochi-network-oh-loader-smoke/use-this-package/source-or-built-mode:
+  en: 653426b256287701
+  zh: f7b9b48c5d1fee63
+/orochi-network-oh-loader-smoke/use-this-package/what-can-go-wrong:
+  en: fd44c56defa03e2c
+  zh: b532ca1c5052a22c
+/orochi-network-oh-loader-smoke/understand-the-implementation:
+  en: 3ffb8df759bf5071
+  zh: a93d3dd6472d9782
+/orochi-network-oh-loader-smoke/understand-the-implementation/design:
+  en: c44bfa37c2087f6d
+  zh: a7ed2da3a7ede45b
+/orochi-network-oh-loader-smoke/understand-the-implementation/source-map:
+  en: 4212f963f739e76e
+  zh: 1a08bcb7654df951
+/orochi-network-oh-loader-smoke/further-exploration:
+  en: 55f1c63c8afa1b40
+  zh: d1acfd94c8afe974
+/orochi-network-oh-loader-smoke/model-experience:
+  en: 27696a3c4d31d171
+  zh: 48b6df074e0b0911
+/orochi-network-oh-loader-smoke/model-experience/kv-cache-effect:
+  en: c204a02c386ca3a0
+  zh: ce9b24304f9644aa
+/orochi-network-oh-loader-smoke/known-limitations-and-deferred-work:
+  en: a3e0e21178bb00cc
+  zh: f3dc6139370330f6
+/orochi-network-oh-loader-smoke/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

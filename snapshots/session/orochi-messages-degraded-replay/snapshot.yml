@@ -1,0 +1,7 @@
+version: 1
+scenario: orochi-messages-degraded-replay
+profile: headless
+composition: default
+recording: authored
+header:
+  class: orochi-messages

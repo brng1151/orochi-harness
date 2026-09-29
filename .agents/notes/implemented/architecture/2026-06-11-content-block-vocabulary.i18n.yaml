@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-06-11-content-block-vocabulary.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-06-11-content-block-vocabulary.md
+/agent-note-provider-neutral-content-block-vocabulary-owned-by-oh-llm:
+  en: b3cf853badafd683
+  zh: 69444a364ba143fb
+/agent-note-provider-neutral-content-block-vocabulary-owned-by-oh-llm/problem:
+  en: 4e81df7bca1c1638
+  zh: f7483d180a613237
+/agent-note-provider-neutral-content-block-vocabulary-owned-by-oh-llm/decision:
+  en: 0381e295e725be6f
+  zh: d9416219b4fb35c9
+/agent-note-provider-neutral-content-block-vocabulary-owned-by-oh-llm/alternatives-considered:
+  en: 5582b750a3e8dd46
+  zh: 67f16c2e7e811f68
+/agent-note-provider-neutral-content-block-vocabulary-owned-by-oh-llm/consequences:
+  en: 999d10e69e447e44
+  zh: 38370da5b900ac30

@@ -1,0 +1,55 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/util/atomic-write/README.md
+/:
+  en: 1065a4fcafd0430d
+  zh: 40bc911b6d01288b
+/orochi-network-oh-atomic-write:
+  en: 2f30d6d508742802
+  zh: 6cef90a0c12fd9fb
+/orochi-network-oh-atomic-write/summary:
+  en: b1efe430d5dd90dd
+  zh: 4a8ffc612363b784
+/orochi-network-oh-atomic-write/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-atomic-write/use-this-package:
+  en: 9cc27a0ee5ae0808
+  zh: d0ee06b54452f600
+/orochi-network-oh-atomic-write/use-this-package/writing-a-file-atomically:
+  en: 7b757dc3c3b27335
+  zh: a097d90a2561475d
+/orochi-network-oh-atomic-write/use-this-package/coordinating-writers:
+  en: 77c865c1f78d2a0c
+  zh: 5a91874c352c6f18
+/orochi-network-oh-atomic-write/use-this-package/failures-to-plan-for:
+  en: 59308dc757e25273
+  zh: 01113ed577a413cb
+/orochi-network-oh-atomic-write/understand-the-implementation:
+  en: 93b537308f7c88c7
+  zh: 282e0d2042aeb1be
+/orochi-network-oh-atomic-write/understand-the-implementation/source-map:
+  en: 725509a8b621c668
+  zh: c11e3ffdf73af844
+/orochi-network-oh-atomic-write/understand-the-implementation/write-path:
+  en: 465886e79bd87d77
+  zh: 31575023bfc9a030
+/orochi-network-oh-atomic-write/understand-the-implementation/why-the-swap-stays-safe:
+  en: 784e985c1fb3a25e
+  zh: 4afda1b9bf5f29cc
+/orochi-network-oh-atomic-write/further-exploration:
+  en: 287e7a589e537ae3
+  zh: 0c0b35270fdd6e87
+/orochi-network-oh-atomic-write/model-experience:
+  en: 225fc1d94a284905
+  zh: 7319a43c3b8a884d
+/orochi-network-oh-atomic-write/model-experience/kv-cache-effect:
+  en: 815e93723a98919c
+  zh: 921da870f67e4033
+/orochi-network-oh-atomic-write/known-limitations-and-deferred-work:
+  en: 5d0b395da8833bbb
+  zh: 6191bab46d288be7
+/orochi-network-oh-atomic-write/known-limitations-and-deferred-work/dev-note:
+  en: d3461ceeaf041974
+  zh: f59df2adbf52fed9

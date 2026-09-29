@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-06-13-twin-llm-adapters.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-06-13-twin-llm-adapters.md
+/agent-note-two-llm-adapters-as-a-design-verification-twin:
+  en: 5108c72e51af0d21
+  zh: e9e89ee600bd15db
+/agent-note-two-llm-adapters-as-a-design-verification-twin/problem:
+  en: f70843a57239a2be
+  zh: 04aedbd68ccd0675
+/agent-note-two-llm-adapters-as-a-design-verification-twin/decision:
+  en: 719e93b491566051
+  zh: 0f29422d840c5964
+/agent-note-two-llm-adapters-as-a-design-verification-twin/alternatives-considered:
+  en: b870fdc8651e469e
+  zh: aec7197ee0627821
+/agent-note-two-llm-adapters-as-a-design-verification-twin/consequences:
+  en: 853150d61cb6df87
+  zh: 02faf7e21910c9cd

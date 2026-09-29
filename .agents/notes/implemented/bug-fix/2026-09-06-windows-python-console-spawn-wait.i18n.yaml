@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-09-06-windows-python-console-spawn-wait.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/bug-fix/2026-09-06-windows-python-console-spawn-wait.md
+/agent-note-wait-for-the-windows-python-console-runtime:
+  en: a051cb3c8eab59b3
+  zh: 8b5c3d4ccb0e2cf0
+/agent-note-wait-for-the-windows-python-console-runtime/problem:
+  en: c395ac205f8828ad
+  zh: cee96cfcf71ed724
+/agent-note-wait-for-the-windows-python-console-runtime/decision:
+  en: 3bff64e76dba564c
+  zh: 7b7b307a49f2f308
+/agent-note-wait-for-the-windows-python-console-runtime/alternatives-considered:
+  en: 2cc100a4b8724d40
+  zh: 6ba47c76f304a460
+/agent-note-wait-for-the-windows-python-console-runtime/consequences:
+  en: ec5c2a7082012ed5
+  zh: 32027ea20bd32acf

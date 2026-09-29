@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for ui-radius.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/ui-radius.md
+/oh-unified-corner-radius-standard:
+  en: ee81a7a708d814ec
+  zh: 17b3d63ca623df5f
+/oh-unified-corner-radius-standard/summary:
+  en: dafa1e303e71d33f
+  zh: 324c7e3e4520c620
+/oh-unified-corner-radius-standard/table-of-contents:
+  en: aad65e4a8399adbb
+  zh: e76b80d421b17992
+/oh-unified-corner-radius-standard/scope-and-authority:
+  en: e672f51599847e8a
+  zh: e2be663173c758af
+/oh-unified-corner-radius-standard/select-the-radius:
+  en: bb1f70205904ae86
+  zh: 213c5cf57b371625
+/oh-unified-corner-radius-standard/reuse-tokens-and-preserve-deliberate-shapes:
+  en: 6362a37dff98ca77
+  zh: 785762e794eec9ea
+/oh-unified-corner-radius-standard/nested-geometry-and-hover:
+  en: 531f42cc733f7dd9
+  zh: 634551e57057da72
+/oh-unified-corner-radius-standard/settings-card-materials:
+  en: 228dfaeac55ae935
+  zh: 62f90ed9189e4be0
+/oh-unified-corner-radius-standard/apply-and-verify:
+  en: 2f6f10e45b27c19b
+  zh: 9eb5fd964c643be6

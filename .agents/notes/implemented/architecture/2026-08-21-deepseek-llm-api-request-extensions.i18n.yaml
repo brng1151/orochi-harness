@@ -1,0 +1,34 @@
+# Bilingual-pair consistency record for 2026-08-21-deepseek-llm-api-request-extensions.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-08-21-deepseek-llm-api-request-extensions.md
+/agent-note-orochi-llm-api-request-extension-for-plugin-packages:
+  en: f576943096a5302d
+  zh: c727c604e48d3a8d
+/agent-note-orochi-llm-api-request-extension-for-plugin-packages/problem:
+  en: 4b8e3e0a132a14ca
+  zh: 8e08e361b92c2604
+/agent-note-orochi-llm-api-request-extension-for-plugin-packages/decision:
+  en: e93db6406963eb38
+  zh: 4091c1544de9e457
+/agent-note-orochi-llm-api-request-extension-for-plugin-packages/plugin-package-field:
+  en: 5b5b384a26e8889c
+  zh: d1f80805567c6c7e
+/agent-note-orochi-llm-api-request-extension-for-plugin-packages/deferred-inventory-caching:
+  en: eb69576e756f4aa1
+  zh: 5c1923159da3f7a2
+/agent-note-orochi-llm-api-request-extension-for-plugin-packages/verification:
+  en: 7ad641321d19a36e
+  zh: 4989c1bb840c78ce
+/agent-note-orochi-llm-api-request-extension-for-plugin-packages/alternatives-considered:
+  en: fb05bbf90493678f
+  zh: 8fc9806751de2af6
+/agent-note-orochi-llm-api-request-extension-for-plugin-packages/alternatives-considered/why-not-request-relative-message-references:
+  en: 10300ad999060670
+  zh: 6c8ea280f36aa577
+/agent-note-orochi-llm-api-request-extension-for-plugin-packages/alternatives-considered/why-not-omit-assistant-chunks-or-overlapping-event-data:
+  en: 4f27de21305dd6cf
+  zh: c729a8b1b0aa9033
+/agent-note-orochi-llm-api-request-extension-for-plugin-packages/consequences:
+  en: 1402dfb414a4d51b
+  zh: afe8f415bf642f7f

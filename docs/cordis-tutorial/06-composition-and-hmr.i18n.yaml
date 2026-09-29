@@ -1,0 +1,16 @@
+# Bilingual-pair consistency record for 06-composition-and-hmr.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/cordis-tutorial/06-composition-and-hmr.md
+/6-composition-and-hmr:
+  en: dabfe1f826453076
+  zh: 7b7f1c91c38ce00d
+/6-composition-and-hmr/entries-are-more-than-a-name:
+  en: 711ae6ec3707acc9
+  zh: b07ce26ec897b7ef
+/6-composition-and-hmr/hot-module-replacement:
+  en: 99a76a8167c97396
+  zh: f4aa0ef719a8adf2
+/6-composition-and-hmr/diagnosing-a-plugin-that-never-loads:
+  en: 21273e1c2168467f
+  zh: b225610b8842469f

@@ -1,0 +1,313 @@
+# Bilingual-pair consistency record for tool-catalog.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/tool-catalog.md
+/:
+  en: 0be8ffbf23193557
+  zh: ce2c69aa86875171
+/tool-schema-catalog:
+  en: 070420b958cf8174
+  zh: 172cca61766f3cef
+/tool-schema-catalog/tool-package-map:
+  en: bac77cad96963738
+  zh: 943d9125dd7d620f
+/tool-schema-catalog/orochi-network-oh-plugin-manager:
+  en: 8731a672104bcc3d
+  zh: 8731a672104bcc3d
+/tool-schema-catalog/orochi-network-oh-plugin-manager/plugin-manager:
+  en: 0a3880c27ac9ff0d
+  zh: 9d15dc3b0c4a4949
+/tool-schema-catalog/orochi-network-oh-mcp-resources:
+  en: d7601c4643cf3af9
+  zh: d7601c4643cf3af9
+/tool-schema-catalog/orochi-network-oh-mcp-resources/list-mcp-resource-templates:
+  en: 96275ece9d040944
+  zh: 1fa9744642601ece
+/tool-schema-catalog/orochi-network-oh-mcp-resources/list-mcp-resources:
+  en: bf4236607199d61e
+  zh: 82f4f749dcabc89f
+/tool-schema-catalog/orochi-network-oh-mcp-resources/read-mcp-resource:
+  en: cef88c247dcee06b
+  zh: 73aa017aecea3530
+/tool-schema-catalog/orochi-network-oh-experimental-browser-use-stagehand-native:
+  en: 7c916440386df5b4
+  zh: 7c916440386df5b4
+/tool-schema-catalog/orochi-network-oh-experimental-browser-use-stagehand-native/stagehand-act:
+  en: c4b27bf62c534dcc
+  zh: 70c53824ed57ac23
+/tool-schema-catalog/orochi-network-oh-experimental-browser-use-stagehand-native/stagehand-extract:
+  en: ec7462ab99848155
+  zh: 632fe0249040708e
+/tool-schema-catalog/orochi-network-oh-experimental-browser-use-stagehand-native/stagehand-navigate:
+  en: ef97f063a037a006
+  zh: 27727ccc908e007f
+/tool-schema-catalog/orochi-network-oh-experimental-browser-use-stagehand-native/stagehand-observe:
+  en: 2068f1baa0a59e1b
+  zh: 5743c7b33e2c5ccb
+/tool-schema-catalog/orochi-network-oh-experimental-browser-use-stagehand-native/stagehand-screenshot:
+  en: 4910ab327694ee97
+  zh: 17e79e4366cb636d
+/tool-schema-catalog/orochi-network-oh-experimental-browser-use-stagehand-native/stagehand-tabs:
+  en: 16189d3783e8922d
+  zh: c32f953bd750450b
+/tool-schema-catalog/orochi-network-oh-tool-ask-user:
+  en: 6bc3d57115900b6d
+  zh: 6bc3d57115900b6d
+/tool-schema-catalog/orochi-network-oh-tool-ask-user/ask-user-question:
+  en: 66ce2a46211455a8
+  zh: 00ee6467a54e75fb
+/tool-schema-catalog/orochi-network-oh-tools:
+  en: e59a0e4a8c466e8e
+  zh: e59a0e4a8c466e8e
+/tool-schema-catalog/orochi-network-oh-tools/run-code:
+  en: 2e44f3c0cadb9dbe
+  zh: 8622f744b118dc60
+/tool-schema-catalog/orochi-network-oh-plan-mode:
+  en: 0691c562816b477b
+  zh: 0691c562816b477b
+/tool-schema-catalog/orochi-network-oh-plan-mode/exit-plan-mode:
+  en: c1c83120b5c1f7bd
+  zh: 80ad5b5abbcd0f80
+/tool-schema-catalog/orochi-network-oh-tool-bash:
+  en: e9900130e25c3c78
+  zh: e9900130e25c3c78
+/tool-schema-catalog/orochi-network-oh-tool-bash/bash:
+  en: 81e485d6f9d39ddc
+  zh: 5ecf38ccdfe5959d
+/tool-schema-catalog/orochi-network-oh-tool-present:
+  en: 1c0a97c142dd74e2
+  zh: 1c0a97c142dd74e2
+/tool-schema-catalog/orochi-network-oh-tool-present/present:
+  en: c6188cc4c3ed9bd7
+  zh: 456c93f1c599712f
+/tool-schema-catalog/orochi-network-oh-tool-pwsh:
+  en: 6f39a183dd835f54
+  zh: 6f39a183dd835f54
+/tool-schema-catalog/orochi-network-oh-tool-pwsh/pwsh:
+  en: c0d54af8a8989069
+  zh: 9fe28b944279c033
+/tool-schema-catalog/orochi-network-oh-tool-cordis:
+  en: 802b110a0a4bff3f
+  zh: 802b110a0a4bff3f
+/tool-schema-catalog/orochi-network-oh-tool-cordis/cordis-inspect-list:
+  en: 594e5b42047969cc
+  zh: 72189ca21345c210
+/tool-schema-catalog/orochi-network-oh-tool-cordis/cordis-inspect-query:
+  en: 0fcc6233436465b5
+  zh: 5885353334731916
+/tool-schema-catalog/orochi-network-oh-tool-bash-persistent:
+  en: 0cc83bfc41eaf79e
+  zh: 0cc83bfc41eaf79e
+/tool-schema-catalog/orochi-network-oh-tool-bash-persistent/bash:
+  en: 47a255c39d0a078e
+  zh: 6730574828569c20
+/tool-schema-catalog/orochi-network-oh-tool-pwsh-persistent:
+  en: 22510a626b603a67
+  zh: 22510a626b603a67
+/tool-schema-catalog/orochi-network-oh-tool-pwsh-persistent/pwsh:
+  en: e6f470062b8c9e3a
+  zh: 1bc00d84b8f44594
+/tool-schema-catalog/orochi-network-oh-tool-str-replace-editor:
+  en: a867fa51de1f8907
+  zh: a867fa51de1f8907
+/tool-schema-catalog/orochi-network-oh-tool-str-replace-editor/str-replace-editor:
+  en: 1c997e13832cc6a2
+  zh: c7840a0313553db9
+/tool-schema-catalog/orochi-network-oh-tool-fs:
+  en: 1f72563a6e92afb9
+  zh: 1f72563a6e92afb9
+/tool-schema-catalog/orochi-network-oh-tool-fs/edit:
+  en: 5b6a252adde51af6
+  zh: 7aa172a5d8b9cbd2
+/tool-schema-catalog/orochi-network-oh-tool-fs/read:
+  en: 94bfc5b03c63baef
+  zh: 339338a0e74696c3
+/tool-schema-catalog/orochi-network-oh-tool-fs/read-image:
+  en: f6f7a1140066ce04
+  zh: d528e01a0939795a
+/tool-schema-catalog/orochi-network-oh-tool-fs/write:
+  en: 9a03e2802d0d277d
+  zh: f081743f021ea80d
+/tool-schema-catalog/orochi-network-oh-tool-fs-search:
+  en: 6669a1833459ef88
+  zh: 6669a1833459ef88
+/tool-schema-catalog/orochi-network-oh-tool-fs-search/glob:
+  en: 3ba734ba7852cdd5
+  zh: c6ce31ff2c195520
+/tool-schema-catalog/orochi-network-oh-tool-fs-search/grep:
+  en: 50958b23879e120d
+  zh: 22e3cbfd4abc9361
+/tool-schema-catalog/orochi-network-oh-tool-terminal:
+  en: 447001118a4d590b
+  zh: 447001118a4d590b
+/tool-schema-catalog/orochi-network-oh-tool-terminal/terminal-close:
+  en: 6d6e428c866ac6c1
+  zh: 8033539fcdcb6e7b
+/tool-schema-catalog/orochi-network-oh-tool-terminal/terminal-list:
+  en: ae7d5bce32142aa5
+  zh: e956a650a5bf294b
+/tool-schema-catalog/orochi-network-oh-tool-terminal/terminal-open:
+  en: c542bd7f7e872441
+  zh: 14731de81780b518
+/tool-schema-catalog/orochi-network-oh-tool-terminal/terminal-read:
+  en: 6a7491d2436e4404
+  zh: 772ff408ec0a67e3
+/tool-schema-catalog/orochi-network-oh-tool-terminal/terminal-send:
+  en: e24ca8735dd59adb
+  zh: 24f7140a0aed0968
+/tool-schema-catalog/orochi-network-oh-tool-terminal/terminal-signal:
+  en: 324b149c2e388475
+  zh: 96842b0676589756
+/tool-schema-catalog/orochi-network-oh-tool-goal:
+  en: 62daf329b84ecb23
+  zh: 62daf329b84ecb23
+/tool-schema-catalog/orochi-network-oh-tool-goal/create-goal:
+  en: 9ae877cdf8a641a3
+  zh: f83c3c09e80e4190
+/tool-schema-catalog/orochi-network-oh-tool-goal/get-goal:
+  en: 0b517f13dfde11fe
+  zh: b7ee7482e8ecde56
+/tool-schema-catalog/orochi-network-oh-tool-goal/update-goal:
+  en: ac0bd90f0c0435f4
+  zh: ab5e83127583409e
+/tool-schema-catalog/orochi-network-oh-schedule:
+  en: 07f207f58e8ac1f0
+  zh: 07f207f58e8ac1f0
+/tool-schema-catalog/orochi-network-oh-schedule/schedule-create:
+  en: 0a10b5db8919d316
+  zh: 175d680a29f59b63
+/tool-schema-catalog/orochi-network-oh-schedule/schedule-delete:
+  en: cff096695f06e298
+  zh: 3d0063a1e529377f
+/tool-schema-catalog/orochi-network-oh-schedule/schedule-list:
+  en: d8543c8503d0947e
+  zh: 4ef64dce09fbe6ff
+/tool-schema-catalog/orochi-network-oh-schedule/schedule-update:
+  en: a891fed8137531b2
+  zh: b2812a77494fb2c5
+/tool-schema-catalog/orochi-network-oh-tool-lsp:
+  en: 86378b77f295bf27
+  zh: 86378b77f295bf27
+/tool-schema-catalog/orochi-network-oh-tool-lsp/lsp:
+  en: 694cab4a87509d04
+  zh: 5ce12b6d16814a48
+/tool-schema-catalog/orochi-network-oh-tool-ralph:
+  en: edb59bfeac4c3125
+  zh: edb59bfeac4c3125
+/tool-schema-catalog/orochi-network-oh-tool-ralph/ralph:
+  en: ff57676b9858b463
+  zh: 0ebaedb2c9fdbdc4
+/tool-schema-catalog/orochi-network-oh-tool-skill:
+  en: b56d03f4676993b6
+  zh: b56d03f4676993b6
+/tool-schema-catalog/orochi-network-oh-tool-skill/skill:
+  en: fdad1baac436f723
+  zh: 43e2ed9d5701dd56
+/tool-schema-catalog/orochi-network-oh-tool-session-query:
+  en: c82832eb037d1032
+  zh: c82832eb037d1032
+/tool-schema-catalog/orochi-network-oh-tool-session-query/session-event-read:
+  en: 6687105065ac3a5f
+  zh: 48b2f4d38536e4c7
+/tool-schema-catalog/orochi-network-oh-tool-session-query/session-event-search:
+  en: 41251b4cbe9af70d
+  zh: 8855a5f32b4720e5
+/tool-schema-catalog/orochi-network-oh-tool-session-query/session-event-trace:
+  en: 14b5ec05fa8c0932
+  zh: 3c85d44c13cc42c5
+/tool-schema-catalog/orochi-network-oh-tool-session-query/session-search:
+  en: 8263202c97568fc3
+  zh: 92067337294c7a00
+/tool-schema-catalog/orochi-network-oh-tool-session-query/session-trace:
+  en: 1c0b9f4372540a05
+  zh: 4771a4e707f2e88d
+/tool-schema-catalog/orochi-network-oh-tool-subagent:
+  en: f3165ededa4037bb
+  zh: f3165ededa4037bb
+/tool-schema-catalog/orochi-network-oh-tool-subagent/list-subagent-models:
+  en: c89084b31ffccbce
+  zh: d7b3b7000f2d2be9
+/tool-schema-catalog/orochi-network-oh-tool-subagent/subagent:
+  en: b2d258bd89f71e04
+  zh: 421e9cca114fbec0
+/tool-schema-catalog/orochi-network-oh-tool-subagent-control:
+  en: 6c193daf115cfe40
+  zh: 6c193daf115cfe40
+/tool-schema-catalog/orochi-network-oh-tool-subagent-control/interrupt-agent:
+  en: 0cec3f2520050839
+  zh: 06735f086cea84f1
+/tool-schema-catalog/orochi-network-oh-tool-subagent-control/list-agents:
+  en: ae22e8543d123c39
+  zh: 4943a5c5980fc2d3
+/tool-schema-catalog/orochi-network-oh-tool-subagent-control/send-message:
+  en: 23d94f2313aa4442
+  zh: d95237328f15bbaf
+/tool-schema-catalog/orochi-network-oh-tool-jobs:
+  en: 12e9e3c85088c52e
+  zh: 12e9e3c85088c52e
+/tool-schema-catalog/orochi-network-oh-tool-jobs/job-kill:
+  en: 14294cc1988ae768
+  zh: 80a9152bdc02723f
+/tool-schema-catalog/orochi-network-oh-tool-jobs/job-list:
+  en: 0c37fb1fed979d72
+  zh: 5ea9d07f5a4a8a6c
+/tool-schema-catalog/orochi-network-oh-tool-jobs/job-output:
+  en: 28680d1cd5abf7a0
+  zh: 3ba56d81826889ff
+/tool-schema-catalog/orochi-network-oh-experimental-tool-agent-team:
+  en: bce7a8c4b22f7895
+  zh: bce7a8c4b22f7895
+/tool-schema-catalog/orochi-network-oh-experimental-tool-agent-team/interrupt-agent:
+  en: c3c7af05ceb9f8c9
+  zh: ec379e0b42110c6a
+/tool-schema-catalog/orochi-network-oh-experimental-tool-agent-team/list-agents:
+  en: f9457f033f75f00a
+  zh: a2d60ec44118c34c
+/tool-schema-catalog/orochi-network-oh-experimental-tool-agent-team/send-message:
+  en: e99455aec4656ff2
+  zh: a8f88ec35cfe38b8
+/tool-schema-catalog/orochi-network-oh-experimental-tool-agent-team/spawn-teammate:
+  en: 02d6cc746e234b99
+  zh: 49bc60ac098bca48
+/tool-schema-catalog/orochi-network-oh-experimental-tool-agent-team/team-task-create:
+  en: 91e84febe063c3bd
+  zh: 550555d0f44f603b
+/tool-schema-catalog/orochi-network-oh-experimental-tool-agent-team/team-task-get:
+  en: 1c6ae0aba0b8041d
+  zh: f8d634387b74121d
+/tool-schema-catalog/orochi-network-oh-experimental-tool-agent-team/team-task-list:
+  en: 2084d494aae8798a
+  zh: e4c136c91028a7b1
+/tool-schema-catalog/orochi-network-oh-experimental-tool-agent-team/team-task-update:
+  en: 2eac7360ba68b1bd
+  zh: b5d676bf288c245e
+/tool-schema-catalog/orochi-network-oh-experimental-tool-agent-team/wait-agent:
+  en: e70c952777ab3126
+  zh: 35b194faf94a57b9
+/tool-schema-catalog/orochi-network-oh-tool-todo:
+  en: b70742ff23618f2e
+  zh: b70742ff23618f2e
+/tool-schema-catalog/orochi-network-oh-tool-todo/todo-write:
+  en: d5f8e01b431184ad
+  zh: 5fa81023ba70acb1
+/tool-schema-catalog/orochi-network-oh-tool-workflow:
+  en: 8f02fa9db66e0774
+  zh: 8f02fa9db66e0774
+/tool-schema-catalog/orochi-network-oh-tool-workflow/workflow:
+  en: 39180d18bea5faad
+  zh: 7a0e2664ed6d522a
+/tool-schema-catalog/orochi-network-oh-tool-workspace-dependencies:
+  en: b23dbc265520777c
+  zh: b23dbc265520777c
+/tool-schema-catalog/orochi-network-oh-tool-workspace-dependencies/load-workspace-dependencies:
+  en: 054813d44c8f4f0e
+  zh: 5ba8f508c0dac681
+/tool-schema-catalog/orochi-network-oh-tool-web:
+  en: 2127ab6b3b8481f2
+  zh: 2127ab6b3b8481f2
+/tool-schema-catalog/orochi-network-oh-tool-web/web-fetch:
+  en: 8673f203aea9bdf2
+  zh: 4e17783ffdf34c83
+/tool-schema-catalog/orochi-network-oh-tool-web/web-search:
+  en: cc1ad38bf0006710
+  zh: 324eacb827a09e93

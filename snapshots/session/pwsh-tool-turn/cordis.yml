@@ -1,0 +1,77 @@
+# Minimal live counterpart for the pwsh-tool-turn snapshot composition.
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  config:
+    models:
+      - id: deepseek-v4-pro
+
+- id: subprocess
+  name: '@orochi-network/oh-subprocess-local'
+
+- id: bash-sandbox
+  name: '@orochi-network/oh-bash-sandbox'
+  disabled: true
+
+- id: pwsh-sandbox
+  name: '@orochi-network/oh-pwsh-sandbox'
+  disabled: false
+
+- id: shell-env
+  name: '@orochi-network/oh-shell-env'
+
+- id: agent-default-model
+  name: '@orochi-network/oh-agent-default-model'
+  config:
+    provider: orochi-official
+    model: deepseek-v4-pro
+
+- id: session-persistence-jsonl
+  name: '@orochi-network/oh-session-persistence-jsonl'
+  config:
+    root: !!js ohHomePath('sessions')
+    compression: !!js 'process.env.OH_SNAPSHOT === undefined ? ''zstd'' : ''none'''
+
+- id: agent-instructions
+  name: '@orochi-network/oh-agent-instructions'
+  disabled: true
+
+- id: system-prompt
+  name: '@orochi-network/oh-system-prompt'
+  config:
+    personaPrefix: You are a concise snapshot agent working in {{cwd}}.
+
+- id: goal
+  name: '@orochi-network/oh-goal'
+  disabled: true
+
+- id: goal-round-driver
+  name: '@orochi-network/oh-goal-round-driver'
+  disabled: true
+
+- id: command-goal
+  name: '@orochi-network/oh-command-goal'
+  disabled: true
+
+- id: tool-goal
+  name: '@orochi-network/oh-tool-goal'
+  disabled: true
+
+- id: skill
+  name: '@orochi-network/oh-skill'
+  disabled: true
+
+- id: skill-filesystem
+  name: '@orochi-network/oh-skill-filesystem'
+  disabled: true
+
+- id: tool-skill
+  name: '@orochi-network/oh-tool-skill'
+  disabled: true
+
+- id: tool-bash
+  name: '@orochi-network/oh-tool-bash'
+  disabled: true
+
+- id: tool-pwsh
+  name: '@orochi-network/oh-tool-pwsh'
+  disabled: false

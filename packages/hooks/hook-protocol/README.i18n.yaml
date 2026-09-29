@@ -1,0 +1,61 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/hooks/hook-protocol/README.md
+/:
+  en: 7cfe3761eedff848
+  zh: 80b0bed5743d0924
+/orochi-network-oh-hook-protocol:
+  en: 62a596536bda2bc8
+  zh: c1001d4e608877e6
+/orochi-network-oh-hook-protocol/summary:
+  en: bbb1b9a78b517e51
+  zh: bcde205481bb10d3
+/orochi-network-oh-hook-protocol/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-hook-protocol/use-this-package:
+  en: fd4e43fae7725b5f
+  zh: b65ca0948e2cfc22
+/orochi-network-oh-hook-protocol/use-this-package/when-to-choose-it:
+  en: 4b2a5c1676eb1e44
+  zh: cdb34a00c5b5489f
+/orochi-network-oh-hook-protocol/use-this-package/what-a-hook-can-do:
+  en: 043f54b3a5b518a7
+  zh: a4115083a9b1cef1
+/orochi-network-oh-hook-protocol/use-this-package/what-you-see-when-hooks-run:
+  en: ba2d6ed1db063f53
+  zh: ab1b8d72dccd2ff1
+/orochi-network-oh-hook-protocol/understand-the-implementation:
+  en: 08b3960150e9c5e2
+  zh: 6bb2f236d697de01
+/orochi-network-oh-hook-protocol/understand-the-implementation/processing-pipeline:
+  en: a09481f74bc136c9
+  zh: bd92b713cc289e60
+/orochi-network-oh-hook-protocol/understand-the-implementation/hook-session-events:
+  en: 016355973ca47f44
+  zh: 278e71b637572c8a
+/orochi-network-oh-hook-protocol/understand-the-implementation/design-philosophy:
+  en: a7fd8e528eec0bc9
+  zh: 33af252147f743e4
+/orochi-network-oh-hook-protocol/understand-the-implementation/source-map:
+  en: d613d9bd98d499fb
+  zh: afe2939d7df250ea
+/orochi-network-oh-hook-protocol/further-exploration:
+  en: 76aef0e7d41972e3
+  zh: 819d3aa9e9ea5062
+/orochi-network-oh-hook-protocol/model-experience:
+  en: 26d24e28977e7416
+  zh: d0d509cac450ec96
+/orochi-network-oh-hook-protocol/model-experience/kv-cache-effect:
+  en: e290ccc9b3c92c08
+  zh: cb3c8823f41e7afe
+/orochi-network-oh-hook-protocol/known-limitations-and-deferred-work:
+  en: ef7a0c2c7e159dd4
+  zh: 5dd9c1b202abae9d
+/orochi-network-oh-hook-protocol/known-limitations-and-deferred-work/dev-note:
+  en: ac1d08360a93382b
+  zh: 6c58749bae9a6e65
+/orochi-network-oh-hook-protocol/known-limitations-and-deferred-work/dev-note/future-run-level-halt:
+  en: bfb3db50de22c1d0
+  zh: 2a979359b0edbbe7

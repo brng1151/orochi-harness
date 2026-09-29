@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-08-18-model-selected-subagent-routes.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-08-18-model-selected-subagent-routes.md
+/agent-note-model-selected-subagent-routes:
+  en: 389d151c149337cd
+  zh: 13470f293e9ecad6
+/agent-note-model-selected-subagent-routes/problem:
+  en: 4598c174e90f78f1
+  zh: 510498832f4a1fd0
+/agent-note-model-selected-subagent-routes/decision:
+  en: 57d1bc07c25e4337
+  zh: 3efd980d75a66740
+/agent-note-model-selected-subagent-routes/alternatives-considered:
+  en: 6f3e3fdae694809a
+  zh: ef716439bb453c43
+/agent-note-model-selected-subagent-routes/consequences:
+  en: ff2e47e743248366
+  zh: 9fe8276ccdbd0432
+/agent-note-model-selected-subagent-routes/related-decisions:
+  en: 3574cb74952cadbc
+  zh: eae94f9ce90785d2

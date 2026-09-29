@@ -1,0 +1,31 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/llm/orochi-llm-api-extensions/README.md
+/:
+  en: 98a63b357c885303
+  zh: 91b802e6d21f8d4c
+/orochi-network-oh-orochi-llm-api-extensions:
+  en: d645f453c6a9a2cd
+  zh: 1b5f64d5bacb5887
+/orochi-network-oh-orochi-llm-api-extensions/summary:
+  en: 8f99fc88e20f072f
+  zh: 148f61ae80a6263b
+/orochi-network-oh-orochi-llm-api-extensions/table-of-contents:
+  en: 6b7f62c318c9aad6
+  zh: 5e22d58884e60c87
+/orochi-network-oh-orochi-llm-api-extensions/service:
+  en: 1b88b6922050fbbf
+  zh: beaec1c11c367a89
+/orochi-network-oh-orochi-llm-api-extensions/model-experience:
+  en: 9d7f6dd7f93aa127
+  zh: 5ba6a131a2306f04
+/orochi-network-oh-orochi-llm-api-extensions/model-experience/kv-cache-effect:
+  en: 83eb7f1e6ce80b45
+  zh: 516811171411ffca
+/orochi-network-oh-orochi-llm-api-extensions/known-limitations-and-deferred-work:
+  en: ee371670f0751ba1
+  zh: 592ac2d28b3d4bd5
+/orochi-network-oh-orochi-llm-api-extensions/known-limitations-and-deferred-work/dev-note:
+  en: 0718d089fcbe4223
+  zh: 5d6f73b7ecfe86ef

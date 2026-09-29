@@ -1,0 +1,29 @@
+{
+  "//": ["Dependency '@orochi-network/libreoffice-kit' resolves through an npm alias to the previously published '@deepseek-ai/libreoffice-kit' until the kit family (github.com/deepseek-harness/libreoffice-kit) is republished under @orochi-network; drop the 'npm:@deepseek-ai/libreoffice-kit@' alias then."],
+  "name": "@orochi-network/oh-desktop-host",
+  "description": "Private Node-mode host process for the Electron desktop application",
+  "version": "0.1.7-rc.2",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib/index.js"
+  ],
+  "dependencies": {
+    "@orochi-network/libreoffice-kit": "npm:@deepseek-ai/libreoffice-kit@0.1.1",
+    "@orochi-network/cordis": "workspace:~",
+    "@orochi-network/oh": "workspace:*",
+    "@orochi-network/oh-agent": "workspace:*",
+    "@orochi-network/oh-app-boot": "workspace:*",
+    "@orochi-network/oh-client-connection": "workspace:*",
+    "@orochi-network/oh-host-webserver": "workspace:*",
+    "@orochi-network/oh-home-paths": "workspace:*",
+    "@orochi-network/oh-jobs": "workspace:*",
+    "@orochi-network/oh-schedule": "workspace:*",
+    "@orochi-network/oh-tool-workspace-dependencies": "workspace:*",
+    "@orochi-network/oh-skill-office": "workspace:*",
+    "@orochi-network/oh-orochi-account": "workspace:*",
+    "@orochi-network/oh-workspace": "workspace:*"
+  }
+}

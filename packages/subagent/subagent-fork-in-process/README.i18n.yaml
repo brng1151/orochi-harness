@@ -1,0 +1,82 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/subagent/subagent-fork-in-process/README.md
+/:
+  en: a4a75d423f70c4de
+  zh: a60816274b877a80
+/orochi-network-oh-subagent-fork-in-process:
+  en: 36bc1568d9c5983b
+  zh: 2094c0d0024aaeb0
+/orochi-network-oh-subagent-fork-in-process/summary:
+  en: 5aa3de4df8e629dd
+  zh: 133397a86d4ebb5b
+/orochi-network-oh-subagent-fork-in-process/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-subagent-fork-in-process/use-this-package:
+  en: 9c4e636c51fe46e5
+  zh: 8309cf0b4a3bac9b
+/orochi-network-oh-subagent-fork-in-process/use-this-package/when-to-choose-it:
+  en: 05090df7cc302c6a
+  zh: bd988019ba062e0a
+/orochi-network-oh-subagent-fork-in-process/use-this-package/seed-boundary:
+  en: f4dfd1ce652f019b
+  zh: 9bb75239491f07cc
+/orochi-network-oh-subagent-fork-in-process/use-this-package/minimal-configuration:
+  en: cbfe5845eb0b2ae8
+  zh: 5aa50e756ab3685b
+/orochi-network-oh-subagent-fork-in-process/use-this-package/what-a-fork-delegation-does:
+  en: 221626f65c2faf04
+  zh: dfa8200b5349340f
+/orochi-network-oh-subagent-fork-in-process/understand-the-implementation:
+  en: 6a0fe4b9cc780aaa
+  zh: 50cd69ceb8296827
+/orochi-network-oh-subagent-fork-in-process/understand-the-implementation/design-concept:
+  en: 3917de9c152828e0
+  zh: 4c48bb580510ef0e
+/orochi-network-oh-subagent-fork-in-process/understand-the-implementation/source-map:
+  en: b629a79a8b4de729
+  zh: 3b3019101cf70c54
+/orochi-network-oh-subagent-fork-in-process/understand-the-implementation/run-flow:
+  en: 59b82d0f46c21967
+  zh: aacc5455eaabc8f7
+/orochi-network-oh-subagent-fork-in-process/understand-the-implementation/lifecycle-binding:
+  en: 0f5dc4a99ce9ee44
+  zh: 2459f26c3dff73c6
+/orochi-network-oh-subagent-fork-in-process/further-exploration:
+  en: 4b151b132287a3a6
+  zh: b3ac06cc4c59a4ec
+/orochi-network-oh-subagent-fork-in-process/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/orochi-network-oh-subagent-fork-in-process/model-experience/child-agent-history-and-envelope:
+  en: 91a5bd22001586e9
+  zh: 456e5bf20881a70d
+/orochi-network-oh-subagent-fork-in-process/model-experience/child-agent-history-and-envelope/what-the-model-sees:
+  en: fe88f3e65bb01009
+  zh: 64e05acfe80e81f3
+/orochi-network-oh-subagent-fork-in-process/model-experience/child-agent-history-and-envelope/token-effect:
+  en: db9ae2edb5ee28ce
+  zh: 5a342ffa3e7a7b40
+/orochi-network-oh-subagent-fork-in-process/model-experience/child-agent-history-and-envelope/kv-cache-effect:
+  en: b2c79f4004fa5f6d
+  zh: bf3a2cb26d608294
+/orochi-network-oh-subagent-fork-in-process/model-experience/parent-tool-result-indirectly:
+  en: 75d061c2151624a7
+  zh: 71e58e020b60ff90
+/orochi-network-oh-subagent-fork-in-process/model-experience/parent-tool-result-indirectly/what-the-model-sees:
+  en: 36c3aabe49deeb17
+  zh: fd14b6c04f5b522d
+/orochi-network-oh-subagent-fork-in-process/model-experience/parent-tool-result-indirectly/token-effect:
+  en: 8c81bab3c5d6a38a
+  zh: 44c798432a4bfdfb
+/orochi-network-oh-subagent-fork-in-process/model-experience/parent-tool-result-indirectly/kv-cache-effect:
+  en: f5d5f97a153f7c70
+  zh: 3d6bc05b9eadfbc2
+/orochi-network-oh-subagent-fork-in-process/known-limitations-and-deferred-work:
+  en: d99411c401338e3e
+  zh: 799d67c89f6329b4
+/orochi-network-oh-subagent-fork-in-process/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 3bb0c20c93f16f98

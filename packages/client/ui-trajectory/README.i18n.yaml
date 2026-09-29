@@ -1,0 +1,49 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/client/ui-trajectory/README.md
+/:
+  en: 3c1ec6dc9077c5e9
+  zh: 9afbcadd6a9a2424
+/orochi-network-oh-client-ui-trajectory:
+  en: 1424e1bdcf919b94
+  zh: 6d5dcec70f96f7e6
+/orochi-network-oh-client-ui-trajectory/summary:
+  en: dc75677138d05dc6
+  zh: 6e11553a5caf4716
+/orochi-network-oh-client-ui-trajectory/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/orochi-network-oh-client-ui-trajectory/use-this-package:
+  en: 4bd17d05b8385675
+  zh: 5174e27f754f2a03
+/orochi-network-oh-client-ui-trajectory/use-this-package/inspecting-records:
+  en: 17e52cf99ba2bff2
+  zh: 7ac2e078ed10a4d8
+/orochi-network-oh-client-ui-trajectory/use-this-package/the-timing-overview:
+  en: 0331f90cbd904862
+  zh: bdc2d4ed1c3c1f5e
+/orochi-network-oh-client-ui-trajectory/understand-the-implementation:
+  en: 925abc8e4b092cb3
+  zh: ebe85c5acdbea3b1
+/orochi-network-oh-client-ui-trajectory/understand-the-implementation/virtual-rows:
+  en: c85e342bc7eee4e6
+  zh: 9feab66ef1755b94
+/orochi-network-oh-client-ui-trajectory/understand-the-implementation/layout:
+  en: b9693a54b800d439
+  zh: cd9b84382ae0b181
+/orochi-network-oh-client-ui-trajectory/further-exploration:
+  en: 7296fae39c912228
+  zh: a6aab9af7fb3f9d4
+/orochi-network-oh-client-ui-trajectory/model-experience:
+  en: 3120df665299c634
+  zh: 1d9f365d091d0d2a
+/orochi-network-oh-client-ui-trajectory/model-experience/kv-cache-effect:
+  en: ca75c51c89c2c9b0
+  zh: de54f3467ef3b9be
+/orochi-network-oh-client-ui-trajectory/known-limitations-and-deferred-work:
+  en: d7da620f56eb3c65
+  zh: fb030b68322b94cd
+/orochi-network-oh-client-ui-trajectory/known-limitations-and-deferred-work/dev-note:
+  en: f1893e3a6c69cc58
+  zh: b6e0dfe20567c35f

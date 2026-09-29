@@ -1,0 +1,29 @@
+# Workspace-context snapshot patch: keep project-root and user-global
+# discovery inside the scenario's temporary cwd.
+- id: agent-default-model
+  name: '@orochi-network/oh-agent-default-model'
+  config:
+    provider: orochi-official
+    model: deepseek-v4-pro
+
+- id: session-persistence-jsonl
+  name: '@orochi-network/oh-session-persistence-jsonl'
+  config:
+    root: !!js ohHomePath('sessions')
+    compression: !!js 'process.env.OH_SNAPSHOT === undefined ? ''zstd'' : ''none'''
+
+- id: agent-instructions
+  name: '@orochi-network/oh-agent-instructions'
+  config:
+    maxBytes: 65536
+    ohHome: !!js process.cwd() + '/.oh'
+    projectRootMarkers:
+      - .oh-project
+
+- id: system-prompt
+  name: '@orochi-network/oh-system-prompt'
+  config:
+    personaPrefix: |
+      You are a coding assistant powered by the {{model}} model. Your working directory is {{cwd}}.
+
+      Verify your work by running the code or tests. Keep answers brief and factual.

@@ -1,0 +1,274 @@
+body {
+  --oh-linear-gradient-think: linear-gradient(180deg, #fff 20.19%, rgba(255, 255, 255, 0) 100%);
+  --oh-linear-think-select: linear-gradient(180deg, #f5f6f7 20.19%, rgba(245, 246, 247, 0) 100%);
+  /* 阴影 */
+  --oh-shadow-lv1: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  --oh-shadow-lv1-blur: 0 4px 12px 0 rgba(0, 0, 0, 0.02);
+  --oh-shadow-lv2: 0 4px 12px 0 rgba(0, 0, 0, 0.02), 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+  --oh-shadow-lv3:
+    0 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.02), 0 12px 32px 0 rgba(0, 0, 0, 0.08);
+  /* Elevation：浮层/面板/面型按钮的描边+投影三件套。0.5px 发丝描边画在
+     box-shadow 里（组件配 border: 0，不占布局），叠两层极淡柔光；深色主题下
+     柔光几乎不可见，由描边承担分离。描边颜色经 --oh-elevation-stroke-color
+     间接，组件可重绑（菜单面重绑最浅的 l1、输入框重绑 l2，输入框的
+     workspace-trigger 态置 transparent 只保留柔光）。soft 供输入框：更大
+     模糊、更低透明度的柔光。默认色只声明在 body 上，让表面的重绑沿继承
+     传给真正消费投影的后代。 */
+  --oh-elevation-stroke-color: var(--oh-alias-border-l4);
+  /* Blocking masks dim the page; menu backgrounds retain their blur. */
+  --oh-mask-blur: none;
+  --oh-menu-backdrop-filter: blur(40px) saturate(150%);
+}
+
+body[data-ds-dark-theme] [data-menu-material] {
+  --oh-elevation-stroke-color: var(--oh-alias-border-l3);
+}
+
+/* 派生 elevation 值逐元素声明而非从 body 继承：继承传下来的是在 body 上就
+   已替换完 var() 的值，组件重绑 --oh-elevation-stroke-color 将无法进入
+   var(--oh-elevation-*)；逐元素声明让每个元素按自己看到的描边色重新替换
+   （同 scrollbar.css 对 --oh-scrollbar-thumb 的处理）。 */
+body,
+body * {
+  --oh-elevation-stroke: 0 0 0 0.5px var(--oh-elevation-stroke-color);
+  --oh-elevation-panel:
+    var(--oh-elevation-stroke), 0 3px 8px 0 rgba(0, 0, 0, 0.03), 0 0 16px 0 rgba(0, 0, 0, 0.02);
+  --oh-elevation-prominent:
+    var(--oh-elevation-stroke), 0 3px 8px 0 rgba(0, 0, 0, 0.04), 0 0 20px 0 rgba(0, 0, 0, 0.05);
+  --oh-elevation-soft:
+    var(--oh-elevation-stroke), 0 4px 16px 0 rgba(0, 0, 0, 0.03), 0 0 24px 0 rgba(0, 0, 0, 0.03);
+}
+
+body[data-ds-dark-theme] {
+  --oh-linear-gradient-think: linear-gradient(180deg, #161413 20.19%, rgba(22, 20, 19, 0) 100%);
+  --oh-linear-think-select: linear-gradient(180deg, #252321 20.19%, rgba(37, 35, 33, 0) 100%);
+}
+
+/* ---------- 字体 ---------- */
+/* 由 @orochi-figma-plugin/custom-variable-name 插件导出 */
+/* Markdown 阶梯整体按 0.875（正文 16 → 14）等比缩放，四舍五入到整数像素；
+   重新从 Figma 导出时需要保留这一缩放。 */
+/* 正文字号调节：--oh-content-font-size 由主题 bootstrap 与 ThemePresenter
+   写在 body 上（整数 px，12–17，默认 14）。标题与正文变体按同一像素增量
+   （--oh-content-font-delta）随动，保持层级。低一档文本（think、工具/bash
+   行的标题与摘要、markdown 表格、流内次级说明等）统一读
+   --oh-content-font-size-secondary：设置 ≤14 时为设置值 −1，>14 时为
+   设置值 −2（12→11、13→12、14→13、15→13、16→14、17→15）。式中
+   max(13px,·) 的作用是让低设置取 −1 而非 −2，不是结果下限——12 设置下
+   层级触底 11px。small、code 属于密集次级文本，保持固定。 */
+body {
+  --oh-content-font-delta: calc(var(--oh-content-font-size, 14px) - 14px);
+  --oh-content-font-size-secondary: min(calc(var(--oh-content-font-size, 14px) - 1px), max(13px, calc(var(--oh-content-font-size, 14px) - 2px)));
+  --oh-content-font-delta-secondary: calc(var(--oh-content-font-size-secondary) - 13px);
+
+  --oh-font-markdown-h1: 700 calc(21px + var(--oh-content-font-delta)) / calc(30px + var(--oh-content-font-delta)) var(--oh-font-family);
+  --oh-font-markdown-h1-font-family: var(--oh-font-family);
+  --oh-font-markdown-h1-font-weight: 700;
+  --oh-font-markdown-h1-line-height: calc(30px + var(--oh-content-font-delta));
+  --oh-font-markdown-h1-font-size: calc(21px + var(--oh-content-font-delta));
+  --oh-font-markdown-h1-font-style: normal;
+
+  --oh-font-markdown-h2: 700 calc(19px + var(--oh-content-font-delta)) / calc(28px + var(--oh-content-font-delta)) var(--oh-font-family);
+  --oh-font-markdown-h2-font-family: var(--oh-font-family);
+  --oh-font-markdown-h2-font-weight: 700;
+  --oh-font-markdown-h2-line-height: calc(28px + var(--oh-content-font-delta));
+  --oh-font-markdown-h2-font-size: calc(19px + var(--oh-content-font-delta));
+  --oh-font-markdown-h2-font-style: normal;
+
+  --oh-font-markdown-h3: 700 calc(18px + var(--oh-content-font-delta)) / calc(26px + var(--oh-content-font-delta)) var(--oh-font-family);
+  --oh-font-markdown-h3-font-family: var(--oh-font-family);
+  --oh-font-markdown-h3-font-weight: 700;
+  --oh-font-markdown-h3-line-height: calc(26px + var(--oh-content-font-delta));
+  --oh-font-markdown-h3-font-size: calc(18px + var(--oh-content-font-delta));
+  --oh-font-markdown-h3-font-style: normal;
+
+  --oh-font-markdown-h4: 600 var(--oh-content-font-size, 14px) / calc(24px + var(--oh-content-font-delta)) var(--oh-font-family);
+  --oh-font-markdown-h4-font-family: var(--oh-font-family);
+  --oh-font-markdown-h4-font-weight: 600;
+  --oh-font-markdown-h4-line-height: calc(24px + var(--oh-content-font-delta));
+  --oh-font-markdown-h4-font-size: var(--oh-content-font-size, 14px);
+  --oh-font-markdown-h4-font-style: normal;
+
+  --oh-font-markdown-base: var(--oh-content-font-size, 14px) / calc(24px + var(--oh-content-font-delta)) var(--oh-font-family);
+  --oh-font-markdown-base-font-family: var(--oh-font-family);
+  --oh-font-markdown-base-font-weight: 400;
+  --oh-font-markdown-base-line-height: calc(24px + var(--oh-content-font-delta));
+  --oh-font-markdown-base-font-size: var(--oh-content-font-size, 14px);
+  --oh-font-markdown-base-font-style: normal;
+
+  --oh-font-markdown-base-strong: 600 var(--oh-content-font-size, 14px) / calc(24px + var(--oh-content-font-delta)) var(--oh-font-family);
+  --oh-font-markdown-base-strong-font-family: var(--oh-font-family);
+  --oh-font-markdown-base-strong-font-weight: 600;
+  --oh-font-markdown-base-strong-line-height: calc(24px + var(--oh-content-font-delta));
+  --oh-font-markdown-base-strong-font-size: var(--oh-content-font-size, 14px);
+  --oh-font-markdown-base-strong-font-style: normal;
+
+  --oh-font-markdown-base-italic: italic var(--oh-content-font-size, 14px) / calc(24px + var(--oh-content-font-delta)) var(--oh-font-family);
+  --oh-font-markdown-base-italic-font-family: var(--oh-font-family);
+  --oh-font-markdown-base-italic-font-weight: 400;
+  --oh-font-markdown-base-italic-line-height: calc(24px + var(--oh-content-font-delta));
+  --oh-font-markdown-base-italic-font-size: var(--oh-content-font-size, 14px);
+  --oh-font-markdown-base-italic-font-style: italic;
+
+  --oh-font-markdown-base-strong-italic: italic 600 var(--oh-content-font-size, 14px) / calc(24px + var(--oh-content-font-delta)) var(--oh-font-family);
+  --oh-font-markdown-base-strong-italic-font-family: var(--oh-font-family);
+  --oh-font-markdown-base-strong-italic-font-weight: 600;
+  --oh-font-markdown-base-strong-italic-line-height: calc(24px + var(--oh-content-font-delta));
+  --oh-font-markdown-base-strong-italic-font-size: var(--oh-content-font-size, 14px);
+  --oh-font-markdown-base-strong-italic-font-style: italic;
+
+  --oh-font-markdown-table: var(--oh-content-font-size-secondary, 13px)/calc(22px + var(--oh-content-font-delta-secondary, 0px)) var(--oh-font-family);
+  --oh-font-markdown-table-font-family: var(--oh-font-family);
+  --oh-font-markdown-table-font-weight: 400;
+  --oh-font-markdown-table-line-height: calc(22px + var(--oh-content-font-delta-secondary, 0px));
+  --oh-font-markdown-table-font-size: var(--oh-content-font-size-secondary, 13px);
+  --oh-font-markdown-table-font-style: normal;
+
+  --oh-font-markdown-table-head: 500 var(--oh-content-font-size-secondary, 13px)/calc(22px + var(--oh-content-font-delta-secondary, 0px)) var(--oh-font-family);
+  --oh-font-markdown-table-head-font-family: var(--oh-font-family);
+  --oh-font-markdown-table-head-font-weight: 500;
+  --oh-font-markdown-table-head-line-height: calc(22px + var(--oh-content-font-delta-secondary, 0px));
+  --oh-font-markdown-table-head-font-size: var(--oh-content-font-size-secondary, 13px);
+  --oh-font-markdown-table-head-font-style: normal;
+
+  --oh-font-markdown-small: 12px/20px var(--oh-font-family);
+  --oh-font-markdown-small-font-family: var(--oh-font-family);
+  --oh-font-markdown-small-font-weight: 400;
+  --oh-font-markdown-small-line-height: 20px;
+  --oh-font-markdown-small-font-size: 12px;
+  --oh-font-markdown-small-font-style: normal;
+
+  --oh-font-markdown-small-strong: 600 12px/20px var(--oh-font-family);
+  --oh-font-markdown-small-strong-font-family: var(--oh-font-family);
+  --oh-font-markdown-small-strong-font-weight: 600;
+  --oh-font-markdown-small-strong-line-height: 20px;
+  --oh-font-markdown-small-strong-font-size: 12px;
+  --oh-font-markdown-small-strong-font-style: normal;
+
+  --oh-font-markdown-small-italic: italic 12px/20px var(--oh-font-family);
+  --oh-font-markdown-small-italic-font-family: var(--oh-font-family);
+  --oh-font-markdown-small-italic-font-weight: 400;
+  --oh-font-markdown-small-italic-line-height: 20px;
+  --oh-font-markdown-small-italic-font-size: 12px;
+  --oh-font-markdown-small-italic-font-style: italic;
+
+  --oh-font-markdown-small-strong-italic: italic 600 12px/20px var(--oh-font-family);
+  --oh-font-markdown-small-strong-italic-font-family: var(--oh-font-family);
+  --oh-font-markdown-small-strong-italic-font-weight: 600;
+  --oh-font-markdown-small-strong-italic-line-height: 20px;
+  --oh-font-markdown-small-strong-italic-font-size: 12px;
+  --oh-font-markdown-small-strong-italic-font-style: italic;
+
+  --oh-font-markdown-code: 12px/19px var(--ds-font-family-code);
+  --oh-font-markdown-code-font-family: var(--ds-font-family-code);
+  --oh-font-markdown-code-font-weight: 400;
+  --oh-font-markdown-code-line-height: 19px;
+  --oh-font-markdown-code-font-size: 12px;
+  --oh-font-markdown-code-font-style: normal;
+
+  --oh-font-markdown-code-block: 11px/19px var(--ds-font-family-code);
+  --oh-font-markdown-code-block-font-family: var(--ds-font-family-code);
+  --oh-font-markdown-code-block-font-weight: 400;
+  --oh-font-markdown-code-block-line-height: 19px;
+  --oh-font-markdown-code-block-font-size: 11px;
+  --oh-font-markdown-code-block-font-style: normal;
+
+  /* 手工补充（非插件导出）：tool row 展开卡片内的小号 code 字体。 */
+  --oh-font-markdown-code-block-small: 11px/16px var(--ds-font-family-code);
+  --oh-font-markdown-code-block-small-font-family: var(--ds-font-family-code);
+  --oh-font-markdown-code-block-small-font-weight: 400;
+  --oh-font-markdown-code-block-small-line-height: 16px;
+  --oh-font-markdown-code-block-small-font-size: 11px;
+  --oh-font-markdown-code-block-small-font-style: normal;
+
+  --oh-font-xl-24: 600 24px/32px var(--oh-font-family);
+  --oh-font-xl-24-font-family: var(--oh-font-family);
+  --oh-font-xl-24-font-weight: 600;
+  --oh-font-xl-24-line-height: 32px;
+  --oh-font-xl-24-font-size: 24px;
+  --oh-font-xl-24-font-style: normal;
+
+  --oh-font-l-20: 500 20px/28px var(--oh-font-family);
+  --oh-font-l-20-font-family: var(--oh-font-family);
+  --oh-font-l-20-font-weight: 500;
+  --oh-font-l-20-line-height: 28px;
+  --oh-font-l-20-font-size: 20px;
+  --oh-font-l-20-font-style: normal;
+
+  --oh-font-m-18: 500 16px/28px var(--oh-font-family);
+  --oh-font-m-18-font-family: var(--oh-font-family);
+  --oh-font-m-18-font-weight: 500;
+  --oh-font-m-18-line-height: 28px;
+  --oh-font-m-18-font-size: 16px;
+  --oh-font-m-18-font-style: normal;
+
+  --oh-font-base-16: 16px/24px var(--oh-font-family);
+  --oh-font-base-16-font-family: var(--oh-font-family);
+  --oh-font-base-16-font-weight: 400;
+  --oh-font-base-16-line-height: 24px;
+  --oh-font-base-16-font-size: 16px;
+  --oh-font-base-16-font-style: normal;
+
+  --oh-font-base-strong-16: 500 16px/24px var(--oh-font-family);
+  --oh-font-base-strong-16-font-family: var(--oh-font-family);
+  --oh-font-base-strong-16-font-weight: 500;
+  --oh-font-base-strong-16-line-height: 24px;
+  --oh-font-base-strong-16-font-size: 16px;
+  --oh-font-base-strong-16-font-style: normal;
+
+  --oh-font-s-14: 14px/22px var(--oh-font-family);
+  --oh-font-s-14-font-family: var(--oh-font-family);
+  --oh-font-s-14-font-weight: 400;
+  --oh-font-s-14-line-height: 22px;
+  --oh-font-s-14-font-size: 14px;
+  --oh-font-s-14-font-style: normal;
+
+  --oh-font-s-strong-14: 500 14px/22px var(--oh-font-family);
+  --oh-font-s-strong-14-font-family: var(--oh-font-family);
+  --oh-font-s-strong-14-font-weight: 500;
+  --oh-font-s-strong-14-line-height: 22px;
+  --oh-font-s-strong-14-font-size: 14px;
+  --oh-font-s-strong-14-font-style: normal;
+
+  --oh-font-xs-13: 13px/20px var(--oh-font-family);
+  --oh-font-xs-13-font-family: var(--oh-font-family);
+  --oh-font-xs-13-font-weight: 400;
+  --oh-font-xs-13-line-height: 20px;
+  --oh-font-xs-13-font-size: 13px;
+  --oh-font-xs-13-font-style: normal;
+
+  --oh-font-xs-strong-13: 500 13px/20px var(--oh-font-family);
+  --oh-font-xs-strong-13-font-family: var(--oh-font-family);
+  --oh-font-xs-strong-13-font-weight: 500;
+  --oh-font-xs-strong-13-line-height: 20px;
+  --oh-font-xs-strong-13-font-size: 13px;
+  --oh-font-xs-strong-13-font-style: normal;
+
+  --oh-font-xxs-12: 12px/18px var(--oh-font-family);
+  --oh-font-xxs-12-font-family: var(--oh-font-family);
+  --oh-font-xxs-12-font-weight: 400;
+  --oh-font-xxs-12-line-height: 18px;
+  --oh-font-xxs-12-font-size: 12px;
+  --oh-font-xxs-12-font-style: normal;
+
+  --oh-font-xxs-strong-12: 500 12px/18px var(--oh-font-family);
+  --oh-font-xxs-strong-12-font-family: var(--oh-font-family);
+  --oh-font-xxs-strong-12-font-weight: 500;
+  --oh-font-xxs-strong-12-line-height: 18px;
+  --oh-font-xxs-strong-12-font-size: 12px;
+  --oh-font-xxs-strong-12-font-style: normal;
+
+  --oh-font-xxxs-11: 11px/14px var(--oh-font-family);
+  --oh-font-xxxs-11-font-family: var(--oh-font-family);
+  --oh-font-xxxs-11-font-weight: 400;
+  --oh-font-xxxs-11-line-height: 14px;
+  --oh-font-xxxs-11-font-size: 11px;
+  --oh-font-xxxs-11-font-style: normal;
+
+  --oh-font-xxxs-strong-11: 500 11px/14px var(--oh-font-family);
+  --oh-font-xxxs-strong-11-font-family: var(--oh-font-family);
+  --oh-font-xxxs-strong-11-font-weight: 500;
+  --oh-font-xxxs-strong-11-line-height: 14px;
+  --oh-font-xxxs-strong-11-font-size: 11px;
+  --oh-font-xxxs-strong-11-font-style: normal;
+}

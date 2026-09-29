@@ -1,0 +1,46 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/util/brand/README.md
+/:
+  en: 9c53a07c1a04a19a
+  zh: 1fd4666fbc6c39a8
+/orochi-network-oh-brand:
+  en: 3a0980df705008cd
+  zh: 6a2864ddc8660040
+/orochi-network-oh-brand/summary:
+  en: 26f7c87d53e8e65f
+  zh: 41cfe4be95dc136e
+/orochi-network-oh-brand/table-of-contents:
+  en: c992e0cd2e7042d6
+  zh: 2e8cd826664632d1
+/orochi-network-oh-brand/use-this-package:
+  en: abdf7a28d3af06f0
+  zh: 8d68807326b03898
+/orochi-network-oh-brand/use-this-package/branding-a-string:
+  en: 49b137dc146f5c0a
+  zh: 7fe82acb5ba633e8
+/orochi-network-oh-brand/use-this-package/branding-a-number:
+  en: fd9617ca2804f47b
+  zh: cd3c0e6bda613509
+/orochi-network-oh-brand/use-this-package/when-to-brand:
+  en: 9df8c90b641d5a6a
+  zh: b33cbf4824586389
+/orochi-network-oh-brand/understand-the-implementation:
+  en: 98a62299f46d5050
+  zh: 042d3c626e1fbe34
+/orochi-network-oh-brand/understand-the-implementation/source-map:
+  en: 4adda24125bd07aa
+  zh: bfcc7be63f134658
+/orochi-network-oh-brand/understand-the-implementation/how-values-stay-portable:
+  en: 6a126aa2e31591c0
+  zh: c85e395cdb0bbb0e
+/orochi-network-oh-brand/understand-the-implementation/why-it-stays-dependency-free:
+  en: ec65f907c0b7036c
+  zh: 6558da9894758d8f
+/orochi-network-oh-brand/further-exploration:
+  en: d859bf3138cb8a18
+  zh: 65822ccf74fb4086
+/orochi-network-oh-brand/dev-note:
+  en: 5de1d6304e00c58f
+  zh: 8d8225361cfa29e5

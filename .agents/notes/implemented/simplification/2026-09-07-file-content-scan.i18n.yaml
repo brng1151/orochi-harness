@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-09-07-file-content-scan.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/simplification/2026-09-07-file-content-scan.md
+/agent-note-scan-file-content-without-per-array-callbacks:
+  en: 7209b0b480e785b2
+  zh: 92efc3cf167f7100
+/agent-note-scan-file-content-without-per-array-callbacks/problem:
+  en: 8c72fbd6b516e213
+  zh: e8ad568b6dddecac
+/agent-note-scan-file-content-without-per-array-callbacks/decision:
+  en: 2e56e3b14e87c75e
+  zh: 61e4a213003c4e40
+/agent-note-scan-file-content-without-per-array-callbacks/measurement-evidence:
+  en: ad23fa4ee386f3cf
+  zh: 41e54e28d26b3d02
+/agent-note-scan-file-content-without-per-array-callbacks/alternatives-considered:
+  en: 0128940c217dd77c
+  zh: 9394e713dac9675d
+/agent-note-scan-file-content-without-per-array-callbacks/consequences:
+  en: ad4cf66439c28211
+  zh: 3188c53a323e3f66

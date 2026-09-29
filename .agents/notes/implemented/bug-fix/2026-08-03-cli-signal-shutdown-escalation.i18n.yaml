@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-08-03-cli-signal-shutdown-escalation.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/bug-fix/2026-08-03-cli-signal-shutdown-escalation.md
+/agent-note-bounded-escalating-signal-shutdown-for-web-and-headless:
+  en: ba744ca0bd7b0bb1
+  zh: 0d28945cabd12f4a
+/agent-note-bounded-escalating-signal-shutdown-for-web-and-headless/problem:
+  en: 82a4629d8ce4d2e4
+  zh: 9047318bd39c8491
+/agent-note-bounded-escalating-signal-shutdown-for-web-and-headless/decision:
+  en: 5738aa92d9185c4f
+  zh: 1999e41d43063c12
+/agent-note-bounded-escalating-signal-shutdown-for-web-and-headless/alternatives-considered:
+  en: 53239a7e43d70aa1
+  zh: d5ab1cc4c52513e6
+/agent-note-bounded-escalating-signal-shutdown-for-web-and-headless/consequences:
+  en: 888679c978b87125
+  zh: c68d962f516f675e
+/agent-note-bounded-escalating-signal-shutdown-for-web-and-headless/testing:
+  en: a84f242367e6be8a
+  zh: 0c75b124a338d475

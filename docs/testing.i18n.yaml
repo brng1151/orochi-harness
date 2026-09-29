@@ -1,0 +1,34 @@
+# Bilingual-pair consistency record for testing.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/testing.md
+/testing-policy:
+  en: 037622d58e69c563
+  zh: f9dd98a2692db9f8
+/testing-policy/tiers:
+  en: dd6250bc3a4eae69
+  zh: 937f40b0c3838226
+/testing-policy/how-specs-execute:
+  en: b5397e028df55ce7
+  zh: 6078d23cdab20bb7
+/testing-policy/the-with-key-policy-inference-is-cheap-here:
+  en: d327c396dbf0079b
+  zh: 4c0b60b518ccc369
+/testing-policy/prefer-the-real-implementation-over-a-mock:
+  en: 96a5bdcea4960b25
+  zh: 98ad9d468e55a5ed
+/testing-policy/verify-the-world-not-the-self-report:
+  en: e7cbafc4f96b72c2
+  zh: 0c5a0aa2afd9a812
+/testing-policy/test-the-real-entry-path:
+  en: 002e4c4a1bcbef50
+  zh: c3dd3820c0b2164f
+/testing-policy/test-resolution-source-plane-only:
+  en: 74ce45de8be43809
+  zh: 724b1d3b320bacd5
+/testing-policy/test-subprocess-launch-modes:
+  en: 5ea1c7ff7a9a5728
+  zh: bbae70e0cd2d5cbf
+/testing-policy/when-a-snapshot-test-is-required:
+  en: 84452b4a48986174
+  zh: 19795857f457cfc0

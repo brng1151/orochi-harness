@@ -1,0 +1,52 @@
+# Replay-only patch layered after `cordis.yml`: replace the network adapter
+# with recorded JSONL, pin the recorded top-level model, and keep persistence
+# raw for fixture harvesting.
+
+- id: llm-orochi
+  name: '@orochi-network/oh-llm-orochi-api-key'
+  disabled: true
+
+- id: acp
+  name: '@orochi-network/oh-acp'
+  config:
+    provider: orochi-official
+    model: deepseek-v4-flash
+
+- id: session-persistence-jsonl
+  name: '@orochi-network/oh-session-persistence-jsonl'
+  config:
+    root: !!js process.env.OH_SNAPSHOT_SESSIONS_ROOT ?? ohHomePath('sessions')
+    compression: none
+
+- id: sandbox
+  name: '@orochi-network/oh-sandbox-local'
+  config:
+    runnerCommand:
+      - bash
+      - -c
+      - while [ "$1" != "--" ]; do shift; done; shift; exec "$@"
+      - passthrough-runner
+    runnerFailureSignatures:
+      - 'passthrough-runner: profile rejected'
+
+- insert:
+    - id: llm-replay
+      name: '@orochi-network/oh-llm-replay'
+      config:
+        providers:
+          - id: orochi-official
+            name: Orochi
+            models:
+              - id: deepseek-v4-flash
+              - id: deepseek-v4-pro
+
+    - id: subagent-settlement-marker
+      name: './subagent-settlement-marker.ts'
+
+- insert:
+    - id: snapshot-shell-path
+      name: ../../../scripts/snapshot-shell-path.ts
+      config:
+        command: "printf 'escalated\\n' > /tmp/oh-escalated.txt && cat /tmp/oh-escalated.txt && rm /tmp/oh-escalated.txt"
+        recordedPath: /tmp/oh-escalated.txt
+        livePath: !!js process.env.OH_SNAPSHOT_SPILL_ROOT + '/oh-escalated.txt'

@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-07-24-web-config-tree-boot-and-transport-layering.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-07-24-web-config-tree-boot-and-transport-layering.md
+/agent-note-oh-web-config-tree-boot-and-the-web-transport-layering:
+  en: 95cc30f66a8ac583
+  zh: 578b366b0c50ced2
+/agent-note-oh-web-config-tree-boot-and-the-web-transport-layering/problem:
+  en: 7d30ebeede7a3fcc
+  zh: e300b86aef5f4a84
+/agent-note-oh-web-config-tree-boot-and-the-web-transport-layering/decision:
+  en: 610aa46587a10256
+  zh: 3479e2654c632a5a
+/agent-note-oh-web-config-tree-boot-and-the-web-transport-layering/consequences:
+  en: 47f8a6beba1f320b
+  zh: 5f444699dc52cabf
+/agent-note-oh-web-config-tree-boot-and-the-web-transport-layering/alternatives-considered:
+  en: b8354869f3bbfdf0
+  zh: cc6f42d16d202b6b
