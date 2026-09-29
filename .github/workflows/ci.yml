@@ -43,7 +43,7 @@ jobs:
           || vars.OH_CI_FAILOVER_LINUX == 'selfhosted'
           && github.event.pull_request.user.login != 'dependabot[bot]'
           && fromJSON('["self-hosted", "linux", "x64", "vm-backup"]')
-          || 'oh-ubuntu-24-04-16core' }}
+          || 'orochi-runners' }}
     name: node 24 / static
     env:
       # Shared hosts expose host CPUs, not an isolated allocation.
@@ -111,7 +111,7 @@ jobs:
           || vars.OH_CI_FAILOVER_LINUX == 'selfhosted'
           && github.event.pull_request.user.login != 'dependabot[bot]'
           && fromJSON('["self-hosted", "linux", "x64", "vm-backup"]')
-          || 'oh-ubuntu-24-04-16core' }}
+          || 'orochi-runners' }}
     name: node 24 / coverage
     env:
       # Shared hosts expose host CPUs, not an isolated allocation.
@@ -240,7 +240,7 @@ jobs:
           || vars.OH_CI_FAILOVER_LINUX == 'selfhosted'
           && github.event.pull_request.user.login != 'dependabot[bot]'
           && fromJSON('["self-hosted", "linux", "x64", "vm-backup"]')
-          || 'oh-ubuntu-24-04-16core' }}
+          || 'orochi-runners' }}
     name: node 24 / snapshots and artifacts
     env:
       # Shared hosts expose host CPUs, not an isolated allocation.
