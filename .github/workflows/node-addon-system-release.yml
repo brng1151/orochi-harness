@@ -47,7 +47,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         with:
           package_json_file: package.json
 
@@ -80,7 +80,7 @@ jobs:
           pnpm test:packaging
 
       - name: Upload prebuild artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.artifact }}
           path: native/system/${{ matrix.dir }}/bin/**
@@ -94,7 +94,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         with:
           package_json_file: package.json
 
@@ -138,7 +138,7 @@ jobs:
           NALR_REQUIRE_LANDLOCK: 1
 
       - name: Upload npm tarballs
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: npm-tarballs
           path: native/system/dist/npm/*

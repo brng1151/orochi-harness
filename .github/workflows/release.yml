@@ -51,7 +51,7 @@ jobs:
           echo "npm_config_devdir=${{ runner.temp }}/node-gyp" >> "$GITHUB_ENV"
           echo "TMPDIR=${{ runner.temp }}" >> "$GITHUB_ENV"
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         with:
           dest: ${{ runner.temp }}/setup-pnpm-${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}
 
@@ -68,7 +68,7 @@ jobs:
           store_path=$(PNPM_CONFIG_STORE_DIR="$store_root" pnpm store path --silent)
           echo "path=$store_path" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/cache/restore@v4
+      - uses: actions/cache/restore@v6
         if: runner.environment == 'github-hosted'
         with:
           path: ${{ steps.pnpm-store.outputs.path }}
@@ -113,7 +113,7 @@ jobs:
           echo "npm_config_devdir=${{ runner.temp }}/node-gyp" >> "$GITHUB_ENV"
           echo "TMPDIR=${{ runner.temp }}" >> "$GITHUB_ENV"
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         with:
           dest: ${{ runner.temp }}/setup-pnpm-${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}
 
@@ -130,7 +130,7 @@ jobs:
           store_path=$(PNPM_CONFIG_STORE_DIR="$store_root" pnpm store path --silent)
           echo "path=$store_path" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/cache/restore@v4
+      - uses: actions/cache/restore@v6
         if: runner.environment == 'github-hosted'
         with:
           path: ${{ steps.pnpm-store.outputs.path }}
@@ -171,7 +171,7 @@ jobs:
       - name: Verify packed install
         run: pnpm run release:verify-packed-install --family oh --from dist/npm --from dist/npm-vendor --from dist/npm-landlock
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: oh-npm-tarballs
           path: dist/npm/*
