@@ -36,8 +36,8 @@ function updateUsage(usage: TokenUsage, raw: unknown): void {
   const keys = { input_tokens: 'inputTokens', output_tokens: 'outputTokens', cache_read_input_tokens: 'cacheReadTokens', cache_creation_input_tokens: 'cacheWriteTokens' } as const
   for (const [wire, local] of Object.entries(keys)) {
     const value = fields[wire]
-    if (value === undefined) continue
-    if (!Number.isSafeInteger(value) || (value as number) < 0) return malformed(`invalid ${wire}`)
+    if (value == null) continue // Anthropic-compatible endpoints send null for counters they do not track.
+    if (!Number.isSafeInteger(value) || (value as number) < 0) return malformed(`invalid ${wire} ${JSON.stringify(value)}`)
     usage[local] = value as number
   }
 }

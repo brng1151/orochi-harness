@@ -34,6 +34,17 @@ describe('Messages stream', () => {
     expect(result.output.filter(chunk => chunk.type === 'block-start').map(chunk => chunk.index)).toEqual([0, 1])
   })
 
+  it('treats null usage counters like absent ones, keeping counters already reported', async () => {
+    const nulls = { cache_read_input_tokens: null, cache_creation_input_tokens: null }
+    const result = await chunks(translate(events([
+      { ...start, message: { usage: { input_tokens: 12, output_tokens: 1, ...nulls } } },
+      ...textEvents.slice(1, 4),
+      { type: 'message_delta', delta: { stop_reason: 'end_turn' }, usage: { input_tokens: null, output_tokens: 5, ...nulls } },
+      { type: 'message_stop' },
+    ]), MODEL))
+    expect(result.at(-2)).toEqual({ type: 'usage', usage: { inputTokens: 12, outputTokens: 5, totalTokens: 17 } })
+  })
+
   it.each(['end_turn', 'stop_sequence'])('maps %s and ignores forward-compatible envelope events', async (reason) => {
     const result = await chunks(translate(events([start, { type: 'future_event' }, ...textEvents.slice(1, 4), ...end(reason)]), MODEL))
     expect(result.at(-1)).toMatchObject({ reason: { kind: 'stop' } })
