@@ -8,6 +8,13 @@ It is built on an **everything-is-a-plugin** architecture and powered by [Cordis
 
 Documentation: [https://orochi-harness.github.io/orochi-harness/](https://orochi-harness.github.io/orochi-harness/)
 
+## Origin
+
+Orochi Harness is based on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Compared with DeepSeek Harness, this fork:
+
+- removes the log and data collectors;
+- uses [OpenRouter](https://openrouter.ai) as the default model provider.
+
 ## Developer preview
 
 Orochi Harness is in _developer preview_ and iterating rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
