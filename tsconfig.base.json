@@ -28,15 +28,7 @@
     // not declaration path aliases, keep each package/vendor source compiled
     // under its own tsconfig boundary.
     "paths": {
-      "@orochi-network/oh-client-ui-settings-account": ["./packages/client/ui-settings-account/src/index.ts"],
-      "@orochi-network/oh-client-ui-settings-account/client": ["./packages/client/ui-settings-account/src/client/index.ts"],
       "@orochi-network/oh-api-gateway/stream-protocol": ["./packages/api/gateway/src/stream-protocol.ts"],
-      "@orochi-network/oh-api-account-controller": ["./packages/api/account-controller/src/index.ts"],
-      "@orochi-network/oh-api-account-controller/types": ["./packages/api/account-controller/src/types.ts"],
-      "@orochi-network/oh-orochi-account-platform": ["./packages/credentials/orochi-account-platform/src/index.ts"],
-      "@orochi-network/oh-orochi-account-platform/types": ["./packages/credentials/orochi-account-platform/src/types.ts"],
-      "@orochi-network/oh-orochi-account": ["./packages/credentials/orochi-account/src/index.ts"],
-      "@orochi-network/oh-orochi-account/types": ["./packages/credentials/orochi-account/src/types.ts"],
       "@orochi-network/oh-experimental-speech-to-text": ["./packages/experimental/speech-to-text/src/index.ts"],
       "@orochi-network/oh-experimental-speech-to-text-sensevoice": ["./packages/experimental/speech-to-text-sensevoice/src/index.ts"],
       "@orochi-network/oh-experimental-api-speech-to-text": ["./packages/experimental/api-speech-to-text/src/index.ts"],
@@ -398,7 +390,6 @@
       "@orochi-network/oh-llm/invariant": ["./packages/llm/llm/src/invariant.ts"],
       "@orochi-network/oh-llm-mock-server": ["./packages/test-support/llm-mock-server/src"],
       "@orochi-network/oh-llm-orochi": ["./packages/llm/llm-orochi/src"],
-      "@orochi-network/oh-llm-orochi-account": ["./packages/llm/llm-orochi-account/src"],
       "@orochi-network/oh-llm-orochi-api-key": ["./packages/llm/llm-orochi-api-key/src"],
       "@orochi-network/oh-llm-pi-ai": ["./packages/llm/llm-pi-ai/src"],
       "@orochi-network/oh-llm-replay": ["./packages/test-support/llm-replay/src"],

@@ -80,9 +80,9 @@ describe.skipIf(!existsSync(preload('preload-app')))('built sandboxed Desktop pr
       expect(send).toHaveBeenCalledWith('oh-desktop:locale-changed', 'zh')
     } else {
       expect(exposed.has('ohWelcome')).toBe(true)
-      const bridge = exposed.get('ohWelcome') as { takeNotice(): Promise<unknown> }
-      void bridge.takeNotice()
-      expect(invoke).toHaveBeenCalledWith('oh-welcome:take-notice')
+      const bridge = exposed.get('ohWelcome') as { skip(): Promise<unknown> }
+      void bridge.skip()
+      expect(invoke).toHaveBeenCalledWith('oh-welcome:skip')
     }
   })
 })

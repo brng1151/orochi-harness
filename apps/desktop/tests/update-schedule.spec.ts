@@ -94,7 +94,7 @@ describe('ordinary update polling', () => {
     expect(f.checkForUpdates).toHaveBeenCalledTimes(2)
   })
 
-  it('ignores wall-clock changes and lets policy arrival bypass the automatic deadline silently', async () => {
+  it('ignores wall-clock changes and lets a forced check bypass the automatic deadline silently', async () => {
     const f = fixture()
     await f.schedule.check()
     vi.setSystemTime(Date.now() + 86_400_000)

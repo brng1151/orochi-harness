@@ -20,10 +20,10 @@ import SessionStore from '@orochi-network/oh-session'
 import type { SessionId } from '@orochi-network/oh-session'
 import type { SessionPromptRequest, SessionRequestId } from '../src/types.ts'
 import { ApiSessionAgentController } from '../src/agent.ts'
-import { buildModelCatalog, hasProviderApiKey } from '../src/catalog.ts'
+import { buildModelCatalog } from '../src/catalog.ts'
 import SystemPrompt from '@orochi-network/oh-system-prompt'
 import { RemoteError } from '@orochi-network/oh-typert-protocol'
-import { createSessionTestController, createSessionTestRemote } from './test-remote.ts'
+import { createSessionTestRemote } from './test-remote.ts'
 
 function request<P>(payload: P): P {
   return payload
@@ -88,11 +88,12 @@ async function harness(logged?: {
   model: string
   reasoningEffort?: ReasoningEffortId
   adapterDefaults?: LlmCallConfigAdapterDefaults
-}, ctx = new Context()): Promise<{
+}): Promise<{
   ctx: Context
   agent: Agent
   sessionId: SessionId
 }> {
+  const ctx = new Context()
   await ctx.plugin(SessionStore)
   await ctx.plugin(SystemPrompt, { personaPrefix: '' })
   await ctx.plugin(LlmRuntime)
@@ -345,66 +346,6 @@ describe('Web session model selection', () => {
     expect(readImage).toHaveBeenCalledOnce()
     await ctx.fiber.dispose()
   })
-  it('checks configured key references even for empty catalogs and skips profiles without keys', async () => {
-    const ctx = new Context()
-    await ctx.plugin(LlmRuntime)
-    const describe = vi.fn(async () => ({ configured: true, writable: true }))
-    ctx.provide('credentials', { describe } as never)
-    ctx.provide('settings', { describe: () => [{ ns: 'profiles', value: {
-      providers: { blank: { apiKeyEnv: '' }, absent: {}, configured: { apiKeyEnv: 'CUSTOM_KEY' } },
-    } }] } as never)
-    const routes = ['missing', 'blank', 'absent', 'configured']
-    ctx.effect(() => ctx.llm.registerConfigurableProviders(routes.map(provider => ({
-      provider, displayName: provider, settingsNs: 'profiles',
-      settingsPath: provider === 'missing' ? ['missing', 'nested'] : ['providers', provider],
-    }))))
-    try {
-      expect(await hasProviderApiKey(ctx)).toBe(true)
-      expect(describe).toHaveBeenCalledExactlyOnceWith('CUSTOM_KEY')
-      describe.mockRejectedValueOnce(new Error('credential read failed'))
-      await expect(hasProviderApiKey(ctx)).rejects.toThrow('credential read failed')
-    } finally { await ctx.fiber.dispose() }
-  })
-
-  it.each(['settings', 'credentials'] as const)('refuses account initialization without %s inspection', async (missing) => {
-    const ctx = new Context()
-    if (missing !== 'settings') ctx.provide('settings', {} as never)
-    if (missing !== 'credentials') ctx.provide('credentials', {} as never)
-    try {
-      await expect(hasProviderApiKey(ctx)).rejects.toMatchObject({ code: 'session/provider-credentials-unavailable' })
-    } finally { await ctx.fiber.dispose() }
-  })
-
-  it.each([false, true])('account login replaces a saved default only without another API key: %s', async (configuredKey) => {
-    const { configurationFixture } = await import('../../../settings/settings/tests/configuration-fixture.ts')
-    const configured = await configurationFixture({ hmr: false })
-    const { ctx } = await harness(undefined, configured.ctx)
-    ctx.effect(() => ctx.llm.registerAdapter(['orochi-account'], new CatalogAdapter('Account', [
-      { provider: 'orochi-account', id: 'first-model', name: 'First' },
-      { provider: 'orochi-account', id: 'second-model', name: 'Second' },
-    ], REASONING)))
-    const describe = vi.fn(async () => ({ configured: configuredKey, writable: true }))
-    ctx.provide('credentials', { describe } as never)
-    ctx.effect(() => ctx.llm.registerConfigurableProviders([
-      { provider: 'orochi-account', displayName: 'Account', settingsNs: 'account', settingsPath: [] },
-      { provider: 'removed-model-provider', displayName: 'Custom', settingsNs: 'first', settingsPath: ['providers', 'custom'] },
-    ]))
-    vi.spyOn(ctx.settings, 'describe').mockReturnValue([{
-      ns: 'first' as never, autoGenerate: false, schema: {}, revision: 0, applies: 'live',
-      value: { providers: { custom: { apiKeyEnv: 'CUSTOM_API_KEY', models: [] } } },
-    }])
-    await ctx.agentDefaultModel.saveSelection({ provider: 'removed', model: 'saved' })
-    const controller = createSessionTestController(ctx, {
-      defaultModelSelection: () => ctx.agentDefaultModel.currentSelection(), cwd: '/tmp',
-    })
-    await controller.initializeDefaultModel()
-    expect(describe).toHaveBeenCalledWith('CUSTOM_API_KEY')
-    expect(ctx.agentDefaultModel.currentSelection()).toEqual(configuredKey
-      ? { provider: 'removed', model: 'saved' }
-      : { provider: 'orochi-account', model: 'first-model', reasoningEffort: 'high' })
-    await ctx.fiber.dispose()
-  })
-
   it('groups successful providers and leaves an unlisted current selection out of the catalog', async () => {
     const { ctx, sessionId } = await harness({
       provider: 'orochi-official',
@@ -876,25 +817,6 @@ describe('Web session model selection', () => {
       error: { code: 'session/model-unavailable', message: 'string selection failure' },
     })
     await ctx.fiber.dispose()
-  })
-})
-
-it('initializes the account model without reasoning metadata and rejects an empty account catalog', async () => {
-  const { configurationFixture } = await import('../../../settings/settings/tests/configuration-fixture.ts')
-  const configured = await configurationFixture({ hmr: false })
-  const { ctx } = await harness(undefined, configured.ctx)
-  ctx.provide('credentials', { describe: vi.fn() } as never)
-  const dispose = ctx.llm.registerAdapter(['orochi-account'], new CatalogAdapter('Account', [
-    { provider: 'orochi-account', id: 'basic', name: 'Basic' },
-  ]))
-  const controller = createSessionTestController(ctx, {
-    defaultModelSelection: () => ctx.agentDefaultModel.currentSelection(), cwd: '/tmp',
-  })
-  await controller.initializeDefaultModel()
-  expect(ctx.agentDefaultModel.currentSelection()).toEqual({ provider: 'orochi-account', model: 'basic' })
-  dispose()
-  await expect(controller.initializeDefaultModel()).rejects.toMatchObject({
-    code: 'session/provider-models-unavailable', details: { provider: 'orochi-account' },
   })
 })
 

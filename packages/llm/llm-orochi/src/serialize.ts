@@ -151,7 +151,7 @@ export function serialize(
   return {
     model: options.model, stream: true, messages,
     max_tokens: options.maxTokens ?? model?.maxTokens ?? connection.maxTokens,
-    thinking: { type: effort === 'off' ? 'disabled' : 'enabled' },
+    thinking: { type: effort === 'off' ? 'disabled' : connection.defaults.thinkingType },
     ...effort === 'off' ? {} : { output_config: { effort: effort as 'low' | 'high' | 'max' } },
     ...system.length === 0 ? {} : { system },
     ...options.temperature === undefined ? {} : { temperature: options.temperature },

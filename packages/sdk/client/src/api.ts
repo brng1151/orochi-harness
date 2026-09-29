@@ -40,7 +40,7 @@ export class OrochiHarness implements AsyncDisposable {
     // relative value would double-resolve (e.g. `worker` → `worker/worker`).
     this.cwd = resolve(options.cwd ?? options.processCwd ?? process.cwd())
     this.provider = options.provider ?? 'orochi-official'
-    this.model = options.model ?? 'deepseek-v4-flash'
+    this.model = options.model ?? 'xiaomi/mimo-v2.6-flash'
     this.reasoningEffort = options.reasoningEffort
     this.maxTokens = options.maxTokens
   }

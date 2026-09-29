@@ -11,7 +11,7 @@ it.each(['', 'invalid\nheader'])('advertises configured models without a usable 
     await ctx.plugin(LlmRuntime)
     await ctx.plugin(ApiKey, {})
     expect(await ctx.llm.listModels('orochi-official')).toEqual(expect.arrayContaining([
-      expect.objectContaining({ provider: 'orochi-official', id: 'deepseek-flash' }),
+      expect.objectContaining({ provider: 'orochi-official', id: 'xiaomi/mimo-v2.6-flash' }),
     ]))
   } finally {
     await ctx.fiber.dispose()

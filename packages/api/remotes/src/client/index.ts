@@ -3,7 +3,6 @@
 import type { Context } from '@orochi-network/cordis'
 import agentPresetsRemote from '@orochi-network/oh-agent-preset-registry/remote'
 import commandsRemote from '@orochi-network/oh-commands/remote'
-import accountRemote from '@orochi-network/oh-api-account-controller/remote'
 import settingsControllerRemote from '@orochi-network/oh-api-settings-controller/remote'
 import officeToPdfRemote from '@orochi-network/oh-office-to-pdf/remote'
 import goalsRemote from '@orochi-network/oh-goal/remote'
@@ -39,7 +38,6 @@ export type { PluginInventorySnapshot } from '@orochi-network/oh-host-plugin-inv
 export type {} from '@orochi-network/oh-agent-preset-registry/remote'
 export type {} from '@orochi-network/oh-commands/remote'
 export type {} from '@orochi-network/oh-api-settings-controller/remote'
-export type {} from '@orochi-network/oh-api-account-controller/remote'
 export type {} from '@orochi-network/oh-goal/remote'
 export type {} from '@orochi-network/oh-schedule/remote'
 export type {} from '@orochi-network/oh-office-to-pdf/remote'
@@ -175,7 +173,7 @@ export async function apply(ctx: Context): Promise<() => Promise<void>> {
   const disposers: Array<() => Promise<void>> = []
   try {
     for (const contribution of [
-      agentPresetsRemote, commandsRemote, settingsControllerRemote, accountRemote,
+      agentPresetsRemote, commandsRemote, settingsControllerRemote,
       goalsRemote, llmRemote, dynamicRemote, scheduleRemote,
       pluginInventoryRemote, pluginManagerRemote, pluginRegistryProbeRemote, messageFeedbackRemote, sessionFeedbackRemote,
       fileUploadsRemote, sessionReferencesRemote,

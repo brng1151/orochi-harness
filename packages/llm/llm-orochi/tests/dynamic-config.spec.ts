@@ -220,16 +220,16 @@ describe('request-level dynamic configuration', () => {
       source: { kind: 'test' },
     })]
 
-    await assemble(ctx, { model: 'deepseek-flash', messages })
+    await assemble(ctx, { model: 'xiaomi/mimo-v2.6-flash', messages })
     await configurations.get(ctx)!.update({ maxRequestFilesBytes: 4, imageOffloadByteQuantum: 2 })
     // A request whose retained exact bytes exceed the tightened budget names the occurrences to offload.
-    const rejected = await assemble(ctx, { model: 'deepseek-flash', messages })
+    const rejected = await assemble(ctx, { model: 'xiaomi/mimo-v2.6-flash', messages })
     expect(rejected.finish).toMatchObject({
       kind: 'error',
       failure: { code: 'IMAGE_OFFLOAD_REQUIRED', offloadImages: 1 },
     })
     await assemble(ctx, {
-      model: 'deepseek-flash',
+      model: 'xiaomi/mimo-v2.6-flash',
       messages: [createUserMessage({
         content: [
           { type: 'image', attachment: IMAGE_REF, offloaded: true },

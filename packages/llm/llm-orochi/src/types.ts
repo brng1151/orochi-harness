@@ -117,4 +117,6 @@ export interface OrochiAdapterOptions<Connection extends OrochiConnectionOptions
 export interface RequestDefaults {
   thinking?: 'enabled' | 'disabled' | undefined
   reasoningEffort?: 'off' | 'low' | 'high' | 'max' | undefined
+  /** `thinking.type` sent whenever a request thinks; always resolved, never inferred at request time. */
+  thinkingType: 'adaptive' | 'enabled'
 }

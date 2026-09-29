@@ -20,7 +20,7 @@ class OrochiHarnessConfig:
     """
 
     provider: str = "orochi-official"
-    model: str = "deepseek-v4-flash"
+    model: str = "xiaomi/mimo-v2.6-flash"
     reasoning_effort: str | None = None
     max_tokens: int | None = None
     cwd: str | None = None

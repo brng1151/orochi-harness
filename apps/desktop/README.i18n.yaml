@@ -3,17 +3,17 @@
 # After editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write apps/desktop/README.md
 /orochi-harness-desktop:
-  en: 9643fefd32e5316e
-  zh: b18e9db317b144b8
+  en: 545bf2b0f424efa2
+  zh: a11f3a2ffcca8ce3
 /orochi-harness-desktop/closing-the-window-and-quitting:
-  en: 0e3975aa7291df73
-  zh: 8ed6f93daa4768bb
+  en: 2a1c13f4d6d97f99
+  zh: 74b09dfc97c96c99
 /orochi-harness-desktop/key-technical-decisions:
   en: f82075f650d5f45b
   zh: 82250e83e289fb0d
 /orochi-harness-desktop/key-technical-decisions/bundled-workspace-dependencies:
-  en: ee1fd55459b47224
-  zh: 6c90c849a9e8adcc
+  en: e3dde5ea8ae60d01
+  zh: 034b3edc91d18c15
 /orochi-harness-desktop/installation-ownership:
   en: 562d658050086d1c
   zh: ea6b1c00cbe845bd
@@ -24,11 +24,11 @@
   en: 921ce6aaaec3c739
   zh: 0eceda520ddce433
 /orochi-harness-desktop/develop/startup-onboarding:
-  en: 57a6073206b43ecd
-  zh: 5b625747b6cdb036
+  en: c1ab460830b2dbf0
+  zh: 10ec4785d654e5e8
 /orochi-harness-desktop/develop/welcome-window-appearance:
-  en: 7e6d20909ad7c0f5
-  zh: a322f5caaef7dd90
+  en: 7ed55a4611a27ebf
+  zh: 5f3449b6cc1bb6c0
 /orochi-harness-desktop/package:
   en: 4cd8a8da6977928d
   zh: 9f624855a2edac37
@@ -51,20 +51,17 @@
   en: 959d17871d4b8123
   zh: 84391b2bf380af6e
 /orochi-harness-desktop/updates:
-  en: 8272cdcf257eda5f
-  zh: 0b9bd04cd8875dca
-/orochi-harness-desktop/updates/mandatory-update-policy:
-  en: 317226f339d7718b
-  zh: e4241bcab8644f56
+  en: e9bc67330a81f4cd
+  zh: a55c3ec76ef12e91
 /orochi-harness-desktop/updates/local-updater-qualification:
-  en: 25b22fa2e2737f69
-  zh: 0fbee7da2dbd416c
+  en: 851cb810fb1f8c8b
+  zh: ecc2c06cb4dc0c5d
 /orochi-harness-desktop/low-level-development-overrides:
   en: e7d09888ca142f20
   zh: f85ebc0c29b95ee7
 /orochi-harness-desktop/known-limitations:
-  en: 7498594e837e8ebc
-  zh: 5ba11156c5c4f1eb
+  en: a6a18152c6dcd64a
+  zh: d06e143d93abc8de
 /orochi-harness-desktop/dev-note:
   en: d54a6b3f400da437
   zh: 3db289e7ac90f3ea

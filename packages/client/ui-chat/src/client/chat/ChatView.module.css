@@ -107,7 +107,7 @@
   align-items: flex-start;
   --oh-chat-flow-gap: 12px;
   color: var(--oh-alias-label-deep-diving);
-  font-size: calc(var(--oh-content-font-size, 14px) - 2px);
+  font-size: var(--oh-content-font-size, 14px);
   line-height: calc(22px + var(--oh-content-font-delta, 0px));
 }
 
@@ -133,7 +133,7 @@
   display: inline-flex;
   align-items: center;
   min-width: 0;
-  gap: 6px;
+  gap: 8px;
 }
 
 .runningText {
@@ -141,35 +141,11 @@
   font-variant-numeric: tabular-nums;
 }
 
-.runningIcon {
-  display: inline-flex;
-  flex: none;
-  width: calc(14px + var(--oh-content-font-delta, 0px));
-  height: calc(14px + var(--oh-content-font-delta, 0px));
-}
-
-/* Breathe the mark while the run is live; reduced motion keeps it static. */
-.runningMark {
-  display: block;
-  transform-origin: 50% 55%;
-  animation: running-mark-breathe 1.6s ease-in-out infinite;
-}
-
-@keyframes running-mark-breathe {
-  0%,
-  100% {
-    transform: none;
-  }
-
-  50% {
-    transform: scale(0.86) rotate(-3deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .runningMark {
-    animation: none;
-  }
+/* The shared spinner defaults to tertiary ink; the status keeps its own color. */
+.runningContent .runningSpinner {
+  width: calc(20px + var(--oh-content-font-delta, 0px));
+  height: calc(20px + var(--oh-content-font-delta, 0px));
+  color: inherit;
 }
 
 .openError {

@@ -92,8 +92,6 @@
     "@orochi-network/oh-api-terminal-controller": "workspace:*",
     "@orochi-network/oh-plugin-manager": "workspace:*",
     "@orochi-network/oh-client-ui-plugin-manager": "workspace:*",
-    "@orochi-network/oh-office-to-pdf": "workspace:*",
-    "@orochi-network/oh-api-account-controller": "workspace:*",
-    "@orochi-network/oh-orochi-account": "workspace:*"
+    "@orochi-network/oh-office-to-pdf": "workspace:*"
   }
 }

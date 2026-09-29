@@ -50,8 +50,6 @@ flowchart LR
   cfg --> plugin_oh_base_settings
   plugin_oh_base_authorization["authorization<br/>@orochi-network/oh-authorization"]
   cfg --> plugin_oh_base_authorization
-  plugin_oh_base_orochi_account["orochi-account<br/>@orochi-network/oh-orochi-account-platform"]
-  cfg --> plugin_oh_base_orochi_account
   plugin_oh_base_credentials["credentials<br/>@orochi-network/oh-credentials-local"]
   cfg --> plugin_oh_base_credentials
   plugin_oh_base_llm_pi_ai["llm-pi-ai<br/>@orochi-network/oh-llm-pi-ai"]
@@ -188,8 +186,6 @@ flowchart LR
   cfg --> plugin_oh_base_fs_sandbox
   plugin_oh_base_llm_orochi["llm-orochi<br/>@orochi-network/oh-llm-orochi-api-key"]
   cfg --> plugin_oh_base_llm_orochi
-  plugin_oh_base_llm_orochi_account["llm-orochi-account<br/>@orochi-network/oh-llm-orochi-account"]
-  cfg --> plugin_oh_base_llm_orochi_account
 ```
 
 | Plugin id | Package / module |
@@ -215,7 +211,6 @@ flowchart LR
 | `config-editor` | `@orochi-network/oh-config-editor` |
 | `settings` | `@orochi-network/oh-settings` |
 | `authorization` | `@orochi-network/oh-authorization` |
-| `orochi-account` | `@orochi-network/oh-orochi-account-platform` |
 | `credentials` | `@orochi-network/oh-credentials-local` |
 | `llm-pi-ai` | `@orochi-network/oh-llm-pi-ai` |
 | `session-persistence-jsonl` | `@orochi-network/oh-session-persistence-jsonl` |
@@ -284,7 +279,6 @@ flowchart LR
 | `agent-loop` | `@orochi-network/oh-agent-loop` |
 | `fs-sandbox` | `@orochi-network/oh-fs-sandbox` |
 | `llm-orochi` | `@orochi-network/oh-llm-orochi-api-key` |
-| `llm-orochi-account` | `@orochi-network/oh-llm-orochi-account` |
 
 Source config: [`packages/bundle/base/cordis.patch.yml`](../../packages/bundle/base/cordis.patch.yml).
 

@@ -3,7 +3,6 @@
 /** English strings (the key-set source of truth for this pair). */
 export const en = {
   nav: 'Models',
-  orochiAccount: 'Orochi Account',
   title: 'Models',
   intro: 'Enter your API keys to use models from the following providers.',
   edit: 'Edit',
@@ -43,7 +42,7 @@ export const en = {
   customized: 'Customized settings',
   baseUrl: 'Base URL',
   baseUrlDefault: 'Provider default',
-  orochiBaseUrl: 'https://api.deepseek.com/anthropic',
+  orochiBaseUrl: 'https://openrouter.ai/api/v1',
   orochiEndpointHint: 'Use an API endpoint compatible with Anthropic Messages.',
   models: 'Models',
   modelsInherited: 'Using the adapter defaults',
@@ -123,7 +122,6 @@ export type ModelsKey = keyof typeof en
 /** Chinese strings (same keys as {@link en}). */
 export const zh: { [Key in keyof typeof en]: string } = {
   nav: '模型',
-  orochiAccount: 'Orochi 账号',
   title: '模型',
   intro: '填入各提供商的 API 密钥即可使用其模型。',
   edit: '编辑',
@@ -163,7 +161,7 @@ export const zh: { [Key in keyof typeof en]: string } = {
   customized: '自定义设置',
   baseUrl: 'API 地址',
   baseUrlDefault: '提供商默认',
-  orochiBaseUrl: 'https://api.deepseek.com/anthropic',
+  orochiBaseUrl: 'https://openrouter.ai/api/v1',
   orochiEndpointHint: '请填写兼容 Anthropic Messages 协议的 API 地址。',
   models: '模型目录',
   modelsInherited: '正在使用适配器默认模型',

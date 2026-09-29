@@ -9,7 +9,7 @@ kind: "package-reference"
 
 ## 概述
 
-有了 `oh-web-search-orochi`，harness 可以通过 Orochi 原生搜索检索 web，使用 Orochi 账号登录或部署已有的 `OROCHI_API_KEY`。当部署希望使用 Orochi 原生搜索、并接受一次搜索在延迟与 token 上消耗一个完整模型轮次时选择它，因为 Orochi 不提供专用搜索端点。结果来自 Orochi 返回的结构化搜索块，绝不会从回复文本中抓取。凭据缺失时调用以结构化错误失败；响应缺少搜索结果块时会明确报错，而非降级。面向模型的 `web_search` 工具位于 `oh-tool-web`。
+有了 `oh-web-search-orochi`，harness 可以通过 Orochi 原生搜索检索 web，使用部署已有的 `OROCHI_API_KEY`。当部署希望使用 Orochi 原生搜索、并接受一次搜索在延迟与 token 上消耗一个完整模型轮次时选择它，因为 Orochi 不提供专用搜索端点。结果来自 Orochi 返回的结构化搜索块，绝不会从回复文本中抓取。凭据缺失时调用以结构化错误失败；响应缺少搜索结果块时会明确报错，而非降级。面向模型的 `web_search` 工具位于 `oh-tool-web`。
 
 ## 目录
 
@@ -29,11 +29,11 @@ kind: "package-reference"
 
 ### 何时选择
 
-当部署希望使用 Orochi 原生服务端 web 搜索、且其用户登录 Orochi 账号或持有 `OROCHI_API_KEY` 时选择此后端——提供方按[鉴权](#authentication)所述复用这些凭据。一次搜索比专用检索端点更重：Orochi 在完整模型轮次内执行搜索，因此每次搜索都要预期一次 Messages 调用的延迟与生成 token，每次请求最多 `maxUses` 次服务端搜索。当单次搜索的成本或延迟占主导时避免使用它。
+当部署希望使用 Orochi 原生服务端 web 搜索、且其用户持有 `OROCHI_API_KEY` 时选择此后端——提供方按[鉴权](#authentication)所述复用该凭据。一次搜索比专用检索端点更重：Orochi 在完整模型轮次内执行搜索，因此每次搜索都要预期一次 Messages 调用的延迟与生成 token，每次请求最多 `maxUses` 次服务端搜索。当单次搜索的成本或延迟占主导时避免使用它。
 
 ### 最小配置
 
-加载 web 服务与本提供方；密钥在已挂载 `ctx.credentials` 服务时从其解析，否则从进程环境解析。辅助搜索调用有独立的端点设置，使用 Anthropic 兼容基址 `https://api.deepseek.com/anthropic/v1`，并追加 `/messages`。它读取 `$OROCHI_SEARCH_BASE_URL`，与会话适配器的 `$OROCHI_BASE_URL` 相互独立。
+加载 web 服务与本提供方；密钥在已挂载 `ctx.credentials` 服务时从其解析，否则从进程环境解析。辅助搜索调用有独立的端点设置，使用 Anthropic 兼容基址 `https://openrouter.ai/api/v1`，并追加 `/messages`。它读取 `$OROCHI_SEARCH_BASE_URL`，与会话适配器的 `$OROCHI_BASE_URL` 相互独立。
 
 ```yaml
 - name: '@orochi-network/oh-web'
@@ -45,10 +45,10 @@ kind: "package-reference"
 
 | 字段 | 默认值 | 含义 |
 |---|---|---|
-| `apiKey` | 未设置 | Orochi API 密钥字面值；优先使用 `apiKeyEnv`，避免密钥进入配置。非空字面值优先于 `apiKeyEnv`；账号 token 优先于两者 |
+| `apiKey` | 未设置 | Orochi API 密钥字面值；优先使用 `apiKeyEnv`，避免密钥进入配置。非空字面值优先于 `apiKeyEnv` |
 | `apiKeyEnv` | `OROCHI_API_KEY` | 每次搜索通过 `ctx.credentials` 解析的凭据引用；没有该服务时从进程环境解析。需要 API 密钥却解析不到时，搜索以 `WEB_PROVIDER_CREDENTIAL_MISSING` 失败 |
-| `baseURL` | `https://api.deepseek.com/anthropic/v1` | Anthropic 兼容端点基址；追加 `/messages`。缺省时回退到 `$OROCHI_SEARCH_BASE_URL`；无法解析时提供方不可用 |
-| `model` | `deepseek-v4-flash` | Anthropic 格式模型名称 |
+| `baseURL` | `https://openrouter.ai/api/v1` | Anthropic 兼容端点基址；追加 `/messages`。缺省时回退到 `$OROCHI_SEARCH_BASE_URL`；无法解析时提供方不可用 |
+| `model` | `xiaomi/mimo-v2.6-flash` | Anthropic 格式模型名称 |
 | `apiVersion` | `2023-06-01` | `anthropic-version` 标头值 |
 | `maxTokens` | `4096` | Messages 请求生成 token 的正整数上限 |
 | `maxUses` | `5` | 每次请求使用 `web_search` 服务器工具的正整数上限 |
@@ -58,7 +58,7 @@ kind: "package-reference"
 <a id="authentication"></a>
 ### 鉴权
 
-当发起会话最近的 `request/context` 事件指明 `orochi-account` 提供方路由，且 `ctx.orochiAccount` 为搜索端点解析出 token 时，搜索使用 Orochi 账号鉴权。账号服务仅在已登录时、且仅对部署配置的推理 origin（默认 `https://api.deepseek.com`）解析 token。这类搜索只发送 `x-oh-auth-token`，即使配置了 API 密钥也是如此。其余所有搜索，包括没有发起会话的调用以及端点属于其他 origin 的搜索，都把 API 密钥同时作为 `x-api-key` 与 `Authorization: Bearer` 发送。账号鉴权的搜索收到 HTTP 401 时以 `WEB_PROVIDER_ERROR` 失败，附带登录指引而非端点指引，账号保持登录。
+搜索以 `x-api-key` 与 `Authorization: Bearer` 两种方式发送 API Key。挂载 `ctx.credentials` 时密钥从其解析，否则从进程环境读取。
 
 ### 搜索返回什么
 
@@ -87,7 +87,7 @@ kind: "package-reference"
 本提供方建立在两项承诺之上：
 
 - **只取结构化块。** Orochi 在服务端执行搜索并返回结构化的 `web_search_tool_result` 块；提供方解析这些块，绝不从模型文本中抓取 URL。严格模式下，没有此类块的响应会抛出 `WEB_PROVIDER_ERROR`，而非降级。
-- **会话凭据，逐次解析。** 提供方不新增密钥：来自账号路由会话的搜索使用该账号的 token，其余搜索复用 `OROCHI_API_KEY` 引用。辅助请求端点通过 `$OROCHI_SEARCH_BASE_URL` 保持独立。已挂载的凭据服务具有权威性；没有该服务时回退到启动进程的环境。按次解析意味着在 Web 的 Models 页中存储或轮换的密钥，或一次账号登录，无需重启即可用于下一次搜索。
+- **会话凭据，逐次解析。** 提供方不新增密钥：所有搜索复用 `OROCHI_API_KEY` 引用。辅助请求端点通过 `$OROCHI_SEARCH_BASE_URL` 保持独立。已挂载的凭据服务具有权威性；没有该服务时回退到启动进程的环境。按次解析意味着在 Web 的 Models 页中存储或轮换的密钥无需重启即可用于下一次搜索。
 
 ### 源码地图
 
@@ -100,7 +100,7 @@ kind: "package-reference"
 
 ### 请求流程
 
-每次搜索先把当前 Config 段投影为提供方选项——端点、模型、密钥引用、上限——然后在发起会话使用账号路由时向 `ctx.orochiAccount` 请求 token，否则通过 `ctx.credentials`（或环境）解析凭据引用，追加仅用于日志的会话事件，并以原生 `web_search` 服务器工具分发 Messages 请求。响应中的 `web_search_tool_result` 块变为 `sources[]`；文本块中的 `cited_text` 条目按其 URL 拼接为 snippet；结果按 URL 去重；服务在返回路径上强制执行请求的来源上限。
+每次搜索先把当前 Config 段投影为提供方选项——端点、模型、密钥引用、上限——然后通过 `ctx.credentials`（或环境）解析凭据引用，追加仅用于日志的会话事件，并以原生 `web_search` 服务器工具分发 Messages 请求。响应中的 `web_search_tool_result` 块变为 `sources[]`；文本块中的 `cited_text` 条目按其 URL 拼接为 snippet；结果按 URL 去重；服务在返回路径上强制执行请求的来源上限。
 
 </details>
 
@@ -141,7 +141,7 @@ kind: "package-reference"
 
 #### 模型看到的内容
 
-通过 `oh-tool-web`，会话模型会看到结构化搜索块中去重后的 URL、标题、日期与引用 snippet；提供方文本不会作为答案受到信任。该提供方的具体失败消息包括带有处理指引的凭据缺失消息（其中也提到 Orochi 账号登录）、`Orochi search credential resolution failed: <error>` 和 `Orochi search aborted`。账号鉴权的搜索收到 HTTP 401 时，会追加引导用户重新登录 Orochi 的指引。其他请求、HTTP、原生搜索和响应正文失败会追加已解析端点及前述条件式配置指引。错误包装属于消费方。
+通过 `oh-tool-web`，会话模型会看到结构化搜索块中去重后的 URL、标题、日期与引用 snippet；提供方文本不会作为答案受到信任。该提供方的具体失败消息包括带有处理指引的凭据缺失消息、`Orochi search credential resolution failed: <error>` 和 `Orochi search aborted`。其他请求、HTTP、原生搜索和响应正文失败会追加已解析端点及前述条件式配置指引。错误包装属于消费方。
 
 #### Token 影响
 

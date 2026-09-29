@@ -58,7 +58,7 @@ export interface AssistantActionOwnerProps {
 }
 
 /** Stable quota failure codes retained in the Session log; both raise the frame-wide notice. */
-export type QuotaNoticeCode = 'QUOTA' | 'ACCOUNT_QUOTA'
+export type QuotaNoticeCode = 'QUOTA'
 
 /** The notice on display; `seq` keys remounts so an unretained later notice restarts its transient display. */
 export interface QuotaNoticeState {

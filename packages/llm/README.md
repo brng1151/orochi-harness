@@ -27,7 +27,6 @@ The llm group provides the harness's model-call capability: one provider-neutral
 | [`llm/`](llm/README.md) | Streams one model call through a registered provider adapter and shares the harness message, block, and chunk vocabulary | `ctx.llm` |
 | [`llm-orochi/`](llm-orochi/README.md) | Shared Messages protocol, request configuration, and model capabilities | — |
 | [`llm-orochi-api-key/`](llm-orochi-api-key/README.md) | API-key authentication and discovery for the official route | `ctx.llm` |
-| [`llm-orochi-account/`](llm-orochi-account/README.md) | Account-token authentication, invalidation, and discovery | `ctx.llm` |
 | [`llm-pi-ai/`](llm-pi-ai/README.md) | Serves configured provider routes through pi-ai catalogs and wire protocols, including hand-declared gateways | registers on `ctx.llm` |
 | [`orochi-llm-api-extensions/`](orochi-llm-api-extensions/README.md) | Registers lifecycle-owned top-level fields on official Orochi requests | `ctx.orochiLlmApiExtensions` |
 | [`plugin-package-inventory-orochi/`](plugin-package-inventory-orochi/README.md) | Contributes the active Loader package inventory to official Orochi requests | contributes `oh_plugin_packages` |

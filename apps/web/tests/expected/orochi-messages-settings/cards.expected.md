@@ -20,24 +20,24 @@
       - group:
         - text: 自定义设置 API 地址
         - textbox "API 地址":
-          - /placeholder: https://api.deepseek.com/anthropic
+          - /placeholder: https://openrouter.ai/api/v1
         - text: 请填写兼容 Anthropic Messages 协议的 API 地址。
         - region "模型目录":
           - text: 模型目录 正在使用适配器默认模型
           - textbox "模型 ID 1":
             - /placeholder: 模型 ID
-            - text: deepseek-flash
+            - text: xiaomi/mimo-v2.6-flash
           - textbox "显示名称 1":
             - /placeholder: 显示名称
-            - text: DeepSeek-V41-Flash
+            - text: MiMo-V2.6-Flash
           - button "模型选项 1"
           - button "删除模型 1"
           - textbox "模型 ID 2":
             - /placeholder: 模型 ID
-            - text: deepseek-v4-pro
+            - text: xiaomi/mimo-v2.6-pro
           - textbox "显示名称 2":
             - /placeholder: 显示名称
-            - text: DeepSeek-V4-Pro
+            - text: MiMo-V2.6-Pro
           - button "模型选项 2"
           - button "删除模型 2"
           - button "添加模型"

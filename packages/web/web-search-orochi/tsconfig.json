@@ -33,9 +33,6 @@
       "path": "../../credentials/credentials"
     },
     {
-      "path": "../../credentials/orochi-account"
-    },
-    {
       "path": "../../util/http-proxy"
     }
   ]

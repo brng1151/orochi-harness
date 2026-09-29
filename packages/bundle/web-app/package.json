@@ -171,8 +171,6 @@
     "@orochi-network/schemastery": "workspace:~",
     "commander": "^15.0.0",
     "open": "^11.0.0",
-    "@orochi-network/oh-api-account-controller": "workspace:*",
-    "@orochi-network/oh-client-ui-settings-account": "workspace:*",
     "@orochi-network/oh-client-shortcuts": "workspace:*",
     "@orochi-network/oh-client-ui-shortcuts": "workspace:*"
   },

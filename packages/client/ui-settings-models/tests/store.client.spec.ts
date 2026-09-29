@@ -4,7 +4,7 @@ import type { RpcResponse } from '@orochi-network/oh-api-remotes/client'
 import { RemoteError } from '@orochi-network/oh-client-test-runtime'
 import { SettingsDescribeMirror } from '@orochi-network/oh-client-ui-settings/src/client/settings-mirror.ts'
 import { settingsSchema } from './settings-schema.client.ts'
-import { joinProviderDirectory, ModelsSettingsStore, providerUsable } from '../src/client/store.ts'
+import { joinProviderDirectory, ModelsSettingsStore } from '../src/client/store.ts'
 
 it.each([false, true])('retains configuration diagnostics when the route is active: %s', (active) => {
   expect(joinProviderDirectory(active ? [{ id: 'openai', name: 'openai' }] : [], [{
@@ -16,13 +16,13 @@ it.each([false, true])('retains configuration diagnostics when the route is acti
   }])
 })
 
-it('places account and official before third-party providers', () => {
-  const providers = ['custom', 'orochi-official', 'orochi-account', 'openai']
+it('places official before third-party providers', () => {
+  const providers = ['custom', 'orochi-official', 'openai']
   const directory = providers.map(provider => ({
     provider, displayName: provider, settingsNs: 'fixture', settingsPath: [],
   }))
   expect(joinProviderDirectory([], directory).map(row => row.provider))
-    .toEqual(['orochi-account', 'orochi-official', 'custom', 'openai'])
+    .toEqual(['orochi-official', 'custom', 'openai'])
   expect(directory.map(row => row.provider)).toEqual(providers)
 })
 
@@ -63,15 +63,6 @@ const NAMESPACES = [
     revision: 0,
   },
   {
-    ns: 'llm-orochi-account',
-    schema: {},
-    value: { baseURL: 'https://base' },
-    base: { baseURL: 'https://base' },
-    autoGenerate: true, applies: 'live' as const,
-    secrets: [],
-    revision: 0,
-  },
-  {
     ns: 'llm-pi-ai',
     schema: {},
     value: { providers: { openai: { apiKeyEnv: 'OPENAI_API_KEY' } } },
@@ -83,7 +74,6 @@ const NAMESPACES = [
 ]
 
 function api(overrides: {
-  accountAvailable?: boolean
   providers?: () => Promise<RpcResponse<{ providers: typeof DIRECTORY }>>
   describeSettings?: () => Promise<RemoteAnswer<{ writable: boolean; hasDocument: boolean; namespaces: typeof NAMESPACES }>>
   describeCredentials?: (refs: readonly string[]) => Promise<RemoteAnswer<Record<string, unknown>>>
@@ -108,8 +98,6 @@ function api(overrides: {
       : remoteFail(response.result.error.message)
   }
   const face = {
-    session: { modelCatalog: async () => remoteOk({ groups: overrides.accountAvailable
-      ? [{ id: 'orochi-account', models: [{ id: 'deepseek-flash' }] }] : [] }) },
     llm: {
       listProviders: () => mapProviderBatch(rows => rows
         .filter(row => row.active)
@@ -350,38 +338,4 @@ describe('edge joins', () => {
     // The stale empty directory never overwrote the newer join.
     expect(store.store.getSnapshot().rows).toHaveLength(4)
   })
-})
-
-
-it.each([false, true])('uses account availability without asking for an API key: %s', async (accountAvailable) => {
-  const { ctx, mirror, seenRefs } = api({ accountAvailable, providers: async () => ok({ providers: [{
-    provider: 'orochi-account', displayName: 'Orochi Account', settingsNs: 'llm-orochi-account', settingsPath: [], active: true,
-  }] }) })
-  const store = new ModelsSettingsStore(ctx, settingsSchema, mirror)
-  await store.load()
-  const rows = store.store.getSnapshot().rows
-  expect(rows).toHaveLength(accountAvailable ? 1 : 0)
-  if (accountAvailable) {
-    expect(rows[0]).toMatchObject({ accountAvailable: true, apiKeyEnv: undefined, credential: undefined })
-    expect(providerUsable(rows[0]!)).toBe(true)
-  }
-  expect(store.store.getSnapshot().namespaces.get('llm-orochi-account')?.ns).toBe('llm-orochi-account')
-  expect(seenRefs).toEqual([])
-})
-
-it('removes the account row after sign-out and restores it after sign-in', async () => {
-  const overrides = { accountAvailable: true, providers: async () => ok({ providers: [{
-    provider: 'orochi-account', displayName: 'Orochi Account', settingsNs: 'llm-orochi-account', settingsPath: [], active: true,
-  }, ...DIRECTORY] }) }
-  const { ctx, mirror } = api(overrides)
-  const store = new ModelsSettingsStore(ctx, settingsSchema, mirror)
-  await store.load()
-  expect(store.store.getSnapshot().rows[0]?.entry.provider).toBe('orochi-account')
-  overrides.accountAvailable = false
-  await store.load()
-  expect(store.store.getSnapshot().rows.map(row => row.entry.provider)).not.toContain('orochi-account')
-  expect(store.store.getSnapshot().rows).toHaveLength(DIRECTORY.length)
-  overrides.accountAvailable = true
-  await store.load()
-  expect(store.store.getSnapshot().rows[0]?.entry.provider).toBe('orochi-account')
 })

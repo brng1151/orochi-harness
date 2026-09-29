@@ -19,6 +19,3 @@
     reasoningEffort: high
     maxTokens: 256000
     streamIdleTimeoutMs: 300000
-- name: '@orochi-network/oh-llm-orochi-account'
-  config:
-    baseURL: {{endpoint}}

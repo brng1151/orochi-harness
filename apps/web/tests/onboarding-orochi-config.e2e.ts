@@ -207,9 +207,9 @@ describe.skipIf(MODE === 'record')('web e2e: first-run Orochi credential setup',
     await orochi.waitFor({ timeout: 10_000 })
     await orochi.locator('xpath=ancestor::li').getByRole('button', { name: '编辑' }).click()
     await settings.getByText('自定义设置').click()
-    expect(await settings.getByLabel('模型 ID 1').inputValue()).toBe('deepseek-flash')
-    expect(await settings.getByLabel('显示名称 1').inputValue()).toBe('DeepSeek-V41-Flash')
-    expect(await settings.getByLabel('模型 ID 2').inputValue()).toBe('deepseek-v4-pro')
+    expect(await settings.getByLabel('模型 ID 1').inputValue()).toBe('xiaomi/mimo-v2.6-flash')
+    expect(await settings.getByLabel('显示名称 1').inputValue()).toBe('MiMo-V2.6-Flash')
+    expect(await settings.getByLabel('模型 ID 2').inputValue()).toBe('xiaomi/mimo-v2.6-pro')
     expect(await settings.getByRole('button', { name: /删除模型/ }).count()).toBe(2)
     await settings.getByRole('button', { name: '模型选项 1' }).click()
     expect(await settings.getByRole('group', { name: '输入类型 1' }).getByRole('checkbox', { name: '图片' }).isChecked()).toBe(true)
@@ -221,15 +221,16 @@ describe.skipIf(MODE === 'record')('web e2e: first-run Orochi credential setup',
     await settings.getByRole('button', { name: '保存', exact: true }).click()
     await settings.getByLabel('模型 ID 1').waitFor({ state: 'detached', timeout: 15_000 })
     const savedDefaults = await readFile(join(scaffold.harnessHome, 'profiles', 'scaffold', 'cordis.patch.yml'), 'utf8')
-    expect(savedDefaults).toContain('id: deepseek-flash')
+    expect(savedDefaults).toContain('id: xiaomi/mimo-v2.6-flash')
     expect(savedDefaults).toContain('inputModalities:')
     expect(savedDefaults).toContain('- text')
-    expect(savedDefaults).toContain('systemPromptUpdate: in-history')
-    await expect(scaffold.ctx.llm.resolveModelInfo('orochi-official', 'deepseek-flash')).resolves.toMatchObject({
-      name: 'Configured Flash', inputModalities: ['text'], systemPromptUpdate: 'in-history',
+    // No default entry declares the in-history prompt mode, so an edit cannot save one.
+    expect(savedDefaults).not.toContain('systemPromptUpdate:')
+    await expect(scaffold.ctx.llm.resolveModelInfo('orochi-official', 'xiaomi/mimo-v2.6-flash')).resolves.toMatchObject({
+      name: 'Configured Flash', inputModalities: ['text'],
     })
-    await expect(scaffold.ctx.llm.resolveModelInfo('orochi-official', 'deepseek-v4-pro')).resolves.toMatchObject({
-      name: 'DeepSeek-V4-Pro', inputModalities: ['text'],
+    await expect(scaffold.ctx.llm.resolveModelInfo('orochi-official', 'xiaomi/mimo-v2.6-pro')).resolves.toMatchObject({
+      name: 'MiMo-V2.6-Pro', inputModalities: ['text', 'image'],
     })
     await orochi.locator('xpath=ancestor::li').getByRole('button', { name: '编辑' }).click()
     await settings.getByText('自定义设置').click()
@@ -260,7 +261,7 @@ describe.skipIf(MODE === 'record')('web e2e: first-run Orochi credential setup',
     expect(document).toContain('name: Private Preview')
     expect(document).toContain('contextWindow: 131072')
     expect(document).toContain('maxTokens: 64000')
-    expect(document).not.toContain('id: deepseek-flash')
+    expect(document).not.toContain('id: xiaomi/mimo-v2.6-flash')
     await expect(scaffold.ctx.llm.resolveModelInfo('orochi-official', 'private-preview')).resolves.toMatchObject({
       inputModalities: ['text', 'image'],
     })

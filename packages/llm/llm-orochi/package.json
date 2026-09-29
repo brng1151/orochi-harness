@@ -47,7 +47,6 @@
   },
   "devDependencies": {
     "@orochi-network/oh-llm-orochi-api-key": "workspace:*",
-    "@orochi-network/oh-llm-orochi-account": "workspace:*",
     "@orochi-network/cordis": "workspace:~",
     "@orochi-network/oh-agent": "workspace:*",
     "@orochi-network/oh-atomic-write": "workspace:*",
@@ -70,8 +69,7 @@
     "@orochi-network/oh-system-prompt": "workspace:*",
     "@orochi-network/oh-tools": "workspace:*",
     "@orochi-network/oh-credentials-local": "workspace:*",
-    "@orochi-network/oh-settings": "workspace:*",
-    "@orochi-network/oh-orochi-account": "workspace:*"
+    "@orochi-network/oh-settings": "workspace:*"
   },
   "peerDependenciesMeta": {
     "@orochi-network/cordis-plugin-loader": {

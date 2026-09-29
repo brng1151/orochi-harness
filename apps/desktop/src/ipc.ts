@@ -14,8 +14,6 @@ export const DESKTOP_IPC = {
   shortcutsRecording: 'oh-desktop:shortcuts-recording',
   boot: 'oh-desktop:boot',
   enterWorkspace: 'oh-desktop:enter-workspace',
-  onboardingActive: 'oh-desktop:onboarding-active',
-  onboardingApiKey: 'oh-desktop:onboarding-api-key',
   bootFailed: 'oh-desktop:boot-failed',
   browserAcquire: 'oh-desktop:browser-acquire',
   browserRelease: 'oh-desktop:browser-release',

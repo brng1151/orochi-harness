@@ -1,7 +1,6 @@
 // @vitest-environment jsdom
 import { JSDOM } from 'jsdom'
 import { afterEach, beforeEach, expect, it, vi } from 'vitest'
-import { installMandatoryUpdateOverlay } from '../src/preload-mandatory-overlay.ts'
 import { syncWindowsAppearance } from '../src/preload-windows.ts'
 import { DESKTOP_IPC, type OhDesktopProductApi } from '../src/ipc.ts'
 
@@ -14,28 +13,9 @@ vi.mock('electron', () => electron)
 vi.mock('../src/preload-platform.ts', () => ({ markDocumentPlatform: vi.fn(), syncWindowFullscreen: vi.fn() }))
 vi.mock('../src/preload-theme.ts', () => ({ syncNativeTheme: vi.fn() }))
 vi.mock('../src/preload-windows.ts', () => ({ syncWindowsAppearance: vi.fn() }))
-vi.mock('../src/preload-mandatory-overlay.ts', () => ({ installMandatoryUpdateOverlay: vi.fn() }))
 
 beforeEach(() => { vi.stubGlobal('process', { ...process, isMainFrame: true }) })
 afterEach(() => { document.body.replaceChildren(); vi.unstubAllGlobals(); vi.restoreAllMocks(); vi.clearAllMocks(); vi.resetModules() })
-
-it('reads only native login API-key presence through the onboarding bridge', async () => {
-  vi.stubGlobal('location', new URL('oh-app://app/'))
-  electron.ipcRenderer.invoke.mockResolvedValueOnce(true)
-  await import('../src/preload-app.ts')
-  const api = electron.contextBridge.exposeInMainWorld.mock.calls.find(([name]) => name === 'ohOnboarding')?.[1] as { hasApiKey(): Promise<boolean> }
-  expect(await api.hasApiKey()).toBe(true)
-  expect(electron.ipcRenderer.invoke).toHaveBeenCalledWith(DESKTOP_IPC.onboardingApiKey)
-})
-
-it('exposes onboarding size activation to the application document', async () => {
-  vi.stubGlobal('location', new URL('oh-app://app/'))
-  await import('../src/preload-app.ts')
-  const api = electron.contextBridge.exposeInMainWorld.mock.calls.find(([name]) => name === 'ohOnboarding')?.[1] as { setActive(active: boolean): void }
-  api.setActive(true)
-  api.setActive(false)
-  expect(electron.ipcRenderer.send.mock.calls).toEqual([[DESKTOP_IPC.onboardingActive, true], [DESKTOP_IPC.onboardingActive, false]])
-})
 
 it('limits product documents to update status and a native confirmation action', async () => {
   vi.stubGlobal('location', new URL('oh-app://app/index.html'))
@@ -138,17 +118,6 @@ it('moves welcome-entry focus to the document without changing keyboard tab orde
     enter()
     expect(dom.window.document.body.getAttribute('tabindex')).toBe('-1')
   } finally { dom.window.close() }
-})
-
-it.each(['win32', 'darwin'] as const)('installs the embedded mandatory UI only in the Windows app document (%s)', async (platform) => {
-  vi.stubGlobal('process', { ...process, platform })
-  for (const url of ['oh-app://app/', 'oh-app://shell/mandatory-update.html', 'https://example.com/']) {
-    vi.resetModules()
-    vi.mocked(installMandatoryUpdateOverlay).mockClear()
-    vi.stubGlobal('location', new URL(url))
-    await import('../src/preload-app.ts')
-    expect(installMandatoryUpdateOverlay).toHaveBeenCalledTimes(platform === 'win32' && url === 'oh-app://app/' ? 1 : 0)
-  }
 })
 
 it('exposes constrained shortcut operations and releases configuration subscriptions', async () => {

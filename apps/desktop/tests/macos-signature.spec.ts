@@ -13,8 +13,6 @@ import {
 
 const RELEASE_ENVIRONMENT = {
   OH_DESKTOP_APP_ID: 'com.example.desktop',
-  OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN: 'https://policy.example.com',
-  OH_DESKTOP_MANDATORY_UPDATE_CONFIG: JSON.stringify({ allowedAuthOrigins: ['https://login.example.com'] }),
   OH_DESKTOP_TARGET_PLATFORM: 'darwin',
   OH_DESKTOP_TARGET_ARCH: 'arm64',
   OH_DESKTOP_MACOS_SIGNING_IDENTITY: 'Example Company (TEAMID1234)',
@@ -99,8 +97,6 @@ describe('desktop macOS release signature', () => {
     const { createElectronBuilderConfig } = await import('../electron-builder.config.mjs')
     expect(() => createElectronBuilderConfig({
       OH_DESKTOP_APP_ID: RELEASE_ENVIRONMENT.OH_DESKTOP_APP_ID,
-      OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN: 'https://policy.example.com',
-      OH_DESKTOP_MANDATORY_UPDATE_CONFIG: JSON.stringify({ allowedAuthOrigins: ['https://login.example.com'] }),
       OH_DESKTOP_TARGET_PLATFORM: 'win32',
     }, 'win32')).toThrow(/OH_DESKTOP_WINDOWS_CER_FILE/u)
   })
@@ -109,8 +105,6 @@ describe('desktop macOS release signature', () => {
     const { createElectronBuilderConfig } = await import('../electron-builder.config.mjs')
     const config = createElectronBuilderConfig({
       OH_DESKTOP_APP_ID: RELEASE_ENVIRONMENT.OH_DESKTOP_APP_ID,
-      OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN: 'https://policy.example.com',
-      OH_DESKTOP_MANDATORY_UPDATE_CONFIG: JSON.stringify({ allowedAuthOrigins: ['https://login.example.com'] }),
       OH_DESKTOP_TARGET_PLATFORM: 'win32',
       OH_DESKTOP_UNSIGNED: '1',
     }, 'win32', 'x64')

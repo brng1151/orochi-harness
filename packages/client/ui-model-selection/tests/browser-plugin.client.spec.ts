@@ -28,8 +28,8 @@ const GROUPS = [{
   name: 'Orochi',
   models: [
     {
-      id: 'deepseek-v4-flash',
-      name: 'DeepSeek-V4-Flash',
+      id: 'xiaomi/mimo-v2.6-flash',
+      name: 'MiMo-V2.6-Flash',
       description: 'Fast, efficient, and economical; suited to focused, routine, or parallel tasks.',
       reasoning: {
         efforts: [
@@ -41,8 +41,8 @@ const GROUPS = [{
       },
     },
     {
-      id: 'deepseek-v4-pro',
-      name: 'DeepSeek-V4-Pro',
+      id: 'xiaomi/mimo-v2.6-pro',
+      name: 'MiMo-V2.6-Pro',
       description: 'Stronger agentic coding, knowledge, and difficult reasoning; suited to complex or quality-critical tasks at higher cost.',
       reasoning: {
         efforts: [
@@ -58,7 +58,7 @@ const GROUPS = [{
   id: 'external',
   name: 'External Provider',
   models: [{
-    id: 'deepseek-v4-flash',
+    id: 'xiaomi/mimo-v2.6-flash',
     name: 'External Flash',
     description: 'Provider-authored description.',
   }],
@@ -67,7 +67,7 @@ const GROUPS = [{
 /** Boot the plugin over fake faces + a stateful fake host (current moves on selectModel). */
 async function bench(locale: 'zh' | 'en' = 'zh') {
   const ctx = new Context()
-  let defaultSelection: ModelSelection = { provider: 'orochi-official', model: 'deepseek-v4-flash' }
+  let defaultSelection: ModelSelection = { provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-flash' }
   let selected = defaultSelection
   const calls = { models: 0, select: 0 }
   const projections = new Map<SessionId, SnapshotStore<ModelSelectionProjection | undefined>>()
@@ -227,7 +227,7 @@ describe('ui-model-selection dual entry', () => {
     b.mint('s1')
     const options = await b.popup().options(projection('s1'), new AbortController().signal)
     expect(options.map((o: SelectOption) => o.label)).toEqual([
-      'DeepSeek-V4-Flash', 'DeepSeek-V4-Pro', 'External Flash',
+      'MiMo-V2.6-Flash', 'MiMo-V2.6-Pro', 'External Flash',
     ])
     expect(options[0]).toMatchObject({
       active: true,
@@ -254,24 +254,24 @@ describe('ui-model-selection dual entry', () => {
     b.mint('s1')
     const seatFace = b.seat().inject!(sid('s1'))
     // Switch through the SEAT entry; the directory holds the submission until it settles.
-    const selection = { provider: 'orochi-official', model: 'deepseek-v4-pro', reasoningEffort: 'max' }
+    const selection = { provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-pro', reasoningEffort: 'max' }
     const settled = seatFace.select(selection)
     expect(seatFace.directory.getSnapshot()).toMatchObject({ status: 'selecting', pending: selection })
     expect(await settled).toEqual({ ok: true, value: undefined })
     expect(seatFace.directory.getSnapshot()).toMatchObject({ status: 'ready', pending: null })
     expect(b.hostCurrent()).toEqual({
       provider: 'orochi-official',
-      model: 'deepseek-v4-pro',
+      model: 'xiaomi/mimo-v2.6-pro',
       reasoningEffort: 'max',
     })
     expect(seatFace.directory.getSnapshot().current).toEqual({
       provider: 'orochi-official',
-      model: 'deepseek-v4-pro',
+      model: 'xiaomi/mimo-v2.6-pro',
       reasoningEffort: 'max',
     })
     // The POPUP's next options pass reflects it without a seat-side reload.
     const options = await b.popup().options(projection('s1'), new AbortController().signal)
-    expect(options.find((o: SelectOption) => o.label === 'DeepSeek-V4-Pro')).toMatchObject({ active: true })
+    expect(options.find((o: SelectOption) => o.label === 'MiMo-V2.6-Pro')).toMatchObject({ active: true })
   })
 
   it('a popup selection lands on the seat store — the reverse direction of the same state', async () => {
@@ -279,47 +279,13 @@ describe('ui-model-selection dual entry', () => {
     b.mint('s1')
     const seatFace = b.seat().inject!(sid('s1'))
     const options = await b.popup().options(projection('s1'), new AbortController().signal)
-    const pro = options.find((o: SelectOption) => o.label === 'DeepSeek-V4-Pro')!
+    const pro = options.find((o: SelectOption) => o.label === 'MiMo-V2.6-Pro')!
     await b.popup().onSelect(pro, projection('s1'))
     expect(seatFace.directory.getSnapshot().current).toEqual({
       provider: 'orochi-official',
-      model: 'deepseek-v4-pro',
+      model: 'xiaomi/mimo-v2.6-pro',
       reasoningEffort: 'high',
     })
-  })
-
-  it.each(['en', 'zh'] as const)('localizes account provider details in the %s model popup', async (locale) => {
-    const b = await bench(locale)
-    try {
-      b.setGroups([{ ...GROUPS[0]!, id: 'orochi-account', name: 'Orochi Account' }])
-      b.remote.emit('llm/adapters-updated', [])
-      b.mint('s1')
-      const options = await b.popup().options(projection('s1'), new AbortController().signal)
-      expect(options[0]?.detail).toContain(locale === 'zh' ? 'Orochi 账号' : 'Orochi Account')
-    } finally {
-      await b.ctx.fiber.dispose()
-    }
-  })
-
-  it('removes account models from the picker after sign-out', async () => {
-    const b = await bench('en')
-    try {
-      b.setGroups([{ ...GROUPS[0]!, id: 'orochi-account', name: 'Orochi Account' }, ...GROUPS])
-      b.remote.emit('llm/adapters-updated', [])
-      b.mint('s1')
-      const before = await b.popup().options(projection('s1'), new AbortController().signal)
-      expect(before.some(option => option.detail?.includes('Orochi Account'))).toBe(true)
-      b.setGroups(GROUPS)
-      b.remote.emit('credentials/record-updated', ['orochi-account-platform'])
-      await vi.waitFor(() => {
-        expect(b.ctx.modelDirectories.directoryFor(sid('s1')).store.getSnapshot().groups).toEqual(GROUPS)
-      })
-      const after = await b.popup().options(projection('s1'), new AbortController().signal)
-      expect(after.some(option => option.detail?.includes('Orochi Account'))).toBe(false)
-      expect(after.length).toBeGreaterThan(0)
-    } finally {
-      await b.ctx.fiber.dispose()
-    }
   })
 
   it('both entries share one directory instance per session, isolated across sessions', async () => {
@@ -345,8 +311,8 @@ describe('ui-model-selection dual entry', () => {
     b.mint('s1')
     const face = b.seat().inject!(sid('s1'))
     await b.ctx.modelDirectories.directoryFor(sid('s1')).load()
-    const late = face.select({ provider: 'orochi-official', model: 'deepseek-v4-pro' })
-    expect(face.directory.getSnapshot().pending).toEqual({ provider: 'orochi-official', model: 'deepseek-v4-pro' })
+    const late = face.select({ provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-pro' })
+    expect(face.directory.getSnapshot().pending).toEqual({ provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-pro' })
     b.ctx.emit('connection/reset')
     expect(face.directory.getSnapshot()).toMatchObject({ status: 'loading', pending: null })
     await late
@@ -357,8 +323,8 @@ describe('ui-model-selection dual entry', () => {
     const b = await bench()
     b.mint('s1')
     const face = b.seat().inject!(sid('s1'))
-    await face.select({ provider: 'orochi-official', model: 'deepseek-v4-pro' })
-    b.setHostCurrent({ provider: 'orochi-official', model: 'deepseek-v4-flash' })
+    await face.select({ provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-pro' })
+    b.setHostCurrent({ provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-flash' })
 
     b.ctx.emit('connection/reset')
     expect(face.directory.getSnapshot()).toMatchObject({
@@ -377,15 +343,15 @@ describe('ui-model-selection dual entry', () => {
     b.mint('s1')
     const face = b.seat().inject!(sid('s1'))
     face.load()
-    expect(face.directory.getSnapshot().current?.model).toBe('deepseek-v4-flash')
+    expect(face.directory.getSnapshot().current?.model).toBe('xiaomi/mimo-v2.6-flash')
 
     b.remote.emit('settings/document-updated', ['llm-orochi', 1])
     b.setProjected(sid('s1'), {
-      lastUsed: { provider: 'orochi-official', model: 'deepseek-v4-flash' },
-      next: { provider: 'orochi-official', model: 'deepseek-v4-pro' },
+      lastUsed: { provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-flash' },
+      next: { provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-pro' },
     })
     expect(face.directory.getSnapshot()).toMatchObject({
-      current: { provider: 'orochi-official', model: 'deepseek-v4-flash' },
+      current: { provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-flash' },
       groups: GROUPS,
       routable: null,
       status: 'loading',
@@ -393,7 +359,7 @@ describe('ui-model-selection dual entry', () => {
 
     await vi.waitFor(() => {
       expect(face.directory.getSnapshot()).toMatchObject({
-        current: { provider: 'orochi-official', model: 'deepseek-v4-pro' },
+        current: { provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-pro' },
         status: 'ready',
       })
     })
@@ -409,7 +375,7 @@ describe('ui-model-selection dual entry', () => {
       b.remote.emit('credentials/record-updated', ['OROCHI_API_KEY'])
       await vi.waitFor(() => {
         expect(face.directory.getSnapshot()).toMatchObject({
-          current: { provider: 'orochi-official', model: 'deepseek-v4-flash' },
+          current: { provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-flash' },
           groups: GROUPS, routable: null, status: 'error', error: 'catalog offline',
         })
       })
@@ -436,21 +402,21 @@ describe('ui-model-selection dual entry', () => {
   it('retains saved effort for existing and new sessions after credentials disappear', async () => {
     const b = await bench()
     try {
-      b.setHostCurrent({ provider: 'orochi-official', model: 'deepseek-v4-flash', reasoningEffort: 'max' })
+      b.setHostCurrent({ provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-flash', reasoningEffort: 'max' })
       b.mint('existing')
       const existing = b.ctx.modelDirectories.directoryFor(sid('existing'))
       await existing.load()
       b.setProjected(sid('existing'), { lastUsed: null,
-        next: { provider: 'orochi-official', model: 'deepseek-v4-flash', reasoningEffort: 'high' } })
+        next: { provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-flash', reasoningEffort: 'high' } })
       b.setRoutable(false)
       b.remote.emit('settings/document-updated', ['llm-orochi', 1])
       expect(existing.store.getSnapshot().retainedEffort).toBe('High')
       await vi.waitFor(() => {
-        expect(existing.store.getSnapshot()).toMatchObject({ current: { provider: 'orochi-official', model: 'deepseek-v4-flash', reasoningEffort: 'high' }, routable: false, retainedEffort: 'High' })
+        expect(existing.store.getSnapshot()).toMatchObject({ current: { provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-flash', reasoningEffort: 'high' }, routable: false, retainedEffort: 'High' })
       })
       b.mint('new')
       const fresh = b.ctx.modelDirectories.directoryFor(sid('new'))
-      expect(fresh.store.getSnapshot()).toMatchObject({ current: { provider: 'orochi-official', model: 'deepseek-v4-flash', reasoningEffort: 'max' }, routable: false, retainedEffort: 'Max' })
+      expect(fresh.store.getSnapshot()).toMatchObject({ current: { provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-flash', reasoningEffort: 'max' }, routable: false, retainedEffort: 'Max' })
     } finally {
       await b.ctx.fiber.dispose()
     }
@@ -515,12 +481,12 @@ describe('ui-model-selection dual entry', () => {
     const face = b.seat().inject!(sid('child'))
     expect(face.available).toBe(false)
     face.load()
-    await expect(face.select({ provider: 'deepseek', model: 'deepseek-v4-pro' })).resolves.toBeUndefined()
+    await expect(face.select({ provider: 'deepseek', model: 'xiaomi/mimo-v2.6-pro' })).resolves.toBeUndefined()
     await expect(b.ctx.modelDirectories.directoryFor(sid('child')).load())
       .rejects.toThrow(/unavailable for addressed subagent/)
     await expect(b.ctx.modelDirectories.directoryFor(sid('child')).select({
       provider: 'deepseek',
-      model: 'deepseek-v4-pro',
+      model: 'xiaomi/mimo-v2.6-pro',
     })).rejects.toThrow(/unavailable for addressed subagent/)
     b.ctx.emit('connection/reset')
     await Promise.resolve()

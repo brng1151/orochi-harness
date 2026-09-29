@@ -38,7 +38,10 @@ const COLLAPSE_SETTLE_MS = 150
  */
 const SCROLLBAR_LINGER_MS = 2000
 
-/** Format complete-build metadata for the local brand badge. */
+/** Square edge of the expanded brand mark; the rail keeps its own 24px mark. */
+const BRAND_MARK_SIZE = 28
+
+/** Format complete-build metadata for the footer version line. */
 function localBuildVersion(): string | undefined {
   const version = process.env.OH_CLIENT_VERSION
   if (version === undefined) return undefined
@@ -222,18 +225,11 @@ export function SidebarRoot({
           const identity = (
             <span className={css.brandIdentity} aria-hidden="true">
               <span className={css.brandMark}>
-                {renderSlot('sidebar.brand.mark', { size: 24 }, { fallback: <OroLogo size={24} /> })}
+                {renderSlot('sidebar.brand.mark', { size: BRAND_MARK_SIZE }, { fallback: <OroLogo size={BRAND_MARK_SIZE} /> })}
               </span>
               <span className={css.brandName}>
                 {renderSlot('sidebar.brand.name', {}, {
-                  fallback: buildVersion === undefined
-                    ? <span className={css.fallbackBrandName}>{t('brand.localBuild')}</span>
-                    : (
-                      <span className={css.localBuildBrand}>
-                        <span className={css.localBuildTitle}>{t('brand.localBuild')}</span>
-                        <span className={css.buildVersion}>{buildVersion}</span>
-                      </span>
-                    ),
+                  fallback: <span className={css.fallbackBrandName}>{t('brand.localBuild')}</span>,
                 })}
               </span>
             </span>
@@ -311,6 +307,11 @@ export function SidebarRoot({
         <div className={css.settingsArea}>
           {renderSlot('sidebar.settings', { wide })}
         </div>
+        {wide && buildVersion !== undefined && (
+          <div className={css.versionArea}>
+            <span className={css.buildVersion} title={buildVersion}>{buildVersion}</span>
+          </div>
+        )}
       </div>
     </div>
   )

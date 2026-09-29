@@ -1,4 +1,4 @@
-/** Ordinary feed polling; policy queries and user-authorized transfers keep their own lifetimes. */
+/** Ordinary feed polling; user-authorized transfers keep their own lifetimes. */
 
 import type { DesktopUpdateCoordinator } from './update-coordinator.ts'
 import type { DesktopUpdateState } from './ipc.ts'
@@ -11,7 +11,7 @@ export interface DesktopUpdateScheduleConfig {
 }
 
 /**
- * Resolve ordinary-update polling settings without changing mandatory-policy scheduling.
+ * Resolve ordinary-update polling settings.
  * @param env - Desktop process environment.
  * @returns Validated durations and fractional jitter.
  */
@@ -59,7 +59,7 @@ export class DesktopUpdateSchedule {
   /**
    * Start immediately when due; explicit requests bypass the deadline and share in-flight work.
    * @param manual - Whether a check failure must be visible, including when joining an automatic request.
-   * @param force - Whether policy arrival or explicit intent bypasses the automatic deadline.
+   * @param force - Whether explicit intent or the retry timer bypasses the automatic deadline.
    * @returns Current state when not due, otherwise the coordinator result. Disposal rejects new work.
    */
   async check(manual = false, force = manual): Promise<DesktopUpdateState> {

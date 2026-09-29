@@ -58,7 +58,7 @@ export interface OrochiHarnessOptions extends HarnessClientOptions {
   cwd?: string
   /** Provider route for SDK-created agents (default `orochi-official`). */
   provider?: string
-  /** Model for SDK-created agents (default `deepseek-v4-flash`). */
+  /** Model for SDK-created agents (default `xiaomi/mimo-v2.6-flash`). */
   model?: string
   /** Adapter-owned reasoning effort for the selected provider/model route. */
   reasoningEffort?: ReasoningEffortId

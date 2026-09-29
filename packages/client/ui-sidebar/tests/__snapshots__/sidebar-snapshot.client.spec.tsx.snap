@@ -124,9 +124,9 @@ exports[`sidebar shell snapshots > renders Windows caption controls in expanded 
                 aria-hidden="true"
                 data-content="ad50180c"
                 fill="none"
-                height="24"
+                height="28"
                 viewBox="0 0 32 32"
-                width="24"
+                width="28"
               />
             </div>
           </span>
@@ -138,18 +138,9 @@ exports[`sidebar shell snapshots > renders Windows caption controls in expanded 
               style="display: contents;"
             >
               <span
-                class="localBuildBrand"
+                class="fallbackBrandName"
               >
-                <span
-                  class="localBuildTitle"
-                >
-                  OH Local Build
-                </span>
-                <span
-                  class="buildVersion"
-                >
-                  1.2.3-rc.4-abc1234-dirty
-                </span>
+                Orochi Harness
               </span>
             </div>
           </span>
@@ -228,6 +219,16 @@ exports[`sidebar shell snapshots > renders Windows caption controls in expanded 
           data-slot="sidebar.settings"
           style="display: contents;"
         />
+      </div>
+      <div
+        class="versionArea"
+      >
+        <span
+          class="buildVersion"
+          title="1.2.3-rc.4-abc1234-dirty"
+        >
+          1.2.3-rc.4-abc1234-dirty
+        </span>
       </div>
     </div>
   </div>
@@ -376,9 +377,9 @@ exports[`sidebar shell snapshots > renders the expanded column (wordmark, capsul
                 aria-hidden="true"
                 data-content="ad50180c"
                 fill="none"
-                height="24"
+                height="28"
                 viewBox="0 0 32 32"
-                width="24"
+                width="28"
               />
             </div>
           </span>
@@ -390,18 +391,9 @@ exports[`sidebar shell snapshots > renders the expanded column (wordmark, capsul
               style="display: contents;"
             >
               <span
-                class="localBuildBrand"
+                class="fallbackBrandName"
               >
-                <span
-                  class="localBuildTitle"
-                >
-                  OH Local Build
-                </span>
-                <span
-                  class="buildVersion"
-                >
-                  1.2.3-rc.4-abc1234-dirty
-                </span>
+                Orochi Harness
               </span>
             </div>
           </span>
@@ -481,6 +473,16 @@ exports[`sidebar shell snapshots > renders the expanded column (wordmark, capsul
           style="display: contents;"
         />
       </div>
+      <div
+        class="versionArea"
+      >
+        <span
+          class="buildVersion"
+          title="1.2.3-rc.4-abc1234-dirty"
+        >
+          1.2.3-rc.4-abc1234-dirty
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -519,9 +521,9 @@ exports[`sidebar shell snapshots > renders the expanded column in the default lo
                 aria-hidden="true"
                 data-content="ad50180c"
                 fill="none"
-                height="24"
+                height="28"
                 viewBox="0 0 32 32"
-                width="24"
+                width="28"
               />
             </div>
           </span>
@@ -533,18 +535,9 @@ exports[`sidebar shell snapshots > renders the expanded column in the default lo
               style="display: contents;"
             >
               <span
-                class="localBuildBrand"
+                class="fallbackBrandName"
               >
-                <span
-                  class="localBuildTitle"
-                >
-                  OH 本地构建
-                </span>
-                <span
-                  class="buildVersion"
-                >
-                  1.2.3-rc.4-abc1234-dirty
-                </span>
+                Orochi Harness
               </span>
             </div>
           </span>
@@ -623,6 +616,16 @@ exports[`sidebar shell snapshots > renders the expanded column in the default lo
           data-slot="sidebar.settings"
           style="display: contents;"
         />
+      </div>
+      <div
+        class="versionArea"
+      >
+        <span
+          class="buildVersion"
+          title="1.2.3-rc.4-abc1234-dirty"
+        >
+          1.2.3-rc.4-abc1234-dirty
+        </span>
       </div>
     </div>
   </div>

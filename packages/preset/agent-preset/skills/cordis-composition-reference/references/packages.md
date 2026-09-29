@@ -14,7 +14,6 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 
 | Package | Config | Description |
 |---|---|---|
-| `@orochi-network/oh-api-account-controller` | no | Expose safe account operations over authenticated Remote |
 | `@orochi-network/oh-api-gateway` | yes | Typert Remote Host dispatcher and Client API endpoint |
 | `@orochi-network/oh-api-job-controller` | yes | Job Remote observation stream and the reference-counted client job-output service |
 | `@orochi-network/oh-api-remotes` | no | Remote BFF assembly for application-selected Host capabilities |
@@ -89,7 +88,6 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | `@orochi-network/oh-client-ui-schedule` | no | Host task management page and Session reminder catalog |
 | `@orochi-network/oh-client-ui-session` | no | Session Controller adapter for React and session-scoped slots |
 | `@orochi-network/oh-client-ui-settings` | no | Settings domain base plugin: shared configuration forms and the canonical settings slot-type contract |
-| `@orochi-network/oh-client-ui-settings-account` | yes | Manage Orochi login and open Platform billing pages |
 | `@orochi-network/oh-client-ui-settings-agent-loop` | no | Settings page of the agent loop on the oh web client's Plugins page: the parallel tool-call cap of the agent-loop namespace |
 | `@orochi-network/oh-client-ui-settings-general` | no | Settings ownerless-copy and product onboarding plugin: the General section, shell trigger/header chrome content, settings dictionaries, and the versioned welcome notice |
 | `@orochi-network/oh-client-ui-settings-models` | yes | Models settings and shared product-onboarding dialogs over existing settings and credential joins |
@@ -157,7 +155,6 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 |---|---|---|
 | `@orochi-network/oh-authorization` | no | Authorization seam (ctx.authorization): plugin-owned flows that obtain a credential through a conversation with the human |
 | `@orochi-network/oh-credentials-local` | yes | File-backed credentials provider ($OH_HOME/.env under the live process environment) for the Orochi Harness |
-| `@orochi-network/oh-orochi-account-platform` | yes | Authorize Orochi accounts through browser PKCE |
 
 ## deliverables
 
@@ -276,7 +273,6 @@ Every package below exports a Cordis plugin that a bundle patch can name in a Lo
 | Package | Config | Description |
 |---|---|---|
 | `@orochi-network/oh-llm` | no | Provider-neutral LLM service interface for the Orochi Harness |
-| `@orochi-network/oh-llm-orochi-account` | yes | Orochi account provider authentication and discovery |
 | `@orochi-network/oh-llm-orochi-api-key` | yes | Orochi api-key provider authentication and discovery |
 | `@orochi-network/oh-llm-pi-ai` | yes | pi-ai-backed Orochi adapter for the Orochi Harness LLM seam (design-verification twin of oh-llm-orochi) |
 | `@orochi-network/oh-llm-retry` | yes | Provider-routed LLM request retry policy for the Orochi Harness |

@@ -24,13 +24,15 @@ import { MESSAGES_FILES_BETA } from '../src/messages-api.ts'
 import { assemble, options, user, sourceModuleLoader } from './helpers.ts'
 
 const IN_HISTORY_MODEL = process.env.OROCHI_IN_HISTORY_MODEL
+/** A Messages root that also serves the Anthropic Files API; the public default does not, so unset skips the Files smoke. */
+const FILES_BASE_URL = process.env.OROCHI_FILES_BASE_URL
 const cleanups: (() => Promise<unknown>)[] = []
 afterEach(async () => {
   while (cleanups.length) await cleanups.pop()!()
   vi.unstubAllEnvs()
   vi.unstubAllGlobals()
 })
-async function boot(models?: Messages.Options['models']) {
+async function boot(models?: Messages.Options['models'], baseURL: string = Protocol.PUBLIC_BASE_URL) {
   const home = await mkdtemp(join(tmpdir(), 'oh-messages-e2e-'))
   cleanups.push(() => rm(home, { recursive: true, force: true }))
   vi.stubEnv('OH_HOME', home)
@@ -38,7 +40,7 @@ async function boot(models?: Messages.Options['models']) {
   cleanups.push(() => ctx.fiber.dispose())
   await ctx.plugin(LlmRuntime)
   await ctx.plugin(Messages, {
-    baseURL: Protocol.PUBLIC_BASE_URL,
+    baseURL,
     maxTokens: 4096,
     ...models === undefined ? {} : { models },
   })
@@ -68,14 +70,15 @@ describe.skipIf(!process.env.OROCHI_API_KEY)('Orochi Messages real API', () => {
     await reply('PROMPT_CLEARED')
   })
 
-  it('uploads, lists, retrieves, reuses, and replaces a deleted Files image across Messages requests', async () => {
-    const ctx = await boot()
+  it.skipIf(FILES_BASE_URL === undefined)('uploads, lists, retrieves, reuses, and replaces a deleted Files image across Messages requests', async () => {
+    const filesRoot = FILES_BASE_URL as string
+    const ctx = await boot(undefined, filesRoot)
     await ctx.plugin(LocalAttachments)
     const fetchImpl = globalThis.fetch
     const uploads: string[] = []
     const bodies: string[] = []
     const files = new OrochiFilesClient({
-      baseURL: Protocol.PUBLIC_BASE_URL, headers: { 'x-api-key': process.env.OROCHI_API_KEY as string }, fetch: fetchImpl,
+      baseURL: filesRoot, headers: { 'x-api-key': process.env.OROCHI_API_KEY as string }, fetch: fetchImpl,
     })
     const ownedFiles = new Set<ReturnType<typeof Protocol.OrochiFileId>>()
     cleanups.push(async () => {
@@ -84,12 +87,12 @@ describe.skipIf(!process.env.OROCHI_API_KEY)('Orochi Messages real API', () => {
     vi.stubGlobal('fetch', async (input: string | URL | Request, init?: RequestInit) => {
       const url = typeof input === 'string' ? input : input instanceof URL ? input.href : input.url
       const response = await fetchImpl(input, init)
-      if (url === `${Protocol.PUBLIC_BASE_URL}/v1/files` && init?.method === 'POST' && response.ok) {
+      if (url === `${filesRoot}/v1/files` && init?.method === 'POST' && response.ok) {
         const file = await response.clone().json() as { id: string }
         uploads.push(file.id)
         ownedFiles.add(Protocol.OrochiFileId(file.id))
       }
-      if (url === `${Protocol.PUBLIC_BASE_URL}/v1/messages`) {
+      if (url === `${filesRoot}/v1/messages`) {
         expect(new Headers(init?.headers).get('anthropic-beta')).toBe(MESSAGES_FILES_BETA)
         if (typeof init?.body !== 'string') throw new Error('expected a JSON Messages request')
         bodies.push(init.body)
@@ -99,7 +102,7 @@ describe.skipIf(!process.env.OROCHI_API_KEY)('Orochi Messages real API', () => {
     const attachment = await ctx.attachments.saveImage({ data: await readFile(new URL('fixtures/red.png', import.meta.url)), mediaType: 'image/png' })
     const message = user('What is the dominant color of this image? Reply with one English color word.')
     const request = options({
-      model: 'deepseek-flash', reasoningEffort: ReasoningEffortId('off'),
+      model: 'xiaomi/mimo-v2.6-flash', reasoningEffort: ReasoningEffortId('off'),
       messages: [{ ...message, content: [...message.content, { type: 'image', attachment }] }],
     })
     for (let run = 0; run < 2; run++) {
