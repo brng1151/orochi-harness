@@ -1194,9 +1194,6 @@
   "packages/experimental/webworker-packer/src/preview.ts": {
     "cdd46c8ceda6d5707bc2abfba329351ba06bcc030b314a3c799d72a4971bd5a4": 1
   },
-  "packages/experimental/webworker-packer/tests/preview.spec.ts": {
-    "cdd46c8ceda6d5707bc2abfba329351ba06bcc030b314a3c799d72a4971bd5a4": 1
-  },
   "packages/experimental/webworker-runtime/src/compile/transform.ts": {
     "48bb7e26a882fa7a44a4175f843d20846606976c7d6fdaf67c8a08dd8830b95e": 1
   },
@@ -1222,9 +1219,6 @@
   "packages/experimental/webworker-runtime/tests/transport/tunnel-client.spec.ts": {
     "57012c2a1a6607e1296bdf33eb3d118eb2caae1abbbb1e8eed966837de75cd55": 1,
     "ce85127d7198918f7141235a5784b3db422482fcd6a5a3ae24c5d94f22f4239e": 2
-  },
-  "packages/experimental/webworker-runtime/tests/vfs-example-fixture.spec.ts": {
-    "e3b3858336ae260253abe549d2b763f5087ab4e8650f4eb5b323339eff0a6ce4": 1
   },
   "packages/experimental/webworker-runtime/tests/vfs-example-fixture.ts": {
     "d3e642e91bcbc51168a96a4ab1d85291de54989eec33c4f36bb5acb18aef7a39": 1
@@ -2008,12 +2002,9 @@
     "e3b3858336ae260253abe549d2b763f5087ab4e8650f4eb5b323339eff0a6ce4": 1
   },
   "packages/test-support/llm-replay/tests/llm-replay.spec.ts": {
-    "319c99c30d9759513c335590587942a42fd0fae77d4f54fd640212df139215cc": 1,
-    "8178817a1e752ac5e742dc7e7552161566cf3fe28de9310253d914985060f1e2": 1,
     "957690a91ec3fbe9b64aecc6baed7c902b93956cd87dcbf2b77ea11dd8d75bfc": 1,
     "9b81e0ea560604a3d52094cf7a261c4a03095ef6a314314b8ff0b2354046d9da": 1,
-    "da6ccb5610150a9169b5c3949017d7f5e0d60eadd999615e231db00470aa00e7": 1,
-    "f772961d38eac5032c547a0485c4b941da2faa044c428f788934798230fc389a": 1
+    "da6ccb5610150a9169b5c3949017d7f5e0d60eadd999615e231db00470aa00e7": 1
   },
   "packages/test-support/loader-smoke/tests/agent-turn.spec.ts": {
     "432811d8f7105d0bf1934d2b52456aeb8f202b334486810dc1b6c3d87349b5b1": 1,
