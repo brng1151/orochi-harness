@@ -323,9 +323,9 @@ describe('CI workflow', () => {
     expect(aggregate.needs).not.toContain('windows')
     // Windows CI is off (orochi-network/orochi-harness#13), so no Windows job feeds the verdict.
     expect(aggregate.needs).not.toContain('windows-build')
-    // The benchmark lane is a required verdict input and runs alone so its
-    // wall-clock budgets never share a runner with a concurrent aggregate.
-    expect(aggregate.needs).toContain('node-24-bench')
+    // The benchmark lane is off (orochi-network/orochi-harness#13), so it feeds no verdict; it still runs alone
+    // so its wall-clock budgets never share a runner once it is restored.
+    expect(aggregate.needs).not.toContain('node-24-bench')
     expect(node24Bench.name).toBe('node 24 / benchmarks')
     expect(node24Bench.env).toBeUndefined()
     expect(node24Bench.steps).toContainEqual({
@@ -444,11 +444,12 @@ describe('CI workflow', () => {
     const aggregate = workflowJob(workflow, 'all-checks-passed')
 
     expect(benchmark['runs-on']).toBe('ubuntu-24.04')
-    expect(benchmark.if).toBe("github.event_name == 'pull_request'")
+    // Off (orochi-network/orochi-harness#13); restore the pull_request condition to run it again.
+    expect(benchmark.if).toBe(false)
     expect(benchmark.needs).toBeUndefined()
     expect(benchmark['continue-on-error']).toBeUndefined()
     expect(benchmark.env).toBeUndefined()
-    expect(aggregate.needs).toContain('node-24-bench')
+    expect(aggregate.needs).not.toContain('node-24-bench')
   })
 
   it('always restores the hosted benchmark pnpm cache', () => {
