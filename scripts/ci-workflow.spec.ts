@@ -190,7 +190,8 @@ describe('CI workflow', () => {
       const cores = jobName === 'windows-native-tests' ? 2 : 16
       expect(evaluateRunsOn(job['runs-on'], { vars: { OH_CI_FAILOVER_WINDOWS: 'blacksmith' } }))
         .toBe(`blacksmith-${cores}vcpu-windows-2025`)
-      expect(job.if).toBe("github.event_name == 'pull_request'")
+      // Windows CI is off (orochi-network/orochi-harness#13); restore the pull_request condition to re-enable it.
+      expect(job.if).toBe(false)
     }
 
     // windows-build runs the blocking build/site pair.
@@ -320,7 +321,8 @@ describe('CI workflow', () => {
     // windows-coverage is temporarily non-blocking while Windows ACP
     // half-close tests are stabilized; observational stays out too.
     expect(aggregate.needs).not.toContain('windows')
-    expect(aggregate.needs).toContain('windows-build')
+    // Windows CI is off (orochi-network/orochi-harness#13), so no Windows job feeds the verdict.
+    expect(aggregate.needs).not.toContain('windows-build')
     // The benchmark lane is a required verdict input and runs alone so its
     // wall-clock budgets never share a runner with a concurrent aggregate.
     expect(aggregate.needs).toContain('node-24-bench')
@@ -337,7 +339,7 @@ describe('CI workflow', () => {
       run: 'pnpm run check:ci:bench',
     })
     expect(aggregate.needs).not.toContain('windows-coverage')
-    expect(aggregate.needs).toContain('windows-native-tests')
+    expect(aggregate.needs).not.toContain('windows-native-tests')
     expect(aggregate.needs).not.toContain('windows-observational')
     expect(aggregate.needs).not.toContain('serial-windows')
 
@@ -584,7 +586,7 @@ describe('CI workflow', () => {
     expect(config).not.toContain('packages/lsp/lsp-stdio/src/instance.ts')
   })
 
-  it('requires release-shaped Python runtime validation on Linux and Windows x64', () => {
+  it('requires release-shaped Python runtime validation on Linux x64', () => {
     const workflow = loadWorkflow('.github/workflows/ci.yml')
     const pythonRuntime = workflowJob(workflow, 'python-runtime')
     const aggregate = workflowJob(workflow, 'all-checks-passed')
@@ -597,7 +599,7 @@ describe('CI workflow', () => {
       name: 'python runtime / release-shaped matrix',
       uses: './.github/workflows/build-exe-for-python-sdk.yml',
       with: {
-        targets: 'node24-linux-x64,node24-win-x64',
+        targets: 'node24-linux-x64',
         ci: true,
       },
       secrets: {
