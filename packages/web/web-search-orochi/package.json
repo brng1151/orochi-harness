@@ -29,7 +29,6 @@
   "peerDependencies": {
     "@orochi-network/oh-agent": "workspace:*",
     "@orochi-network/oh-credentials": "workspace:*",
-    "@orochi-network/oh-orochi-account": "workspace:*",
     "@orochi-network/oh-launch-environment": "workspace:*",
     "@orochi-network/oh-session": "workspace:*",
     "@orochi-network/oh-web": "workspace:*",
@@ -42,16 +41,10 @@
     "@orochi-network/oh-agent": "workspace:*",
     "@orochi-network/oh-credentials": "workspace:*",
     "@orochi-network/oh-credentials-local": "workspace:*",
-    "@orochi-network/oh-orochi-account": "workspace:*",
     "@orochi-network/oh-launch-environment": "workspace:*",
     "@orochi-network/oh-session": "workspace:*",
     "@orochi-network/oh-web": "workspace:*",
     "@orochi-network/cordis": "workspace:~",
     "@orochi-network/oh-http-proxy": "workspace:*"
-  },
-  "peerDependenciesMeta": {
-    "@orochi-network/oh-orochi-account": {
-      "optional": true
-    }
   }
 }

@@ -13,7 +13,7 @@ const repo = fileURLToPath(new URL('../../../../', import.meta.url))
 // OH_PRIMARY_RUNTIME names the same runtime.json + dependencies/ payload used by shipped deployments.
 const runtime = process.env.OH_PRIMARY_RUNTIME
 const python = runtime && join(runtime, 'dependencies/python', process.platform === 'win32' ? 'python.exe' : 'bin/python3')
-const model = process.env.MODEL_NAME ?? 'deepseek-flash'
+const model = process.env.MODEL_NAME ?? 'xiaomi/mimo-v2.6-flash'
 // Development gateways can expose Chat Completions without the official Messages API.
 const completions = process.env.OH_OFFICE_TEST_API === 'openai-completions'
 

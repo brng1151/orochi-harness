@@ -1,6 +1,0 @@
-- region "Welcome to Orochi Harness":
-  - heading "Welcome to Orochi Harness" [level=1]:
-    - text: Welcome to
-    - emphasis: Orochi Harness
-  - paragraph: Orochi Harness works in a local folder and uses tools to read and write files on your computer. It can help you research and organize information, create documents and spreadsheets, write code, troubleshoot issues, and more.
-  - button "Get started"

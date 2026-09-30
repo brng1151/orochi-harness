@@ -31,10 +31,10 @@ export const OROCHI_PROVIDER_ID = 'orochi-official'
  * `$OROCHI_SEARCH_BASE_URL` overrides it independently of the conversation
  * adapter's endpoint. Both providers share the API key.
  */
-export const OROCHI_DEFAULT_BASE_URL = 'https://api.deepseek.com/anthropic/v1'
+export const OROCHI_DEFAULT_BASE_URL = 'https://openrouter.ai/api/v1'
 
 /** Default Anthropic-format model name (aligned with the repo's Orochi model vocabulary). */
-export const OROCHI_DEFAULT_MODEL = 'deepseek-v4-flash'
+export const OROCHI_DEFAULT_MODEL = 'xiaomi/mimo-v2.6-flash'
 
 /** Default `anthropic-version` header value. */
 export const OROCHI_DEFAULT_API_VERSION = '2023-06-01'
@@ -85,12 +85,6 @@ declare module '@orochi-network/oh-session/types' {
 
 /** Resolved provider options (the plugin's `apply` supplies credential and constant defaults). */
 export interface OrochiSearchProviderOptions {
-  /**
-   * Resolve the Orochi account token for one search endpoint. A token takes
-   * precedence over every API key and is sent only as `x-oh-auth-token`;
-   * `undefined` selects API-key authentication.
-   */
-  resolveAccountToken?: (endpoint: string) => Promise<string | undefined>
   /** Literal Orochi API key; when present it wins over {@link resolveApiKey}. */
   apiKey?: string
   /** Resolve the current Orochi API key for one search operation. */
@@ -178,11 +172,9 @@ export function mapAnthropicResponse(response: AnthropicResponse): WebSearchResu
   return { sources, truncated: false }
 }
 
-/** Authentication headers for one search, tagged by the credential that produced them. */
+/** Authentication headers for one search. */
 interface SearchAuth {
-  /** `account` for a Orochi account token, `api-key` for an API key. */
-  readonly kind: 'account' | 'api-key'
-  /** Headers carrying the credential. */
+  /** Headers carrying the API key. */
   readonly headers: Readonly<Record<string, string>>
 }
 
@@ -204,7 +196,7 @@ export class OrochiSearchProvider implements WebSearchProvider {
 
   available(): boolean {
     const options = this.resolveOptions()
-    return ((options.apiKey?.length ?? 0) > 0 || options.resolveApiKey !== undefined || options.resolveAccountToken !== undefined)
+    return ((options.apiKey?.length ?? 0) > 0 || options.resolveApiKey !== undefined)
       && URL.canParse(options.baseURL)
       && isPositiveInteger(options.maxTokens)
       && isPositiveInteger(options.maxUses)
@@ -216,7 +208,7 @@ export class OrochiSearchProvider implements WebSearchProvider {
     // from the old section to the endpoint named by the new one.
     const options = this.resolveOptions()
     const endpoint = `${options.baseURL}/messages`
-    const auth = await this.authHeaders(options, endpoint, signal)
+    const auth = await this.authHeaders(options, signal)
     throwIfSearchAborted(signal)
     const body: OrochiSearchLlmRequest['body'] = {
       model: options.model,
@@ -273,9 +265,6 @@ export class OrochiSearchProvider implements WebSearchProvider {
         // malformed/non-JSON error body (normal for gateway 5xx/429s) can only
         // cost a richer provider message, never the real error.
       }
-      // The account service released this token only for its inference
-      // origin, so the endpoint is not what the user must change.
-      if (status === 401 && auth.kind === 'account') throw accountRejectedError(message)
       throw searchEndpointError(endpoint, message)
     }
 
@@ -294,22 +283,16 @@ export class OrochiSearchProvider implements WebSearchProvider {
   /**
    * Resolve one operation's authentication headers without retaining a credential on the provider.
    * @param options - the caller's snapshot, so the credential and the endpoint it is sent to come from one section.
-   * @param endpoint - the Messages endpoint this operation dispatches to.
    * @param signal - abort signal for the surrounding search.
-   * @returns the account-token header when one resolves, otherwise the API-key headers, tagged by credential kind.
+   * @returns the API-key headers.
    */
   private async authHeaders(
-    options: OrochiSearchProviderOptions, endpoint: string, signal?: AbortSignal,
+    options: OrochiSearchProviderOptions, signal?: AbortSignal,
   ): Promise<SearchAuth> {
-    const { resolveAccountToken } = options
-    const token = resolveAccountToken === undefined
-      ? undefined
-      : await resolveCredential(() => resolveAccountToken(endpoint), signal)
-    if (token !== undefined && token.length > 0) return { kind: 'account', headers: { 'x-oh-auth-token': token } }
     const apiKey = await this.apiKey(options, signal)
     // Official Orochi expects `x-api-key`; an Anthropic-compatible proxy
     // may expect `Authorization: Bearer` — send both so either resolves.
-    return { kind: 'api-key', headers: { 'x-api-key': apiKey, 'authorization': `Bearer ${apiKey}` } }
+    return { headers: { 'x-api-key': apiKey, 'authorization': `Bearer ${apiKey}` } }
   }
 
   /**
@@ -328,8 +311,7 @@ export class OrochiSearchProvider implements WebSearchProvider {
     throw new WebError(
       `Orochi search has no API key for "${ref}"; store it through the credentials service`
       + ' (the web Models page writes it), export it in the launching environment, or set a literal'
-      + ' "apiKey" in the web-search-orochi config; a conversation using a Orochi Account model'
-      + ' searches with the account sign-in instead',
+      + ' "apiKey" in the web-search-orochi config',
       'WEB_PROVIDER_CREDENTIAL_MISSING',
     )
   }
@@ -357,15 +339,6 @@ async function resolveCredential(
       { cause: error },
     )
   }
-}
-
-/** Replace endpoint guidance with sign-in guidance when Orochi rejects the account token. */
-function accountRejectedError(message: string): WebError {
-  return new WebError(
-    `${message}\n\nOrochi rejected the account sign-in used for this web search. `
-    + 'Guide the user to sign in to Orochi again; the search endpoint does not need changing.',
-    'WEB_PROVIDER_ERROR',
-  )
 }
 
 /** Add endpoint recovery instructions to failures that occur after request dispatch begins. */

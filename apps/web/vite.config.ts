@@ -11,7 +11,7 @@ const src = (rel: string): string => fileURLToPath(new URL(rel, import.meta.url)
 const STANDALONE_ERROR = 'apps/web is not a standalone application: bare Vite cannot inject window.__OH_BOOT__. '
   + 'From a repository checkout, run `pnpm oh web`; an installed package uses `oh web`. '
   + 'For client-plugin HMR, run `pnpm run dev:web`, which starts `oh web` and the rebuild watchers together.'
-const DEFAULT_CLIENT_TITLE = 'OH Local Build'
+const DEFAULT_CLIENT_TITLE = 'Orochi Harness'
 
 /** Escape build-time text before placing it in the HTML title element. */
 function escapeHtmlText(value: string): string {
@@ -24,7 +24,7 @@ function clientDocumentTitle(): Plugin {
   return {
     name: 'oh-client-document-title',
     transformIndexHtml(html) {
-      return html.replace('<title>OH Local Build</title>', `<title>${title}</title>`)
+      return html.replace('<title>Orochi Harness</title>', `<title>${title}</title>`)
     },
   }
 }

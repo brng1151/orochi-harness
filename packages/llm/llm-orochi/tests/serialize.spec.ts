@@ -281,13 +281,21 @@ describe('Messages request conversion', () => {
 
   it.each(['off', 'low', 'high', 'max'])('maps reasoning effort %s', (effort) => {
     const request = body([user()], { reasoningEffort: ReasoningEffortId(effort) })
-    expect(request.thinking.type).toBe(effort === 'off' ? 'disabled' : 'enabled')
+    expect(request.thinking.type).toBe(effort === 'off' ? 'disabled' : 'adaptive')
     expect(request.output_config).toEqual(effort === 'off' ? undefined : { effort })
+  })
+
+  it.each(['adaptive', 'enabled'] as const)('sends the configured thinkingType %s while the effort stays in output_config', (thinkingType) => {
+    const configured = resolveAdapterOptions({ thinkingType })
+    const request = serialize(options({ reasoningEffort: ReasoningEffortId('low') }), configured, [user()], new Map(), () => undefined)
+    expect(request.thinking).toEqual({ type: thinkingType })
+    expect(request.output_config).toEqual({ effort: 'low' })
+    expect(serialize(options({ purpose: 'session-title' }), configured, [user()], new Map(), () => undefined).thinking).toEqual({ type: 'disabled' })
   })
 
   it('disables thinking for titles, passes temperature with thinking and refuses unsupported effort', () => {
     expect(body([user()], { purpose: 'session-title', temperature: 0 })).toMatchObject({ thinking: { type: 'disabled' }, temperature: 0 })
-    expect(body([user()], { temperature: 0 })).toMatchObject({ thinking: { type: 'enabled' }, temperature: 0 })
+    expect(body([user()], { temperature: 0 })).toMatchObject({ thinking: { type: 'adaptive' }, temperature: 0 })
     expect(() => body([user()], { reasoningEffort: ReasoningEffortId('medium') })).toThrow(/effort/)
     const disabled = resolveAdapterOptions({ thinking: 'disabled' })
     expect(serialize(options(), disabled, [user()], new Map(), () => undefined).thinking).toEqual({ type: 'disabled' })
@@ -403,7 +411,8 @@ describe('validated configuration', () => {
     expect(modelInfo(capable, 'orochi-official', MODEL).systemPromptUpdate).toBe('in-history')
     expect(modelInfo(capable, 'orochi-official', 'custom').systemPromptUpdate).toBeUndefined()
     expect(modelInfo(connection, 'orochi-official', MODEL).toolUpdate).toBeUndefined()
-    expect(modelInfo(connection, 'orochi-official', 'deepseek-flash').toolUpdate).toBe('addition-only')
+    const additionOnlyTools = resolveAdapterOptions({ models: [{ id: MODEL, toolUpdate: 'addition-only' }] })
+    expect(modelInfo(additionOnlyTools, 'orochi-official', MODEL).toolUpdate).toBe('addition-only')
     const inHistoryTools = resolveAdapterOptions({ models: [{ id: MODEL, toolUpdate: 'in-history' }] })
     expect(modelInfo(inHistoryTools, 'orochi-official', MODEL).toolUpdate).toBe('in-history')
     expect(modelInfo(inHistoryTools, 'orochi-official', 'custom').toolUpdate).toBeUndefined()
@@ -411,7 +420,8 @@ describe('validated configuration', () => {
     expect(resolveAdapterOptions({ baseURL: 'https://example.com/anthropic///' }).baseURL).toBe('https://example.com/anthropic///')
   })
   it.each([
-    { thinking: 'disabled', reasoningEffort: 'high' }, { models: [{ id: '' }] },
+    { thinking: 'disabled', reasoningEffort: 'high' }, { thinking: 'disabled', thinkingType: 'adaptive' },
+    { thinkingType: 'budgeted' }, { models: [{ id: '' }] },
     { models: [{ id: 'a' }, { id: 'a' }] }, { models: [{ id: 'a', name: '' }] },
     { maxInlineRequestImageBytes: 1 }, { maxImagesPerRequest: 1 },
     { baseURL: 'ftp://example.com' }, { baseURL: 'https://user:pass@example.com' },
@@ -429,7 +439,7 @@ describe('Messages images', () => {
   const image: ImageBlock = { type: 'image', attachment: ref }
   const version: RequestImageAttachment = { attachment: ref, variantId: ImageVariantId(`sha256:${'b'.repeat(64)}`), mediaType: 'image/png', bytes: 3, data: Uint8Array.of(1, 2, 3), width: 1, height: 1, depth: 'uchar', space: 'srgb', hasAlpha: false }
   const access = () => ({ readonlyPath: '/workspace/image.png' })
-  const model = 'deepseek-flash'
+  const model = 'xiaomi/mimo-v2.6-flash'
   // Only the read operation is consumed by image preparation; the transport is mocked, not durable content.
   const attachments = requestImageStore(async () => version)
   const signal = new AbortController().signal

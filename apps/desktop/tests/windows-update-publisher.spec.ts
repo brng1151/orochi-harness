@@ -50,8 +50,6 @@ async function withCertificate(subject: unknown, action: (file: string, signTool
 describe('Windows update publisher', () => {
   beforeAll(() => {
     vi.stubEnv('OH_DESKTOP_APP_ID', 'com.example.publisher-test')
-    vi.stubEnv('OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN', 'https://policy.example.com')
-    vi.stubEnv('OH_DESKTOP_MANDATORY_UPDATE_CONFIG', JSON.stringify({ allowedAuthOrigins: ['https://login.example.com'] }))
     vi.stubEnv('OH_DESKTOP_TARGET_PLATFORM', 'win32')
     vi.stubEnv('OH_DESKTOP_UNSIGNED', '1')
   })

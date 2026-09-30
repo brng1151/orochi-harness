@@ -30,7 +30,7 @@ describe('oh-acp-app bundle', () => {
     expect(rows.find(row => row.id === 'acp-app-startup')?.name).toBe('@orochi-network/oh-acp-app')
     expect(rows.find(row => row.id === 'acp')).toMatchObject({
       inject: ['acpAppStartup'],
-      config: { provider: 'orochi-official', model: 'deepseek-v4-flash' },
+      config: { provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-flash' },
     })
   })
 })

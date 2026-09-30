@@ -160,8 +160,6 @@ describe('Windows token signing', () => {
       await writeFile(path, 'fixture')
       validateDesktopPackageEnvironment({
         OH_DESKTOP_APP_ID: 'com.example.desktop', DOWNLOAD_TEST_ORIGIN: 'https://updates.example.com', DOWNLOAD_TEST_RELEASE_ID: '0123456789abcdef0123456789abcdef',
-        OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN: 'https://policy.example.com',
-        OH_DESKTOP_MANDATORY_UPDATE_CONFIG: JSON.stringify({ allowedAuthOrigins: ['https://login.example.com'] }),
         OH_DESKTOP_WINDOWS_CER_FILE: certificateFile, OH_DESKTOP_WINDOWS_SIGNTOOL: signTool,
         OH_DESKTOP_WINDOWS_TOKEN_PIN: 'fixture-pin', OH_DESKTOP_WINDOWS_KEY_CONTAINER: 'fixture-container',
         OH_DESKTOP_WINDOWS_SIGNATURE_CACHE_DIR: 'C:\\fixture\\signature-cache',

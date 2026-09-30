@@ -2,4 +2,4 @@
   - group "Orochi":
     - text: Orochi
     - menuitemradio "Messages Flash" [checked]
-    - menuitemradio "DeepSeek-V4-Pro"
+    - menuitemradio "MiMo-V2.6-Pro"

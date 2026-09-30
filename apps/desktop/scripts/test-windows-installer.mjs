@@ -46,10 +46,6 @@ try {
     OH_DESKTOP_APP_ID: `network.orochi.harness.installertest.n${id}`,
     OH_DESKTOP_TARGET_PLATFORM: 'win32', OH_DESKTOP_TARGET_ARCH: 'x64',
     OH_DESKTOP_UNSIGNED: '1', CSC_IDENTITY_AUTO_DISCOVERY: 'false', ELECTRON_BUILDER_7Z_FILTER: 'BCJ',
-    OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN: signingEnvironment.OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN
-      ?? 'https://test.example.com',
-    OH_DESKTOP_MANDATORY_UPDATE_CONFIG: signingEnvironment.OH_DESKTOP_MANDATORY_UPDATE_CONFIG
-      ?? JSON.stringify({ allowedAuthOrigins: ['https://login.example.com'] }),
     ...signingRun ? { OH_DESKTOP_PACKAGING_RUN_DIR: signingRun.directory } : {},
   })
   const { createElectronBuilderConfig } = await import('../electron-builder.config.mjs')

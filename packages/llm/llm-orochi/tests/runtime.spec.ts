@@ -387,7 +387,7 @@ describe('OrochiAdapter against a mock server', () => {
 
     await drain(adapter.stream({
       provider: 'orochi-official',
-      model: 'deepseek-flash',
+      model: 'xiaomi/mimo-v2.6-flash',
       messages: [createUserMessage({
         content: [
           { type: 'text', text: 'describe ' },
@@ -398,7 +398,7 @@ describe('OrochiAdapter against a mock server', () => {
     }))
 
     expect(server.requests[0]).toMatchObject({
-      model: 'deepseek-flash',
+      model: 'xiaomi/mimo-v2.6-flash',
       messages: [{
         role: 'user',
         content: [
@@ -422,7 +422,7 @@ describe('OrochiAdapter against a mock server', () => {
     const server = await mockServer([{ kind: 'sse', events: textEvents }])
     const attachmentMocks = attachmentStoreOf(ref => Promise.resolve(requestImage(ref)))
     const adapter = adapterOf({ baseURL: server.url }, attachmentMocks.store)
-    await expect(drain(adapter.stream({ provider: 'orochi-official', model: 'deepseek-v4-pro', messages: [
+    await expect(drain(adapter.stream({ provider: 'orochi-official', model: 'xiaomi/mimo-v2.6-pro', messages: [
       createUserMessage({ source: { kind: 'user' }, content: [
         { type: 'plugin:message',
           message: { role: 'tool', toolCallId: 'foreign', content: [{ type: 'image', attachment: { ...imageRef } }] },
@@ -1258,7 +1258,7 @@ describe('OrochiAdapter against a mock server', () => {
       })],
     })
     expect(server.requests[0]).toMatchObject({
-      thinking: { type: 'enabled' },
+      thinking: { type: 'adaptive' },
       output_config: { effort: 'low' },
     })
     expect(server.requests[1]).toMatchObject({
@@ -1266,7 +1266,7 @@ describe('OrochiAdapter against a mock server', () => {
     })
     expect(server.requests[1]).not.toHaveProperty('output_config')
     expect(server.requests[2]).toMatchObject({
-      thinking: { type: 'enabled' },
+      thinking: { type: 'adaptive' },
       output_config: { effort: 'max' },
     })
   })
@@ -1711,7 +1711,7 @@ describe('OrochiAdapter against a mock server', () => {
 
 describe('plugin registration and config', () => {
   it('resolves the Messages endpoint without rewriting overrides', () => {
-    expect(resolveAdapterOptions({}).baseURL).toBe('https://api.deepseek.com/anthropic')
+    expect(resolveAdapterOptions({}).baseURL).toBe('https://openrouter.ai/api/v1')
     for (const baseURL of ['https://example.com', 'https://example.com/custom']) {
       expect(resolveAdapterOptions({ baseURL }).baseURL).toBe(baseURL)
     }
@@ -1777,24 +1777,29 @@ describe('plugin registration and config', () => {
     await ctx.plugin(LlmOrochi, { baseURL: 'http://127.0.0.1:1' })
     expect(ctx.llm.listProviders()).toEqual([{ id: 'orochi-official', name: 'Orochi' }])
     await expect(ctx.llm.listModels('orochi-official')).resolves.toEqual([
-      { provider: 'orochi-official', id: 'deepseek-flash', name: 'DeepSeek-V41-Flash', inputModalities: ['text', 'image'] },
       {
         provider: 'orochi-official',
-        id: 'deepseek-v4-pro',
-        name: 'DeepSeek-V4-Pro',
+        id: 'xiaomi/mimo-v2.6-flash',
+        name: 'MiMo-V2.6-Flash',
+        description: 'Fast, efficient, and economical; suited to focused, routine, or parallel tasks.',
+        inputModalities: ['text', 'image'],
+      },
+      {
+        provider: 'orochi-official',
+        id: 'xiaomi/mimo-v2.6-pro',
+        name: 'MiMo-V2.6-Pro',
         description: 'Stronger agentic coding, knowledge, and difficult reasoning; suited to complex or quality-critical tasks at higher cost.',
-        inputModalities: ['text'],
+        inputModalities: ['text', 'image'],
       },
     ])
-    await expect(ctx.llm.resolveModelInfo('orochi-official', 'deepseek-flash'))
+    await expect(ctx.llm.resolveModelInfo('orochi-official', 'xiaomi/mimo-v2.6-flash'))
       .resolves.toMatchObject({
         provider: 'orochi-official',
-        id: 'deepseek-flash',
-        name: 'DeepSeek-V41-Flash',
+        id: 'xiaomi/mimo-v2.6-flash',
+        name: 'MiMo-V2.6-Flash',
         inputModalities: ['text', 'image'],
-        systemPromptUpdate: 'in-history',
         context: { contextWindow: 1_000_000 },
-        defaultMaxTokens: 256_000,
+        defaultMaxTokens: 131_072,
         reasoning: {
           efforts: [
             { id: ReasoningEffortId('off'), name: 'Off', description: 'Use for simple tasks that do not need reasoning.' },
@@ -1805,20 +1810,26 @@ describe('plugin registration and config', () => {
           defaultEffort: ReasoningEffortId('high'),
         },
       })
+    // Neither default entry claims the in-history prompt or tool-activation
+    // modes, so the loop re-declares both on every request.
+    const flash = await ctx.llm.resolveModelInfo('orochi-official', 'xiaomi/mimo-v2.6-flash')
+    expect(flash?.systemPromptUpdate).toBeUndefined()
+    expect(flash?.toolUpdate).toBeUndefined()
   })
 
-  it('keeps deepseek-v4-pro available with its V4 capabilities', async () => {
+  it('advertises the pro default with its own output cap and image input', async () => {
     const ctx = new Context()
     await ctx.plugin(LlmRuntime)
     await ctx.plugin(LlmOrochi, { baseURL: 'http://127.0.0.1:1' })
-    const info = await ctx.llm.resolveModelInfo('orochi-official', 'deepseek-v4-pro')
+    const info = await ctx.llm.resolveModelInfo('orochi-official', 'xiaomi/mimo-v2.6-pro')
     expect(info).toMatchObject({
-      id: 'deepseek-v4-pro',
-      inputModalities: ['text'],
+      id: 'xiaomi/mimo-v2.6-pro',
+      inputModalities: ['text', 'image'],
       context: { contextWindow: 1_000_000 },
-      defaultMaxTokens: 256_000,
+      defaultMaxTokens: 131_072,
     })
     expect(info?.systemPromptUpdate).toBeUndefined()
+    expect(info?.toolUpdate).toBeUndefined()
   })
 
   it.each(['off', 'low', 'max'] as const)('uses the configured %s reasoning default', async (effort) => {
@@ -1905,13 +1916,19 @@ describe('plugin registration and config', () => {
     await ctx.plugin(LlmRuntime)
     LlmOrochi.apply(ctx, LlmOrochi.Config({ baseURL: 'http://127.0.0.1:1' }))
     await expect(ctx.llm.listModels('orochi-official')).resolves.toEqual([
-      { provider: 'orochi-official', id: 'deepseek-flash', name: 'DeepSeek-V41-Flash', inputModalities: ['text', 'image'] },
       {
         provider: 'orochi-official',
-        id: 'deepseek-v4-pro',
-        name: 'DeepSeek-V4-Pro',
+        id: 'xiaomi/mimo-v2.6-flash',
+        name: 'MiMo-V2.6-Flash',
+        description: 'Fast, efficient, and economical; suited to focused, routine, or parallel tasks.',
+        inputModalities: ['text', 'image'],
+      },
+      {
+        provider: 'orochi-official',
+        id: 'xiaomi/mimo-v2.6-pro',
+        name: 'MiMo-V2.6-Pro',
         description: 'Stronger agentic coding, knowledge, and difficult reasoning; suited to complex or quality-critical tasks at higher cost.',
-        inputModalities: ['text'],
+        inputModalities: ['text', 'image'],
       },
     ])
   })
@@ -2288,7 +2305,7 @@ describe('plugin registration and config', () => {
     vi.stubEnv('OROCHI_BASE_URL', undefined)
     const ctx = new Context()
     await ctx.plugin(LlmRuntime)
-    // Registration succeeds; no call is made (would hit api.deepseek.com).
+    // Registration succeeds; no call is made (would hit the public endpoint).
     await ctx.plugin(LlmOrochi, {})
     expect(ctx.llm.listProviders()).toEqual([{ id: 'orochi-official', name: 'Orochi' }])
   })
@@ -2297,7 +2314,7 @@ describe('plugin registration and config', () => {
     const adapter = adapterOf()
     expect(adapter).toBeInstanceOf(OrochiAdapter)
     await expect(adapter.listModels('orochi-official')).resolves.toEqual([])
-    await expect(adapter.resolveModel('orochi-official', 'deepseek-flash')).resolves.toMatchObject({ name: 'DeepSeek-V41-Flash' })
+    await expect(adapter.resolveModel('orochi-official', 'xiaomi/mimo-v2.6-flash')).resolves.toMatchObject({ name: 'MiMo-V2.6-Flash' })
   })
 
   it('resolves connection facts and the credential exactly once per stream call', async () => {

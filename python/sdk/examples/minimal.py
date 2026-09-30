@@ -24,7 +24,7 @@ def main() -> None:
     parser.add_argument("--profile", default="sdk-minimal")
     parser.add_argument("--session-id")
     parser.add_argument("--provider", default="orochi-official")
-    parser.add_argument("--model", default=os.environ.get("OH_MODEL", "deepseek-v4-flash"))
+    parser.add_argument("--model", default=os.environ.get("OH_MODEL", "xiaomi/mimo-v2.6-flash"))
     parser.add_argument("--max-tokens", type=int)
     args = parser.parse_args()
     if args.oh_home is None:

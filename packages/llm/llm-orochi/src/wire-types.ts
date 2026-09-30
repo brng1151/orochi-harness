@@ -27,7 +27,13 @@ export type WireRequest = {
   max_tokens: number
   messages: WireMessage[]
   system?: string
-  thinking: { type: 'enabled' | 'disabled' }
+  /**
+   * `adaptive` leaves the amount of thinking to `output_config`; `enabled`
+   * targets endpoints that read it without a token budget. Endpoints following
+   * the Anthropic request protocol reject `enabled` unless the same object
+   * carries `budget_tokens`, which this subset never sends.
+   */
+  thinking: { type: 'adaptive' | 'enabled' | 'disabled' }
   output_config?: { effort: 'low' | 'high' | 'max' }
   temperature?: number
   stop_sequences?: string[]

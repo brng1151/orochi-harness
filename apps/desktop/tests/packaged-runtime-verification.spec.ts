@@ -12,8 +12,6 @@ vi.mock('../scripts/windows-asar-unpack.mjs', async importOriginal => ({
 
 const ENVIRONMENT = {
   OH_DESKTOP_APP_ID: 'com.example.installer',
-  OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN: 'https://policy.example.com',
-  OH_DESKTOP_MANDATORY_UPDATE_CONFIG: JSON.stringify({ allowedAuthOrigins: ['https://login.example.com'] }),
   OH_DESKTOP_TARGET_PLATFORM: 'win32',
   OH_DESKTOP_TARGET_ARCH: 'x64',
   OH_DESKTOP_UNSIGNED: '1',

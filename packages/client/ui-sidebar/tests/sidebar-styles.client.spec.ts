@@ -26,6 +26,14 @@ function declarations(selector: string): Map<string, string> | undefined {
 }
 
 describe('SidebarRoot.module.css', () => {
+  it('keeps the brand mark red and in place on hover', () => {
+    expect(declarations('.brandMark')?.get('color')).toBe('var(--oh-static-orochi-500)')
+    expect(declarations('.railMark')?.get('color')).toBe('var(--oh-static-orochi-500)')
+    const withoutComments = css.replace(/\/\*[\s\S]*?\*\//g, ' ')
+    expect(withoutComments).not.toMatch(/\.toggle:hover\s+\.railMark/)
+    expect(withoutComments).not.toMatch(/\.toggle:hover\s+\.panelIcon/)
+  })
+
   it('shares and cancels the wide shell trailing padding structurally', () => {
     const root = declarations('.root')
     expect(root?.get('--oh-sidebar-inline-padding')).toBe('12px')
@@ -65,11 +73,18 @@ describe('SidebarRoot.module.css', () => {
   })
 
   it('keeps the slotted brand row at the full artwork height', () => {
-    expect(declarations('.brandIdentity')?.get('height')).toBe('24px')
-    expect(declarations('.brandName')?.get('height')).toBe('24px')
-    expect(declarations('.brandName')?.get('line-height')).toBe('24px')
+    expect(declarations('.brandIdentity')?.get('min-height')).toBe('28px')
+    expect(declarations('.brandName')?.get('min-height')).toBe('28px')
+    expect(declarations('.brandName')?.get('line-height')).toBe('28px')
     expect(declarations('.brandName')?.get('font-size')).toBe('18px')
     expect(declarations('.fallbackBrandName')?.get('font-size')).toBe('17px')
     expect(declarations('.fallbackBrandName')?.get('white-space')).toBe('nowrap')
+  })
+
+  it('keeps the footer build version legible', () => {
+    const version = declarations('.buildVersion')
+    expect(version?.get('font-size')).toBe('13px')
+    expect(version?.get('color')).toBe('var(--oh-alias-label-tertiary)')
+    expect(version?.has('background')).toBe(false)
   })
 })

@@ -33,13 +33,15 @@ import { assemble, type AssembledResult } from './assemble.ts'
  * Real-API e2e for the direct-fetch adapter: V4 Flash across thinking modes
  * and a max-effort tool round trip with reasoning passback. The suite skips
  * entirely without $OROCHI_API_KEY; the pre-release vision smoke additionally
- * requires $OROCHI_VISION_E2E=1, and the Flash image/system-update smoke
- * requires $OROCHI_FLASH_E2E=1.
+ * requires $OROCHI_VISION_E2E=1 and $OROCHI_FILES_BASE_URL, and the Flash
+ * image/system-update smoke requires $OROCHI_FLASH_E2E=1.
  */
 
 const FLASH = 'deepseek-v4-flash'
 const VISION = 'deepseek-v4-flash-vision-exp'
-const VISION_E2E_ENABLED = process.env.OROCHI_VISION_E2E === '1'
+/** A Messages root that also serves the Anthropic Files API; the public default does not. */
+const FILES_BASE_URL = process.env.OROCHI_FILES_BASE_URL
+const VISION_E2E_ENABLED = process.env.OROCHI_VISION_E2E === '1' && FILES_BASE_URL !== undefined
 /** A model whose endpoint reads the latest `system` message at any position; unset skips the in-history smoke. */
 const IN_HISTORY_MODEL = process.env.OROCHI_IN_HISTORY_MODEL
 const TEST_PNG = Uint8Array.from(readFileSync(
@@ -149,15 +151,17 @@ const weatherTool: ToolSchema = {
 }
 
 describe.skipIf(!process.env.OROCHI_API_KEY)('llm-orochi e2e (real API)', () => {
-  it.skipIf(process.env.OROCHI_FLASH_E2E !== '1')('deepseek-flash accepts images and retains system updates', async () => {
+  it.skipIf(process.env.OROCHI_FLASH_E2E !== '1')('the default flash model accepts images and follows the newest system snapshot', async () => {
     const ctx = new Context()
     contexts.push(ctx)
     await ctx.plugin(LlmRuntime)
     await ctx.plugin(LocalAttachments)
     await ctx.plugin(LlmOrochi, { baseURL: Protocol.PUBLIC_BASE_URL, maxTokens: 4096 })
-    const model = 'deepseek-flash'
+    const model = 'xiaomi/mimo-v2.6-flash'
+    // The default entry declares no in-history mode, so a later snapshot
+    // reaches the endpoint as the leading system prompt.
     await expect(ctx.llm.resolveModelInfo('orochi-official', model)).resolves.toMatchObject({
-      inputModalities: ['text', 'image'], systemPromptUpdate: 'in-history',
+      inputModalities: ['text', 'image'],
     })
     const attachment = await ctx.attachments.saveImage({ data: readFileSync(new URL('fixtures/red.png', import.meta.url)), mediaType: 'image/png' })
     const message = ask('What is the dominant color of this image?')[0]!
@@ -181,7 +185,7 @@ describe.skipIf(!process.env.OROCHI_API_KEY)('llm-orochi e2e (real API)', () => 
   it.skipIf(!VISION_E2E_ENABLED)('uses the built-in official route to upload, reference, and delete one image', async () => {
     const key = process.env.OROCHI_API_KEY
     if (key === undefined) throw new Error('e2e ran without OROCHI_API_KEY')
-    const baseURL = Protocol.PUBLIC_BASE_URL
+    const baseURL = FILES_BASE_URL as string
     const ctx = await harness(VISION, { baseURL })
     await ctx.plugin(E2eAttachmentStore)
     const attachments = ctx.attachments as E2eAttachmentStore

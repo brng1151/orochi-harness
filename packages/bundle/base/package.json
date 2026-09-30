@@ -60,7 +60,6 @@
     "@orochi-network/oh-api-gateway": "workspace:*",
     "@orochi-network/oh-llm": "workspace:*",
     "@orochi-network/oh-llm-orochi-api-key": "workspace:*",
-    "@orochi-network/oh-llm-orochi-account": "workspace:*",
     "@orochi-network/oh-llm-pi-ai": "workspace:*",
     "@orochi-network/oh-llm-retry": "workspace:*",
     "@orochi-network/oh-mcp-resources": "workspace:*",
@@ -121,7 +120,6 @@
     "@orochi-network/oh-ptc-runtime-node": "workspace:*",
     "@orochi-network/oh-plugin-manager": "workspace:*",
     "@orochi-network/oh-authorization": "workspace:*",
-    "@orochi-network/oh-orochi-account-platform": "workspace:*",
     "@orochi-network/oh-config-editor": "workspace:*",
     "@orochi-network/oh-settings": "workspace:*"
   },

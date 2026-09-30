@@ -9,7 +9,7 @@ English | [中文](README.zh.md)
 
 ## Summary
 
-With `oh-web-search-orochi`, the harness searches the web through Orochi's native search using the Orochi account sign-in or an existing `OROCHI_API_KEY`. Choose it when a deployment wants Orochi native search and accepts that one search costs a full model turn in latency and tokens, because Orochi exposes no dedicated search endpoint. Results come from the structured search blocks Orochi returns, never from scraping text out of a reply. A missing credential fails the call with a structured error; a response without a search-result block fails loudly rather than degrading. The model-facing `web_search` tool lives in `oh-tool-web`.
+With `oh-web-search-orochi`, the harness searches the web through Orochi's native search using an existing `OROCHI_API_KEY`. Choose it when a deployment wants Orochi native search and accepts that one search costs a full model turn in latency and tokens, because Orochi exposes no dedicated search endpoint. Results come from the structured search blocks Orochi returns, never from scraping text out of a reply. A missing credential fails the call with a structured error; a response without a search-result block fails loudly rather than degrading. The model-facing `web_search` tool lives in `oh-tool-web`.
 
 ## Table of Contents
 
@@ -29,11 +29,11 @@ Mount the provider in a composition that already loads the web service; it regis
 
 ### When to choose it
 
-Choose this backend when a deployment wants Orochi's native server-side web search and its users either sign in to a Orochi account or hold a `OROCHI_API_KEY` — the provider reuses those credentials as [Authentication](#authentication) describes. One search is heavier than a dedicated retrieval endpoint: Orochi runs the search inside a full model turn, so expect one Messages call's latency and generated tokens per search, with up to `maxUses` server-side searches per request. Avoid it when per-search cost or latency dominates.
+Choose this backend when a deployment wants Orochi's native server-side web search and its users hold a `OROCHI_API_KEY` — the provider reuses that credential as [Authentication](#authentication) describes. One search is heavier than a dedicated retrieval endpoint: Orochi runs the search inside a full model turn, so expect one Messages call's latency and generated tokens per search, with up to `maxUses` server-side searches per request. Avoid it when per-search cost or latency dominates.
 
 ### Minimal configuration
 
-Load the web service and the provider; the key resolves from `ctx.credentials` when that service is mounted, otherwise from the process environment. The auxiliary search call has its own endpoint setting and uses the Anthropic-compatible base `https://api.deepseek.com/anthropic/v1`, with `/messages` appended. It reads `$OROCHI_SEARCH_BASE_URL`, independently of the conversation adapter’s `$OROCHI_BASE_URL`.
+Load the web service and the provider; the key resolves from `ctx.credentials` when that service is mounted, otherwise from the process environment. The auxiliary search call has its own endpoint setting and uses the Anthropic-compatible base `https://openrouter.ai/api/v1`, with `/messages` appended. It reads `$OROCHI_SEARCH_BASE_URL`, independently of the conversation adapter’s `$OROCHI_BASE_URL`.
 
 ```yaml
 - name: '@orochi-network/oh-web'
@@ -45,10 +45,10 @@ Load the web service and the provider; the key resolves from `ctx.credentials` w
 
 | Field | Default | Meaning |
 |---|---|---|
-| `apiKey` | omitted | Literal Orochi API key; prefer `apiKeyEnv` so no secret enters configuration. A non-empty literal wins over `apiKeyEnv`; an account token wins over both |
+| `apiKey` | omitted | Literal Orochi API key; prefer `apiKeyEnv` so no secret enters configuration. A non-empty literal wins over `apiKeyEnv` |
 | `apiKeyEnv` | `OROCHI_API_KEY` | Credential reference resolved for each search through `ctx.credentials`, or from the process environment when that service is absent. A search that needs an API key and finds none fails as `WEB_PROVIDER_CREDENTIAL_MISSING` |
-| `baseURL` | `https://api.deepseek.com/anthropic/v1` | Anthropic-compatible endpoint base; `/messages` is appended. Falls back to `$OROCHI_SEARCH_BASE_URL`; an unparseable value makes the provider unavailable |
-| `model` | `deepseek-v4-flash` | Anthropic-format model name |
+| `baseURL` | `https://openrouter.ai/api/v1` | Anthropic-compatible endpoint base; `/messages` is appended. Falls back to `$OROCHI_SEARCH_BASE_URL`; an unparseable value makes the provider unavailable |
+| `model` | `xiaomi/mimo-v2.6-flash` | Anthropic-format model name |
 | `apiVersion` | `2023-06-01` | `anthropic-version` header value |
 | `maxTokens` | `4096` | Positive-integer upper bound on generated tokens for the Messages request |
 | `maxUses` | `5` | Positive-integer maximum `web_search` server-tool uses per request |
@@ -58,7 +58,7 @@ The generated [configuration catalog](../../../docs/config-catalog.md#orochi-net
 <a id="authentication"></a>
 ### Authentication
 
-A search authenticates with the Orochi account when the latest `request/context` event of the initiating Session names the `orochi-account` provider route and `ctx.orochiAccount` resolves a token for the search endpoint. The account service resolves one only while signed in and only for its deployment-configured inference origin, `https://api.deepseek.com` by default. That search sends only `x-oh-auth-token`, even when an API key is configured. Every other search, including a call without an initiating Session and a search whose endpoint has another origin, sends the API key as both `x-api-key` and `Authorization: Bearer`. An HTTP 401 response to an account-authenticated search fails as `WEB_PROVIDER_ERROR` with sign-in guidance instead of endpoint guidance, and leaves the account signed in.
+A search sends the API key as both `x-api-key` and `Authorization: Bearer`. The key resolves from `ctx.credentials` when mounted, otherwise from the process environment.
 
 ### What a search returns
 
@@ -87,7 +87,7 @@ This section explains the design decisions behind the provider; the observable b
 The provider is built on two commitments:
 
 - **Structured blocks only.** Orochi runs the search server-side and returns structured `web_search_tool_result` blocks; the provider parses those blocks and never scrapes URLs out of model prose. In strict mode, a response with no such block throws `WEB_PROVIDER_ERROR` instead of degrading.
-- **Conversation credentials, resolved per search.** The provider adds no secret: a search from a Session on the account route uses that account's token, and every other search reuses the `OROCHI_API_KEY` reference. The auxiliary request endpoint stays independent through `$OROCHI_SEARCH_BASE_URL`. A mounted credentials service is authoritative; without one the provider falls back to the launching process environment. Resolving per call means a key stored or rotated in the Web Models page, or an account sign-in, reaches the next search without a restart.
+- **Conversation credentials, resolved per search.** The provider adds no secret: every search reuses the `OROCHI_API_KEY` reference. The auxiliary request endpoint stays independent through `$OROCHI_SEARCH_BASE_URL`. A mounted credentials service is authoritative; without one the provider falls back to the launching process environment. Resolving per call means a key stored or rotated in the Web Models page reaches the next search without a restart.
 
 ### Source map
 
@@ -100,7 +100,7 @@ The provider is built on two commitments:
 
 ### Request flow
 
-Each search captures the current Config values into provider options — endpoint, model, key reference, limits — then asks `ctx.orochiAccount` for a token when the initiating Session uses the account route, otherwise resolves the credential reference through `ctx.credentials` (or the environment), appends the log-only session event, and dispatches the Messages request with the native `web_search` server tool. The response's `web_search_tool_result` blocks become `sources[]`; `cited_text` entries from text blocks are joined to their URLs as snippets; results are deduplicated by URL; and the service enforces the requested source bound on the way back.
+Each search captures the current Config values into provider options — endpoint, model, key reference, limits — then resolves the credential reference through `ctx.credentials` (or the environment), appends the log-only session event, and dispatches the Messages request with the native `web_search` server tool. The response's `web_search_tool_result` blocks become `sources[]`; `cited_text` entries from text blocks are joined to their URLs as snippets; results are deduplicated by URL; and the service enforces the requested source bound on the way back.
 
 </details>
 
@@ -141,7 +141,7 @@ Independent of the conversation request cache. The auxiliary instruction and nat
 
 #### What the model sees
 
-Through `oh-tool-web`, the conversation model sees deduplicated URLs, titles, dates, and citation snippets from structured search blocks; provider prose is not trusted as an answer. This provider's exact failures include the actionable missing-credential message, which also names Orochi Account sign-in, `Orochi search credential resolution failed: <error>`, and `Orochi search aborted`. An HTTP 401 to an account-authenticated search appends an instruction to guide the user to sign in to Orochi again. Other request, HTTP, native-search, and response-body failures append the resolved endpoint and the conditional configuration instruction described above. The consumer owns the error wrapper.
+Through `oh-tool-web`, the conversation model sees deduplicated URLs, titles, dates, and citation snippets from structured search blocks; provider prose is not trusted as an answer. This provider's exact failures include the actionable missing-credential message, `Orochi search credential resolution failed: <error>`, and `Orochi search aborted`. Other request, HTTP, native-search, and response-body failures append the resolved endpoint and the conditional configuration instruction described above. The consumer owns the error wrapper.
 
 #### Token effect
 

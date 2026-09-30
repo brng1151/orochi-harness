@@ -53,7 +53,7 @@ export interface Config {
   cwd?: string
   /** Provider route the child runtime initializes with (default `orochi-official`). */
   provider: string
-  /** Model the child runtime initializes with (default `deepseek-v4-flash`). */
+  /** Model the child runtime initializes with (default `xiaomi/mimo-v2.6-flash`). */
   model: string
   /** Optional per-request output-token cap for the child runtime. */
   maxTokens?: number
@@ -84,7 +84,7 @@ export const Config: z<Config> = z.object({
   ohHome: z.string().required(),
   cwd: z.string(),
   provider: z.string().default('orochi-official'),
-  model: z.string().default('deepseek-v4-flash'),
+  model: z.string().default('xiaomi/mimo-v2.6-flash'),
   maxTokens: z.number().step(1).min(1).max(Number.MAX_SAFE_INTEGER),
   env: z.dict(z.string()).default({}),
   shutdownTimeoutMs: z.number().default(DEFAULT_SHUTDOWN_TIMEOUT_MS),

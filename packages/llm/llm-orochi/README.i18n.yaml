@@ -9,8 +9,8 @@
   en: 2cb2e795fce26157
   zh: f59fa48e3d7a4351
 /orochi-network-oh-llm-orochi/summary:
-  en: 5b66cd3b2397e071
-  zh: 5ac224b930aaa572
+  en: 2e0c6b6369d6cac4
+  zh: b07b6894a1ce1bf9
 /orochi-network-oh-llm-orochi/table-of-contents:
   en: d152484eb41ac6b4
   zh: 09388d293f9be9cb
@@ -21,17 +21,17 @@
   en: a88841de7cf6b931
   zh: e14156fa900139a0
 /orochi-network-oh-llm-orochi/use-this-package/minimal-configuration:
-  en: 38169420cd707375
-  zh: db916b7e83dd46df
+  en: 681b6e75466cb807
+  zh: 6e7a6908d3456eaa
 /orochi-network-oh-llm-orochi/use-this-package/endpoint-and-wire-format:
-  en: 00985212d8cdd55d
-  zh: e7eeae9a0a6422f7
-/orochi-network-oh-llm-orochi/use-this-package/account-credentials:
-  en: 113db004bcc9bc37
-  zh: f451a49276793581
+  en: cb9b793d6bf9d451
+  zh: 2405ed6d22bed286
+/orochi-network-oh-llm-orochi/use-this-package/credentials:
+  en: dfd5d4972e2d17c4
+  zh: 337059d622ce0a7d
 /orochi-network-oh-llm-orochi/use-this-package/streaming-with-thinking-and-images:
-  en: aecea0f7e37daed8
-  zh: 5f5bc4d810a3d40f
+  en: a30c2b4905b7df23
+  zh: 199e52bf383517d1
 /orochi-network-oh-llm-orochi/use-this-package/dynamic-configuration:
   en: 49290fc5647136b4
   zh: 96fa9ce0f9e83c13
@@ -39,8 +39,8 @@
   en: 5929fbc291355802
   zh: 4bbdc5339a2ae933
 /orochi-network-oh-llm-orochi/use-this-package/failures-and-recovery:
-  en: cd62bc9d41cb3a60
-  zh: 442b3dc4ddae8557
+  en: 5dda4c13ec644405
+  zh: 05ad3e0f99a0cc53
 /orochi-network-oh-llm-orochi/understand-the-implementation:
   en: 1598ac8a8bb9b6bf
   zh: fdd089c5ae7722cd
@@ -84,8 +84,8 @@
   en: ddfbea043596878d
   zh: 4fbf5864a684c053
 /orochi-network-oh-llm-orochi/known-limitations-and-deferred-work:
-  en: 9b523e59d24f063b
-  zh: 205fca43dcfc36f2
+  en: 3cfe514f1a7aabe4
+  zh: 06911a246f8e99b9
 /orochi-network-oh-llm-orochi/known-limitations-and-deferred-work/dev-note:
-  en: 64e566e940827a2d
-  zh: 8d0528945e83d2b9
+  en: 9eb6dfc393fe3f69
+  zh: 5517e7ef1f318c21

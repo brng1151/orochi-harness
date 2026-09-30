@@ -48,10 +48,8 @@ function rowId(providerId: string, modelId: string): string {
 }
 
 const BUILTIN_DESCRIPTION_KEYS: Readonly<Record<string, ModelKey>> = {
-  'orochi-account/deepseek-v4-flash': 'option.orochiV4Flash.description',
-  'orochi-account/deepseek-v4-pro': 'option.orochiV4Pro.description',
-  'orochi-official/deepseek-v4-flash': 'option.orochiV4Flash.description',
-  'orochi-official/deepseek-v4-pro': 'option.orochiV4Pro.description',
+  'orochi-official/xiaomi/mimo-v2.6-flash': 'option.orochiFlash.description',
+  'orochi-official/xiaomi/mimo-v2.6-pro': 'option.orochiPro.description',
 }
 
 function descriptionOf(
@@ -67,13 +65,12 @@ function descriptionOf(
 function optionsOf(directory: ModelDirectoryState, t: TranslateNS<'model'>): SelectOption[] {
   const rows: SelectOption[] = []
   for (const group of directory.groups) {
-    const name = group.id === 'orochi-account' ? t('provider.account') : group.name
     for (const model of group.models) {
       const description = descriptionOf(group.id, model, t)
       rows.push({
         id: rowId(group.id, model.id),
         label: model.name,
-        detail: description !== undefined ? `${name} · ${description}` : name,
+        detail: description !== undefined ? `${group.name} · ${description}` : group.name,
         ...(directory.current !== null
           && directory.current.provider === group.id
           && directory.current.model === model.id
@@ -84,7 +81,7 @@ function optionsOf(directory: ModelDirectoryState, t: TranslateNS<'model'>): Sel
   for (const failure of directory.failures) {
     rows.push({
       id: `failure/${failure.id}`,
-      label: failure.id === 'orochi-account' ? t('provider.account') : failure.name,
+      label: failure.name,
       detail: t('option.loadError', { message: failure.message }),
     })
   }

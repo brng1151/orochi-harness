@@ -1,9 +1,7 @@
 /**
  * Register a Orochi-backed provider in `ctx.web`. It calls the Anthropic-compatible Messages API
- * with native `web_search_20250305`. A search initiated by a Session on the Orochi account route
- * authenticates with the account token when the account service allows the search endpoint;
- * every other search reuses `OROCHI_API_KEY`. The provider does not reuse `OROCHI_BASE_URL`;
- * auxiliary search has its own endpoint configuration.
+ * with native `web_search_20250305`, authenticating with `OROCHI_API_KEY`. The provider does not
+ * reuse `OROCHI_BASE_URL`; auxiliary search has its own endpoint configuration.
  * @module @orochi-network/oh-web-search-orochi
  */
 import type { Volatile } from '@orochi-network/cordis'
@@ -12,7 +10,6 @@ import type { Context } from '@orochi-network/cordis'
 import z from '@orochi-network/schemastery'
 import type {} from '@orochi-network/oh-agent'
 import { credentialRef } from '@orochi-network/oh-credentials'
-import type {} from '@orochi-network/oh-orochi-account'
 import { launchEnvironmentOf } from '@orochi-network/oh-launch-environment'
 import type {} from '@orochi-network/oh-session'
 import type {} from '@orochi-network/oh-web'
@@ -53,7 +50,7 @@ export interface Config {
   apiKeyEnv: Volatile<string>
   /** Anthropic-compatible endpoint base; `/messages` is appended. */
   baseURL: Volatile<string | undefined>
-  /** Anthropic-format model name. Defaults to `deepseek-v4-flash`. */
+  /** Anthropic-format model name. Defaults to `xiaomi/mimo-v2.6-flash`. */
   model: Volatile<string>
   /** `anthropic-version` header value. Defaults to `2023-06-01`. */
   apiVersion: Volatile<string>
@@ -82,9 +79,6 @@ export const Config = z.object({
  */
 const SEARCH_BASE_URL_ENV = 'OROCHI_SEARCH_BASE_URL'
 
-/** Provider route id `oh-llm-orochi-account` registers; `request/context` events record it per Session. */
-const ACCOUNT_PROVIDER = 'orochi-account'
-
 /** Settings namespace carrying this provider's endpoint, model, and key reference. */
 export const WEB_SEARCH_OROCHI_SETTINGS_NAMESPACE = 'web-search-orochi'
 
@@ -105,13 +99,6 @@ function resolveOptions(
     : undefined
   return {
     ...literalApiKey === undefined ? {} : { apiKey: literalApiKey },
-    resolveAccountToken: async (endpoint) => {
-      // The latest request context names the route that served the model
-      // request which called this search, as account sign-out reads it.
-      const provider = ctx.get('agents')?.currentInitiator()?.session.requestContext()?.provider
-      if (provider !== ACCOUNT_PROVIDER) return undefined
-      return await ctx.get('orochiAccount')?.resolveToken(endpoint)
-    },
     resolveApiKey: async () => {
       const credentials = ctx.get('credentials')
       if (credentials !== undefined) return (await credentials.resolve(apiKeyEnv))?.value

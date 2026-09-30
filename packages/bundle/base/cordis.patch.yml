@@ -80,7 +80,7 @@
       name: '@orochi-network/oh-agent-default-model'
       config:
         provider: orochi-official
-        model: deepseek-flash
+        model: xiaomi/mimo-v2.6-flash
 
     - id: jobs
       name: '@orochi-network/oh-jobs-local'
@@ -105,11 +105,6 @@
     # managed document, which is never materialized into the process environment.
     - id: authorization
       name: '@orochi-network/oh-authorization'
-
-    - id: orochi-account
-      name: '@orochi-network/oh-orochi-account-platform'
-      config:
-        desktopPlatform: !!js "ctx.get('profileContext')?.name === 'desktop' && ['darwin', 'win32'].includes(process.platform) ? process.platform : null"
 
     - id: credentials
       name: '@orochi-network/oh-credentials-local'
@@ -489,6 +484,3 @@
     # choice.
     - id: llm-orochi
       name: '@orochi-network/oh-llm-orochi-api-key'
-
-    - id: llm-orochi-account
-      name: '@orochi-network/oh-llm-orochi-account'

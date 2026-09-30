@@ -111,8 +111,8 @@ describe('frame-wide quota notices', () => {
     await attach(b.runtime, b.sourceDescriptor)
     const notice = noticeFace(b.runtime).hooks.notice
     expect(notice.getSnapshot()).toBeNull()
-    await b.runtime.sessions.appendEvent(SID, quotaEntry(0, 'ACCOUNT_QUOTA'))
-    expect(notice.getSnapshot()).toMatchObject({ code: 'ACCOUNT_QUOTA' })
+    await b.runtime.sessions.appendEvent(SID, quotaEntry(0, 'QUOTA'))
+    expect(notice.getSnapshot()).toMatchObject({ code: 'QUOTA' })
     const first = notice.getSnapshot()?.seq
     await b.runtime.sessions.appendEvent(SID, quotaEntry(1, 'QUOTA'))
     expect(notice.getSnapshot()).toMatchObject({ code: 'QUOTA' })
@@ -129,7 +129,7 @@ describe('frame-wide quota notices', () => {
     expect(published).toMatchObject({ code: 'QUOTA' })
     await b.runtime.sessions.replaceEvents(SID, [quotaEntry(1, 'QUOTA')])
     expect(notice.getSnapshot()).toBe(published)
-    await b.runtime.sessions.prependEvents(SID, [quotaEntry(2, 'ACCOUNT_QUOTA')])
+    await b.runtime.sessions.prependEvents(SID, [quotaEntry(2, 'QUOTA')])
     expect(notice.getSnapshot()).toBe(published)
     await b.runtime.sessions.appendEvent(SID, quotaEntry(3, 'AUTH'))
     expect(notice.getSnapshot()).toBe(published)
@@ -146,7 +146,7 @@ describe('frame-wide quota notices', () => {
     // portals to the body, so the query is document-wide.
     b.runtime.renderSlot('shell.overlay', {})
     expect(screen.queryByRole('alert')).toBeNull()
-    await b.runtime.sessions.appendEvent(SID, quotaEntry(0, 'ACCOUNT_QUOTA'))
+    await b.runtime.sessions.appendEvent(SID, quotaEntry(0, 'QUOTA'))
     // Wait for the committed notice rather than assuming the store write has
     // already reached React.
     expect((await screen.findByRole('alert')).textContent).toBe('Request quota exhausted.')
@@ -162,13 +162,12 @@ describe('frame-wide quota notices', () => {
     const b = await bench()
     await attach(b.runtime, b.sourceDescriptor)
     const face = noticeFace(b.runtime)
-    await b.runtime.sessions.appendEvent(SID, quotaEntry(0, 'ACCOUNT_QUOTA'))
+    await b.runtime.sessions.appendEvent(SID, quotaEntry(0, 'QUOTA'))
     const held = face.hooks.notice.getSnapshot()
-    expect(held).toMatchObject({ code: 'ACCOUNT_QUOTA' })
+    expect(held).toMatchObject({ code: 'QUOTA' })
     const release = face.keepNoticeOpen()
-    // Holding means a takeover owns the surface: neither a later account
-    // failure nor a generic one may republish and remount it.
-    await b.runtime.sessions.appendEvent(SID, quotaEntry(1, 'ACCOUNT_QUOTA'))
+    // Holding means a takeover owns the surface: no later failure may republish and remount it.
+    await b.runtime.sessions.appendEvent(SID, quotaEntry(1, 'QUOTA'))
     expect(face.hooks.notice.getSnapshot()).toBe(held)
     await b.runtime.sessions.appendEvent(SID, quotaEntry(2, 'QUOTA'))
     expect(face.hooks.notice.getSnapshot()).toBe(held)
@@ -189,15 +188,15 @@ describe('frame-wide quota notices', () => {
     expect(face.hooks.notice.getSnapshot()).toMatchObject({ code: 'QUOTA' })
     // Its release clears nothing either.
     release()
-    await b.runtime.sessions.appendEvent(SID, quotaEntry(1, 'ACCOUNT_QUOTA'))
-    expect(face.hooks.notice.getSnapshot()).toMatchObject({ code: 'ACCOUNT_QUOTA' })
+    await b.runtime.sessions.appendEvent(SID, quotaEntry(1, 'QUOTA'))
+    expect(face.hooks.notice.getSnapshot()).toMatchObject({ code: 'QUOTA' })
   })
 
   it('ignores a stale release that arrives after a dismissal or a newer hold', async () => {
     const b = await bench()
     await attach(b.runtime, b.sourceDescriptor)
     const face = noticeFace(b.runtime)
-    await b.runtime.sessions.appendEvent(SID, quotaEntry(0, 'ACCOUNT_QUOTA'))
+    await b.runtime.sessions.appendEvent(SID, quotaEntry(0, 'QUOTA'))
     const stale = face.keepNoticeOpen()
     // Dismissal clears every hold, then the next failure publishes anew.
     face.dismissNotice()
@@ -211,7 +210,7 @@ describe('frame-wide quota notices', () => {
     // Nor may it clear a hold taken on the newer notice.
     const active = face.keepNoticeOpen()
     stale()
-    await b.runtime.sessions.appendEvent(SID, quotaEntry(2, 'ACCOUNT_QUOTA'))
+    await b.runtime.sessions.appendEvent(SID, quotaEntry(2, 'QUOTA'))
     expect(face.hooks.notice.getSnapshot()).toBe(current)
     // Only its own release ends that newer hold.
     active()
@@ -230,7 +229,7 @@ describe('frame-wide quota notices', () => {
     await b.chat.dispose()
     expect(b.runtime.slots.entries('shell.overlay').some(entry => entry.options.id === 'chat.quota-notice')).toBe(false)
     // A leaked callback would still write through the detached store.
-    await b.runtime.sessions.appendEvent(SID, quotaEntry(1, 'ACCOUNT_QUOTA'))
+    await b.runtime.sessions.appendEvent(SID, quotaEntry(1, 'QUOTA'))
     expect(notice.getSnapshot()).toBe(published)
   })
 })

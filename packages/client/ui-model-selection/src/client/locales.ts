@@ -10,12 +10,11 @@
 
 /** Simplified Chinese dictionary (the key-set source of truth). */
 export const zh = {
-  'provider.account': 'Orochi 账号',
   'command.label': '模型',
   'command.description': '选择本会话使用的模型',
   'option.loadError': '目录加载失败：{message}',
-  'option.orochiV4Flash.description': '快速、高效且经济；适合目标明确、常规或并行任务。',
-  'option.orochiV4Pro.description': '更强的自主编码、知识与复杂推理能力；适合复杂或质量优先的任务，但成本更高。',
+  'option.orochiFlash.description': '快速、高效且经济；适合目标明确、常规或并行任务。',
+  'option.orochiPro.description': '更强的自主编码、知识与复杂推理能力；适合复杂或质量优先的任务，但成本更高。',
   'trigger.fallback': '请选择模型',
   'trigger.loading': '正在加载模型…',
   'trigger.selectAria': '请选择模型',
@@ -39,12 +38,11 @@ export type ModelKey = keyof typeof zh
 
 /** English dictionary, checked complete against the zh key set. */
 export const en = {
-  'provider.account': 'Orochi Account',
   'command.label': 'Model',
   'command.description': 'Select the model for this conversation',
   'option.loadError': 'Catalog failed to load: {message}',
-  'option.orochiV4Flash.description': 'Fast, efficient, and economical; suited to focused, routine, or parallel tasks.',
-  'option.orochiV4Pro.description': 'Stronger agentic coding, knowledge, and difficult reasoning; suited to complex or quality-critical tasks at higher cost.',
+  'option.orochiFlash.description': 'Fast, efficient, and economical; suited to focused, routine, or parallel tasks.',
+  'option.orochiPro.description': 'Stronger agentic coding, knowledge, and difficult reasoning; suited to complex or quality-critical tasks at higher cost.',
   'trigger.fallback': 'Select model',
   'trigger.loading': 'Loading models…',
   'trigger.selectAria': 'Select model',

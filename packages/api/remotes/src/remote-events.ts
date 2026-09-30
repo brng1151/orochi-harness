@@ -7,7 +7,6 @@
  */
 
 import type {} from '@orochi-network/oh-api-session-controller/remote-events'
-import type {} from '@orochi-network/oh-orochi-account/types'
 import type {} from '@orochi-network/oh-permission-presets/types'
 import type {} from '@orochi-network/oh-plugin-manager/types'
 import type {} from '@orochi-network/oh-schedule/client'
@@ -26,8 +25,6 @@ export const API_REMOTE_FORWARDED_EVENTS = [
   { event: 'api-session/removed', mode: 'emit' },
   { event: 'api-session/status', mode: 'emit' },
   { event: 'commands/change', mode: 'emit' },
-  { event: 'orochi-account/session-expired', mode: 'emit' },
-  { event: 'orochi-account/model-sign-in-required', mode: 'emit' },
   { event: 'credentials/record-updated', mode: 'emit' },
   { event: 'credentials/reference-updated', mode: 'emit' },
   { event: 'goal/activation-changed', mode: 'emit' },

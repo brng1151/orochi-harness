@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for 2026-09-29-openrouter-default-endpoint-and-thinking-type.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/architecture/2026-09-29-openrouter-default-endpoint-and-thinking-type.md
+/agent-note-openrouter-is-the-default-messages-endpoint-and-thinking-type-is-configurable:
+  en: c6da1e057d077a90
+  zh: 1cd18ee9cd6fe768
+/agent-note-openrouter-is-the-default-messages-endpoint-and-thinking-type-is-configurable/problem:
+  en: 1521a02cbadc1eb2
+  zh: fa784a077c99851d
+/agent-note-openrouter-is-the-default-messages-endpoint-and-thinking-type-is-configurable/decision:
+  en: af00f543bb545ed0
+  zh: a074376a5fb70176
+/agent-note-openrouter-is-the-default-messages-endpoint-and-thinking-type-is-configurable/alternatives-considered:
+  en: ab9cd35666123026
+  zh: 26c6100258aa5c09
+/agent-note-openrouter-is-the-default-messages-endpoint-and-thinking-type-is-configurable/consequences:
+  en: da13e03e180dd570
+  zh: 432913e860117122
+/agent-note-openrouter-is-the-default-messages-endpoint-and-thinking-type-is-configurable/verification:
+  en: a077e80a1c7663c4
+  zh: b50defccd3c26b05

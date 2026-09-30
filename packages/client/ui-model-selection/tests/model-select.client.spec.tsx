@@ -8,7 +8,7 @@ import { createSnapshotStore } from '@orochi-network/oh-client-store'
 import type { ComponentProps } from 'react'
 import type { ModelDirectoryState } from '../src/client/directory.ts'
 import { ModelSelect } from '../src/client/ModelSelect.tsx'
-import { en, zh } from '../src/client/locales.ts'
+import { zh } from '../src/client/locales.ts'
 import { zh as commonZh } from '@orochi-network/oh-client-locale/src/locales/zh.ts'
 
 // The seat's key domain is model ∪ common; the stub mirrors the real lookup
@@ -554,8 +554,8 @@ it('shows the unselected model control with the inherited effort', async () => {
 })
 
 
-it('places account and official models before third-party models', async () => {
-  const groups = ['custom', 'orochi-official', 'orochi-account', 'another'].map(id => ({
+it('places official models before third-party models', async () => {
+  const groups = ['custom', 'orochi-official', 'another'].map(id => ({
     id, name: id, models: [1, 2].map(index => ({ id: `${id}-${index}`, name: `${id}-${index}` })),
   }))
   const directory = createSnapshotStore<ModelDirectoryState>(state({ current: null, groups }))
@@ -563,37 +563,23 @@ it('places account and official models before third-party models', async () => {
   fireEvent.click(screen.getByRole('button', { name: '请选择模型' }))
   const names = screen.getAllByRole('menuitemradio').map(row => row.textContent)
   expect(names).toEqual([
-    'orochi-account-1', 'orochi-account-2', 'orochi-official-1', 'orochi-official-2',
-    'custom-1', 'custom-2', 'another-1', 'another-2',
+    'orochi-official-1', 'orochi-official-2', 'custom-1', 'custom-2', 'another-1', 'another-2',
   ])
-  expect(groups.map(group => group.id)).toEqual(['custom', 'orochi-official', 'orochi-account', 'another'])
-  await expect(`${names.join('\n')}\n`).toMatchFileSnapshot('./expected/account-first.txt')
+  expect(groups.map(group => group.id)).toEqual(['custom', 'orochi-official', 'another'])
+  await expect(`${names.join('\n')}\n`).toMatchFileSnapshot('./expected/official-first.txt')
 })
 
-it.each([en, zh])('localizes the account group while preserving external names', (copy) => {
-  const groups = ['orochi-account', 'custom'].map(id => ({
-    id, name: id === 'orochi-account' ? 'Orochi Account' : 'My Gateway',
-    models: [{ id: 'model', name: 'Model' }],
-  }))
-  render(<ModelSelect locked={false} available
-    directory={createSnapshotStore(state({ current: null, groups }))}
-    load={vi.fn()} select={vi.fn()} t={key => key in copy ? copy[key as keyof typeof copy] : key} />)
-  fireEvent.click(screen.getByRole('button', { name: copy['trigger.selectAria'] }))
-  expect(screen.getByRole('group', { name: copy['provider.account'] })).toBeTruthy()
-  expect(screen.getByRole('group', { name: 'My Gateway' })).toBeTruthy()
-})
-
-it('restores the account model name after login without changing the saved route', () => {
-  const groups = [{ id: 'orochi-account', name: 'Orochi Account', models: [
+it('restores the model name when its provider returns without changing the saved route', () => {
+  const groups = [{ id: 'orochi-official', name: 'Orochi', models: [
     { id: 'deepseek-flash', name: 'DeepSeek Flash', reasoning },
   ] }]
-  const selected = { provider: 'orochi-account', model: 'deepseek-flash', reasoningEffort: 'high' }
+  const selected = { provider: 'orochi-official', model: 'deepseek-flash', reasoningEffort: 'high' }
   const directory = createSnapshotStore(state({ current: selected, groups, retainedEffort: 'High' }))
   render(<ModelSelect locked={false} available directory={directory} load={vi.fn()} select={vi.fn()} t={t} />)
   expect(screen.getByRole('button', { name: /选择模型，当前/ }).textContent).toBe('DeepSeek FlashHigh')
   act(() => { directory.update((snapshot) => { snapshot.groups = []; snapshot.routable = false }) })
   expect(screen.getByRole('button', { name: /选择模型，当前/ }).textContent)
-    .toMatchInlineSnapshot('"orochi-account/deepseek-flashHigh"')
+    .toMatchInlineSnapshot('"orochi-official/deepseek-flashHigh"')
   act(() => { directory.update((snapshot) => { snapshot.groups = groups; snapshot.routable = true }) })
   expect(screen.getByRole('button', { name: /选择模型，当前/ }).textContent).toBe('DeepSeek FlashHigh')
   expect(directory.getSnapshot().current).toEqual(selected)

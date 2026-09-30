@@ -485,9 +485,6 @@ importers:
       '@orochi-network/oh-llm-orochi':
         specifier: workspace:*
         version: link:../../packages/llm/llm-orochi
-      '@orochi-network/oh-llm-orochi-account':
-        specifier: workspace:*
-        version: link:../../packages/llm/llm-orochi-account
       '@orochi-network/oh-llm-orochi-api-key':
         specifier: workspace:*
         version: link:../../packages/llm/llm-orochi-api-key
@@ -606,9 +603,6 @@ importers:
       '@orochi-network/oh-client-shortcuts':
         specifier: workspace:*
         version: link:../../packages/client/shortcuts
-      '@orochi-network/oh-client-ui-primitives':
-        specifier: workspace:*
-        version: link:../../packages/client/ui-primitives
       '@orochi-network/oh-client-ui-settings-general':
         specifier: workspace:*
         version: link:../../packages/client/ui-settings-general
@@ -621,9 +615,6 @@ importers:
       '@orochi-network/oh-home-paths':
         specifier: workspace:*
         version: link:../../packages/util/home-paths
-      '@orochi-network/oh-orochi-account':
-        specifier: workspace:*
-        version: link:../../packages/credentials/orochi-account
       '@types/js-yaml':
         specifier: ^4.0.9
         version: 4.0.9
@@ -711,9 +702,6 @@ importers:
       '@orochi-network/oh-jobs':
         specifier: workspace:*
         version: link:../../packages/jobs/jobs
-      '@orochi-network/oh-orochi-account':
-        specifier: workspace:*
-        version: link:../../packages/credentials/orochi-account
       '@orochi-network/oh-schedule':
         specifier: workspace:*
         version: link:../../packages/schedule/schedule
@@ -1024,25 +1012,6 @@ importers:
         specifier: workspace:*
         version: link:../../interaction/user-approval
 
-  packages/api/account-controller:
-    dependencies:
-      zod:
-        specifier: ^4.4.3
-        version: 4.4.3
-    devDependencies:
-      '@orochi-network/cordis':
-        specifier: workspace:~
-        version: link:../../../vendor/cordis
-      '@orochi-network/oh-agent':
-        specifier: workspace:*
-        version: link:../../core/agent
-      '@orochi-network/oh-orochi-account':
-        specifier: workspace:*
-        version: link:../../credentials/orochi-account
-      '@orochi-network/oh-typert-protocol':
-        specifier: workspace:*
-        version: link:../../typert/protocol
-
   packages/api/gateway:
     dependencies:
       '@orochi-network/oh-deque':
@@ -1153,9 +1122,6 @@ importers:
       '@orochi-network/oh-agent-preset-registry':
         specifier: workspace:*
         version: link:../../preset/agent-preset-registry
-      '@orochi-network/oh-api-account-controller':
-        specifier: workspace:*
-        version: link:../account-controller
       '@orochi-network/oh-api-gateway':
         specifier: workspace:*
         version: link:../gateway
@@ -1216,9 +1182,6 @@ importers:
       '@orochi-network/oh-office-to-pdf':
         specifier: workspace:*
         version: link:../../document/office-to-pdf
-      '@orochi-network/oh-orochi-account':
-        specifier: workspace:*
-        version: link:../../credentials/orochi-account
       '@orochi-network/oh-permission-presets':
         specifier: workspace:*
         version: link:../../interaction/permission-presets
@@ -1962,9 +1925,6 @@ importers:
       '@orochi-network/oh-llm':
         specifier: workspace:*
         version: link:../../llm/llm
-      '@orochi-network/oh-llm-orochi-account':
-        specifier: workspace:*
-        version: link:../../llm/llm-orochi-account
       '@orochi-network/oh-llm-orochi-api-key':
         specifier: workspace:*
         version: link:../../llm/llm-orochi-api-key
@@ -1977,9 +1937,6 @@ importers:
       '@orochi-network/oh-mcp-resources':
         specifier: workspace:*
         version: link:../../mcp/mcp-resources
-      '@orochi-network/oh-orochi-account-platform':
-        specifier: workspace:*
-        version: link:../../credentials/orochi-account-platform
       '@orochi-network/oh-orochi-llm-api-extensions':
         specifier: workspace:*
         version: link:../../llm/orochi-llm-api-extensions
@@ -2338,9 +2295,6 @@ importers:
       '@orochi-network/oh-agent-tool-presentation':
         specifier: workspace:*
         version: link:../../core/agent-tool-presentation
-      '@orochi-network/oh-api-account-controller':
-        specifier: workspace:*
-        version: link:../../api/account-controller
       '@orochi-network/oh-api-job-controller':
         specifier: workspace:*
         version: link:../../api/job-controller
@@ -2461,9 +2415,6 @@ importers:
       '@orochi-network/oh-client-ui-settings':
         specifier: workspace:*
         version: link:../../client/ui-settings
-      '@orochi-network/oh-client-ui-settings-account':
-        specifier: workspace:*
-        version: link:../../client/ui-settings-account
       '@orochi-network/oh-client-ui-settings-agent-loop':
         specifier: workspace:*
         version: link:../../client/ui-settings-agent-loop
@@ -4599,82 +4550,6 @@ importers:
       react:
         specifier: ^18.2.0
         version: 18.3.1
-
-  packages/client/ui-settings-account:
-    dependencies:
-      '@orochi-network/schemastery':
-        specifier: link:../../../vendor/schemastery
-        version: link:../../../vendor/schemastery
-    devDependencies:
-      '@orochi-network/cordis':
-        specifier: workspace:~
-        version: link:../../../vendor/cordis
-      '@orochi-network/oh-api-remotes':
-        specifier: workspace:*
-        version: link:../../api/remotes
-      '@orochi-network/oh-client-locale':
-        specifier: workspace:*
-        version: link:../locale
-      '@orochi-network/oh-client-store':
-        specifier: workspace:*
-        version: link:../store
-      '@orochi-network/oh-client-test-runtime':
-        specifier: workspace:*
-        version: link:../../test-support/client-runtime
-      '@orochi-network/oh-client-ui-chat':
-        specifier: workspace:*
-        version: link:../ui-chat
-      '@orochi-network/oh-client-ui-layout':
-        specifier: workspace:*
-        version: link:../ui-layout
-      '@orochi-network/oh-client-ui-primitives':
-        specifier: workspace:*
-        version: link:../ui-primitives
-      '@orochi-network/oh-client-ui-renderer':
-        specifier: workspace:*
-        version: link:../ui-renderer
-      '@orochi-network/oh-client-ui-settings':
-        specifier: workspace:*
-        version: link:../ui-settings
-      '@orochi-network/oh-client-ui-settings-models':
-        specifier: workspace:*
-        version: link:../ui-settings-models
-      '@orochi-network/oh-client-ui-slots':
-        specifier: workspace:*
-        version: link:../ui-slots
-      '@orochi-network/oh-client-ui-theme':
-        specifier: workspace:*
-        version: link:../ui-theme
-      '@orochi-network/oh-host-webserver':
-        specifier: workspace:*
-        version: link:../../host/webserver
-      '@orochi-network/oh-orochi-account':
-        specifier: workspace:*
-        version: link:../../credentials/orochi-account
-      '@orochi-network/oh-settings':
-        specifier: workspace:*
-        version: link:../../settings/settings
-      '@testing-library/react':
-        specifier: ^16.1.0
-        version: 16.3.2(@testing-library/dom@10.4.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/big.js':
-        specifier: ^6.2.2
-        version: 6.2.2
-      '@types/react':
-        specifier: ~18.3.1
-        version: 18.3.31
-      '@types/react-dom':
-        specifier: ~18.3.0
-        version: 18.3.7(@types/react@18.3.31)
-      big.js:
-        specifier: ^7.0.1
-        version: 7.0.1
-      react:
-        specifier: ^18.2.0
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
 
   packages/client/ui-settings-agent-loop:
     devDependencies:
@@ -6894,46 +6769,6 @@ importers:
       '@orochi-network/oh-launch-environment':
         specifier: workspace:*
         version: link:../../util/launch-environment
-
-  packages/credentials/orochi-account:
-    devDependencies:
-      '@orochi-network/cordis':
-        specifier: workspace:~
-        version: link:../../../vendor/cordis
-      '@orochi-network/oh-agent':
-        specifier: workspace:*
-        version: link:../../core/agent
-      '@orochi-network/oh-brand':
-        specifier: workspace:*
-        version: link:../../util/brand
-      '@orochi-network/oh-llm':
-        specifier: workspace:*
-        version: link:../../llm/llm
-
-  packages/credentials/orochi-account-platform:
-    dependencies:
-      '@orochi-network/schemastery':
-        specifier: link:../../../vendor/schemastery
-        version: link:../../../vendor/schemastery
-      zod:
-        specifier: ^4.4.3
-        version: 4.4.3
-    devDependencies:
-      '@orochi-network/cordis':
-        specifier: workspace:~
-        version: link:../../../vendor/cordis
-      '@orochi-network/oh-authorization':
-        specifier: workspace:*
-        version: link:../authorization
-      '@orochi-network/oh-credentials':
-        specifier: workspace:*
-        version: link:../credentials
-      '@orochi-network/oh-host-webserver':
-        specifier: workspace:*
-        version: link:../../host/webserver
-      '@orochi-network/oh-orochi-account':
-        specifier: workspace:*
-        version: link:../orochi-account
 
   packages/deliverables/tool-present:
     dependencies:
@@ -9328,15 +9163,9 @@ importers:
       '@orochi-network/oh-llm':
         specifier: workspace:*
         version: link:../llm
-      '@orochi-network/oh-llm-orochi-account':
-        specifier: workspace:*
-        version: link:../llm-orochi-account
       '@orochi-network/oh-llm-orochi-api-key':
         specifier: workspace:*
         version: link:../llm-orochi-api-key
-      '@orochi-network/oh-orochi-account':
-        specifier: workspace:*
-        version: link:../../credentials/orochi-account
       '@orochi-network/oh-orochi-llm-api-extensions':
         specifier: workspace:*
         version: link:../orochi-llm-api-extensions
@@ -9361,30 +9190,6 @@ importers:
       '@orochi-network/oh-tools':
         specifier: workspace:*
         version: link:../../core/tools
-
-  packages/llm/llm-orochi-account:
-    devDependencies:
-      '@orochi-network/cordis':
-        specifier: workspace:~
-        version: link:../../../vendor/cordis
-      '@orochi-network/cordis-plugin-loader':
-        specifier: workspace:~
-        version: link:../../../vendor/loader
-      '@orochi-network/oh-launch-environment':
-        specifier: workspace:*
-        version: link:../../util/launch-environment
-      '@orochi-network/oh-llm':
-        specifier: workspace:*
-        version: link:../llm
-      '@orochi-network/oh-llm-orochi':
-        specifier: workspace:*
-        version: link:../llm-orochi
-      '@orochi-network/oh-llm-orochi-api-key':
-        specifier: workspace:*
-        version: link:../llm-orochi-api-key
-      '@orochi-network/oh-orochi-account':
-        specifier: workspace:*
-        version: link:../../credentials/orochi-account
 
   packages/llm/llm-orochi-api-key:
     dependencies:
@@ -13193,9 +12998,6 @@ importers:
       '@orochi-network/oh-launch-environment':
         specifier: workspace:*
         version: link:../../util/launch-environment
-      '@orochi-network/oh-orochi-account':
-        specifier: workspace:*
-        version: link:../../credentials/orochi-account
       '@orochi-network/oh-session':
         specifier: workspace:*
         version: link:../../core/session
@@ -13701,9 +13503,6 @@ importers:
       '@orochi-network/oh-llm-orochi':
         specifier: workspace:*
         version: link:../../packages/llm/llm-orochi
-      '@orochi-network/oh-llm-orochi-account':
-        specifier: workspace:*
-        version: link:../../packages/llm/llm-orochi-account
       '@orochi-network/oh-llm-orochi-api-key':
         specifier: workspace:*
         version: link:../../packages/llm/llm-orochi-api-key
@@ -13719,9 +13518,6 @@ importers:
       '@orochi-network/oh-message-feedback':
         specifier: workspace:*
         version: link:../../packages/feedback/message-feedback
-      '@orochi-network/oh-orochi-account':
-        specifier: workspace:*
-        version: link:../../packages/credentials/orochi-account
       '@orochi-network/oh-orochi-llm-api-extensions':
         specifier: workspace:*
         version: link:../../packages/llm/orochi-llm-api-extensions
@@ -16734,9 +16530,6 @@ packages:
   '@types/babel__traverse@7.28.0':
     resolution: {integrity: sha512-8PvcXf70gTDZBgt9ptxJ8elBeBjcLOAcOtoO/mPJjtji1+CdGbHgm77om1GrsPxsiE+uXIpNSK64UYaIwQXd4Q==}
 
-  '@types/big.js@6.2.2':
-    resolution: {integrity: sha512-e2cOW9YlVzFY2iScnGBBkplKsrn2CsObHQ2Hiw4V1sSyiGbgWL8IyqE3zFi1Pt5o1pdAtYkDAIsF3KKUPjdzaA==}
-
   '@types/body-parser@1.19.6':
     resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
 
@@ -17536,9 +17329,6 @@ packages:
   big-integer@1.6.52:
     resolution: {integrity: sha512-QxD8cf2eVqJOOz63z6JIN9BzvVs/dlySa5HGSBH5xtR8dPteIRQnBxxKqkNTiT6jbDTF6jAfrd4oMcND9RGbQg==}
     engines: {node: '>=0.6'}
-
-  big.js@7.0.1:
-    resolution: {integrity: sha512-iFgV784tD8kq4ccF1xtNMZnXeZzVuXWWM+ERFzKQjv+A5G9HC8CY3DuV45vgzFFcW+u2tIvmF95+AzWgs6BjCg==}
 
   bignumber.js@9.3.1:
     resolution: {integrity: sha512-Ko0uX15oIUS7wJ3Rb30Fs6SkVbLmPBAKdlm7q9+ak9bbIeFf0MwuBsQV6z7+X768/cHsfg+WlysDWJcmthjsjQ==}
@@ -23744,8 +23534,6 @@ snapshots:
     dependencies:
       '@babel/types': 7.29.7
 
-  '@types/big.js@6.2.2': {}
-
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
@@ -24663,8 +24451,6 @@ snapshots:
       require-from-string: 2.0.2
 
   big-integer@1.6.52: {}
-
-  big.js@7.0.1: {}
 
   bignumber.js@9.3.1: {}
 

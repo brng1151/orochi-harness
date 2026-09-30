@@ -1,5 +1,4 @@
 /** HTTP lifecycle, routing and optional Cordis services under real composition. */
-import { installAccountTaskCancellation, type OrochiAccount } from '@orochi-network/oh-orochi-account'
 import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -26,7 +25,6 @@ import { OrochiAdapter } from '../src/adapter.ts'
 import { object } from '../src/replay.ts'
 import { OrochiFileStore } from '../src/file-store.ts'
 import * as Messages from '@orochi-network/oh-llm-orochi-api-key'
-import * as AccountProvider from '@orochi-network/oh-llm-orochi-account'
 import { adapter, assemble, chunks, MODEL, options, prepareExtensions, server, sse, textEvents, user, sourceModuleLoader } from './helpers.ts'
 
 const cleanup: (() => Promise<unknown>)[] = []
@@ -127,20 +125,21 @@ describe('direct Messages HTTP', () => {
   it('uses the Messages endpoint, authentication, attribution and final usage', async () => {
     const http = await endpoint()
     const llm = adapter({ baseURL: http.url })
-    const response = await assemble(llm.stream(options({ model: 'deepseek-flash', sessionId: SessionId('session-test'), purpose: 'compaction' })), 'deepseek-flash')
+    const flash = 'xiaomi/mimo-v2.6-flash'
+    const response = await assemble(llm.stream(options({ model: flash, sessionId: SessionId('session-test'), purpose: 'compaction' })), flash)
     expect(response.message.content).toEqual([{ type: 'text', text: 'Hello 世界' }])
     expect(response.message.source).toMatchObject({
-      model: 'deepseek-flash', replayState: { response: { model: 'deepseek-flash' } },
+      model: flash, replayState: { response: { model: flash } },
     })
     expect(http.requests[0]).toMatchObject({ path: '/anthropic/v1/messages', headers: {
       'x-api-key': 'test-key', 'anthropic-version': '2023-06-01',
       'user-agent': expect.stringContaining('orochi-harness/') as string,
       'x-orochi-harness-session-id': 'session-test', 'x-orochi-harness-compact': '1',
-    }, body: { thinking: { type: 'enabled' }, output_config: { effort: 'high' } } })
+    }, body: { thinking: { type: 'adaptive' }, output_config: { effort: 'high' } } })
     expect(llm.providerInfo('orochi-official')).toEqual({ id: 'orochi-official', name: 'Orochi' })
     expect(await llm.listModels('orochi-official')).toEqual([])
-    expect(await llm.resolveModel('orochi-official', 'deepseek-flash')).toMatchObject({
-      name: 'DeepSeek-V41-Flash', inputModalities: ['text', 'image'], systemPromptUpdate: 'in-history',
+    expect(await llm.resolveModel('orochi-official', flash)).toMatchObject({
+      name: 'MiMo-V2.6-Flash', inputModalities: ['text', 'image'],
     })
     expect(await llm.resolveModel('orochi-official', MODEL)).toMatchObject({ id: MODEL })
     expect(llm.imageRequestPricing('orochi-official', MODEL)).toBeDefined()
@@ -279,7 +278,7 @@ describe('Cordis provider composition', () => {
     vi.stubEnv('OROCHI_API_KEY', 'test-key')
     await ctx.plugin(LlmRuntime)
     await ctx.plugin(Messages, { baseURL: http.url })
-    const model = 'deepseek-flash'
+    const model = 'xiaomi/mimo-v2.6-flash'
     const price = () => ctx.llm.imageRequestPricing('orochi-official', model)!
     const dummy = { attachmentId: AttachmentId(`sha256:${'a'.repeat(64)}`), width: 1, height: 1, bytes: 3, mediaType: 'image/png' as const }
     expect(price().priceImages([{ type: 'image', attachment: dummy }])[0]?.text).toBeDefined()
@@ -308,7 +307,7 @@ describe('Cordis provider composition', () => {
     await ctx.plugin(Loader)
     ctx.loader.builtins.include = Include
     const modules = new Map<string, unknown>([
-      ['@orochi-network/oh-llm', LlmRuntime], ['@orochi-network/oh-llm-orochi-api-key', Messages], ['@orochi-network/oh-llm-orochi-account', AccountProvider],
+      ['@orochi-network/oh-llm', LlmRuntime], ['@orochi-network/oh-llm-orochi-api-key', Messages],
       ['@orochi-network/oh-credentials-local', LocalCredentials],
       ['@orochi-network/oh-agent', AgentRegistry], ['@orochi-network/oh-agent-loop', AgentLoop],
       ['@orochi-network/oh-session', SessionStore], ['@orochi-network/oh-session-projection', SessionProjectionRegistry],
@@ -328,89 +327,29 @@ describe('Cordis provider composition', () => {
     return { ctx, http }
   }
 
-  it.each(['orochi-account', 'orochi-official'].flatMap(provider => [
-    { provider, body: JSON.stringify({ error: { type: 'authentication_error', message: 'API key is invalid' } }) },
-    { provider, body: JSON.stringify({ error: { message: 'Authentication Fails (invalid oh token)' } }) },
-    { provider, body: 'Unauthorized' },
-    { provider, body: '' },
-  ]))('handles $provider HTTP 401 independently of the response body ($body)', async ({ provider, body }) => {
+  it.each([
+    JSON.stringify({ error: { type: 'authentication_error', message: 'API key is invalid' } }),
+    JSON.stringify({ error: { message: 'Authentication Fails (invalid key)' } }),
+    'Unauthorized',
+    '',
+  ])('classifies HTTP 401 as AUTH independently of the response body (%j)', async (body) => {
     const { ctx } = await boot((response) => {
       response.writeHead(401, { 'content-type': 'application/json' })
       response.end(body)
     })
-    const rejectToken = vi.fn(async (_token: string) => {})
-    ctx.provide('orochiAccount', { resolveToken: async (_url: string): Promise<string | undefined> => 'fixture-token',
-      rejectToken: (token: string): Promise<void> => rejectToken(token) } as OrochiAccount)
-    expect((await chunks(ctx.llm.stream(options({ provider })))).at(-1)).toMatchObject({
-      type: 'finish', reason: { kind: 'error', failure: { code: provider === 'orochi-account' ? 'ACCOUNT_TOKEN_INVALID' : 'AUTH' } },
-    })
-    expect(rejectToken.mock.calls).toEqual(provider === 'orochi-account' ? [['fixture-token']] : [])
-  })
-
-  it('reports the request token when credentials change before a 401 response', async () => {
-    let token = 'first-login'
-    const { ctx } = await boot((response) => {
-      token = 'replacement-login'
-      response.writeHead(401)
-      response.end('Unauthorized')
-    })
-    const rejectToken = vi.fn(async (_token: string) => {})
-    ctx.provide('orochiAccount', { resolveToken: async (_url: string): Promise<string | undefined> => token,
-      rejectToken: (value: string): Promise<void> => rejectToken(value) } as OrochiAccount)
-    await chunks(ctx.llm.stream(options({ provider: 'orochi-account' })))
-    expect(token).toBe('replacement-login')
-    expect(rejectToken).toHaveBeenCalledExactlyOnceWith('first-login')
-  })
-
-  it('finishes the active account turn when rejected credentials publish sign-out', async () => {
-    const { ctx } = await boot((response) => {
-      response.writeHead(401)
-      response.end(JSON.stringify({ error: { message: 'Authentication Fails (invalid oh token)' } }))
-    })
-    ctx.provide('orochiAccount', { resolveToken: async (_url: string): Promise<string | undefined> => 'fixture-token',
-      rejectToken: async (_token: string): Promise<void> => { ctx.emit('orochi-account/signed-out') } } as OrochiAccount)
-    installAccountTaskCancellation(ctx)
-    const agent = await ctx.agentLoop.create(SessionId('inference-account-expiry'), { provider: 'orochi-account', model: MODEL })
-    agent.followup(user('hello'))
-    await agent.whenIdle()
-    expect(agent.session.snapshotEvents().at(-1)?.data).toMatchObject({
-      reason: { kind: 'aborted', reason: { kind: 'hook', reason: 'orochi-account/signed-out' } },
-    })
-  })
-
-  it('preserves the inference error when rejected credential removal fails', async () => {
-    const { ctx } = await boot((response) => {
-      response.writeHead(401)
-      response.end(JSON.stringify({ error: { message: 'Authentication Fails (invalid oh token)' } }))
-    })
-    ctx.provide('orochiAccount', { resolveToken: async (_url: string): Promise<string | undefined> => 'fixture-token',
-      rejectToken: async (_token: string): Promise<void> => { throw new Error('credential storage unavailable') } } as OrochiAccount)
-    expect((await chunks(ctx.llm.stream(options({ provider: 'orochi-account' })))).at(-1)).toMatchObject({
-      type: 'finish', reason: { kind: 'error', failure: { code: 'ACCOUNT_TOKEN_INVALID' } },
-    })
-  })
-
-  it('does not remove account credentials for HTTP 403', async () => {
-    const { ctx } = await boot((response) => {
-      response.writeHead(403)
-      response.end(JSON.stringify({ error: { type: 'authentication_error', message: 'API key is invalid' } }))
-    })
-    const rejectToken = vi.fn(async (_token: string) => {})
-    ctx.provide('orochiAccount', { resolveToken: async (_url: string): Promise<string | undefined> => 'fixture-token',
-      rejectToken: (token: string): Promise<void> => rejectToken(token) } as OrochiAccount)
-    expect((await chunks(ctx.llm.stream(options({ provider: 'orochi-account' })))).at(-1)).toMatchObject({
+    expect((await chunks(ctx.llm.stream(options({ provider: 'orochi-official' })))).at(-1)).toMatchObject({
       type: 'finish', reason: { kind: 'error', failure: { code: 'AUTH' } },
     })
-    expect(rejectToken).not.toHaveBeenCalled()
   })
 
+  // No default catalog entry declares the in-history mode, so the in-history
+  // case configures it explicitly.
   it.each([
     { model: MODEL, inHistory: false },
     { model: MODEL, inHistory: true },
-    { model: 'deepseek-flash', inHistory: true },
   ])('updates, clears and restores prompts across continued and resumed sessions, model=$model in-history=$inHistory', async ({ model, inHistory }) => {
     const { ctx, http } = await boot()
-    if (inHistory && model === MODEL) await ctx.settings.update(Messages.name, { models: [{ id: model, systemPromptUpdate: 'in-history' }] })
+    if (inHistory) await ctx.settings.update(Messages.name, { models: [{ id: model, systemPromptUpdate: 'in-history' }] })
     let prompt = 'first prompt'
     ctx.on('system-prompt/assemble', async (_assembly, _context, next) => ({
       ...await next(), sections: [{ name: 'test', text: prompt, order: 0 }],
@@ -530,7 +469,7 @@ describe('Cordis provider composition', () => {
 
   it('loads one provider from YAML, rotates settings and credentials, then removes disposed registrations', async () => {
     const { ctx, http } = await boot()
-    expect(ctx.llm.listProviders().map(provider => provider.id)).toEqual(['orochi-official', 'orochi-account'])
+    expect(ctx.llm.listProviders().map(provider => provider.id)).toEqual(['orochi-official'])
     expect((await assemble(ctx.llm.stream(options()))).assembler.finish.kind).toBe('stop')
     expect(http.requests[0]?.headers['x-api-key']).toBe('stored-key')
     const second = await endpoint()
@@ -576,27 +515,19 @@ it('rejects invalid catalog context windows at the options resolver', () => {
 })
 
 
-it.each([
-  ['https://api.deepseek.com', 'account-token'],
-  ['https://custom.example.test', 'ambient-key'],
-] as const)('selects account or API-key credentials from the actual endpoint %s', async (baseURL, expected) => {
+it('sends the API key from the actual endpoint without following redirects', async () => {
   vi.stubEnv('OROCHI_API_KEY', 'ambient-key')
   const { ctx } = await context()
-  // This consumer uses only resolveToken; the real provider owns origin validation in its own suite.
-  ctx.provide('orochiAccount', {
-    resolveToken: (url: string) => Promise.resolve(url === 'https://api.deepseek.com' ? 'account-token' : undefined),
-  } as OrochiAccount)
   await ctx.plugin(LlmRuntime)
-  await ctx.plugin(expected === 'account-token' ? AccountProvider : Messages, { baseURL })
+  await ctx.plugin(Messages, { baseURL: 'https://custom.example.test' })
   const request = vi.fn<typeof fetch>((_input, init) => {
     const headers = new Headers(init?.headers)
     expect(headers.has('authorization')).toBe(false)
-    expect(headers.get('x-api-key')).toBe(expected === 'account-token' ? null : expected)
-    expect(headers.get('x-oh-auth-token')).toBe(expected === 'account-token' ? expected : null)
+    expect(headers.get('x-api-key')).toBe('ambient-key')
     expect(init?.redirect).toBe('error')
     return Promise.resolve(new Response(sse(textEvents), { status: 200 }))
   })
   vi.stubGlobal('fetch', request)
-  await assemble(ctx.llm.stream(options({ provider: expected === 'account-token' ? 'orochi-account' : 'orochi-official' })))
+  await assemble(ctx.llm.stream(options({ provider: 'orochi-official' })))
   expect(request).toHaveBeenCalledOnce()
 })

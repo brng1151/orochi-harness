@@ -12,19 +12,10 @@ vi.mock('node:child_process', async (importOriginal) => {
 })
 
 describe('installer preparation preserves application dependencies', () => {
-  it.each(['win32', 'darwin'] as const)('rejects a missing production policy before signing on %s', async (platform) => {
-    const { createElectronBuilderConfig } = await import('../scripts/electron-builder-config.mjs')
-    expect(() => createElectronBuilderConfig({ OH_DESKTOP_APP_ID: 'com.example.installer',
-      OH_DESKTOP_AUTO_UPDATE_ENV: 'production',
-      OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN: 'https://test.example.com',
-    }, platform, 'x64')).toThrow('OH_DESKTOP_MANDATORY_UPDATE_PROD_ORIGIN')
-  })
   it.each(['win32', 'darwin'] as const)('keeps electron-builder responsible for node_modules on %s', async (platform) => {
     execute.mockClear()
     const env = {
       OH_DESKTOP_APP_ID: 'com.example.installer',
-      OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN: 'https://policy.example.com',
-      OH_DESKTOP_MANDATORY_UPDATE_CONFIG: JSON.stringify({ allowedAuthOrigins: ['https://login.example.com'] }),
       OH_DESKTOP_TARGET_PLATFORM: platform,
       OH_DESKTOP_TARGET_ARCH: 'x64',
       OH_DESKTOP_UNSIGNED: platform === 'win32' ? '1' : '0',
@@ -68,8 +59,6 @@ describe('installer preparation preserves application dependencies', () => {
     const { createElectronBuilderConfig } = await import('../scripts/electron-builder-config.mjs')
     const config = createElectronBuilderConfig({
       OH_DESKTOP_APP_ID: 'com.example.installer',
-      OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN: 'https://policy.example.com',
-      OH_DESKTOP_MANDATORY_UPDATE_CONFIG: JSON.stringify({ allowedAuthOrigins: ['https://login.example.com'] }),
       OH_DESKTOP_TARGET_PLATFORM: 'win32',
       OH_DESKTOP_TARGET_ARCH: 'x64',
       OH_DESKTOP_UNSIGNED: '1',
@@ -90,8 +79,6 @@ describe('installer preparation preserves application dependencies', () => {
     const config = createElectronBuilderConfig({
       OH_DESKTOP_APP_ID: 'com.example.installer',
       OH_DESKTOP_AUTO_UPDATE_ENV: 'production',
-      OH_DESKTOP_MANDATORY_UPDATE_TEST_ORIGIN: 'https://harness-test.deepseek.com',
-      OH_DESKTOP_MANDATORY_UPDATE_PROD_ORIGIN: 'https://policy.example.com',
       OH_DESKTOP_MACOS_SIGNING_IDENTITY: 'Example Company (TEAMID1234)',
       OH_DESKTOP_MACOS_TEAM_ID: 'TEAMID1234',
       APPLE_KEYCHAIN_PROFILE: 'installer-test',

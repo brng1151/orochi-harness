@@ -387,15 +387,6 @@ const SERVICE_ROLES: ServiceRole[] = [
     note: 'Configuration carries references to secrets; providers own the values. Consumers resolve per operation, so a rotated credential reaches the very next request; the settings controller exposes value-free views and write-only storage.',
   },
   {
-    key: 'orochiAccount',
-    pkg: 'orochi-account',
-    title: 'Orochi account',
-    mode: 'seam',
-    implementations: ['orochi-account-platform'],
-    consumers: ['api-account-controller', 'llm-orochi'],
-    note: 'The Host owns browser authorization and local credentials; UI consumers receive state without tokens.',
-  },
-  {
     key: 'authorization',
     pkg: 'authorization',
     title: 'Authorization flow registry',

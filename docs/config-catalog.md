@@ -529,56 +529,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@orochi-network/oh-client-ui-plugin-manager -->
 
-<!-- BEGIN GENERATED config-catalog:@orochi-network/oh-client-ui-settings-account -->
-<a id="orochi-networkoh-client-ui-settings-account"></a>
-
-## `@orochi-network/oh-client-ui-settings-account`
-
-- `refs`: `Volatile` (`@orochi-network/cordis`)
-- `source`: [`packages/client/ui-settings-account/src/index.ts:9`](../packages/client/ui-settings-account/src/index.ts)
-
-```ts config-catalog
-/** Public contact options and live device-local onboarding progress. */
-export interface Config extends ContactConfig {
-  /** Onboarding progress format version. */
-  version: Volatile<1>
-  /** Last accepted onboarding page. */
-  step: Volatile<OnboardingStep>
-  /** Selected work scenario. */
-  purpose?: Volatile<OnboardingPurpose | null | undefined>
-  /** Selected transcript detail. */
-  process?: Volatile<OnboardingProcess | null | undefined>
-  /** Completion reason, absent until completion. */
-  completion?: Volatile<'completed' | 'skipped' | 'api-key' | null | undefined>
-  /** Selected usage detail. */
-  usage: Volatile<'compact' | 'detailed'>
-  /** Selected developer-tool visibility. */
-  developerTools: Volatile<boolean>
-}
-
-/** Questionnaire destination and bonus notice timings shared by Host and Client. */
-export interface ContactConfig {
-  /** HTTPS questionnaire URL; override for a test form. */
-  contactFormUrl: string
-  /** Questionnaire source option; empty until Harness is supported by the form. */
-  contactSource: string
-  /** First delay before retrying a failed bonus acknowledgement. */
-  bonusAckRetryDelayMs: number
-  /** Ceiling for the acknowledgement retry backoff. */
-  bonusAckRetryMaxDelayMs: number
-}
-
-/** Persisted steps; a native top-up page leaves the durable step at credit. */
-export type OnboardingStep = 'welcome' | 'credit' | 'purpose' | 'process' | 'done'
-
-/** Work scenarios offered by the desktop introduction. */
-export type OnboardingPurpose = 'office' | 'development' | 'both'
-
-/** Work-detail mode applied to Chat when onboarding completes. */
-export type OnboardingProcess = 'compact' | 'standard' | 'detailed'
-```
-<!-- END GENERATED config-catalog:@orochi-network/oh-client-ui-settings-account -->
-
 <!-- BEGIN GENERATED config-catalog:@orochi-network/oh-client-ui-settings-models -->
 <a id="orochi-networkoh-client-ui-settings-models"></a>
 
@@ -1462,21 +1412,6 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@orochi-network/oh-jobs-local -->
 
-<!-- BEGIN GENERATED config-catalog:@orochi-network/oh-llm-orochi-account -->
-<a id="orochi-networkoh-llm-orochi-account"></a>
-
-## `@orochi-network/oh-llm-orochi-account`
-
-- `inject`: `llm`
-- `refs`: [`ProtocolConfig`](../packages/llm/llm-orochi/src/index.ts)
-- `source`: [`packages/llm/llm-orochi-account/src/config.ts:5`](../packages/llm/llm-orochi-account/src/config.ts)
-
-```ts config-catalog
-/** Account route configuration; authentication comes exclusively from the account service. */
-export type Config = ProtocolConfig
-```
-<!-- END GENERATED config-catalog:@orochi-network/oh-llm-orochi-account -->
-
 <!-- BEGIN GENERATED config-catalog:@orochi-network/oh-llm-orochi-api-key -->
 <a id="orochi-networkoh-llm-orochi-api-key"></a>
 
@@ -2054,47 +1989,6 @@ export interface Config {
 }
 ```
 <!-- END GENERATED config-catalog:@orochi-network/oh-office-to-pdf -->
-
-<!-- BEGIN GENERATED config-catalog:@orochi-network/oh-orochi-account-platform -->
-<a id="orochi-networkoh-orochi-account-platform"></a>
-
-## `@orochi-network/oh-orochi-account-platform`
-
-- `inject`: `credentials` · `authorization`
-- `source`: [`packages/credentials/orochi-account-platform/src/index.ts:23`](../packages/credentials/orochi-account-platform/src/index.ts)
-
-```ts config-catalog
-/** Deployment-specific platform and request deadlines. */
-export interface Config {
-  /** Platform origin serving auth-api and browser pages. */
-  platformOrigin?: string
-  /** Native desktop identity for Host API and embedded Platform requests; null identifies the client as web. */
-  desktopPlatform?: 'darwin' | 'win32' | null
-  /** Optional frontend deployment selector for embedded Usage and Top-up pages. */
-  embeddedPageDist?: string
-  /** Exact HTTP(S) origin allowed to receive account tokens for inference and files. */
-  inferenceOrigin?: string
-  /** Allow HTTP only on loopback for the development Mock. */
-  allowLoopbackHttp?: boolean
-  /** Map authorization and completion pages to platformOrigin for private development proxies. */
-  rewriteBrowserOrigin?: boolean
-  /** Host-only headers sent exclusively to platformOrigin; account authorization cannot be overridden. */
-  requestHeaders?: Record<string, string>
-  /** Overrides for profile, balance and embedded Platform requests; Cookie pairs merge by name. Logout retains requestHeaders. */
-  accountRequestHeaders?: Record<string, string>
-  /** Deadline for each platform HTTP request. */
-  requestTimeoutMs?: number
-  /** Deadline for recharge-wallet queries; timeout returns a failed balance outcome. */
-  balanceTimeoutMs?: number
-  /** Additional logout attempts after the first request fails, at most five. */
-  logoutMaxRetries?: number
-  /** Delay before the first logout retry; each later delay doubles. */
-  logoutRetryDelayMs?: number
-  /** Upper bound for the entire local attempt, even if the server advertises a longer TTL. */
-  attemptTimeoutMs?: number
-}
-```
-<!-- END GENERATED config-catalog:@orochi-network/oh-orochi-account-platform -->
 
 <!-- BEGIN GENERATED config-catalog:@orochi-network/oh-permission-presets -->
 <a id="orochi-networkoh-permission-presets"></a>
@@ -3143,7 +3037,7 @@ export interface Config {
   cwd?: string
   /** Provider route the child runtime initializes with (default `orochi-official`). */
   provider: string
-  /** Model the child runtime initializes with (default `deepseek-v4-flash`). */
+  /** Model the child runtime initializes with (default `xiaomi/mimo-v2.6-flash`). */
   model: string
   /** Optional per-request output-token cap for the child runtime. */
   maxTokens?: number
@@ -4051,7 +3945,7 @@ export interface Config {
 
 - `inject`: `web`
 - `refs`: `Volatile` (`@orochi-network/cordis`)
-- `source`: [`packages/web/web-search-orochi/src/index.ts:49`](../packages/web/web-search-orochi/src/index.ts)
+- `source`: [`packages/web/web-search-orochi/src/index.ts:46`](../packages/web/web-search-orochi/src/index.ts)
 
 ```ts config-catalog
 /** Plugin config (all optional — `apply` fills env-var and constant defaults). */
@@ -4062,7 +3956,7 @@ export interface Config {
   apiKeyEnv: Volatile<string>
   /** Anthropic-compatible endpoint base; `/messages` is appended. */
   baseURL: Volatile<string | undefined>
-  /** Anthropic-format model name. Defaults to `deepseek-v4-flash`. */
+  /** Anthropic-format model name. Defaults to `xiaomi/mimo-v2.6-flash`. */
   model: Volatile<string>
   /** `anthropic-version` header value. Defaults to `2023-06-01`. */
   apiVersion: Volatile<string>
@@ -4184,7 +4078,6 @@ These load from a `cordis.yml` entry with no `config:` block; they declare no co
 | --- | --- | --- |
 | `@orochi-network/oh-acp-app` | `cmdlineArgs` | [`packages/bundle/acp-app/src/index.ts`](../packages/bundle/acp-app/src/index.ts) |
 | `@orochi-network/oh-agent` | — | [`packages/core/agent/src/index.ts`](../packages/core/agent/src/index.ts) |
-| `@orochi-network/oh-api-account-controller` | `orochiAccount` · `agents` | [`packages/api/account-controller/src/index.ts`](../packages/api/account-controller/src/index.ts) |
 | `@orochi-network/oh-api-remotes` | `typertGateway` | [`packages/api/remotes/src/index.ts`](../packages/api/remotes/src/index.ts) |
 | `@orochi-network/oh-authorization` | `credentials` | [`packages/credentials/authorization/src/index.ts`](../packages/credentials/authorization/src/index.ts) |
 | `@orochi-network/oh-browser-use` | — | [`packages/browser-use/browser-use/src/index.ts`](../packages/browser-use/browser-use/src/index.ts) |
@@ -4294,7 +4187,6 @@ Abstract service classes — a deployment loads a concrete implementation packag
 | `@orochi-network/oh-fs` | `FileSystem` | — | [`packages/fs/fs/src/index.ts`](../packages/fs/fs/src/index.ts) |
 | `@orochi-network/oh-host-directory-picker` | `DirectoryPicker` | — | [`packages/host/directory-picker/src/index.ts`](../packages/host/directory-picker/src/index.ts) |
 | `@orochi-network/oh-jobs` | `JobRegistry` | — | [`packages/jobs/jobs/src/index.ts`](../packages/jobs/jobs/src/index.ts) |
-| `@orochi-network/oh-orochi-account` | `OrochiAccount` | — | [`packages/credentials/orochi-account/src/index.ts`](../packages/credentials/orochi-account/src/index.ts) |
 | `@orochi-network/oh-ptc-runtime` | `PtcRuntime` | — | [`packages/ptc-runtime/ptc-runtime/src/index.ts`](../packages/ptc-runtime/ptc-runtime/src/index.ts) |
 | `@orochi-network/oh-sandbox` | `SandboxProvider` | — | [`packages/sandbox/sandbox/src/index.ts`](../packages/sandbox/sandbox/src/index.ts) |
 | `@orochi-network/oh-session-persistence` | `SessionPersistence` | — | [`packages/session/session-persistence/src/index.ts`](../packages/session/session-persistence/src/index.ts) |

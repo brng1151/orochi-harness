@@ -23,7 +23,6 @@
     "@orochi-network/oh-schedule": "workspace:*",
     "@orochi-network/oh-tool-workspace-dependencies": "workspace:*",
     "@orochi-network/oh-skill-office": "workspace:*",
-    "@orochi-network/oh-orochi-account": "workspace:*",
     "@orochi-network/oh-workspace": "workspace:*"
   }
 }

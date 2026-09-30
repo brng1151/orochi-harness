@@ -22,11 +22,18 @@ export interface Config {
   thinking: Volatile<'enabled' | 'disabled' | undefined>
   /** Default thinking effort (default `high`); `off` disables thinking per request. */
   reasoningEffort: Volatile<'off' | 'low' | 'high' | 'max' | undefined>
+  /**
+   * `thinking.type` sent whenever a request thinks (default `adaptive`, which
+   * leaves the amount to `output_config.effort`). Set `enabled` only for an
+   * endpoint that reads that value without a token budget; endpoints following
+   * the Anthropic request protocol reject it.
+   */
+  thinkingType: Volatile<'adaptive' | 'enabled' | undefined>
   /** Default per-request output cap (default 256,000); a model's own cap and explicit request values win. */
   maxTokens: Volatile<number>
   /** Positive context capacity used when the selected model has no exact value (default 1,000,000). */
   defaultContextWindow: Volatile<number>
-  /** Advisory models shown by discovery consumers; defaults to V41 Flash and V4 Pro. */
+  /** Advisory models shown by discovery consumers; defaults to MiMo-V2.6-Flash and MiMo-V2.6-Pro. */
   models: Volatile<OrochiCatalogModel[]>
   /** Maximum provider idle time while one stream read is outstanding (default five minutes). */
   streamIdleTimeoutMs: Volatile<number>
@@ -83,6 +90,7 @@ export const orochiConfigFields = {
   baseURL: z.string().volatile(),
   thinking: z.union(['enabled', 'disabled']).volatile(),
   reasoningEffort: z.union(['off', 'low', 'high', 'max']).volatile(),
+  thinkingType: z.union(['adaptive', 'enabled']).volatile(),
   maxTokens: z.number().step(1).min(1).max(Number.MAX_SAFE_INTEGER).default(DEFAULT_MAX_TOKENS).volatile(),
   defaultContextWindow: z.number().step(1).min(1).default(DEFAULT_CONTEXT_WINDOW).volatile(),
   models: z.array(catalogModel).default(DEFAULT_MODELS).volatile(),
@@ -103,7 +111,10 @@ export const orochiConfigFields = {
 export const Config = z.object(orochiConfigFields)
 
 /** Public API default; the internal endpoint comes from $OROCHI_BASE_URL. */
-export const PUBLIC_BASE_URL = 'https://api.deepseek.com/anthropic'
+export const PUBLIC_BASE_URL = 'https://openrouter.ai/api/v1'
+
+/** `thinking.type` used when no deployment selects one. */
+const DEFAULT_THINKING_TYPE = 'adaptive'
 
 /** Environment variable naming this provider's endpoint, honored only from trusted layers. */
 const BASE_URL_ENV = 'OROCHI_BASE_URL'
@@ -211,6 +222,12 @@ export function resolveAdapterOptions(config: Options, environment?: LaunchEnvir
     && config.reasoningEffort !== 'off') {
     throw new Error('llm-orochi: only reasoningEffort "off" can be configured when thinking is disabled')
   }
+  if (config.thinking === 'disabled' && config.thinkingType !== undefined) {
+    throw new Error('llm-orochi: thinkingType cannot be configured when thinking is disabled, because no request thinks')
+  }
+  if (config.thinkingType !== undefined && !['adaptive', 'enabled'].includes(config.thinkingType)) {
+    throw new Error('llm-orochi: thinkingType must be "adaptive" or "enabled"')
+  }
   if (config.defaultContextWindow !== undefined
     && (!Number.isInteger(config.defaultContextWindow) || config.defaultContextWindow <= 0)) {
     throw new Error('llm-orochi: defaultContextWindow must be a positive integer')
@@ -297,6 +314,7 @@ export function resolveAdapterOptions(config: Options, environment?: LaunchEnvir
     defaults: {
       thinking: config.thinking,
       reasoningEffort: config.reasoningEffort,
+      thinkingType: config.thinkingType ?? DEFAULT_THINKING_TYPE,
     },
     maxTokens: config.maxTokens ?? DEFAULT_MAX_TOKENS,
     defaultContextWindow: config.defaultContextWindow ?? DEFAULT_CONTEXT_WINDOW,

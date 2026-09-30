@@ -9,7 +9,7 @@ kind: "package-reference"
 
 ## 概述
 
-提供共享的 Orochi Messages 传输、请求配置和模型能力。组合 [API key](../llm-orochi-api-key/README.zh.md) 或[账号](../llm-orochi-account/README.zh.md)插件以提供鉴权、模型发现与 provider 注册。有效的设置更改在后续请求生效，进行中的请求保留原配置。本包可与 [pi-ai 适配器](../llm-pi-ai/README.zh.md)并用。
+提供共享的 Orochi Messages 传输、请求配置和模型能力。组合 [API key](../llm-orochi-api-key/README.zh.md) 插件以提供鉴权、模型发现与 provider 注册。有效的设置更改在后续请求生效，进行中的请求保留原配置。本包可与 [pi-ai 适配器](../llm-pi-ai/README.zh.md)并用。
 
 `resolveAuth(connection)` 返回提供方持有的鉴权请求头，以及绑定本次请求凭据的可选失败回调。Messages 和 Files 直接使用这些请求头，不判断凭据类型。上传复用按端点和鉴权请求头的哈希隔离，不持久化原始凭据。
 
@@ -49,16 +49,17 @@ kind: "package-reference"
     filesApiTimeoutMs: 60000
 ```
 
-请求用 `provider: orochi-official` 选择路由；模型 id 原样传到协议，因此新增 Orochi 模型无需重新注册。省略 `models` 时公布支持文本和图像的 `deepseek-flash`，以及仅支持文本的 `deepseek-v4-pro`，各自的上下文窗口均为 1,000,000 token。显式列表会替换这些默认值，核心调用中未列出的模型 id 仍作为纯文本路由原样通过。GUI 选择要求模型具有目录条目；条目消失后，已保存的选择仍可提交请求。包括模型发现工具在内的客户端可通过 `ctx.llm.listModels('orochi-official')` 读取这些建议性条目。支持图片的条目可把 `imagePixelBudget` 设置为正整数或 `low`，也可以设置 `imageMaxBytes`。当端点把 `messages` 中任意位置最新的 `system` 消息读作完整的有效系统提示词时，条目可以声明 `systemPromptUpdate: in-history`；适配器会在已解析模型与已准备调用上报告该模式，agent loop（智能体循环）随后把变化后的提示词追加到已缓存历史之后，而不是改写开头的 system 消息（[决策规则](../../core/agent-loop/README.zh.md#understand-the-implementation)）。默认的 `deepseek-flash` 条目声明该模式；其他模型需通过 `models` 显式声明，`in-history` 以外的任何值都会在加载时以 `llm-orochi: catalog model "<id>" systemPromptUpdate must be "in-history" when present` 失败。
+请求用 `provider: orochi-official` 选择路由；模型 id 原样传到协议，因此新增 Orochi 模型无需重新注册。省略 `models` 时公布均支持文本和图像的 `xiaomi/mimo-v2.6-flash` 与 `xiaomi/mimo-v2.6-pro`，各自的上下文窗口均为 1,000,000 token，输出上限均为 131,072 token。显式列表会替换这些默认值，核心调用中未列出的模型 id 仍作为纯文本路由原样通过。GUI 选择要求模型具有目录条目；条目消失后，已保存的选择仍可提交请求。包括模型发现工具在内的客户端可通过 `ctx.llm.listModels('orochi-official')` 读取这些建议性条目。支持图片的条目可把 `imagePixelBudget` 设置为正整数或 `low`，也可以设置 `imageMaxBytes`。当端点把 `messages` 中任意位置最新的 `system` 消息读作完整的有效系统提示词时，条目可以声明 `systemPromptUpdate: in-history`；适配器会在已解析模型与已准备调用上报告该模式，agent loop（智能体循环）随后把变化后的提示词追加到已缓存历史之后，而不是改写开头的 system 消息（[决策规则](../../core/agent-loop/README.zh.md#understand-the-implementation)）。默认条目都不声明该模式，因此需通过 `models` 显式声明，`in-history` 以外的任何值都会在加载时以 `llm-orochi: catalog model "<id>" systemPromptUpdate must be "in-history" when present` 失败。
 
 | 字段 | 默认值 | 含义 |
 |---|---|---|
-| `baseURL` | `https://api.deepseek.com/anthropic` | 显式值优先，其次为 `$OROCHI_BASE_URL`，最后为官方根地址 |
+| `baseURL` | `https://openrouter.ai/api/v1` | 显式值优先，其次为 `$OROCHI_BASE_URL`，最后为官方根地址 |
 | `thinking` | `enabled` | 部署策略；`disabled` 把所有请求锁定为 `off` |
 | `reasoningEffort` | `high` | 默认强度：`off`、`low`、`high` 或 `max` |
+| `thinkingType` | `adaptive` | 请求思考时发送的 `thinking.type`；`enabled` 面向不读 `budget_tokens` 就接受该值的端点 |
 | `maxTokens` | `256,000` | 单次请求输出上限；模型自身上限与显式请求值优先 |
 | `defaultContextWindow` | `1,000,000` | 无精确值模型的容量回退 |
-| `models` | V41 Flash + V4 Pro | 供发现消费方查看的建议性目录 |
+| `models` | MiMo-V2.6-Flash + MiMo-V2.6-Pro | 供发现消费方查看的建议性目录 |
 | `streamIdleTimeoutMs` | `300,000` | 单次流读取未完成的最大提供方空闲时间 |
 | `maxRequestFilesBytes` | `128 MiB` | file 模式请求图片字节预算，保留图片超过时请求以 `IMAGE_OFFLOAD_REQUIRED` 失败 |
 | `maxInlineRequestImageBytes` | `20 MiB` | 独立的 base64 回退高水位 |
@@ -79,15 +80,13 @@ kind: "package-reference"
 <a id="endpoint-and-wire-format"></a>
 ### 端点与协议格式
 
-官方根地址为 `https://api.deepseek.com/anthropic`。显式 `baseURL` 或 `$OROCHI_BASE_URL` 提供兼容 Messages 的根地址。模型与 Files 请求分别追加 `/v1/messages` 和 `/v1/files`，但末尾严格匹配的 `/v1` 路径段会直接复用。末尾斜线不改变这些结果。基址必须使用 HTTP(S)，且不含凭据、查询或片段。
+官方根地址为 `https://openrouter.ai/api/v1`。显式 `baseURL` 或 `$OROCHI_BASE_URL` 提供兼容 Messages 的根地址。模型与 Files 请求分别追加 `/v1/messages` 和 `/v1/files`，但末尾严格匹配的 `/v1` 路径段会直接复用。末尾斜线不改变这些结果。基址必须使用 HTTP(S)，且不含凭据、查询或片段。
 
-Messages 以内容块发送文本、思考、工具调用和工具结果，以 `output_config.effort` 发送推理强度，并以 Files 引用或内联 base64 发送图片。声明 `systemPromptUpdate: in-history` 的模型保留初始顶层 system，在对应 user/tool-result 轮次之后发送新的 system 快照；未声明能力时，使用最新快照作为顶层 system。回放元数据保留模型与思考签名。无效的回放元数据产生警告并省略签名，不丢弃文本或工具历史。 模型条目可声明 `toolUpdate: addition-only` 或 `in-history`；默认 `deepseek-flash` 条目声明 `addition-only`。投影后的 developer 工具更新转换为 system 角色的 `tool_addition` 和 `tool_removal` 块，引用已声明名称，延迟声明携带 `defer_loading`。包含这些块的请求发送 `mid-conversation-tool-changes-2026-07-01` beta 请求头。
+Messages 以内容块发送文本、思考、工具调用和工具结果，以 `output_config.effort` 发送推理强度，并以 Files 引用或内联 base64 发送图片。声明 `systemPromptUpdate: in-history` 的模型保留初始顶层 system，在对应 user/tool-result 轮次之后发送新的 system 快照；未声明能力时，使用最新快照作为顶层 system。回放元数据保留模型与思考签名。无效的回放元数据产生警告并省略签名，不丢弃文本或工具历史。 模型条目可声明 `toolUpdate: addition-only` 或 `in-history`；默认条目都不声明，因此每次请求都重新声明完整工具列表。投影后的 developer 工具更新转换为 system 角色的 `tool_addition` 和 `tool_removal` 块，引用已声明名称，延迟声明携带 `defer_loading`。包含这些块的请求发送 `mid-conversation-tool-changes-2026-07-01` beta 请求头。
 
-### 账号凭据
+### 凭据
 
-`orochi-official` 仅解析配置的 API Key 引用。`orochi-account` 仅解析[账号提供者](../../credentials/orochi-account-platform/README.zh.md)保存的授权，其允许的 `inferenceOrigin` 默认为 `https://api.deepseek.com`。两条路由均不回退到另一凭证。退出登录删除账号授权，保留 API Key。
-
-Messages 和 Files 请求通过 `x-oh-auth-token` 发送账号 token，不加 Bearer 前缀；API Key 使用 `x-api-key`。两种凭据模式均拒绝重定向。账号 provider 负责 HTTP 401 分类和凭据失效处理；传输层将错误交给其回调。
+`orochi-official` 仅解析配置的 API Key 引用，用户通过模型设置页面提供。Messages 和 Files 请求通过 `x-api-key` 发送该密钥。请求不跟随重定向。
 
 ### 带 thinking 与图片的流式调用
 
@@ -99,7 +98,7 @@ Messages 和 Files 请求通过 `x-oh-auth-token` 发送账号 token，不加 Be
 
 Files 模式通过 `maxRequestFilesBytes` 与 `maxImagesPerRequest` 限制保留请求版本；内联回退有独立 base64 预算。两种模式都按配置的字节或数量量子移除最旧前缀。每张省略图片都有自己的模型可见占位符，包含显示名或附件 id，以及可用时的规范化尺寸、媒体类型与当前只读路径。分阶高水位策略避免每新增一张图片都改写旧请求前缀。
 
-`reasoningEffort` 选择公布的默认值。当部署策略允许 thinking 时，确切模型元数据会按顺序公开 `off`、`low`、`high` 与 `max` 强度及选择指引。`low`、`high` 与 `max` 启用 thinking，并以 `output_config.effort` 序列化，适配器自有的 `off` 则发送 `thinking.type: disabled`。不支持的取值会在网络 I/O 前以 `UNSUPPORTED_REASONING_EFFORT` 失败；`thinking: disabled` 会在插件加载时拒绝任何非 `off` 强度。`purpose: 'session-title'` 的请求会强制关闭 thinking，把有界输出留给可见标题文本。适配器转发显式 `temperature`；Orochi 在启用 thinking 时接受该参数，但忽略其值。
+`reasoningEffort` 选择公布的默认值。当部署策略允许 thinking 时，确切模型元数据会按顺序公开 `off`、`low`、`high` 与 `max` 强度及选择指引。`low`、`high` 与 `max` 以 `output_config.effort` 序列化，并伴随 `thinking.type: adaptive`，因此仅由强度决定模型思考多少；适配器自有的 `off` 发送 `thinking.type: disabled` 且不发送 `output_config`。端点改为读取不带 `budget_tokens` 的 `thinking.type: enabled` 时，部署设置 `thinkingType: enabled`；该值与 `thinking: disabled` 同时配置会被拒绝，因为后者下没有请求会思考。不支持的取值会在网络 I/O 前以 `UNSUPPORTED_REASONING_EFFORT` 失败；`thinking: disabled` 会在插件加载时拒绝任何非 `off` 强度。`purpose: 'session-title'` 的请求会强制关闭 thinking，把有界输出留给可见标题文本。适配器转发显式 `temperature`；Orochi 在启用 thinking 时接受该参数，但忽略其值。
 
 ### 动态配置
 
@@ -117,7 +116,7 @@ Files 模式通过 `maxRequestFilesBytes` 与 `maxImagesPerRequest` 限制保留
 
 非 2xx 响应以稳定 code 失败：`AUTH`（401/403）、`QUOTA`、`RATE_LIMIT`、`CONTEXT_WINDOW_EXCEEDED`、`INVALID_REQUEST`、`SERVER` 以及其他情况的 `HTTP_<status>`；响应前传输失败抛出 `TRANSPORT`，调用方中止抛出 `ABORTED`，流空闲超时抛出 `TIMEOUT`。请求扩展准备、字段冲突或 2xx 后接受失败使用 `REQUEST_EXTENSION`。当提供方未指出 file id 时，规范化图片拒绝会列出所有可能附件及其持久位置。陈旧文件拒绝会在一次上传索引更新中删除全部点名映射（或该次尝试使用的全部映射），并允许一次替换模型请求。协议违规抛出 `STREAM_CLOSED` 或 `MALFORMED_RESPONSE`；不带内容块的终止 `stop` 变成 `EMPTY_RESPONSE`，默认重试策略会重试它。官方路由缺少 API Key 的请求以 `MISSING_CREDENTIAL` 失败；格式错误的凭据以 `INVALID_CREDENTIAL` 失败，并点名需要修复的引用——绝不包含密钥的任何部分。
 
-提供方插件负责目录可用性；仅账号路由要求存有凭据才能发现模型。两者的目录独立配置；传输层提供共享的默认模型元数据和能力解析。
+提供方插件负责目录可用性。两者的目录独立配置；传输层提供共享的默认模型元数据和能力解析。
 
 -----
 
@@ -205,8 +204,9 @@ loop 保留的响应块会追加到下一个请求，并保留其更早的可复
 - **请求使用原始 `fetch`，而非 `@cordisjs/plugin-http`**——没有共享代理或拦截配置。
 - **Messages 历史内 system 更新需要保留用户或工具结果轮次**——若更新后的全部用户输入都被省略，且前一个协议轮次是 assistant，序列化会在下一个 assistant 之前或请求结束处以 `UNSUPPORTED_CONTENT` 失败。文本或空工具结果可以保留该轮次。不支持将更新移到更早的轮次；[输入历史决策](../../../.agents/notes/implemented/bug-fix/2026-09-18-messages-input-history-compatibility.zh.md)记录了排序约束。
 - **图片是仅用于输入的持久附件**——不支持直接外部 URL 与 assistant 图片输出；Orochi 输入通常使用 Files API，仅在单次请求恢复时使用内联 base64。
-- 默认目录公布 `deepseek-flash` 及其文本、图片和历史内更新能力，不探测网关可用性。网关开放该 ID 前，请求可能以 `INVALID_REQUEST` 失败。
-- [adapter.e2e.ts](tests/adapter.e2e.ts) 与 [runtime.e2e.ts](tests/runtime.e2e.ts) 中的真实 API 检查需要 `OROCHI_API_KEY`。将 `OROCHI_IN_HISTORY_MODEL` 设为受支持的非空模型 ID 可运行 system 更新检查：适配器套件使用 `high` 思考强度，运行时套件则在关闭思考时比较缓存复用，可能受到指令遵循不稳定的影响。运行时图片用例还需要 `OROCHI_FLASH_E2E=1` 或 `OROCHI_VISION_E2E=1`。
+- 默认目录公布 `xiaomi/mimo-v2.6-flash` 与 `xiaomi/mimo-v2.6-pro` 及其文本、图片输入能力，不探测网关可用性。网关开放该 ID 前，请求可能以 `INVALID_REQUEST` 失败。
+- **公共端点不提供 Anthropic Files API**——图片请求会尝试一次上传，得到 `FileResolutionFailure`，随后以内联 base64 重发请求。图片仍能发送，代价是每个请求多一次往返；端点确实提供 Files 的部署不受影响。
+- [adapter.e2e.ts](tests/adapter.e2e.ts) 与 [runtime.e2e.ts](tests/runtime.e2e.ts) 中的真实 API 检查需要 `OROCHI_API_KEY`。将 `OROCHI_IN_HISTORY_MODEL` 设为受支持的非空模型 ID 可运行 system 更新检查：适配器套件使用 `high` 思考强度，运行时套件则在关闭思考时比较缓存复用，可能受到指令遵循不稳定的影响。运行时图片用例还需要 `OROCHI_FLASH_E2E=1` 或 `OROCHI_VISION_E2E=1`。Files API 用例需要 `OROCHI_FILES_BASE_URL` 指向同时提供 `/v1/files` 的 Messages 根地址——公共默认端点并不提供；未设置则跳过这些用例。
 
 <a id="dev-note"></a>
 ### 开发备注
@@ -215,4 +215,4 @@ loop 保留的响应块会追加到下一个请求，并保留其更早的可复
 
 **运行时不变式：** 不发布伴生入口。本包没有独立事件序列或可变数据关系，相关约定在所属 seam 强制执行。
 
-`orochi-official` 仅使用配置的 API Key 引用；`orochi-account` 仅在账号提供方允许的推理来源使用已保存的 OH 授权。两条路由共享 Messages 传输，模型与文件设置独立配置。账号凭证缺失或不适用于目标时拒绝请求并提示登录；两条路由均不回退到另一凭证。Chat 和 Files 请求拒绝重定向。账号提供方根据运行中 Agent 已记录的请求上下文负责退登取消，包括工具执行阶段；传输层接收现有请求的中止信号。
+`orochi-official` 仅使用配置的 API Key 引用。Chat 和 Files 请求拒绝重定向；传输层接收现有请求的中止信号。

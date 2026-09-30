@@ -4,12 +4,8 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@orochi-network/cordis'
 import Loader from '@orochi-network/cordis-plugin-loader'
-import AgentRegistry from '@orochi-network/oh-agent'
-import type { Agent } from '@orochi-network/oh-agent'
 import { credentialRef } from '@orochi-network/oh-credentials'
 import LocalCredentialProvider from '@orochi-network/oh-credentials-local'
-import type { OrochiAccount } from '@orochi-network/oh-orochi-account'
-import SessionStore, { SessionId } from '@orochi-network/oh-session'
 import WebRuntime, { WebError } from '@orochi-network/oh-web'
 import {
   OrochiSearchProvider,
@@ -38,7 +34,7 @@ async function rejectedWebError(operation: Promise<unknown>): Promise<WebError> 
 
 const options = {
   apiKey: 'ds-key',
-  baseURL: 'https://api.deepseek.test/anthropic/v1',
+  baseURL: 'https://search.example.test/v1',
   model: 'deepseek-chat',
   apiVersion: '2023-06-01',
   maxTokens: 4096,
@@ -170,10 +166,6 @@ describe('OrochiSearchProvider availability', () => {
     expect(searchProvider(options).available()).toBe(true)
   })
 
-  it('is available with only an account token resolver', () => {
-    expect(searchProvider({ ...options, apiKey: '', resolveAccountToken: async () => 'account-token' }).available()).toBe(true)
-  })
-
   it('is misconfigured when the base URL is unparseable', () => {
     expect(searchProvider({ ...options, baseURL: 'not a url' }).available()).toBe(false)
   })
@@ -192,7 +184,7 @@ describe('OrochiSearchProvider request mapping', () => {
     vi.stubGlobal('fetch', fetchMock)
     await searchProvider({ ...options, recordRequest }).search({ query: 'hello' })
     const [url, init] = fetchMock.mock.calls[0] as unknown as [string, RequestInit]
-    expect(url).toBe('https://api.deepseek.test/anthropic/v1/messages')
+    expect(url).toBe('https://search.example.test/v1/messages')
     expect(init).toMatchObject({ method: 'POST', redirect: 'error' })
     const headers = init.headers as Record<string, string>
     expect(headers['x-api-key']).toBe('ds-key')
@@ -224,125 +216,23 @@ describe('OrochiSearchProvider request mapping', () => {
   })
 })
 
-describe('OrochiSearchProvider account authentication', () => {
-  /** Stub fetch and read back the endpoint and headers of its first call. */
-  function captureFetch() {
-    // The provider always passes the endpoint as a string.
-    const fetchMock = vi.fn(async (_input: string, _init?: RequestInit) => jsonResponse(searchResponse()))
-    vi.stubGlobal('fetch', fetchMock)
-    return {
-      fetchMock,
-      first: () => {
-        const [url, init] = fetchMock.mock.calls[0] ?? []
-        return { url: url ?? '', headers: (init?.headers ?? {}) as Record<string, string> }
-      },
-    }
-  }
-
-  it('sends only the account token for the dispatched endpoint, ahead of a configured key', async () => {
-    const { first } = captureFetch()
-    const resolveAccountToken = vi.fn(async (_endpoint: string) => 'account-token')
-    const resolveApiKey = vi.fn(async () => 'resolved-key')
-    await searchProvider({ ...options, resolveAccountToken, resolveApiKey }).search({ query: 'q' })
-    const { url, headers } = first()
-    expect(resolveAccountToken).toHaveBeenCalledWith(url)
-    expect(resolveApiKey).not.toHaveBeenCalled()
-    expect(headers['x-oh-auth-token']).toBe('account-token')
-    expect(headers).not.toHaveProperty('x-api-key')
-    expect(headers).not.toHaveProperty('authorization')
-  })
-
-  it.each([undefined, ''])('falls back to the API key when the account resolves %j', async (token) => {
-    const { first } = captureFetch()
-    await searchProvider({ ...options, resolveAccountToken: async () => token }).search({ query: 'q' })
-    const { headers } = first()
-    expect(headers['x-api-key']).toBe('ds-key')
-    expect(headers).not.toHaveProperty('x-oh-auth-token')
-  })
-
-  it('maps an account resolver rejection to WEB_PROVIDER_ERROR without dispatching', async () => {
-    const { fetchMock } = captureFetch()
-    await expect(searchProvider({
-      ...options,
-      resolveAccountToken: () => Promise.reject(new Error('account storage failed')),
-    }).search({ query: 'q' }))
-      .rejects.toThrow(expect.objectContaining({
-        code: 'WEB_PROVIDER_ERROR',
-        message: 'Orochi search credential resolution failed: Error: account storage failed',
-      }))
-    expect(fetchMock).not.toHaveBeenCalled()
-  })
-
-  it('replaces endpoint guidance with sign-in guidance when Orochi rejects the account token', async () => {
-    vi.stubGlobal('fetch', vi.fn(async () => jsonResponse({ error: { message: 'invalid token' } }, { status: 401 })))
-    const error = await rejectedWebError(searchProvider({
-      ...options,
-      resolveAccountToken: async () => 'account-token',
-    }).search({ query: 'q' }))
-    expect(error).toMatchObject({
-      code: 'WEB_PROVIDER_ERROR',
-      message: 'Orochi API error (HTTP 401): invalid token\n\n'
-        + 'Orochi rejected the account sign-in used for this web search. '
-        + 'Guide the user to sign in to Orochi again; the search endpoint does not need changing.',
-    })
-  })
-
-  it('keeps endpoint guidance for other account-authenticated HTTP failures', async () => {
-    vi.stubGlobal('fetch', vi.fn(async () => jsonResponse({}, { status: 503 })))
-    const error = await rejectedWebError(searchProvider({
-      ...options,
-      resolveAccountToken: async () => 'account-token',
-    }).search({ query: 'q' }))
-    expect(error.message).toContain('Search endpoint configuration is separate from chat.')
-  })
-
-  it('maps a synchronous resolver throw to WEB_PROVIDER_ERROR', async () => {
-    const { fetchMock } = captureFetch()
-    await expect(searchProvider({
-      ...options,
-      resolveAccountToken: () => { throw new Error('account service threw') },
-    }).search({ query: 'q' }))
-      .rejects.toThrow(expect.objectContaining({
-        code: 'WEB_PROVIDER_ERROR',
-        message: 'Orochi search credential resolution failed: Error: account service threw',
-      }))
-    expect(fetchMock).not.toHaveBeenCalled()
-  })
-
-  it('starts neither resolver for a pre-aborted call', async () => {
-    const resolveAccountToken = vi.fn(async () => 'account-token')
+describe('OrochiSearchProvider credential resolution', () => {
+  it('starts no resolver for a pre-aborted call', async () => {
     const resolveApiKey = vi.fn(async () => 'resolved-key')
     const controller = new AbortController()
     controller.abort(new Error('caller stopped'))
-    await expect(searchProvider({ ...options, apiKey: '', resolveAccountToken, resolveApiKey })
+    await expect(searchProvider({ ...options, apiKey: '', resolveApiKey })
       .search({ query: 'q' }, controller.signal))
       .rejects.toThrow(expect.objectContaining({ code: 'WEB_ABORTED' }))
-    expect(resolveAccountToken).not.toHaveBeenCalled()
     expect(resolveApiKey).not.toHaveBeenCalled()
   })
 
-  it('does not start API-key resolution after cancellation during account resolution', async () => {
-    const controller = new AbortController()
-    const resolveApiKey = vi.fn(() => Promise.reject(new Error('must not run')))
-    await expect(searchProvider({
-      ...options,
-      apiKey: '',
-      resolveAccountToken: async () => {
-        controller.abort(new Error('caller stopped'))
-        return undefined
-      },
-      resolveApiKey,
-    }).search({ query: 'q' }, controller.signal))
-      .rejects.toThrow(expect.objectContaining({ code: 'WEB_ABORTED' }))
-    expect(resolveApiKey).not.toHaveBeenCalled()
-  })
-
-  it('aborts while the account resolver remains pending', async () => {
-    const { fetchMock } = captureFetch()
+  it('aborts while the key resolver remains pending', async () => {
+    const fetchMock = vi.fn(async () => jsonResponse(searchResponse()))
+    vi.stubGlobal('fetch', fetchMock)
     const controller = new AbortController()
     const search = searchProvider({
-      ...options,
-      resolveAccountToken: () => new Promise<string>(() => {}),
+      ...options, apiKey: '', resolveApiKey: () => new Promise<string>(() => {}),
     }).search({ query: 'q' }, controller.signal)
     controller.abort(new Error('deadline'))
     await expect(search).rejects.toThrow(expect.objectContaining({ code: 'WEB_ABORTED' }))
@@ -470,7 +360,7 @@ describe('OrochiSearchProvider error handling', () => {
       .rejects.toThrow(expect.objectContaining({
         code: 'WEB_PROVIDER_ERROR',
         message: 'Orochi API error (HTTP 429): rate limited\n\n'
-          + 'The web search request used endpoint "https://api.deepseek.test/anthropic/v1/messages". '
+          + 'The web search request used endpoint "https://search.example.test/v1/messages". '
           + 'Search endpoint configuration is separate from chat. If that endpoint is not intended, '
           + 'guide the user to Settings > Plugins > Plugin configuration > Web search, where they can '
           + 'change and save Endpoint. If that settings page is unavailable, the user can set '
@@ -544,7 +434,7 @@ describe('OrochiSearchProvider error handling', () => {
     vi.stubGlobal('fetch', vi.fn(() => Promise.reject(new TypeError('connection refused'))))
     const error = await rejectedWebError(searchProvider(options).search({ query: 'q' }))
     expect(error.code).toBe('WEB_PROVIDER_ERROR')
-    expect(error.message).toContain('The web search request used endpoint "https://api.deepseek.test/anthropic/v1/messages".')
+    expect(error.message).toContain('The web search request used endpoint "https://search.example.test/v1/messages".')
   })
 
   it('strict mode flows through search(): a prose-only response throws WEB_PROVIDER_ERROR', async () => {
@@ -626,9 +516,9 @@ describe('web-search-orochi plugin registration', () => {
       orochiPlugin.apply(ctx, orochiPlugin.Config({}))
       await ctx.web.search({ query: 'q' })
       const [url, init] = fetchMock.mock.calls[0] as unknown as [string, RequestInit]
-      expect(url).toBe('https://api.deepseek.com/anthropic/v1/messages')
+      expect(url).toBe('https://openrouter.ai/api/v1/messages')
       expect((init.headers as Record<string, string>)['x-api-key']).toBe('env-key')
-      expect(JSON.parse(init.body as string)).toMatchObject({ model: 'deepseek-v4-flash' })
+      expect(JSON.parse(init.body as string)).toMatchObject({ model: 'xiaomi/mimo-v2.6-flash' })
       await ctx.fiber.dispose()
     } finally {
       if (prev === undefined) delete process.env.OROCHI_API_KEY
@@ -646,7 +536,7 @@ describe('web-search-orochi plugin registration', () => {
     try {
       await ctx.plugin(WebRuntime, { searchProvider: OROCHI_PROVIDER_ID })
       await ctx.plugin(LocalCredentialProvider, { path: join(dir, '.credentials.yaml'), watch: false })
-      await ctx.plugin(orochiPlugin, { baseURL: 'https://api.deepseek.test/anthropic/v1' })
+      await ctx.plugin(orochiPlugin, { baseURL: 'https://search.example.test/v1' })
 
       await expect(ctx.web.search({ query: 'missing' }))
         .rejects.toThrow(expect.objectContaining({ code: 'WEB_PROVIDER_CREDENTIAL_MISSING' }))
@@ -686,54 +576,5 @@ describe('web-search-orochi plugin registration', () => {
     } finally {
       if (prev !== undefined) process.env.OROCHI_API_KEY = prev
     }
-  })
-})
-
-describe('web-search-orochi account route selection', () => {
-  /**
-   * Mount the provider with a signed-in account and run one search inside an
-   * initiator whose latest request context names `provider`.
-   * @param provider - route recorded by the initiating Session's request context; undefined runs the
-   *   search without an initiator while a Session on the account route exists.
-   * @returns the headers the search sent and the URLs the account was asked about.
-   */
-  async function searchAs(provider: string | undefined): Promise<{ headers: Record<string, string>; asked: string[] }> {
-    const fetchMock = vi.fn(async (_input: string, _init?: RequestInit) => jsonResponse(searchResponse()))
-    vi.stubGlobal('fetch', fetchMock)
-    const asked: string[] = []
-    const ctx = new Context()
-    try {
-      await ctx.plugin(SessionStore)
-      await ctx.plugin(AgentRegistry)
-      await ctx.plugin(WebRuntime, { searchProvider: OROCHI_PROVIDER_ID })
-      ctx.provide('orochiAccount', {
-        resolveToken: async (url: string) => { asked.push(url); return 'account-token' },
-      } as OrochiAccount)
-      await ctx.plugin(orochiPlugin, { apiKey: 'ds-key' })
-      const session = ctx.sessions.create(SessionId(`web-search-account-${provider ?? 'none'}`))
-      session.append('turn/start', { turn: 1 })
-      session.append('request/context', { provider: provider ?? 'orochi-account', model: 'deepseek-v4-flash' })
-      const agent = { session } as Agent
-      const search = () => ctx.web.search({ query: 'q' })
-      await (provider === undefined ? search() : ctx.agents.withInitiator(agent, search))
-      const [, init] = fetchMock.mock.calls[0] ?? []
-      return { headers: (init?.headers ?? {}) as Record<string, string>, asked }
-    } finally {
-      await ctx.fiber.dispose()
-    }
-  }
-
-  it('authenticates with the account token when the initiating Session uses the account route', async () => {
-    const { headers, asked } = await searchAs('orochi-account')
-    expect(asked).toEqual(['https://api.deepseek.com/anthropic/v1/messages'])
-    expect(headers['x-oh-auth-token']).toBe('account-token')
-    expect(headers).not.toHaveProperty('x-api-key')
-  })
-
-  it.each(['orochi-official', undefined])('keeps API-key authentication for route %j', async (provider) => {
-    const { headers, asked } = await searchAs(provider)
-    expect(asked).toEqual([])
-    expect(headers['x-api-key']).toBe('ds-key')
-    expect(headers).not.toHaveProperty('x-oh-auth-token')
   })
 })

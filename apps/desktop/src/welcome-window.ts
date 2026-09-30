@@ -1,4 +1,3 @@
-import type { SignInAttemptId } from '@orochi-network/oh-orochi-account/types'
 /** Native welcome window and its presentation-only renderer. */
 
 import { join } from 'node:path'
@@ -64,12 +63,8 @@ export async function openWelcomeWindow(locale: DesktopLocale, operations: Welco
   const disposeHandlers = (): void => {
     if (!active) return
     active = false
-    for (const channel of [
-      WELCOME_IPC.takeNotice, WELCOME_IPC.saveApiKey,
-      WELCOME_IPC.skip, WELCOME_IPC.start, WELCOME_IPC.cancel, WELCOME_IPC.copyLink,
-    ]) {
-      ipcMain.removeHandler(channel)
-    }
+    ipcMain.removeHandler(WELCOME_IPC.saveApiKey)
+    ipcMain.removeHandler(WELCOME_IPC.skip)
     disposeActiveHandlers = undefined
   }
   disposeActiveHandlers = disposeHandlers
@@ -78,7 +73,6 @@ export async function openWelcomeWindow(locale: DesktopLocale, operations: Welco
       throw new Error('desktop welcome: rejected action from an unowned frame')
     }
   }
-  ipcMain.handle(WELCOME_IPC.takeNotice, async (event) => { assertSender(event); return operations.takeNotice() })
   ipcMain.handle(WELCOME_IPC.saveApiKey, async (event, value: unknown) => {
     assertSender(event)
     if (typeof value !== 'string' || !/^[\x21-\x7e]+$/.test(value)) return { ok: false }
@@ -87,17 +81,6 @@ export async function openWelcomeWindow(locale: DesktopLocale, operations: Welco
   ipcMain.handle(WELCOME_IPC.skip, async (event) => {
     assertSender(event)
     await operations.skip()
-  })
-  ipcMain.handle(WELCOME_IPC.start, async (event) => { assertSender(event); return operations.startSignIn() })
-  ipcMain.handle(WELCOME_IPC.cancel, async (event, id: unknown) => {
-    assertSender(event)
-    if (typeof id !== 'string') throw new Error('desktop welcome: invalid attempt')
-    return operations.cancelSignIn(id as SignInAttemptId)
-  })
-  ipcMain.handle(WELCOME_IPC.copyLink, async (event, id: unknown) => {
-    assertSender(event)
-    if (typeof id !== 'string') throw new Error('desktop welcome: invalid attempt')
-    return operations.copySignInLink(id as SignInAttemptId)
   })
   window.once('closed', disposeHandlers)
   window.webContents.setWindowOpenHandler(() => ({ action: 'deny' }))

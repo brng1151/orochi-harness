@@ -8,13 +8,5 @@
     "src/client",
     "src/welcome-api.ts",
     "src/locale.ts"
-  ],
-  "references": [
-    {
-      "path": "../../packages/client/ui-primitives"
-    },
-    {
-      "path": "../../packages/credentials/orochi-account"
-    }
   ]
 }

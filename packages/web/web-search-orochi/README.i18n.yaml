@@ -9,8 +9,8 @@
   en: 1afdb3e59e9d0a60
   zh: 194772afa40e8ab3
 /orochi-network-oh-web-search-orochi/summary:
-  en: 6b5c358fce4fcced
-  zh: 36eb243e029ef8fd
+  en: 31683a451d74754e
+  zh: 28b793eafc4ecbec
 /orochi-network-oh-web-search-orochi/table-of-contents:
   en: d152484eb41ac6b4
   zh: 09388d293f9be9cb
@@ -18,14 +18,14 @@
   en: 9c2d726aa3698999
   zh: 52d8cda83048e671
 /orochi-network-oh-web-search-orochi/use-this-package/when-to-choose-it:
-  en: e8324e0d5bf65867
-  zh: 326000b1fc9f8e33
+  en: 4cb7929eccf38b49
+  zh: a8967962c12d681b
 /orochi-network-oh-web-search-orochi/use-this-package/minimal-configuration:
-  en: 7ac67643d5ea2ae5
-  zh: b15ee9e9e4ec0907
+  en: 5fbc1ed5beae9765
+  zh: 249400d30d5ed017
 /orochi-network-oh-web-search-orochi/use-this-package/authentication:
-  en: 779abe7ccb10dfe4
-  zh: 644660b1f9b45cab
+  en: 5aa6dc3f2732d02b
+  zh: c7cb73730f200b98
 /orochi-network-oh-web-search-orochi/use-this-package/what-a-search-returns:
   en: 05749f79a149e24b
   zh: c03afc36ccd4cfd9
@@ -39,14 +39,14 @@
   en: 9842c69ad3636bb3
   zh: 3cdc3f816cbdd0cb
 /orochi-network-oh-web-search-orochi/understand-the-implementation/design-philosophy:
-  en: d25b1fcc8ffe9448
-  zh: a3520b11dfa270fb
+  en: b144bed18179edc8
+  zh: 655785421ed74dd4
 /orochi-network-oh-web-search-orochi/understand-the-implementation/source-map:
   en: 1d2e273a0cccf519
   zh: a92f848e2cd599ac
 /orochi-network-oh-web-search-orochi/understand-the-implementation/request-flow:
-  en: 2b9b914662e14e1e
-  zh: 122026cb8947e4f8
+  en: e2462cb33430dc4c
+  zh: c31579cf224dcda2
 /orochi-network-oh-web-search-orochi/further-exploration:
   en: c3dd5ed0937ee95e
   zh: fda5673fefccbd24
@@ -69,8 +69,8 @@
   en: 666f5753c99783ab
   zh: b44328e99bcc45c9
 /orochi-network-oh-web-search-orochi/model-experience/conversation-tool-result-indirectly/what-the-model-sees:
-  en: 75c0432bd8fc36a9
-  zh: d67dfe6e0cad4c25
+  en: c206527430dfbee0
+  zh: 870070e0fdf96de7
 /orochi-network-oh-web-search-orochi/model-experience/conversation-tool-result-indirectly/token-effect:
   en: 01ec43a9b616139d
   zh: 0a5b7c28fde34bcf

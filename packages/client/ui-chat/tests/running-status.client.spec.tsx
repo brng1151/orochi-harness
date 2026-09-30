@@ -22,6 +22,11 @@ function statusHarness(startTime?: number) {
 }
 
 describe('RunningStatus', () => {
+  it('shows the shared ongoing spinner beside the shimmer label', () => {
+    const view = statusHarness(1_000)
+    expect(view.container.querySelectorAll('[data-chat-running] svg[data-state="ongoing"]')).toHaveLength(1)
+  })
+
   it('waits for an open Turn start before allocating its clock', () => {
     const view = statusHarness()
     expect(view.content()?.textContent).toBe('深潜中...')

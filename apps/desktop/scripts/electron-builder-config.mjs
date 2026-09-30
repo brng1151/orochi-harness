@@ -22,7 +22,6 @@ import {
 import { resolveDesktopAutoUpdateConfig } from './desktop-auto-update-environment.mjs'
 import { resolveDesktopBuildCommit } from './desktop-build-commit.mjs'
 import { resolveDesktopBuildVersion } from './desktop-build-version.mjs'
-import { resolveDesktopPolicyEnvironment } from './desktop-policy-environment.mjs'
 import { desktopTargetBuildPaths, resolveDesktopBuildTarget } from './desktop-build-paths.mjs'
 import { installWindowsDirectoryInstaller } from './windows-directory-installer.mjs'
 import { preserveWindowsRuntimeSignature, signWindowsCode } from './windows-runtime-signature.mjs'
@@ -51,7 +50,6 @@ export function createElectronBuilderConfig(
   preparedRuntimeVersion = undefined,
 ) {
   const appId = resolveDesktopAppId(env)
-  const policy = resolveDesktopPolicyEnvironment(env)
   const targetPlatform = env.OH_DESKTOP_TARGET_PLATFORM
   const resolvedPlatform = targetPlatform ?? hostPlatform
   const resolvedArch = env.OH_DESKTOP_TARGET_ARCH ?? hostArch
@@ -102,7 +100,6 @@ export function createElectronBuilderConfig(
     protocols: [{ name: 'Orochi Harness', schemes: ['oh'] }],
     extraMetadata: {
       ohDesktopAppId: appId,
-      ohMandatoryUpdatePolicy: policy,
       ...buildVersion === productVersion ? {} : { version: buildVersion },
       ...packaged === undefined ? {} : { ohBuildCommit: packaged.commit, ohBuildDirty: packaged.dirty },
     },
@@ -130,8 +127,6 @@ export function createElectronBuilderConfig(
       'lib/main.js',
       'lib/welcome/**/*',
       'lib/preload-app.cjs',
-      'lib/preload-mandatory.cjs',
-      'lib/preload-platform-account.cjs',
       'lib/preload-update-dialog.cjs',
       'lib/preload-welcome.cjs',
       'renderer/**/*',
@@ -175,9 +170,6 @@ export function createElectronBuilderConfig(
         primaryRuntimeDestination = join(context.appOutDir, 'resources', 'runtime', 'primary-runtime')
         ohDestination = join(context.appOutDir, 'resources', 'app.asar.unpacked', 'oh')
       }
-      if (policy === undefined) return
-      const { resolveDesktopPolicyConfig } = await import('../lib/types/mandatory-update-policy.js')
-      resolveDesktopPolicyConfig(policy)
     },
     afterPack: async context => {
       const { verifyDesktopRuntime } = await import('../lib/types/runtime-tree.js')

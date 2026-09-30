@@ -90,7 +90,7 @@ describe('Messages request extensions', () => {
     }
     expect(request).toMatchObject({
       sessionId: 'session-parity', purpose: 'compaction',
-      body: { thinking: { type: 'enabled' }, messages: [{ role: 'user', content: [{ type: 'text', text: 'hello' }] }] },
+      body: { thinking: { type: 'adaptive' }, messages: [{ role: 'user', content: [{ type: 'text', text: 'hello' }] }] },
     })
     expect(request?.body).not.toHaveProperty('oh_messages_test')
     expect(fetch.mock.calls[0]?.[0]).toBe('https://messages.example.test/root/v1/messages')
