@@ -1,6 +1,7 @@
 # Agent Note: 按变更生产代码行的归属调整审批权重
 
 Status: implemented
+Archived: 2026-09-30
 
 [English](2026-09-11-production-blame-approval-weight.md) | 中文
 
