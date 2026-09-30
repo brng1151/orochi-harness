@@ -186,11 +186,11 @@ describe('CI workflow', () => {
       expect(job['runs-on'], `${jobName} runs-on must not use the Linux failover switch`).not.toContain('OH_CI_FAILOVER_LINUX')
       expect(job['runs-on']).toContain('self-hosted')
       expect(job['runs-on']).toContain('oh-win-ci')
-      expect(job['runs-on']).toContain('oh-windows-2025-16core')
       const cores = jobName === 'windows-native-tests' ? 2 : 16
       expect(evaluateRunsOn(job['runs-on'], { vars: { OH_CI_FAILOVER_WINDOWS: 'blacksmith' } }))
         .toBe(`blacksmith-${cores}vcpu-windows-2025`)
-      expect(job.if).toBe("github.event_name == 'pull_request'")
+      // Windows CI is off (orochi-network/orochi-harness#13); restore the pull_request condition to re-enable it.
+      expect(job.if).toBe(false)
     }
 
     // windows-build runs the blocking build/site pair.
@@ -320,10 +320,11 @@ describe('CI workflow', () => {
     // windows-coverage is temporarily non-blocking while Windows ACP
     // half-close tests are stabilized; observational stays out too.
     expect(aggregate.needs).not.toContain('windows')
-    expect(aggregate.needs).toContain('windows-build')
-    // The benchmark lane is a required verdict input and runs alone so its
-    // wall-clock budgets never share a runner with a concurrent aggregate.
-    expect(aggregate.needs).toContain('node-24-bench')
+    // Windows CI is off (orochi-network/orochi-harness#13), so no Windows job feeds the verdict.
+    expect(aggregate.needs).not.toContain('windows-build')
+    // The benchmark lane is off (orochi-network/orochi-harness#13), so it feeds no verdict; it still runs alone
+    // so its wall-clock budgets never share a runner once it is restored.
+    expect(aggregate.needs).not.toContain('node-24-bench')
     expect(node24Bench.name).toBe('node 24 / benchmarks')
     expect(node24Bench.env).toBeUndefined()
     expect(node24Bench.steps).toContainEqual({
@@ -337,7 +338,7 @@ describe('CI workflow', () => {
       run: 'pnpm run check:ci:bench',
     })
     expect(aggregate.needs).not.toContain('windows-coverage')
-    expect(aggregate.needs).toContain('windows-native-tests')
+    expect(aggregate.needs).not.toContain('windows-native-tests')
     expect(aggregate.needs).not.toContain('windows-observational')
     expect(aggregate.needs).not.toContain('serial-windows')
 
@@ -373,9 +374,9 @@ describe('CI workflow', () => {
       })
     }
     for (const [name, selector, variable, pool, hosted] of [
-      ['linux gates', selectors.linux, 'OH_CI_FAILOVER_LINUX', ['self-hosted', 'linux', 'x64', 'vm-backup'], 'oh-ubuntu-24-04-16core'],
+      ['linux gates', selectors.linux, 'OH_CI_FAILOVER_LINUX', ['self-hosted', 'linux', 'x64', 'vm-backup'], 'orochi-runners'],
       ['linux aggregate', selectors.linuxAggregate, 'OH_CI_FAILOVER_LINUX', ['self-hosted', 'linux', 'x64', 'vm-backup'], 'ubuntu-latest'],
-      ['windows lanes', selectors.windows, 'OH_CI_FAILOVER_WINDOWS', ['self-hosted', 'oh-win-ci', 'windows'], 'oh-windows-2025-16core'],
+      ['windows lanes', selectors.windows, 'OH_CI_FAILOVER_WINDOWS', ['self-hosted', 'oh-win-ci', 'windows'], 'windows-2025'],
     ] as const) {
       expect(evaluate(selector, { [variable]: 'blacksmith' }), `${name} blacksmith value`).toMatch(/^blacksmith-/)
       expect(evaluate(selector, { [variable]: 'selfhosted' }), `${name} selfhosted value`).toEqual(pool)
@@ -442,11 +443,12 @@ describe('CI workflow', () => {
     const aggregate = workflowJob(workflow, 'all-checks-passed')
 
     expect(benchmark['runs-on']).toBe('ubuntu-24.04')
-    expect(benchmark.if).toBe("github.event_name == 'pull_request'")
+    // Off (orochi-network/orochi-harness#13); restore the pull_request condition to run it again.
+    expect(benchmark.if).toBe(false)
     expect(benchmark.needs).toBeUndefined()
     expect(benchmark['continue-on-error']).toBeUndefined()
     expect(benchmark.env).toBeUndefined()
-    expect(aggregate.needs).toContain('node-24-bench')
+    expect(aggregate.needs).not.toContain('node-24-bench')
   })
 
   it('always restores the hosted benchmark pnpm cache', () => {
@@ -584,7 +586,7 @@ describe('CI workflow', () => {
     expect(config).not.toContain('packages/lsp/lsp-stdio/src/instance.ts')
   })
 
-  it('requires release-shaped Python runtime validation on Linux and Windows x64', () => {
+  it('requires release-shaped Python runtime validation on Linux x64', () => {
     const workflow = loadWorkflow('.github/workflows/ci.yml')
     const pythonRuntime = workflowJob(workflow, 'python-runtime')
     const aggregate = workflowJob(workflow, 'all-checks-passed')
@@ -597,7 +599,7 @@ describe('CI workflow', () => {
       name: 'python runtime / release-shaped matrix',
       uses: './.github/workflows/build-exe-for-python-sdk.yml',
       with: {
-        targets: 'node24-linux-x64,node24-win-x64',
+        targets: 'node24-linux-x64',
         ci: true,
       },
       secrets: {

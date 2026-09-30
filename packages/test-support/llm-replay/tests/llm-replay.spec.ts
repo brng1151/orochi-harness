@@ -58,9 +58,9 @@ const TEXT_CHUNKS: StreamChunk[] = [
 
 const COMPACTION_ID = CompactionId('replay-compaction')
 
-/** Build a minimal session-JSONL string: a header line + the given events. */
+/** Build a minimal session-JSONL string: a header line + the given events (raw objects are allowed, to exercise the parser's refusals). */
 function sessionJsonl(
-  events: SessionEvent[],
+  events: readonly object[],
   header?: { id?: string; createdAt?: number; isSeeded?: boolean; version?: number },
 ): string {
   const version = header?.version ?? SESSION_FORMAT_VERSION
@@ -413,7 +413,7 @@ describe('parseSessionLog', () => {
         ...(index === 4 ? { sourceEventSeqs: [[2, 4], 5] } : {}),
       })),
     ]
-    const parsed = parseSessionLog(sessionJsonl(events as unknown as SessionEvent[]))
+    const parsed = parseSessionLog(sessionJsonl(events))
     expect(parsed[6]).toEqual({ ...events[6], sourceEventSeqs: [2, 3, 4, 5] })
   })
 
@@ -430,7 +430,7 @@ describe('parseSessionLog', () => {
         ...(index === 4 ? { sourceEventSeqs: [[5, 3]] } : {}),
       })),
     ]
-    expect(() => parseSessionLog(sessionJsonl(events as unknown as SessionEvent[])))
+    expect(() => parseSessionLog(sessionJsonl(events)))
       .toThrow(/session snapshot line 8: sourceEventSeqs range/)
   })
 
@@ -585,7 +585,7 @@ describe('parseSessionLog', () => {
 
   it('refuses an unknown event type through current-format admission', () => {
     const source = sessionJsonl([
-      { type: 'mode/set', seq: SessionSeq(0), time: 0, data: { mode: 'plan' } } as unknown as SessionEvent,
+      { type: 'mode/set', seq: SessionSeq(0), time: 0, data: { mode: 'plan' } },
     ])
 
     expect(() => parseSessionLog(source)).toThrow(/unknown event type "mode\/set" at seq 0/)

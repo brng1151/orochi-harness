@@ -7,6 +7,8 @@ import { officePackageDirectories } from './libreoffice-packages.mjs'
 export const OFFICE_ASSET_IGNORES = [
   '**/node_modules/@orochi-network/libreoffice-kit/**',
   '**/node_modules/@orochi-network/libreoffice-kit-*/**',
+  // The alias resolves the kit's own dependencies under their published scope.
+  '**/node_modules/@deepseek-ai/libreoffice-kit-*/**',
 ]
 
 /**

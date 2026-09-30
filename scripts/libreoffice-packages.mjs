@@ -4,6 +4,9 @@ import { readFile } from 'node:fs/promises'
 import { createRequire } from 'node:module'
 import { isAbsolute, join, relative, sep } from 'node:path'
 
+/** Engine packages of the kit under whichever scope its manifest publishes them; `$1` is the engine suffix. */
+const ENGINE_PACKAGE = /^@[^/]+\/libreoffice-kit-(.+)$/
+
 /**
  * Require the declared native engine, or use WASM on other targets.
  * @param {{ optionalDependencies?: Record<string, string> }} manifest - Installed kit manifest.
@@ -12,7 +15,7 @@ import { isAbsolute, join, relative, sep } from 'node:path'
  */
 export function selectOfficeEngine(manifest, target) {
   const native = `${target.platform}-${target.arch}`
-  return Object.hasOwn(manifest.optionalDependencies ?? {}, `@orochi-network/libreoffice-kit-${native}`) ? native : 'wasm'
+  return Object.keys(manifest.optionalDependencies ?? {}).some(name => ENGINE_PACKAGE.exec(name)?.[1] === native) ? native : 'wasm'
 }
 
 /**
@@ -24,7 +27,10 @@ export function selectOfficeEngine(manifest, target) {
 export async function officePackageDirectories(staging, target) {
   const entry = join(staging, 'node_modules', '@orochi-network', 'libreoffice-kit')
   const manifest = JSON.parse(await readFile(join(entry, 'package.json'), 'utf8'))
-  const engineName = `@orochi-network/libreoffice-kit-${selectOfficeEngine(manifest, target)}`
+  const engineSuffix = selectOfficeEngine(manifest, target)
+  const engineName = [...Object.keys(manifest.dependencies ?? {}), ...Object.keys(manifest.optionalDependencies ?? {})]
+    .find(name => ENGINE_PACKAGE.exec(name)?.[1] === engineSuffix)
+  if (engineName === undefined) throw new Error(`Office engine libreoffice-kit-${engineSuffix} required for ${target.platform}/${target.arch} is not declared by the kit.`)
   const packages = new Set()
 
   /** @param {string} packageDirectory - Installed package directory. */
@@ -44,7 +50,7 @@ export async function officePackageDirectories(staging, target) {
       ...Object.keys(manifest.peerDependencies ?? {}),
     ])
     for (const name of dependencies) {
-      if (name.startsWith('@orochi-network/libreoffice-kit-')) continue
+      if (ENGINE_PACKAGE.test(name)) continue
       const optional = manifest.optionalDependencies?.[name] !== undefined
         || manifest.peerDependenciesMeta?.[name]?.optional === true
       const dependencyDirectory = (require.resolve.paths(name) ?? [])

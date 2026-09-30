@@ -197,8 +197,10 @@ def test_stage_runtime_rejects_a_noncanonical_executable_name(tmp_path: Path) ->
     ("manylinux_2_28_x86_64", "linux-x64"), ("macosx_14_0_arm64", "wasm"),
 ])
 @pytest.mark.parametrize("invalid", [None, "asset", "missing-engine", "foreign-engine", "helper-mode"])
+# The kit installs through an @orochi-network alias while its engines keep the scope its manifest names.
+@pytest.mark.parametrize("engine_scope", ["@orochi-network", "@deepseek-ai"])
 def test_office_wheel_requires_only_target_engine(
-    tmp_path: Path, platform_tag: str, selected: str, invalid: str | None,
+    tmp_path: Path, platform_tag: str, selected: str, invalid: str | None, engine_scope: str,
 ) -> None:
     root = "runtime-office/node_modules"
     wheel = tmp_path / "office.zip"
@@ -209,9 +211,9 @@ def test_office_wheel_requires_only_target_engine(
               {"kind": "wasm", "loader": "loader.cjs", "wasm": "engine.wasm", "data": "engine.data", "metadata": "fonts.json"})
     with zipfile.ZipFile(wheel, "w") as archive:
         archive.writestr(f"{root}/@orochi-network/libreoffice-kit/package.json", json.dumps({
-            "optionalDependencies": {f"@orochi-network/libreoffice-kit-{selected}": "0.0.1"},
+            "optionalDependencies": {f"{engine_scope}/libreoffice-kit-{selected}": "0.0.1"},
         }))
-        base = f"{root}/@orochi-network/libreoffice-kit-{selected}"
+        base = f"{root}/{engine_scope}/libreoffice-kit-{selected}"
         if invalid != "missing-engine":
             archive.writestr(f"{base}/prebuilds.json", json.dumps({"engine": engine}))
         for field in (("executable",) if native else ("loader", "wasm", "data", "metadata")):
@@ -222,7 +224,7 @@ def test_office_wheel_requires_only_target_engine(
             archive.writestr(asset, b"payload")
         if invalid == "foreign-engine":
             foreign = "wasm" if native else "darwin-arm64"
-            archive.writestr(f"{root}/@orochi-network/libreoffice-kit-{foreign}/prebuilds.json", "{}")
+            archive.writestr(f"{root}/{engine_scope}/libreoffice-kit-{foreign}/prebuilds.json", "{}")
     with zipfile.ZipFile(wheel) as archive:
         if invalid is None:
             build_python_release.verify_office_payload(archive, root, platform_tag)

@@ -11,6 +11,7 @@ import json
 import os
 import queue
 import re
+import runpy
 import secrets
 import shutil
 import subprocess
@@ -947,12 +948,15 @@ def smoke_sdk_office(executable: Path) -> None:
         office = root / f"{stem}-office"
         adapter = office / "node_modules/@orochi-network/libreoffice-kit/package.json"
         native = stem.removeprefix("orochi-harness-sdk-runtime-").replace("win-", "win32-").replace("macos-", "darwin-")
-        declared = json.loads(adapter.read_text(encoding="utf-8")).get("optionalDependencies", {})
-        selected = native if f"@orochi-network/libreoffice-kit-{native}" in declared else "wasm"
+        office_engine_package = runpy.run_path(
+            str(Path(__file__).resolve().parents[1] / "python/sdk-runtime/src/orochi_harness_runtime/_resources.py")
+        )["office_engine_package"]
+        selected, _ = office_engine_package(json.loads(adapter.read_text(encoding="utf-8")), native)
         expected_backend = "wasm" if selected == "wasm" else "native"
+        # The kit's engines keep the scope its manifest names, which need not match the kit's alias scope.
         engines = [
             json.loads(manifest.read_text())["engine"]["kind"]
-            for manifest in (office / "node_modules/@orochi-network").glob("libreoffice-kit-*/prebuilds.json")
+            for manifest in (office / "node_modules").glob("@*/libreoffice-kit-*/prebuilds.json")
         ]
         if engines != [expected_backend]:
             raise AssertionError(f"Office sidecar must contain only {expected_backend}: {engines}")

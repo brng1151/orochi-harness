@@ -43,11 +43,13 @@ jobs:
           || vars.OH_CI_FAILOVER_LINUX == 'selfhosted'
           && github.event.pull_request.user.login != 'dependabot[bot]'
           && fromJSON('["self-hosted", "linux", "x64", "vm-backup"]')
-          || 'oh-ubuntu-24-04-16core' }}
+          || 'orochi-runners' }}
     name: node 24 / static
     env:
-      # Shared hosts expose host CPUs, not an isolated allocation.
-      OH_GATE_CONCURRENCY: ${{ vars.OH_CI_FAILOVER_LINUX == 'selfhosted' && github.event.pull_request.user.login != 'dependabot[bot]' && '8' || '' }}
+      # Shared hosts expose host CPUs, not an isolated allocation. Left unset, the gates start one worker per host
+      # CPU and each doc gate builds a full TypeScript program; on orochi-runners that took the runner down
+      # ("lost communication with the server") about 13 minutes in. Two workers keep memory bounded.
+      OH_GATE_CONCURRENCY: ${{ vars.OH_CI_FAILOVER_LINUX == 'selfhosted' && github.event.pull_request.user.login != 'dependabot[bot]' && '8' || '2' }}
       # Stop the aggregate at the first blocking gate failure so a red run
       # does not keep burning enterprise runner time on the remaining gates.
       OH_GATE_FAIL_FAST: '1'
@@ -105,13 +107,14 @@ jobs:
         run: pnpm run check:ci:static
 
   node-24-coverage:
-    if: github.event_name == 'pull_request'
+    # Off until orochi-runners allows bubblewrap (user namespaces and mount changes); see orochi-network/orochi-harness#13.
+    if: false
     runs-on: >-
       ${{ vars.OH_CI_FAILOVER_LINUX == 'blacksmith' && 'blacksmith-16vcpu-ubuntu-2404'
           || vars.OH_CI_FAILOVER_LINUX == 'selfhosted'
           && github.event.pull_request.user.login != 'dependabot[bot]'
           && fromJSON('["self-hosted", "linux", "x64", "vm-backup"]')
-          || 'oh-ubuntu-24-04-16core' }}
+          || 'orochi-runners' }}
     name: node 24 / coverage
     env:
       # Shared hosts expose host CPUs, not an isolated allocation.
@@ -188,7 +191,8 @@ jobs:
         run: pnpm run check:ci:coverage
 
   node-24-bench:
-    if: github.event_name == 'pull_request'
+    # Off: the session-open benchmark measures migrating a released-v0 Session, and this fork ships no migration chain; see orochi-network/orochi-harness#13.
+    if: false
     runs-on: ubuntu-24.04
     name: node 24 / benchmarks
     # Wall-clock budgets need an otherwise idle runner, so this job runs the
@@ -234,13 +238,14 @@ jobs:
         run: pnpm run check:ci:bench
 
   node-24-consumers:
-    if: github.event_name == 'pull_request'
+    # Off until orochi-runners allows bubblewrap (user namespaces and mount changes); see orochi-network/orochi-harness#13.
+    if: false
     runs-on: >-
       ${{ vars.OH_CI_FAILOVER_LINUX == 'blacksmith' && 'blacksmith-16vcpu-ubuntu-2404'
           || vars.OH_CI_FAILOVER_LINUX == 'selfhosted'
           && github.event.pull_request.user.login != 'dependabot[bot]'
           && fromJSON('["self-hosted", "linux", "x64", "vm-backup"]')
-          || 'oh-ubuntu-24-04-16core' }}
+          || 'orochi-runners' }}
     name: node 24 / snapshots and artifacts
     env:
       # Shared hosts expose host CPUs, not an isolated allocation.
@@ -486,7 +491,7 @@ jobs:
     name: python runtime / release-shaped matrix
     uses: ./.github/workflows/build-exe-for-python-sdk.yml
     with:
-      targets: node24-linux-x64,node24-win-x64
+      targets: node24-linux-x64
       ci: true
     secrets:
       OROCHI_API_KEY_EXTERNAL: ${{ secrets.OROCHI_API_KEY_EXTERNAL }}
@@ -498,13 +503,14 @@ jobs:
   # Blacksmith uses 2 vCPU for file-serial native tests and 16 for coverage
   # and the shared build/observational workspace.
   windows-build:
-    if: github.event_name == 'pull_request'
+    # Windows CI is off; see orochi-network/orochi-harness#13.
+    if: false
     runs-on: >-
       ${{ vars.OH_CI_FAILOVER_WINDOWS == 'blacksmith' && 'blacksmith-16vcpu-windows-2025'
           || vars.OH_CI_FAILOVER_WINDOWS == 'selfhosted'
           && github.event.pull_request.user.login != 'dependabot[bot]'
           && fromJSON('["self-hosted", "oh-win-ci", "windows"]')
-          || 'oh-windows-2025-16core' }}
+          || 'windows-2025' }}
     name: windows node 24 / build & observational
     timeout-minutes: 60
     env:
@@ -560,13 +566,14 @@ jobs:
           $message | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
 
   windows-coverage:
-    if: github.event_name == 'pull_request'
+    # Windows CI is off; see orochi-network/orochi-harness#13.
+    if: false
     runs-on: >-
       ${{ vars.OH_CI_FAILOVER_WINDOWS == 'blacksmith' && 'blacksmith-16vcpu-windows-2025'
           || vars.OH_CI_FAILOVER_WINDOWS == 'selfhosted'
           && github.event.pull_request.user.login != 'dependabot[bot]'
           && fromJSON('["self-hosted", "oh-win-ci", "windows"]')
-          || 'oh-windows-2025-16core' }}
+          || 'windows-2025' }}
     name: windows node 24 / coverage
     timeout-minutes: 120
     env:
@@ -638,13 +645,14 @@ jobs:
           key: coverage-times-${{ github.run_id }}
 
   windows-native-tests:
-    if: github.event_name == 'pull_request'
+    # Windows CI is off; see orochi-network/orochi-harness#13.
+    if: false
     runs-on: >-
       ${{ vars.OH_CI_FAILOVER_WINDOWS == 'blacksmith' && 'blacksmith-2vcpu-windows-2025'
           || vars.OH_CI_FAILOVER_WINDOWS == 'selfhosted'
           && github.event.pull_request.user.login != 'dependabot[bot]'
           && fromJSON('["self-hosted", "oh-win-ci", "windows"]')
-          || 'oh-windows-2025-16core' }}
+          || 'windows-2025' }}
     name: windows node 24 / native tests
     timeout-minutes: 60
     steps:
@@ -711,7 +719,7 @@ jobs:
           && github.event.pull_request.user.login != 'dependabot[bot]'
           && fromJSON('["self-hosted", "linux", "x64", "vm-backup"]')
           || 'ubuntu-latest' }}
-    needs: [node-24, node-24-coverage, node-24-bench, node-24-consumers, node-compat, python-sdk, python-runtime, windows-build, windows-native-tests]
+    needs: [node-24, node-compat, python-sdk, python-runtime]
     if: ${{ !cancelled() && github.event_name == 'pull_request' }}
     steps:
       - name: Fail if any needed job did not succeed
