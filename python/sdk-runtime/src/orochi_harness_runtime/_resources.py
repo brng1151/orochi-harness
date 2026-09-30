@@ -9,6 +9,28 @@ import zipfile
 from pathlib import Path
 
 
+_KIT_ENGINE = re.compile(r"@[^/]+/libreoffice-kit-(.+)")
+
+
+def _kit_engines(names: dict[str, str]) -> dict[str, str]:
+    """Map each engine suffix to its package name, whatever scope the name carries."""
+    return {match.group(1): name for name in names if (match := _KIT_ENGINE.fullmatch(name))}
+
+
+def office_engine_package(kit_manifest: dict, native: str) -> tuple[str, str | None]:
+    """Pick the Office engine a kit manifest declares for ``native``, or its WASM engine.
+
+    The kit is published as ``@deepseek-ai/libreoffice-kit`` and installed through an
+    ``@orochi-network`` alias, so its engines keep the scope its own manifest names. Returns
+    the engine suffix and the declared package name, or ``None`` for the name when the
+    manifest does not declare that engine.
+    """
+    optional = _kit_engines(kit_manifest.get("optionalDependencies", {}))
+    engines = {**_kit_engines(kit_manifest.get("dependencies", {})), **optional}
+    engine = native if native in optional else "wasm"
+    return engine, engines.get(engine)
+
+
 def validate_resources(root: Path | zipfile.Path, target: str) -> None:
     """Reject a missing or wrong-target Python/Node environment or bundled Office skill tree."""
     manifest_path = root / "primary-runtime/runtime.json"
