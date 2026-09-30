@@ -8,6 +8,13 @@ Orochi Harness（`oh`）是由 [Orochi AI](https://deepseek.com) 开发的开源
 
 文档：[https://orochi-harness.github.io/orochi-harness/](https://orochi-harness.github.io/orochi-harness/)
 
+## 来源
+
+Orochi Harness 基于 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)。与 DeepSeek Harness 相比，本分支：
+
+- 移除了日志与数据收集器；
+- 默认使用 [OpenRouter](https://openrouter.ai) 作为模型提供方。
+
 ## 开发者预览
 
 Orochi Harness 处于 _开发者预览_ 阶段，正在快速迭代。**未来将出现破坏兼容性的变更。**
