@@ -108,7 +108,9 @@ class RuntimeBuildHook(BuildHookInterface):
                 native = target.replace("win-", "win32-").replace("macos-", "darwin-")
                 office_engine_package = runpy.run_path(str(runtime_dir.parent / "_resources.py"))["office_engine_package"]
                 engine, package = office_engine_package(json.loads(adapter.read_text(encoding="utf-8")), native)
-                required = office / "node_modules" / (package or f"libreoffice-kit-{engine}") / "prebuilds.json"
+                if package is None:
+                    raise RuntimeError(f"runtime Office kit does not declare a {engine} engine: {adapter}")
+                required = office / "node_modules" / package / "prebuilds.json"
                 if not required.is_file():
                     raise RuntimeError(f"runtime Office dependency is missing: {required}")
                 continue
