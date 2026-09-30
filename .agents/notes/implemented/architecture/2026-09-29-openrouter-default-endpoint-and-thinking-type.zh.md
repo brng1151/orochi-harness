@@ -10,7 +10,7 @@ Status: implemented
 
 ## 决策
 
-公共默认端点为 `https://openrouter.ai/api/v1`；按 [Messages 基址规则](../bug-fix/2026-09-15-messages-v1-base-url.zh.md)，严格匹配的末尾 `v1` 路径段会被复用，解析为 `/api/v1/messages`。默认目录公布 `xiaomi/mimo-v2.6-flash` 与 `xiaomi/mimo-v2.6-pro`，两者都支持文本与图片输入，各自的 `maxTokens` 为 131,072 token，因为该端点的输出上限低于配置层面 256,000 的默认值。
+公共默认端点为 `https://openrouter.ai/api/v1`；按 [Messages 基址规则](../bug-fix/2026-09-15-messages-v1-base-url.zh.md)，严格匹配的末尾 `v1` 路径段会被复用，解析为 `/api/v1/messages`。默认目录公布 `xiaomi/mimo-v2.6-flash` 与 `xiaomi/mimo-v2.6-pro`，两者都支持文本与图片输入，各自的 `maxTokens` 为 131,072 token，因为该端点的输出上限低于配置层面 256,000 的默认值。两者仍沿用 1,000,000 token 的 `DEFAULT_CONTEXT_WINDOW`：该端点的模型列表显示这两个模型的上下文为 1,050,000 token、承载它们的提供方为 1,048,576 token，因此 `contextWindow * thresholdRatio` 处的压缩触发点会先于端点拒绝该轮请求。
 
 推理以 `thinking: {type: adaptive}` 发送，强度放在 `output_config.effort`。OpenRouter 把 `output_config.effort` 作为 Messages 的一等字段，并归一化到其统一的 `reasoning.effort`，因此非 Claude 模型会以自己的词汇收到该强度；`adaptive` 把思考多少交给该强度决定，无需 token 预算。新增的 `thinkingType` Config 字段可为「端点读取不带 `budget_tokens` 的该值」的部署选择 `enabled`。`resolveAdapterOptions` 一次性解析该值，因此请求路径读到的是确定的 `thinkingType`，而不是在序列化中兜底。与 `thinking: disabled` 同时配置会在加载时失败，因为该策略下没有请求会思考。
 

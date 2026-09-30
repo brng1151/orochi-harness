@@ -6,7 +6,8 @@ import type { OrochiCatalogModel } from './types.ts'
  * Output cap both default models accept. The public endpoint reports 131,072
  * completion tokens for them, below the profile-wide `maxTokens` default, so
  * each entry carries its own cap and requests are not rejected for asking
- * beyond it.
+ * beyond it. The endpoint reports at least 1,048,576 context tokens for both,
+ * so they keep `DEFAULT_CONTEXT_WINDOW`.
  */
 const MIMO_MAX_TOKENS = 131_072
 
