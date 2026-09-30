@@ -46,8 +46,10 @@ jobs:
           || 'orochi-runners' }}
     name: node 24 / static
     env:
-      # Shared hosts expose host CPUs, not an isolated allocation.
-      OH_GATE_CONCURRENCY: ${{ vars.OH_CI_FAILOVER_LINUX == 'selfhosted' && github.event.pull_request.user.login != 'dependabot[bot]' && '8' || '' }}
+      # Shared hosts expose host CPUs, not an isolated allocation. Left unset, the gates start one worker per host
+      # CPU and each doc gate builds a full TypeScript program; on orochi-runners that took the runner down
+      # ("lost communication with the server") about 13 minutes in. Two workers keep memory bounded.
+      OH_GATE_CONCURRENCY: ${{ vars.OH_CI_FAILOVER_LINUX == 'selfhosted' && github.event.pull_request.user.login != 'dependabot[bot]' && '8' || '2' }}
       # Stop the aggregate at the first blocking gate failure so a red run
       # does not keep burning enterprise runner time on the remaining gates.
       OH_GATE_FAIL_FAST: '1'
