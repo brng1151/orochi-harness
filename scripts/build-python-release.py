@@ -241,22 +241,16 @@ def verify_office_payload(archive: zipfile.ZipFile, office_modules: str, platfor
     adapter = f"{office_modules}/@orochi-network/libreoffice-kit/package.json"
     if adapter not in names:
         raise RuntimeError("Office dependency is missing: libreoffice-kit")
-    engines = f"{office_modules}/@orochi-network"
     target = next(name for name, value in PLATFORMS.items() if value[0] == platform_tag)
     native_target = target.replace("win-", "win32-").replace("macos-", "darwin-")
-    declared = json.loads(archive.read(adapter)).get("optionalDependencies", {})
-    selected = native_target if f"@orochi-network/libreoffice-kit-{native_target}" in declared else "wasm"
-    for required in (f"libreoffice-kit-{selected}/prebuilds.json",):
-        if f"{engines}/{required}" not in names:
-            raise RuntimeError(f"Office dependency is missing: {required}")
-    manifests = (
-        name for name in names
-        if name.startswith(f"{engines}/libreoffice-kit-")
-        and name.endswith("/prebuilds.json")
-        and name.count("/") == engines.count("/") + 2
-    )
-    for manifest_path in manifests:
-        if manifest_path != f"{engines}/libreoffice-kit-{selected}/prebuilds.json":
+    office_engine_package = runpy.run_path(str(ROOT / "python/sdk-runtime/src/orochi_harness_runtime/_resources.py"))["office_engine_package"]
+    selected, package = office_engine_package(json.loads(archive.read(adapter)), native_target)
+    selected_manifest = None if package is None else f"{office_modules}/{package}/prebuilds.json"
+    if selected_manifest is None or selected_manifest not in names:
+        raise RuntimeError(f"Office dependency is missing: libreoffice-kit-{selected}/prebuilds.json")
+    engine_manifest = re.compile(rf"{re.escape(office_modules)}/@[^/]+/libreoffice-kit-[^/]+/prebuilds\.json")
+    for manifest_path in (name for name in names if engine_manifest.fullmatch(name)):
+        if manifest_path != selected_manifest:
             raise RuntimeError(f"Unexpected Office engine for {platform_tag}: {manifest_path}")
         manifest = json.loads(archive.read(manifest_path))
         engine = manifest["engine"]

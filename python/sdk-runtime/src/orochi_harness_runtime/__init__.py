@@ -28,7 +28,7 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
-from ._resources import validate_resources
+from ._resources import office_engine_package, validate_resources
 
 PACKAGE_METADATA_FILENAME = "orochi-harness-runtime.json"
 
@@ -100,9 +100,8 @@ def bundled_runtime_path() -> Path:
             + _EXE_ACQUISITION_HINT
         )
     native = tag.replace("win-", "win32-").replace("macos-", "darwin-")
-    declared = json.loads(adapter.read_text(encoding="utf-8")).get("optionalDependencies", {})
-    engine = native if f"@orochi-network/libreoffice-kit-{native}" in declared else "wasm"
-    if not (office / "node_modules" / f"@orochi-network/libreoffice-kit-{engine}/prebuilds.json").is_file():
+    engine, package = office_engine_package(json.loads(adapter.read_text(encoding="utf-8")), native)
+    if package is None or not (office / "node_modules" / package / "prebuilds.json").is_file():
         raise FileNotFoundError(
             f"orochi-harness-runtime-bin is missing the Office sidecar engine {engine} at {office}. "
             + _EXE_ACQUISITION_HINT

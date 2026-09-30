@@ -106,9 +106,9 @@ class RuntimeBuildHook(BuildHookInterface):
                 if not adapter.is_file():
                     raise RuntimeError(f"runtime Office dependency is missing: {adapter}")
                 native = target.replace("win-", "win32-").replace("macos-", "darwin-")
-                declared = json.loads(adapter.read_text(encoding="utf-8")).get("optionalDependencies", {})
-                engine = native if f"@orochi-network/libreoffice-kit-{native}" in declared else "wasm"
-                required = office / "node_modules" / f"@orochi-network/libreoffice-kit-{engine}/prebuilds.json"
+                office_engine_package = runpy.run_path(str(runtime_dir.parent / "_resources.py"))["office_engine_package"]
+                engine, package = office_engine_package(json.loads(adapter.read_text(encoding="utf-8")), native)
+                required = office / "node_modules" / (package or f"libreoffice-kit-{engine}") / "prebuilds.json"
                 if not required.is_file():
                     raise RuntimeError(f"runtime Office dependency is missing: {required}")
                 continue

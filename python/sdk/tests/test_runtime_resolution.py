@@ -22,18 +22,22 @@ from orochi_harness_runtime import (
 )
 
 
-def _resource_sidecars(executable: Path, native_targets: tuple[str, ...] = ("darwin-arm64", "darwin-x64", "win32-x64")) -> Path:
+def _resource_sidecars(
+    executable: Path,
+    native_targets: tuple[str, ...] = ("darwin-arm64", "darwin-x64", "win32-x64"),
+    engine_scope: str = "@orochi-network",
+) -> Path:
     office = executable.with_name(f"{executable.name.removesuffix('.exe')}-office")
     tag = executable.name.removeprefix("orochi-harness-sdk-runtime-").removesuffix(".exe")
     native = tag.replace("win-", "win32-").replace("macos-", "darwin-")
     engine = native if native in native_targets else "wasm"
-    for required in ("@orochi-network/libreoffice-kit/package.json", f"@orochi-network/libreoffice-kit-{engine}/prebuilds.json"):
+    for required in ("@orochi-network/libreoffice-kit/package.json", f"{engine_scope}/libreoffice-kit-{engine}/prebuilds.json"):
         path = office / "node_modules" / required
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text("{}")
     adapter = office / "node_modules/@orochi-network/libreoffice-kit/package.json"
     adapter.write_text(json.dumps({"optionalDependencies": {
-        f"@orochi-network/libreoffice-kit-{target}": "0.0.1" for target in (*native_targets, "wasm")
+        f"{engine_scope}/libreoffice-kit-{target}": "0.0.1" for target in (*native_targets, "wasm")
     }}), encoding="utf-8")
     resources = executable.with_name(tag)
     manifest = resources / "primary-runtime/runtime.json"
@@ -153,6 +157,28 @@ def test_windows_runtime_uses_exe_payload_and_exe_sidecar(
     monkeypatch.setattr(runtime, "_current_platform_tag", lambda: "win-x64")
 
     assert runtime.bundled_runtime_path() == executable
+
+
+@pytest.mark.parametrize("target", ["linux-x64", "win-x64"])
+def test_runtime_finds_office_engines_published_under_another_scope(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, target: str
+) -> None:
+    """The kit is an @orochi-network alias whose engines keep the @deepseek-ai scope its manifest names."""
+    runtime_dir = tmp_path / "runtime"
+    runtime_dir.mkdir()
+    suffix = ".exe" if target.startswith("win-") else ""
+    executable = runtime_dir / f"orochi-harness-sdk-runtime-{target}{suffix}"
+    executable.touch()
+    Path(f"{executable.with_suffix('')}-rg{suffix}").touch()
+    office = _resource_sidecars(executable, engine_scope="@deepseek-ai")
+    monkeypatch.setattr(runtime, "bundled_package_dir", lambda: tmp_path)
+    monkeypatch.setattr(runtime, "_current_platform_tag", lambda: target)
+
+    engine = "win32-x64" if target == "win-x64" else "wasm"
+    assert runtime.bundled_runtime_path() == executable
+    (office / f"node_modules/@deepseek-ai/libreoffice-kit-{engine}/prebuilds.json").unlink()
+    with pytest.raises(FileNotFoundError, match=f"Office sidecar engine {engine}"):
+        runtime.bundled_runtime_path()
 
 
 def test_current_platform_supports_windows_x64_only(monkeypatch: pytest.MonkeyPatch) -> None:
