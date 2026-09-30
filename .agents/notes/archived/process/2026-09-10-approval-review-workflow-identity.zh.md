@@ -1,6 +1,7 @@
 # Agent Note: 按文件路径识别审批评审工作流
 
 Status: implemented
+Archived: 2026-09-30
 
 [English](2026-09-10-approval-review-workflow-identity.md) | 中文
 
