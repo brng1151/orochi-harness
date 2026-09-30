@@ -72,13 +72,14 @@ describe('master-only platform scheduling', () => {
     expect(evaluateCondition(workflow('ci.yml').jobs['all-checks-passed']!.if as string, true, ['success'])).toBe(false)
   })
 
-  it('keeps only Linux and Windows x64 runtimes in required PR CI', () => {
+  it('keeps only the Linux x64 runtime in required PR CI', () => {
     const pr = workflow('ci.yml')
     expect(Object.keys(pr.on)).toEqual(['pull_request'])
+    // The win-x64 runtime target is off (orochi-network/orochi-harness#13); add it back to targets to re-enable it.
     expect(pr.jobs['python-runtime']).toMatchObject({
       if: "github.event_name == 'pull_request'",
       uses: runtimeBuilder,
-      with: { ci: true, targets: 'node24-linux-x64,node24-win-x64' },
+      with: { ci: true, targets: 'node24-linux-x64' },
     })
     expect(pr.jobs.windows).toBeUndefined()
     expect(JSON.stringify(pr.jobs)).not.toMatch(/wine-windows-gates|check:windows-wine/)
