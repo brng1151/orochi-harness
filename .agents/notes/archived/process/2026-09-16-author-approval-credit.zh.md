@@ -1,6 +1,7 @@
 # Agent Note: 作者审批积分
 
 Status: implemented
+Archived: 2026-09-30
 
 [English](2026-09-16-author-approval-credit.md) | 中文
 

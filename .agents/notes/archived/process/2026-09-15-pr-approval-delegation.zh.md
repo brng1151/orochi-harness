@@ -1,6 +1,7 @@
 # Agent Note: PR 范围内的批准委托
 
 Status: implemented
+Archived: 2026-09-30
 
 [English](2026-09-15-pr-approval-delegation.md) | 中文
 
