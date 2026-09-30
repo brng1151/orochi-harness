@@ -186,7 +186,7 @@ describe('CI workflow', () => {
       expect(job['runs-on'], `${jobName} runs-on must not use the Linux failover switch`).not.toContain('OH_CI_FAILOVER_LINUX')
       expect(job['runs-on']).toContain('self-hosted')
       expect(job['runs-on']).toContain('oh-win-ci')
-      expect(job['runs-on']).toContain('oh-windows-2025-16core')
+      expect(job['runs-on']).toContain('windows-2025')
       const cores = jobName === 'windows-native-tests' ? 2 : 16
       expect(evaluateRunsOn(job['runs-on'], { vars: { OH_CI_FAILOVER_WINDOWS: 'blacksmith' } }))
         .toBe(`blacksmith-${cores}vcpu-windows-2025`)
@@ -373,9 +373,9 @@ describe('CI workflow', () => {
       })
     }
     for (const [name, selector, variable, pool, hosted] of [
-      ['linux gates', selectors.linux, 'OH_CI_FAILOVER_LINUX', ['self-hosted', 'linux', 'x64', 'vm-backup'], 'oh-ubuntu-24-04-16core'],
+      ['linux gates', selectors.linux, 'OH_CI_FAILOVER_LINUX', ['self-hosted', 'linux', 'x64', 'vm-backup'], 'orochi-runners'],
       ['linux aggregate', selectors.linuxAggregate, 'OH_CI_FAILOVER_LINUX', ['self-hosted', 'linux', 'x64', 'vm-backup'], 'ubuntu-latest'],
-      ['windows lanes', selectors.windows, 'OH_CI_FAILOVER_WINDOWS', ['self-hosted', 'oh-win-ci', 'windows'], 'oh-windows-2025-16core'],
+      ['windows lanes', selectors.windows, 'OH_CI_FAILOVER_WINDOWS', ['self-hosted', 'oh-win-ci', 'windows'], 'windows-2025'],
     ] as const) {
       expect(evaluate(selector, { [variable]: 'blacksmith' }), `${name} blacksmith value`).toMatch(/^blacksmith-/)
       expect(evaluate(selector, { [variable]: 'selfhosted' }), `${name} selfhosted value`).toEqual(pool)
